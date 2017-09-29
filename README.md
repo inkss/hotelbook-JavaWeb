@@ -20,4 +20,3 @@
 ![](src/resources/markdown/Annoying_Dog.gif)
 ![](src/resources/markdown/Annoying_Dog.gif)
 ![](src/resources/markdown/Annoying_Dog.gif)
-![](src/resources/markdown/Annoying_Dog.gif)
