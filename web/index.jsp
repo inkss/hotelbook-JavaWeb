@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>酒店管理系统</title>
+        <link rel='Shortcut Icon' type='image/x-icon' href='/MAIN/img/windows.ico'>
     </head>
 
     <body>
