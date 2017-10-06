@@ -2,6 +2,7 @@
  * Created by Yuri2 on 2017/7/10.
  */
 window.Win10 = {
+
     _version:'v1.1.2.3',
     _debug:true,
     _bgs:{
@@ -412,10 +413,10 @@ window.Win10 = {
             var mins=myDate.getMinutes();if (mins<10){mins='0'+mins}
             $("#win10_btn_time").html(hours+':'+mins+'<br/>'+year+'/'+month+'/'+date);
         },1000);
-        //离开前警告
-        document.body.onbeforeunload = function(){
-            window.event.returnValue = Win10.lang( '系统可能不会保存您所做的更改','The system may not save the changes you have made.');
-        };
+        // //离开前警告
+        // document.body.onbeforeunload = function(){
+        //     window.event.returnValue = Win10.lang( '系统可能不会保存您所做的更改','The system may not save the changes you have made.');
+        // };
         Win10.buildList();//预处理左侧菜单
         Win10._startAnimate();//动画处理
         Win10.renderShortcuts();//渲染图标
@@ -852,13 +853,13 @@ window.Win10 = {
             closeBtn: 1, //不显示关闭按钮
             anim: 2,
             skin: 'layui-layer-molv',
-            title: 'WIN10-UI '+this._version,
+            title: '酒店管理系统 v1.0 ',
             shadeClose: true, //开启遮罩关闭
-            area: ['320px', '200px'], //宽高
+            area: ['380px', '200px'], //宽高
             content: '<div style="padding: 10px;font-size: 12px">' +
-            '<p>支持组件:layer、jquery、animated.css、font-awesome</p>' +
-            '<p>尤里2号©版权所有</p>' +
-            '<p>作者邮箱:yuri2peter@qq.com</p>' +
+            '<h1>酒店管理系统</h1>' +
+            '<p>所使用的框架：layui & Win10-UI</p>' +
+            '<p>项目地址:https://github.com/inkss/hotelbook-JavaWeb</p>' +
             '</div>'
         });
     },
