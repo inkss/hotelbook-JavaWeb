@@ -8,182 +8,12 @@
   <component name="ChangeListManager">
     <list id="afcc8ac2-025a-44b0-bf96-6d06899bbc36" name="Add description #-#" comment="" />
     <list default="true" id="85976a7a-d337-49a7-901d-13be5ff6a5e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.44-bin.jar" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.44-bin.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/markdown/Annoying_Dog.gif" afterPath="$PROJECT_DIR$/src/resources/markdown/Annoying_Dog.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon-ext.png" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon-ext.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon.png" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-0.gif" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-1.gif" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-2.gif" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/avatar.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/avatar.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/baidu.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/baidu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/blogger.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/blogger.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/demo.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/demo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/doc.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/doc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/download.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/download.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/github.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/github.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/kyzg.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/kyzg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/website.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/website.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/icon/win10.png" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/win10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/presentation/1.png" afterPath="$PROJECT_DIR$/web/MAIN/img/presentation/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/presentation/bluescreen.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/presentation/bluescreen.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/presentation/donation.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/presentation/donation.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/presentation/wangyiyun.gif" afterPath="$PROJECT_DIR$/web/MAIN/img/presentation/wangyiyun.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/wallpapers/login.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/login.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/wallpapers/main.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/main.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/wallpapers/mobile.jpg" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/mobile.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/img/windows.ico" afterPath="$PROJECT_DIR$/web/MAIN/img/windows.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/icon-ext.png" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/icon-ext.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/icon.png" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-0.gif" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-1.gif" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-2.gif" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/loading-2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/font/iconfont.eot" afterPath="$PROJECT_DIR$/web/layui/font/iconfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/font/iconfont.ttf" afterPath="$PROJECT_DIR$/web/layui/font/iconfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/font/iconfont.woff" afterPath="$PROJECT_DIR$/web/layui/font/iconfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/0.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/0.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/1.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/10.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/10.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/11.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/11.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/12.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/12.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/13.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/13.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/14.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/14.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/15.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/15.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/16.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/16.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/17.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/17.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/18.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/18.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/19.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/19.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/2.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/20.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/20.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/21.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/21.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/22.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/22.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/23.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/23.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/24.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/24.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/25.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/25.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/26.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/26.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/27.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/27.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/28.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/28.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/29.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/29.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/3.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/30.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/30.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/31.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/31.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/32.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/32.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/33.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/33.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/34.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/34.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/35.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/35.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/36.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/36.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/37.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/37.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/38.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/38.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/39.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/39.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/4.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/40.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/40.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/41.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/41.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/42.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/42.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/43.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/43.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/44.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/44.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/45.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/45.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/46.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/46.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/47.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/47.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/48.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/48.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/49.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/49.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/5.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/50.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/50.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/51.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/51.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/52.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/52.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/53.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/53.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/54.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/54.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/55.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/55.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/56.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/56.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/57.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/57.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/58.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/58.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/59.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/59.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/6.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/60.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/60.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/61.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/61.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/62.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/62.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/63.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/63.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/64.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/64.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/65.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/65.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/66.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/66.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/67.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/67.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/68.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/68.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/69.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/69.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/7.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/7.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/70.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/70.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/71.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/71.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/8.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/8.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/images/face/9.gif" afterPath="$PROJECT_DIR$/web/layui/images/face/9.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/hotelbook_JavaWeb_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/hotelbook_JavaWeb_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/ink.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/ink.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" afterPath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/README.md" afterPath="$PROJECT_DIR$/src/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/common/DBUtil.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/common/DBUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/controller/QueryLoginNameServlet.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/controller/QueryLoginNameServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDao.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/model/Login.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/model/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/service/LoginService.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/service/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inks/hb/login/service/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/inks/hb/login/service/LoginServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/c3p0-config.xml" afterPath="$PROJECT_DIR$/src/resources/c3p0-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/markdown/README.md" afterPath="$PROJECT_DIR$/src/resources/markdown/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sql/sql.sql" afterPath="$PROJECT_DIR$/src/sql/sql.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/inks/hb/login/dao/LoginDaoImplTest.java" afterPath="$PROJECT_DIR$/src/test/com/inks/hb/login/dao/LoginDaoImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.full.js" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.js" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/layer.js" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/layer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/need/layer.css" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/need/layer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/layer.css" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/layer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/css/animate.css" afterPath="$PROJECT_DIR$/web/MAIN/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/css/default.css" afterPath="$PROJECT_DIR$/web/MAIN/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/js/disable_shortcuts_hidden.js" afterPath="$PROJECT_DIR$/web/MAIN/js/disable_shortcuts_hidden.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/js/jquery-2.2.4.min.js" afterPath="$PROJECT_DIR$/web/MAIN/js/jquery-2.2.4.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/js/win10.child.js" afterPath="$PROJECT_DIR$/web/MAIN/js/win10.child.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/js/win10.js" afterPath="$PROJECT_DIR$/web/MAIN/js/win10.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MAIN/main.html" afterPath="$PROJECT_DIR$/web/MAIN/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/80d5f639-febc-455b-93c9-43549b3c453a.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/login/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/layui.css" afterPath="$PROJECT_DIR$/web/layui/css/layui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/layui.mobile.css" afterPath="$PROJECT_DIR$/web/layui/css/layui.mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/code.css" afterPath="$PROJECT_DIR$/web/layui/css/modules/code.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/laydate/default/laydate.css" afterPath="$PROJECT_DIR$/web/layui/css/modules/laydate/default/laydate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/css/modules/layer/default/layer.css" afterPath="$PROJECT_DIR$/web/layui/css/modules/layer/default/layer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/font/iconfont.svg" afterPath="$PROJECT_DIR$/web/layui/font/iconfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/carousel.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/code.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/code.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/element.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/element.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/flow.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/form.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/jquery.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/laydate.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/laydate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/layedit.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/layedit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/layer.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/layer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/laypage.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/laypage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/laytpl.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/laytpl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/mobile.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/table.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/tree.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/tree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/upload.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/upload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/lay/modules/util.js" afterPath="$PROJECT_DIR$/web/layui/lay/modules/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/layui.all.js" afterPath="$PROJECT_DIR$/web/layui/layui.all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/layui/layui.js" afterPath="$PROJECT_DIR$/web/layui/layui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login/css/register-login.css" afterPath="$PROJECT_DIR$/web/login/css/register-login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login/js/background.js" afterPath="$PROJECT_DIR$/web/login/js/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login/js/particles.js" afterPath="$PROJECT_DIR$/web/login/js/particles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login/login.html" afterPath="$PROJECT_DIR$/web/login/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -223,31 +53,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            <state relative-caret-position="450">
+              <caret line="49" column="11" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="49" selection-end-column="11" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/MAIN/main.html">
+      <file leaf-file-name="QueryLoginNameServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/inks/hb/login/controller/QueryLoginNameServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="504">
+              <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -299,11 +132,12 @@
         <option value="$PROJECT_DIR$/src/com/inks/hb/login/model/Login.java" />
         <option value="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/inks/hb/login/dao/LoginDao.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/MAIN/js/disable_shortcuts_hidden.js" />
         <option value="$PROJECT_DIR$/web/MAIN/main.html" />
         <option value="$PROJECT_DIR$/web/MAIN/js/win10.js" />
         <option value="$PROJECT_DIR$/web/login/login.html" />
+        <option value="$PROJECT_DIR$/web/login/login.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -320,9 +154,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="363" />
-    <option name="y" value="111" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="103" />
+    <option name="y" value="54" />
     <option name="width" value="1461" />
     <option name="height" value="758" />
   </component>
@@ -344,8 +178,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,6 +191,23 @@
             <path>
               <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,13 +215,6 @@
               <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -388,8 +233,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,7 +241,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -654,7 +498,12 @@
       <workItem from="1507510219788" duration="361000" />
       <workItem from="1507510743284" duration="1046000" />
       <workItem from="1507514801197" duration="311000" />
-      <workItem from="1507554574691" duration="15000" />
+      <workItem from="1507554574691" duration="120000" />
+      <workItem from="1507619521941" duration="2670000" />
+      <workItem from="1507643078766" duration="344000" />
+      <workItem from="1507709936681" duration="59000" />
+      <workItem from="1507731742721" duration="131000" />
+      <workItem from="1507902800518" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="Add description #-#">
       <created>1506657526485</created>
@@ -705,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507281804328</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="系统迁移到Deepin上了，这次同步的应该是layui框架">
+      <created>1507554664336</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507554664336</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -738,7 +594,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29693000" />
+    <option name="totallyTimeSpent" value="33092000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -750,8 +606,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="363" y="111" width="1461" height="758" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.49786323" order="6" side_tool="false" content_ui="tabs" />
@@ -759,23 +614,23 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.4957265" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5524109" sideWeight="0.24626069" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5752773" sideWeight="0.2949894" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.4957265" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38827258" sideWeight="0.7345086" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38065195" sideWeight="0.70886755" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54992074" sideWeight="0.7537393" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57515335" sideWeight="0.7050106" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25657204" sideWeight="0.74147123" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5488959" sideWeight="0.7537393" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16796048" sideWeight="0.5675676" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16796048" sideWeight="0.43243244" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1431624" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.54545456" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.45454547" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.251235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.491453" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -860,7 +715,8 @@
     <MESSAGE value="登录界面后，使用了一个框架。超级酷炫酷炫的。" />
     <MESSAGE value="完成前后端通信" />
     <MESSAGE value="修正前端文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正前端文件" />
+    <MESSAGE value="系统迁移到Deepin上了，这次同步的应该是layui框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="系统迁移到Deepin上了，这次同步的应该是layui框架" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -869,27 +725,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.full.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/MAIN/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2592">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/MAIN/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -918,13 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sql/sql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1011,13 +839,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources/22f15be8-ed21-43b8-838c-7c58b3d32b6e.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml" />
-    <entry file="file://$PROJECT_DIR$/src/com/inks/hb/login/controller/QueryLoginNameServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/MAIN/img/avatar.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1155,26 +976,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="49" column="11" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="49" selection-end-column="11" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/80d5f639-febc-455b-93c9-43549b3c453a/console.sql" />
+    <entry file="das://table:/5e139b63/80d5f639-febc-455b-93c9-43549b3c453a/hotelbook.login">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sql/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/MAIN/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login/login.html">
+    <entry file="file://$PROJECT_DIR$/src/com/inks/hb/login/controller/QueryLoginNameServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="504">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding />
         </state>
       </provider>
