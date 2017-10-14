@@ -5,7 +5,7 @@
     - 编辑器：IntelliJ IDEA 2017.2.4
     - 数据库：MySQL 5.7.19-Oubuntu0.16.04.1
     - 服务器：Tomcat 9.0.0.M26
-    - 操作系统：Ubuntu 16.04
+    - 操作系统：Ubuntu 16.04 【本项目已迁移至Deepin】
     
 1. 关于项目
 
