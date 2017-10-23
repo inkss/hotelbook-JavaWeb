@@ -1,0 +1,778 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#win10 *{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#win10-login{
+    background: black no-repeat fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+#win10 {
+    width: 100%;
+    height: 100%;
+    background: black no-repeat fixed;
+    background-size: 100% 100%;
+    position: relative;
+    /*padding-top: 20px;*/
+}
+
+#win10 *{
+    scrollbar-arrow-color: #5e6a5c;);  /*图6,三角箭头的颜色*/
+    scrollbar-face-color: #5e6a5c;  /*图5,立体滚动条的颜色*/
+    scrollbar-3dlight-color: #5e6a5c;  /*图1,立体滚动条亮边的颜色*/
+    scrollbar-highlight-color: #5e6a5c;  /*图2,滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #5e6a5c;  /*图3,立体滚动条阴影的颜色*/
+    scrollbar-darkshadow-color: #5e6a5c; /*图4,立体滚动条强阴影的颜色*/
+    scrollbar-track-color: rgba(74, 84, 78, 0.41);  /*图7,立体滚动条背景颜色*/
+    scrollbar-base-color:#5e6a5c;  /*滚动条的基本颜色*/
+}
+
+#win10 hr { height:0px; border-top:1px solid #999; border-right:0px; border-bottom:0px; border-left:0px; }
+
+#win10 .desktop {
+    width: 100%;
+    height: 100%;
+}
+
+#win10_task_bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    background-color: rgba(19, 23, 28, 0.9);
+    z-index: 19930813;
+}
+
+#win10 .btn_group {
+    height: 100%;
+}
+
+#win10 .btn_group .btn {
+    float: left;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    height: 100%;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+#win10 .btn_group .btn:hover {
+    background-color: rgba(106, 105, 100, 0.71);
+    cursor: pointer;
+}
+
+#win10_btn_group_left{
+    float: left;
+    overflow: auto;
+    max-width:200px;
+}
+
+#win10_btn_group_middle{
+    float: left;
+    width:calc(100% - 240px);
+    overflow: auto;
+}
+#win10_btn_group_middle .btn_close{
+    position: absolute;
+    right: 0;
+    width: 20px;
+    text-align: center;
+    color: transparent;
+}
+#win10_btn_group_middle .btn:hover .btn_close{
+    color: rgba(131, 168, 157, 0.71);
+}
+#win10_btn_group_middle .btn:hover .btn_close:hover{
+    color: white;
+}
+
+#win10_btn_group_middle .btn_title{
+    float: left;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar {
+    width: 2px;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar-track {
+    background-color: #808080;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar-thumb {
+    background-color: rgba(30, 39, 34, 0.41);
+}
+
+#win10_btn_group_right{
+    float: right;
+    max-width:200px;
+    overflow: auto;
+}
+
+#win10_btn_group_left .btn {
+    height: 100%;
+    width: 48px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#win10_btn_group_right .btn {
+    height: 100%;
+    min-width: 4px;
+    padding: 0 10px;
+    font-size: 12px ;
+}
+
+#win10_btn_show_desktop {
+    border-left: grey 1px solid;
+    width: 4px;
+    margin-left: 3px;
+    padding: 0 !important
+}
+
+#win10_btn_time {
+    font-size: 12px;
+    line-height: 20px !important
+}
+#win10-menu {
+    position: fixed;
+    bottom: 41px;
+    background-color: rgba(19,23,28,0.81);
+    height: 60%;
+    width: 75%;
+    max-width: 880px;
+    overflow: auto;
+    padding-left:10px;
+    z-index: 1000;
+    overflow-y: hidden;
+    transition: bottom 0.5s ;
+}
+
+#win10-menu.hidden {
+    bottom:-70%;
+}
+
+#win10-menu .blocks::-webkit-scrollbar,.list::-webkit-scrollbar,#win10_command_center::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#win10-menu .blocks::-webkit-scrollbar-track,.list::-webkit-scrollbar-track,#win10_command_center::-webkit-scrollbar-track {
+    background-color: rgba(74, 84, 78, 0.41);
+}
+
+#win10-menu .blocks::-webkit-scrollbar-thumb,.list::-webkit-scrollbar-thumb,#win10_command_center::-webkit-scrollbar-thumb {
+    background-color: #6a6a6a;
+}
+
+#win10-menu .blocks::-webkit-scrollbar-button ,.list::-webkit-scrollbar-button ,#win10_command_center::-webkit-scrollbar-button  {
+    /*background-color: #6a6a6a;*/
+}
+
+#win10-menu .list,.blocks{
+    float: left;
+    width: 180px;
+    height:100%;
+    overflow: auto;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+#win10-menu .list{
+    width:240px;
+    padding:0 10px;
+    padding-top: 5px;
+    font-size: 12px;
+    height: 100%;
+}
+
+#win10-menu .list .item.has-sub-down::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f107";
+    line-height: inherit;
+    float: right;
+}
+
+#win10-menu .list .item.has-sub-up::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f106";
+    line-height: inherit;
+    float: right;
+}
+
+#win10-menu .list .item,.sub-item{
+    color:white;
+    margin: 1px 0;
+    line-height: 40px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    position: relative;
+    width: calc(100% - 20px);
+}
+
+#win10-menu .list .item>.icon,#win10-menu .list .sub-item>.icon,.sub-item>.icon{
+    line-height: 36px;
+    font-size: 22px;
+    float: left;
+    margin-right: 0.5em;
+    width: 36px;
+    position: relative;
+    top:2px;
+    background-color: grey;
+
+}
+
+#win10-menu .list .sub-item{
+    padding-left:30px;
+    width: calc(100% - 40px);
+}
+
+#win10-menu .list .item:hover,.sub-item:hover{
+    background-color: rgba(72,72,72,0.58);
+    cursor: pointer;
+}
+
+#win10-menu .blocks{
+    max-width: 650px;
+    width:calc(100% - 260px);
+}
+
+#win10-menu-switcher{
+    position: absolute;
+    height: 100%;
+    border-left: 1px solid grey;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+#win10-menu-switcher:active{
+    background-color: rgba(92, 109, 92, 0.81);
+}
+
+#win10-menu .menu_group {
+    float: left;
+    width: 300px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#win10-menu .menu_group .title {
+    padding: 5px;
+    padding-top: 12px;
+    font-size: 13px;
+}
+
+#win10-menu .menu_group:hover .title::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f0c9";
+    line-height: inherit;
+    float: right;
+    margin-right: 17px;
+    color: grey;
+}
+
+#win10-menu .menu_group .block {
+    padding: 0;
+    background-color: transparent;
+    float: left;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    cursor: default;
+    font-size: 16px;
+}
+
+#win10-menu .menu_group .block .content {
+    background-color: rgba(0, 196, 255, 0.55);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    position: absolute;
+    left: -2px;top: -2px;
+    overflow: hidden;
+    transition: left 0.5s;
+}
+
+#win10-menu .menu_group .block:hover .content.cover{
+    left: calc(-100% - 4px);
+}
+
+#win10-menu .menu_group .block .content.detail{
+    left: calc(100% + 4px);
+}
+#win10-menu .menu_group .block:hover .content.detail{
+    left: -2px;
+}
+
+#win10-menu .menu_group .block:hover  {
+    border: 2px solid white;
+}
+
+#win10 #win10-shortcuts {
+    height: calc(100% - 40px);
+    position: absolute;
+    left: 0;top: 0;
+    z-index: 100;
+}
+
+#win10 #win10-shortcuts.shortcuts-hidden .shortcut{display: none}
+
+#win10 #win10-shortcuts .shortcut {
+    width: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+#win10 #win10-shortcuts .shortcut:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+#win10 #win10-shortcuts .shortcut>.icon {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    font-size: 37px;
+    line-height: 50px;
+}
+
+#win10-shortcuts .shortcut .title {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+#win10_command_center {
+    position: fixed;
+    right: 0;
+    bottom: 41px;
+    width: 350px;
+    background-color: rgba(19,23,28,0.81);
+    height: calc(100% - 42px);
+    transition: all 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: white;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#win10_command_center.hidden_right {
+    right: -350px;
+}
+
+#win10_command_center > .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    transition: background-color 0.5s;
+}
+
+#win10_command_center > .title:hover{
+    background-color: rgba(255, 255, 255, 0.19);
+}
+
+#win10_btn_group_right #win10_btn_command{
+    font-size: 20px;
+}
+#win10_btn_command .msgNof{
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+}
+#win10_btn_command_center_clean_all{
+    color: grey;
+    text-align: right;
+    font-size:12px;
+    float: right;
+    margin-top:40px;
+    margin-right:24px;
+    transition: color 0.5s;
+}
+
+#win10_btn_command_center_clean_all:hover{
+    cursor: pointer;
+    color:white;
+}
+
+#win10_command_center .msgs{
+    position: absolute;
+    top:60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    /*padding: 10px;*/
+}
+
+#win10_command_center .btn_close_msg{
+    line-height: inherit;
+    transition: color 0.5s ;
+}
+
+#win10_command_center .msgs .msg{
+    width: calc(100% - 20px);
+    min-height: 40px;
+    padding:10px;
+    margin-top: 4px;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+#win10_command_center .msgs .msg.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+#win10_command_center .msgs .msg:hover{
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.19);
+}
+#win10_command_center .msgs .msg:hover .title{
+    color: white;
+}
+#win10_command_center .msgs .msg:hover>.btn_close_msg{
+    color: grey;
+}
+
+#win10_command_center .msgs .msg:hover>.content{
+    color: white;
+}
+
+#win10_command_center .msgs .msg>.title{
+    color: #c7c7c7;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+#win10_command_center .msgs .msg>.btn_close_msg{
+    cursor: pointer;
+    color: transparent;
+    padding: 3px;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+#win10_command_center .msgs .msg>.btn_close_msg:hover{
+    color: white;
+}
+
+#win10_command_center .msgs .msg>.content{
+    font-size: 12px;
+    color: #9b9b9b;
+    padding-bottom: 5px;
+}
+
+#win10_btn_group_middle .btn{
+    float: left;
+    box-sizing: border-box;
+    height: inherit;
+    max-width: 140px;
+    border-bottom:4px solid #707070;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    word-break: keep-all;
+    padding: 0 10px;
+    margin-right: 1px;
+    position: relative;
+}
+
+#win10_btn_group_middle .btn.active{
+    background-color: #3B3D3F;
+}
+
+#win10_btn_group_middle .btn:hover{
+    cursor: pointer;
+}
+
+.win10-open-iframe{
+    background-color: transparent;
+    border: 1px solid #323232;
+}
+
+.win10-open-iframe .layui-layer-content{
+    background-color: white;
+    max-height: calc(100% - 42px);
+}
+
+.win10-open-iframe .layui-layer-title{
+    box-sizing: border-box;
+    background-color: rgba(49, 49, 50, 0.94);
+    padding-right: 160px;
+    color: white;
+}
+.win10-open-iframe.hide{
+    display: none;
+}
+.win10-btn_refresh{
+    float: right;
+}
+#win10 .img-loader{
+    display: none;
+}
+
+.win10-btn-refresh>span,.win10-btn-change-url>span{
+    font-size: 16px !important;
+    color: rgb(255, 255, 255);
+}
+
+.win10-open-iframe .layui-layer-min cite{display: none;}
+.win10-open-iframe .layui-layer-max:hover{background-image:none}
+.win10-open-iframe .layui-layer-max,.layui-layer-maxmin{background:none}
+.win10-open-iframe .layui-layer-setwin a.layui-layer-close1:hover{
+    background:red;
+    color: #fff ;
+    opacity: 1;
+}
+
+.win10-open-iframe .layui-layer-min::before{
+    content:"\f2d1";
+    color: white;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-max::before{
+    content:"\f2d0";
+    color: white;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-maxmin.layui-layer-max::before{
+    content:"\f2d2";
+    color: white;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-close::before{
+    content:"\f2d3";
+    color: #fff;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-min,.layui-layer-close,.layui-layer-max{
+    text-decoration: none;
+}
+
+.win10-layer-open-browser textarea{
+    margin: 20px;
+    outline: none;
+    resize: none;
+}
+/*右键菜单*/
+#win10 .win10-context-menu { left: 0;top: 0;position: fixed; width: 150px; height: auto; background-color: rgb(255, 255, 255); border: #CCC 1px solid; display: block; border-radius: 5px; z-index: 99999999; }
+#win10 .win10-context-menu ul { margin: 0px; padding: 0px; }
+#win10 .win10-context-menu ul li {transition: background-color 0.5s;cursor: default;padding: 0px 1em; list-style: none; line-height: 30px; height: 30px; margin: 3px 0;  font-size: 13px; }
+#win10 .win10-context-menu ul li:hover { background-color: #DDD; }
+#win10 .win10-context-menu ul li a {text-decoration: none; display: block; height: 100%; color: #333; outline: none; }
+#win10 .win10-context-menu ul hr { margin: 0; height: 0px; border: 0px; border-bottom: rgb(233,233,233) 1px solid;border-top: none }
+
+/*块级按钮*/
+.win10-open-iframe .layui-layer-ico{background-image:none;}
+.win10-open-iframe .layui-layer-setwin {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 0;
+    line-height: 40px;
+    height: 40px;
+}
+.win10-open-iframe .layui-layer-setwin a {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+}
+.win10-open-iframe .layui-layer-setwin a:hover {
+    background: #5d5d5d;
+}
+.win10-open-iframe .layui-layer-title .icon ,#win10_btn_group_middle .btn_title .icon{
+    font-size: 15px;
+    padding: 1px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 0.5em;
+}
+.win10-open-iframe .layui-layer-title img.icon,#win10_btn_group_middle .btn_title img.icon{
+    width: 20px;
+    position: relative;
+    top:5px ;
+    margin-right: 0.5em;
+}
+
+#win10-menu>.list>.sub-item img.icon,#win10-menu>.list>.item img.icon{
+    width: 36px;
+    height:36px;
+    position: relative;
+    top:2px ;
+    margin-right: 0.5em;
+}
+
+/*桌面舞台样式*/
+#win10-desktop-scene{
+    width: 100%;
+    height: calc(100% - 40px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: transparent;
+}
+
+/*各种颜色 具体效果见 https://www.kancloud.cn/qq85569256/xzui/350010*/
+.win10-open-iframe .black-green, #win10 .black-green{background:#009688!important;}
+.win10-open-iframe .green,#win10 .green{background:#5FB878!important;}
+.win10-open-iframe .black,#win10 .black{background:#393D49!important;}
+.win10-open-iframe .blue,#win10 .blue{background:#1E9FFF!important;}
+.win10-open-iframe .orange,#win10 .orange{background:#F7B824!important;}
+.win10-open-iframe .red,#win10 .red{background:#FF5722!important;}
+.win10-open-iframe .dark,#win10 .dark{background:#2F4056!important;}
+.win10-open-iframe .purple,#win10 .purple{background:#b074e6!important;}
+
+
+@media screen and (max-width:768px){
+    #win10-menu{
+        width:calc(100% - 10px);
+        height: calc(100% - 42px);
+    }
+    #win10-menu.hidden{
+        bottom: -100% ;
+    }
+    #win10_command_center{
+        width: 100%;
+    }
+    #win10_command_center.hidden_right {
+        right: -100%;
+    }
+    .layui-layer-setwin .layui-layer-max{
+        display: none;
+    }
+    #win10_btn_group_left .btn {
+        height: 100%;
+        width: 40px;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    #win10_btn_group_right .btn {
+        height: 100%;
+        min-width: 4px;
+        padding: 0 10px;
+        font-size: 16px!important;
+    }
+    #win10_btn_show_desktop {
+        border-left: grey 1px solid;
+        width: 30px;
+        margin-left: 3px;
+        padding: 0 !important
+    }
+    #win10_btn_group_left{
+        max-width:100px;
+    }
+    #win10_btn_group_middle{
+        width:calc(100% - 160px);
+    }
+    #win10_btn_group_middle .btn{
+        padding: 0 3px;
+    }
+    #win10_btn_group_right{
+        max-width:150px;
+    }
+    #win10-menu .list{
+        padding-left: 2px;
+        position: absolute;
+        width: calc(100% - 31px);
+        left: 0;
+        top: 0;
+
+    }
+    #win10-menu .blocks{
+        overflow-x: hidden;
+        position: absolute;
+        width:calc(100% - 31px);
+        left: 0;
+        top: 0;
+    }
+
+    #win10-menu .menu_group {
+        width: 90%;
+        float: none;
+        margin: 0 auto;
+        clear: both;
+    }
+
+    #win10_btn_time{display: none}
+    #win10-menu-switcher{
+        display: block;
+    }
+    #win10-menu>.win10-menu-hidden{
+        display: none;
+    }
+    #win10_btn_group_middle .btn_close{
+        display: none;
+    }
+    .win10-open-iframe .layui-layer-setwin a {
+        width: 32px;
+    }
+}
