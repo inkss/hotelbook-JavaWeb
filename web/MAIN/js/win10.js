@@ -413,9 +413,9 @@ window.Win10 = {
             $("#win10_btn_time").html(hours+':'+mins+'<br/>'+year+'/'+month+'/'+date);
         },1000);
         //离开前警告
-        document.body.onbeforeunload = function(){
-            window.event.returnValue = Win10.lang( '系统可能不会保存您所做的更改','The system may not save the changes you have made.');
-        };
+        // document.body.onbeforeunload = function(){
+        //     window.event.returnValue = Win10.lang( '请确认退出系统','The system may not save the changes you have made.');
+        // };
         Win10.buildList();//预处理左侧菜单
         Win10._startAnimate();//动画处理
         Win10.renderShortcuts();//渲染图标
@@ -453,30 +453,30 @@ window.Win10 = {
         //设置默认右键菜单
         Win10.setContextMenu('#win10',true);
         Win10.setContextMenu('#win10>.desktop',[
-            ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
-                var url = window.location;
-                var title = document.title;
-                var ua = navigator.userAgent.toLowerCase();
-                if (ua.indexOf("360se") > -1) {
-                    layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-                }
-                else if (ua.indexOf("msie 8") > -1) {
-                    window.external.AddToFavoritesBar(url, title); //IE8
-                }
-                else if (document.all) {
-                    try{
-                        window.external.addFavorite(url, title);
-                    }catch(e){
-                        layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-                    }
-                }
-                else if (window.sidebar) {
-                    window.sidebar.addPanel(title, url, "");
-                }
-                else {
-                    layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-                }
-            }],
+            // ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
+            //     var url = window.location;
+            //     var title = document.title;
+            //     var ua = navigator.userAgent.toLowerCase();
+            //     if (ua.indexOf("360se") > -1) {
+            //         layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+            //     }
+            //     else if (ua.indexOf("msie 8") > -1) {
+            //         window.external.AddToFavoritesBar(url, title); //IE8
+            //     }
+            //     else if (document.all) {
+            //         try{
+            //             window.external.addFavorite(url, title);
+            //         }catch(e){
+            //             layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+            //         }
+            //     }
+            //     else if (window.sidebar) {
+            //         window.sidebar.addPanel(title, url, "");
+            //     }
+            //     else {
+            //         layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+            //     }
+            // }],
             ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
             ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
             '|',
@@ -830,7 +830,8 @@ window.Win10 = {
         this._animated_liveness=animated_liveness;
     },
     exit:function () {
-        layer.confirm(Win10.lang('确认要关闭本页吗?','Are you sure you want to close this page?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
+        layer.confirm(Win10.lang('请确认退出系统','Are you sure you want to close this page?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
+            $.post('http://localhost:8080/ExitSystemServlet');
             document.body.onbeforeunload = function(){};
             window.location.href="about:blank";
             window.close();
@@ -852,13 +853,13 @@ window.Win10 = {
             closeBtn: 1, //不显示关闭按钮
             anim: 2,
             skin: 'layui-layer-molv',
-            title: 'WIN10-UI '+this._version,
+            title: 'Hotelbook 关于系统',
             shadeClose: true, //开启遮罩关闭
-            area: ['320px', '200px'], //宽高
+            area: ['300px', '180px'], //宽高
             content: '<div style="padding: 10px;font-size: 12px">' +
-            '<p>支持组件:layer、jquery、animated.css、font-awesome</p>' +
-            '<p>尤里2号©版权所有</p>' +
-            '<p>作者邮箱:yuri2peter@qq.com</p>' +
+            '<h2>酒店管理系统</h2>' +
+            '<p>inks©版权所有</p>' +
+            '<a>© 2017 HotelBook System</a>' +
             '</div>'
         });
     },
