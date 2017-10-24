@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -39,6 +40,12 @@ public class QueryLoginNameServlet extends HttpServlet {
         try {
 
             int check = service.queryByName(loginName,loginPwd);
+
+            //设置session
+            if (check == 1) {
+                HttpSession session = request.getSession();
+                session.setAttribute("LoginName",loginName);
+            }
 
             //转换为json字符串格式
             Gson gson = new Gson();

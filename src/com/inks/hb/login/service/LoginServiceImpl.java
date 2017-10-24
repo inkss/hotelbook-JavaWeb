@@ -15,7 +15,7 @@ public class LoginServiceImpl implements LoginService{
 
         Login login = loginDao.queryByName(name);
 
-        System.out.println(login.toString());
+        //System.out.println(login.toString());
 
         //判断用代码放在业务层
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="../img/windows.ico">
-    <link rel="stylesheet" type="text/css" href="./css/register-login.css">
+    <link rel="stylesheet Icon" href="./img/windows.ico">
+    <link rel="stylesheet" type="text/css" href="./login/css/register-login.css">
 </head>
 <body>
 
@@ -52,10 +52,10 @@
     <p>© 2017 <a href="#">HotelBook System</a></p>
 </div>
 
-<script type="text/javascript" src="./js/particles.js"></script>
-<script type="text/javascript" src="./js/background.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript" src="./login/js/particles.js"></script>
+<script type="text/javascript" src="./login/js/background.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./layui/layui.js"></script>
 
 <script>
 
@@ -90,6 +90,7 @@
                                 icon: 16
                                 , shade: 0.01
                             });
+
                             setTimeout(function () {
                                 location.href = '../MAIN/main.html';
                             }, 1000);   //等待一段时间后跳入
