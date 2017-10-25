@@ -23,7 +23,6 @@ public class ExitSystemServlet extends HttpServlet {
 
         if (session.getAttribute("LoginName") != null)
             session.removeAttribute("LoginName");
-
         System.out.println("当前session已清空\n");
     }
 }

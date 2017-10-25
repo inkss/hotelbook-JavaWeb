@@ -56,6 +56,7 @@
 <script type="text/javascript" src="./login/js/background.js"></script>
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript" src="./layui/layui.js"></script>
+<script type="text/javascript" src="./js/Cookie.js"></script>
 
 <script>
 
@@ -90,6 +91,9 @@
                                 icon: 16
                                 , shade: 0.01
                             });
+
+                            //设置cookie
+                            setCookie("loginName",loginName);
 
                             setTimeout(function () {
                                 location.href = '../MAIN/main.html';

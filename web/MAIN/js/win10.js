@@ -453,6 +453,7 @@ window.Win10 = {
         //设置默认右键菜单
         Win10.setContextMenu('#win10',true);
         Win10.setContextMenu('#win10>.desktop',[
+
             // ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
             //     var url = window.location;
             //     var title = document.title;
@@ -477,6 +478,7 @@ window.Win10 = {
             //         layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
             //     }
             // }],
+
             ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
             ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
             '|',
@@ -833,7 +835,7 @@ window.Win10 = {
         layer.confirm(Win10.lang('请确认退出系统','Are you sure you want to close this page?'), {icon: 3, title:Win10.lang('提示','Prompt')}, function(index){
             $.post('http://localhost:8080/ExitSystemServlet');
             document.body.onbeforeunload = function(){};
-            window.location.href="about:blank";
+            window.location.href="/";
             window.close();
             layer.close(index);
             layer.alert(Win10.lang('哎呀,好像失败了呢。','Ops...There seems to be a little problem.'), {

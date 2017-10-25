@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./component/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="./css/default.css" rel="stylesheet">
     <script type="text/javascript" src="./js/win10.js"></script>
+    <script type="text/javascript" src="../js/Cookie.js"></script>
     <style>
         * {
             font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
@@ -25,8 +26,11 @@
          }
     </style>
     <script>
-        Win10.onReady(function () {
 
+        //从cookie读取登录用户
+        var loginName = getCookie("loginName");
+
+        Win10.onReady(function () {
             //设置壁纸
             Win10.setBgUrl({
                 main: './img/wallpapers/main.jpg',
@@ -37,6 +41,12 @@
                 'animated flip',
                 'animated bounceIn',
             ], 0.01);
+
+            setTimeout(function () {
+                Win10.newMsg('欢迎登录',
+                    '欢迎用户' + loginName + '的登录')
+            }, 2500);
+
         });
     </script>
 </head>
@@ -54,17 +64,19 @@
                 <!--<div class="title">Win10-UI官网</div>-->
             <!--</div>-->
 
-            <div class="shortcut" onclick="window.open('../login/testJSP.jsp','<img class=\'icon\' src=\'./img/icon/demo.png\'/>testJSP')">
-                <img class="icon" src="./img/icon/demo.png"/>
-                <div class="title">testJSP</div>
+            <div class="shortcut" onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'./img/icon/baidu.png\'/>百度一下')">
+                <img class="icon" src="./img/icon/baidu.png"/>
+                <div class="title">百度一下</div>
             </div>
-            <div class="shortcut" onclick="Win10.openUrl('../login/testJSP.jsp','<img class=\'icon\' src=\'./img/icon/demo.png\'/>testJSP')">
-                <img class="icon" src="./img/icon/demo.png"/>
-                <div class="title">testJSP</div>
+
+            <div class="shortcut" onclick="window.open('https://github.com/inkss/hotelbook-JavaWeb')">
+                <img class="icon" src="./img/icon/github.png"/>
+                <div class="title">项目地址</div>
             </div>
-            <div class="shortcut" onclick="Win10.openUrl('../login/tetsHtml.html')">
-                <img class="icon" src="./img/icon/demo.png"/>
-                <div class="title">testHtml</div>
+
+            <div class="shortcut" onclick="Win10.exit()">
+                <img class="icon" src="./img/icon/exit.png"/>
+                <div class="title">安全退出</div>
             </div>
 
 
