@@ -27,35 +27,35 @@ CREATE TABLE `hotelbook`.`floorInfo` (
   PRIMARY KEY (`floorId`));
 
 -- 客房类型
-CREATE TABLE `hotelbook`.`romeType` (
+CREATE TABLE `hotelbook`.`roomType` (
   `typeId` VARCHAR(45) NOT NULL COMMENT '类型编号',
   `typeName` VARCHAR(45) NULL COMMENT '类型名称',
   `price` VARCHAR(20) NULL COMMENT '价格',
   `splicPrice` VARCHAR(20) NULL COMMENT '拼房价格',
   `exceedance` INT NULL COMMENT '可超预定数',
-  `isSplic` VARCHAR(10) NULL COMMENT '是否可拼房',
+  `isSplice` VARCHAR(10) NULL COMMENT '是否可拼房',
   PRIMARY KEY (`typeId`));
 
 -- 客房信息
-CREATE TABLE `hotelbook`.`romeInfo` (
-  `romeId` VARCHAR(45) NOT NULL COMMENT '客房编号',
+CREATE TABLE `hotelbook`.`roomInfo` (
+  `roomId` VARCHAR(45) NOT NULL COMMENT '客房编号',
   `typeId` VARCHAR(45) NOT NULL COMMENT '类型编号',
   `floorId` INT NOT NULL COMMENT '楼层编号',
-  `rateNum` INT NULL COMMENT '额定人数',
-  `beaNum` INT NULL COMMENT '床数',
-  `romeDescribe` VARCHAR(45) NULL COMMENT '客房描述',
+  `ratedNum` INT NULL COMMENT '额定人数',
+  `bedNum` INT NULL COMMENT '床数',
+  `roomDescription` VARCHAR(45) NULL COMMENT '客房描述',
   `remark` VARCHAR(100) NULL COMMENT '备注',
-  `state` VARCHAR(10) NULL COMMENT '状态',
-  `isSplic` VARCHAR(10) NULL COMMENT '是否可拼房',
-  PRIMARY KEY (`romeId`),
-  INDEX `fk_romeInfo_1_idx` (`typeId` ASC),
-  INDEX `fk_romeInfo_2_idx` (`floorId` ASC),
-  CONSTRAINT `fk_romeInfo_1`
+  `status` VARCHAR(10) NULL COMMENT '状态',
+  `isSplice` VARCHAR(10) NULL COMMENT '是否可拼房',
+  PRIMARY KEY (`roomId`),
+  INDEX `fk_roomInfo_1_idx` (`typeId` ASC),
+  INDEX `fk_roomInfo_2_idx` (`floorId` ASC),
+  CONSTRAINT `fk_roomInfo_1`
     FOREIGN KEY (`typeId`)
-    REFERENCES `hotelbook`.`romeType` (`typeId`)
+    REFERENCES `hotelbook`.`roomType` (`typeId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_romeInfo_2`
+  CONSTRAINT `fk_roomInfo_2`
     FOREIGN KEY (`floorId`)
     REFERENCES `hotelbook`.`floorInfo` (`floorId`)
     ON DELETE NO ACTION
@@ -72,7 +72,7 @@ CREATE TABLE `hotelbook`.`orderInfo` (
   `leaveDate` VARCHAR(45) NULL COMMENT '离店时间',
   `orderState` VARCHAR(20) NULL COMMENT '单据状态',
   `checkNum` VARCHAR(45) NULL COMMENT '入住人数',
-  `romeId` VARCHAR(45) NULL COMMENT '客房编号',
+  `roomId` VARCHAR(45) NULL COMMENT '客房编号',
   `price` VARCHAR(20) NULL COMMENT '客房价格',
   `checkPrice` VARCHAR(20) NULL COMMENT '入住价格',
   `discount` INT NULL COMMENT '折扣',
@@ -86,7 +86,7 @@ CREATE TABLE `hotelbook`.`orderInfo` (
   INDEX `fk_orderInfo_1_idx` (`typeId` ASC),
   CONSTRAINT `fk_orderInfo_1`
     FOREIGN KEY (`orderId`)
-    REFERENCES `hotelbook`.`romeType` (`typeId`)
+    REFERENCES `hotelbook`.`roomType` (`typeId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -102,7 +102,7 @@ CREATE TABLE `hotelbook`.`checkInfo` (
   `leaveTime` VARCHAR(45) NULL COMMENT '离店时间',
   `checkState` VARCHAR(20) NULL COMMENT '单据状态',
   `checkNum` INT NULL COMMENT '入住人数',
-  `romeId` VARCHAR(45) NOT NULL COMMENT '客房编号',
+  `roomId` VARCHAR(45) NOT NULL COMMENT '客房编号',
   `price` VARCHAR(20) NULL COMMENT '客房价格',
   `checkPrice` VARCHAR(20) NULL COMMENT '入住价格',
   `discount` INT NULL COMMENT '折扣',
@@ -118,15 +118,15 @@ CREATE TABLE `hotelbook`.`checkInfo` (
   `operatorId` VARCHAR(45) NULL COMMENT '操作员',
   PRIMARY KEY (`checkId`),
   INDEX `fk_checkInfo_1_idx` (`typeId` ASC),
-  INDEX `fk_checkInfo_2_idx` (`romeId` ASC),
+  INDEX `fk_checkInfo_2_idx` (`roomId` ASC),
   CONSTRAINT `fk_checkInfo_1`
     FOREIGN KEY (`typeId`)
-    REFERENCES `hotelbook`.`romeType` (`typeId`)
+    REFERENCES `hotelbook`.`roomType` (`typeId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_checkInfo_2`
-    FOREIGN KEY (`romeId`)
-    REFERENCES `hotelbook`.`romeInfo` (`romeId`)
+    FOREIGN KEY (`roomId`)
+    REFERENCES `hotelbook`.`roomInfo` (`roomId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -165,7 +165,7 @@ CREATE TABLE `hotelbook`.`orderHistory` (
   `leaveDate` VARCHAR(45) NULL COMMENT '离店时间',
   `orderState` VARCHAR(20) NULL COMMENT '单据状态',
   `checkNum` VARCHAR(45) NULL COMMENT '入住人数',
-  `romeId` VARCHAR(45) NULL COMMENT '客房编号',
+  `roomId` VARCHAR(45) NULL COMMENT '客房编号',
   `price` VARCHAR(20) NULL COMMENT '客房价格',
   `checkPrice` VARCHAR(20) NULL COMMENT '入住价格',
   `discount` INT NULL COMMENT '折扣',
@@ -189,7 +189,7 @@ CREATE TABLE `hotelbook`.`checkHistory` (
   `leaveTime` VARCHAR(45) NULL COMMENT '离店时间',
   `checkState` VARCHAR(20) NULL COMMENT '单据状态',
   `checkNum` INT NULL COMMENT '入住人数',
-  `romeId` VARCHAR(45) NULL COMMENT '客房编号',
+  `roomId` VARCHAR(45) NULL COMMENT '客房编号',
   `price` VARCHAR(20) NULL COMMENT '客房价格',
   `checkPrice` VARCHAR(20) NULL COMMENT '入住价格',
   `discount` INT NULL COMMENT '折扣',
