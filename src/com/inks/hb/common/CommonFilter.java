@@ -24,24 +24,28 @@ public class CommonFilter implements Filter {
         String url = request.getRequestURI();
         boolean check = false;
 
-        //应该做到只拦截.html和.jsp请求
+        //因为是全局过滤，所以会对所有请求进行过滤，诸如css、js、png等等
+        //所以应该做到只拦截.html和.jsp请求，对请求地址的末尾进行判断
         if (url.endsWith(".jsp") || url.endsWith(".html"))
             check = true;
-
+        //  测试语句
         if (check) {
             System.out.println("当前请求：" + url);
             System.out.printf("===> 【过滤判定：");
         }
+
         if (!url.equals("/") && check) {
+            //判断session中此值是否存在
             if (session.getAttribute("LoginName") != null) {
                 System.out.println("---->通过】\n");
-                chain.doFilter(request,response);
+                chain.doFilter(request,response); //放行
             } else {
                 System.out.println("---->未通过!】\n");
-                response.sendRedirect("/");
+                response.sendRedirect("/"); //跳转回根目录
             }
         }
         else {
+            //非html和jsp请求一律不管
             chain.doFilter(request, response);
         }
     }

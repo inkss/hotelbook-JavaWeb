@@ -27,4 +27,10 @@ public class LoginServiceImpl implements LoginService{
 
         return check;
     }
+
+    @Override
+    public Login queryLogin(String name) throws SQLException {
+
+        return loginDao.queryByName(name);
+    }
 }

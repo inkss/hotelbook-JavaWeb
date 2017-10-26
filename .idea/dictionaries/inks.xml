@@ -2,10 +2,13 @@
   <dictionary name="inks">
     <words>
       <w>baidu</w>
+      <w>contextmenu</w>
+      <w>cval</w>
       <w>inkss</w>
       <w>molv</w>
       <w>onbeforeunload</w>
       <w>rometype</w>
+      <w>spellcheck</w>
     </words>
   </dictionary>
 </component>

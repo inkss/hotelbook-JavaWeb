@@ -92,8 +92,24 @@
                                 , shade: 0.01
                             });
 
-                            //设置cookie
-                            setCookie("loginName",loginName);
+                            $.post(baseUrl + '/QueryLoginInfoServlet', params, function (loginInfo) {
+
+                                //数据返回样例
+                                <%--{"loginId":1,"loginName":"root","loginPwd":"toor","loginNickName":"管理员","loginAdmin":0}--%>
+
+                                //取值方法
+                                var obj = JSON.parse(loginInfo);
+                                //alert(obj.loginName);
+                                //alert(obj.loginPwd);
+                                //alert(obj.loginNickName);
+                                //alert(obj.loginAdmin);
+
+                                //设置cookie
+                                setCookie("loginName",loginName);
+                                setCookie("loginNickName",obj.loginNickName);
+                                setCookie("loginAdmin",obj.loginAdmin);
+
+                            });
 
                             setTimeout(function () {
                                 location.href = '../MAIN/main.html';

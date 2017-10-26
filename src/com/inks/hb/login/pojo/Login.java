@@ -8,10 +8,11 @@ public class Login {
 
     private String loginPwd;    //登录用户密码
 
-    private String loginNickName;
+    private String loginNickName;   //昵称
 
     private int loginAdmin;     //权限，默认最高权限是0
 
+    //无参构造器
     public Login() {
         super();
         loginAdmin = -1;
@@ -22,24 +23,28 @@ public class Login {
         //分级再说
     }
 
+    //用户名、用户密码
     public Login(String loginName, String loginPwd) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
     }
 
+    //用户名、用户密码、权限
     public Login(String loginName, String loginPwd, int loginAdmin) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.loginAdmin = loginAdmin;
     }
 
-    public Login(int loginId, String loginName, String loginPwd, int loginAdmin) {
-        this.loginId = loginId;
+    //用户名、用户密码、用户昵称、权限     -- 最常用的应该是这个
+    public Login(String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
+        this.loginNickName = loginNickName;
         this.loginAdmin = loginAdmin;
     }
 
+    //全构造器
     public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginId = loginId;
         this.loginName = loginName;

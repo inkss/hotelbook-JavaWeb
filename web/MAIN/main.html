@@ -25,30 +25,7 @@
              font-size: 16px;
          }
     </style>
-    <script>
-
-        //从cookie读取登录用户
-        var loginName = getCookie("loginName");
-
-        Win10.onReady(function () {
-            //设置壁纸
-            Win10.setBgUrl({
-                main: './img/wallpapers/main.jpg',
-                mobile: './img/wallpapers/mobile.jpg',
-            });
-
-            Win10.setAnimated([
-                'animated flip',
-                'animated bounceIn',
-            ], 0.01);
-
-            setTimeout(function () {
-                Win10.newMsg('欢迎登录',
-                    '欢迎用户' + loginName + '的登录')
-            }, 2500);
-
-        });
-    </script>
+    <script type="text/javascript" src="./js/win10-hotelbook.js"></script>
 </head>
 <body>
 <div id="win10">

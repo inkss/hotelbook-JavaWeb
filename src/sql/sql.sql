@@ -17,7 +17,7 @@ INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAd
 
 -- 创建主体数据表
 -- 核心数据库内容
--- 将不使用存出过程，仅仅用到外键/外联
+-- 将不使用存储过程，仅仅用到外键/外联
 -- 数据维护主要依靠后端维护
 
 -- 楼层信息

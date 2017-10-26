@@ -1,6 +1,7 @@
 package com.inks.hb.login.controller;
 
 import com.google.gson.Gson;
+import com.inks.hb.login.pojo.Login;
 import com.inks.hb.login.service.LoginService;
 import com.inks.hb.login.service.LoginServiceImpl;
 
@@ -14,8 +15,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet(value = "/QueryLoginNameServlet", name = "/QueryLoginNameServlet")
-public class QueryLoginNameServlet extends HttpServlet {
+@WebServlet(value = "/QueryLoginInfoServlet",name = "/QueryLoginInfoServlet")
+public class QueryLoginInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         this.doGet(request,response);
@@ -35,20 +36,13 @@ public class QueryLoginNameServlet extends HttpServlet {
 
         // 获得姓名
         String loginName = request.getParameter("loginName");
-        String loginPwd = request.getParameter("loginPwd");
 
         try {
+            Login login = service.queryLogin(loginName);
 
-            int check = service.queryByName(loginName,loginPwd);
-
-            //设置session
-            if (check == 1) {
-                HttpSession session = request.getSession();
-                session.setAttribute("LoginName",loginName);
-            }
             //转换为json字符串格式
             Gson gson = new Gson();
-            out.print(gson.toJson(check));
+            out.print(gson.toJson(login));
 
         } catch (SQLException e) {
             e.printStackTrace();
