@@ -8,6 +8,8 @@ public class Login {
 
     private String loginPwd;    //登录用户密码
 
+    private String loginNickName;
+
     private int loginAdmin;     //权限，默认最高权限是0
 
     public Login() {
@@ -38,6 +40,14 @@ public class Login {
         this.loginAdmin = loginAdmin;
     }
 
+    public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
+        this.loginId = loginId;
+        this.loginName = loginName;
+        this.loginPwd = loginPwd;
+        this.loginNickName = loginNickName;
+        this.loginAdmin = loginAdmin;
+    }
+
     public int getLoginId() {
         return loginId;
     }
@@ -62,6 +72,14 @@ public class Login {
         this.loginPwd = loginPwd;
     }
 
+    public String getLoginNickName() {
+        return loginNickName;
+    }
+
+    public void setLoginNickName(String loginNickName) {
+        this.loginNickName = loginNickName;
+    }
+
     public int getLoginAdmin() {
         return loginAdmin;
     }
@@ -76,6 +94,7 @@ public class Login {
                 "\n loginId = " + loginId +
                 "\n loginName = '" + loginName + '\'' +
                 "\n loginPwd = '" + loginPwd + '\'' +
+                "\n loginNickName = '" + loginNickName + '\'' +
                 "\n loginAdmin = " + loginAdmin +
                 "\n--->Login信息输出结束\n";
     }

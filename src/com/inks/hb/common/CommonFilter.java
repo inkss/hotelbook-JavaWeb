@@ -32,7 +32,6 @@ public class CommonFilter implements Filter {
             System.out.println("当前请求：" + url);
             System.out.printf("===> 【过滤判定：");
         }
-
         if (!url.equals("/") && check) {
             if (session.getAttribute("LoginName") != null) {
                 System.out.println("---->通过】\n");
