@@ -58,6 +58,9 @@
 <script type="text/javascript" src="./layui/layui.js"></script>
 <script type="text/javascript" src="./js/Cookie.js"></script>
 
+//引入win10的api
+<script type="text/javascript" src="./MAIN/js/win10.child.js"></script>
+
 <script>
 
     //模块化调用layui
@@ -92,7 +95,8 @@
                                 , shade: 0.01
                             });
 
-                            $.post(baseUrl + '/QueryLoginInfoServlet', params, function (loginInfo) {
+                            //根据写入的session值得到结果
+                            $.post(baseUrl + '/QueryLoginInfoServlet', function (loginInfo) {
 
                                 //数据返回样例
                                 <%--{"loginId":1,"loginName":"root","loginPwd":"toor","loginNickName":"管理员","loginAdmin":0}--%>

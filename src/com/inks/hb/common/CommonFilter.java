@@ -26,8 +26,14 @@ public class CommonFilter implements Filter {
 
         //因为是全局过滤，所以会对所有请求进行过滤，诸如css、js、png等等
         //所以应该做到只拦截.html和.jsp请求，对请求地址的末尾进行判断
-        if (url.endsWith(".jsp") || url.endsWith(".html"))
+        //修订 servlet加入拦截过滤范围
+        if (url.endsWith(".jsp") || url.endsWith(".html") || url.endsWith("Servlet"))
             check = true;
+
+        //这个servlet要放行
+        if (url.endsWith("/QueryLoginNameServlet"))
+            check = false;
+
         //  测试语句
         if (check) {
             System.out.println("当前请求：" + url);
