@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="./img/windows.ico">
-    <link rel="stylesheet" type="text/css" href="./login/css/register-login.css">
+    <link rel="stylesheet Icon" href="img/windows.ico">
+    <link rel="stylesheet" type="text/css" href="./css/login/register-login.css">
 </head>
 <body>
 
@@ -52,14 +52,14 @@
     <p>© 2017 <a href="#">HotelBook System</a></p>
 </div>
 
-<script type="text/javascript" src="./login/js/particles.js"></script>
-<script type="text/javascript" src="./login/js/background.js"></script>
-<script type="text/javascript" src="./js/jquery.js"></script>
-<script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/Cookie.js"></script>
+<script type="text/javascript" src="./js/login/particles.js"></script>
+<script type="text/javascript" src="./js/login/background.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="layui/layui.js"></script>
+<script type="text/javascript" src="js/Cookie.js"></script>
 
 //引入win10的api
-<script type="text/javascript" src="./MAIN/js/win10.child.js"></script>
+<script type="text/javascript" src="MAIN/js/win10.child.js"></script>
 
 <script>
 
@@ -112,11 +112,10 @@
                                 setCookie("loginName",loginName);
                                 setCookie("loginNickName",obj.loginNickName);
                                 setCookie("loginAdmin",obj.loginAdmin);
-
                             });
 
                             setTimeout(function () {
-                                location.href = '../MAIN/main.html';
+                                location.href = 'MAIN/main.html';
                             }, 1000);   //等待一段时间后跳入
                         }
                     });

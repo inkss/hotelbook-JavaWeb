@@ -857,10 +857,13 @@ window.Win10 = {
             window.location.href = "/";
             window.close();
             layer.close(index);
+
+            /*
             layer.alert(Win10.lang('哎呀,好像失败了呢。', 'Ops...There seems to be a little problem.'), {
                 skin: 'layui-layer-lan'
                 , closeBtn: 0
             });
+            */
         });
 
     },

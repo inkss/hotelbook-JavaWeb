@@ -2,10 +2,7 @@ package com.inks.hb.common;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
@@ -25,8 +22,28 @@ public class ExitSystemServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
 
-        if (session.getAttribute("LoginName") != null)
+        Cookie cookies[] = request.getCookies();
+
+        //当前servlet在'/'目录下，所以下面的删除cookie只能删除当前域下的
+        for (int i = 0; cookies != null && i < cookies.length; i++) {
+            Cookie cookie = cookies[i];
+            cookie.setMaxAge(0);
+            response.addCookie(cookie);
+        }
+
+        //其余域下的cookie删除方法
+        //思路是创建一个同名cookie，指定域setPath
+        //然后设置age为0，表示立即删除
+        //最后再通过response添加进去，因为同名的原因，所以会直接覆盖
+        Cookie cookie = new Cookie("isLogin","");
+        cookie.setPath("/MAIN");
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+
+        if (session.getAttribute("LoginName") != null) {
+            System.out.println("已清除---> LoginName的session值\n");
             session.removeAttribute("LoginName");
-        System.out.println("当前session已清空\n");
+
+        }
     }
 }
