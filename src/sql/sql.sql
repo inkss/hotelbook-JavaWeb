@@ -148,6 +148,7 @@ CREATE TABLE `hotelbook`.`billInfo` (
 -- 权限管理
 CREATE TABLE `hotelbook`.`authInfo` (
   `authId` INT NOT NULL COMMENT '权限编号',
+  `authItem` VARCHAR(45) NULL COMMENT '权限项',
   `isRead` VARCHAR(45) NULL COMMENT '可读',
   `isWrite` VARCHAR(45) NULL COMMENT '可写',
   `isChange` VARCHAR(45) NULL COMMENT '可改',
