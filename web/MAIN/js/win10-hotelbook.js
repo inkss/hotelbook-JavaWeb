@@ -1,5 +1,17 @@
 //自定义js
 
+//存在一种情况，就是在退出系统session情况时
+//此时点击浏览器的返回按钮，因为页面不会重载和浏览器本身的缓存机制
+//此时，页面仍然存在，但是因为session为空，点击一个功能时就会跳转到登录界面
+//但是此时是在框架界面里打开的，所以在登录完成后，就会形成类似俄罗斯套娃的效果
+if( window.top == window.self ){
+    //alert('页面不是在框架中打开的');
+}else{
+    //alert('页面是在框架中打开的');
+    //所以最简单的方法就是判断主页面是否在框架里，如果在就直接刷新父类界面
+    parent.location.reload();
+}
+
 //从cookie读取登录用户
 var loginName = getCookie("loginName");
 var isLogin = getCookie("isLogin");

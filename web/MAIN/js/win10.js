@@ -701,7 +701,7 @@ window.Win10 = {
     },
     openUrl: function (url, title, areaAndOffset) {
         if (this._countTask > 12) {
-            layer.msg("您打开的太多了，歇会儿吧~");
+            c
             return false;
         } else {
             this._countTask++;
@@ -711,12 +711,16 @@ window.Win10 = {
         }
         url = url.replace(/(^\s*)|(\s*$)/g, "");
         var preg = /^(https?:\/\/|\.\.?\/|\/\/?)/;
+
         if (!preg.test(url)) {
             url = 'http://' + url;
         }
-        if (!url) {
-            url = '//yuri2.cn';
-        }
+
+        layer.msg(url);
+
+        //if (!url) {
+          //  url = '//yuri2.cn';
+        //}
         if (!title) {
             title = url;
         }
