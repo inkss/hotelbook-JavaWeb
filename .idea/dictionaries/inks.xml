@@ -2,14 +2,18 @@
   <dictionary name="inks">
     <words>
       <w>baidu</w>
+      <w>checkinfo</w>
       <w>contextmenu</w>
       <w>cval</w>
       <w>inkss</w>
+      <w>liulan</w>
       <w>miaowu</w>
       <w>molv</w>
       <w>onbeforeunload</w>
+      <w>quan</w>
       <w>rometype</w>
       <w>spellcheck</w>
+      <w>zhang</w>
     </words>
   </dictionary>
 </component>

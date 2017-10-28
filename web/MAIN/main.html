@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title>酒店管理系统</title>
-    <link rel='Shortcut Icon' type='image/x-icon' href='./img/windows.ico'>
+    <link rel='Shortcut Icon' type='image/x-icon' href='../img/windows.ico'>
     <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
     <link href="./css/animate.css" rel="stylesheet">
     <script type="text/javascript" src="./component/layer-v3.0.3/layer/layer.js"></script>
@@ -19,12 +19,14 @@
         }
 
         /*磁贴自定义样式*/
-         .win10-block-content-text {
-             line-height: 44px;
-             text-align: center;
-             font-size: 16px;
-         }
+        .win10-block-content-text {
+            line-height: 44px;
+            text-align: center;
+            font-size: 16px;
+        }
     </style>
+
+    <!--引入自定义js-->
     <script type="text/javascript" src="./js/win10-hotelbook.js"></script>
 </head>
 <body>
@@ -34,31 +36,63 @@
     <div class="desktop">
         <div id="win10-shortcuts" class="shortcuts-hidden">
 
-            <!--<div class="shortcut"-->
-                 <!--onclick="Win10.openUrl('http://win10ui.yuri2.cn',-->
-                 <!--'<img class=\'icon\' src=\'./img/icon/win10.png\'/>Win10-UI官网')">-->
-                <!--<img class="icon" src="./img/icon/win10.png"/>-->
-                <!--<div class="title">Win10-UI官网</div>-->
-            <!--</div>-->
 
-            <div class="shortcut" onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'./img/icon/baidu.png\'/>百度一下')">
-                <img class="icon" src="./img/icon/baidu.png"/>
-                <div class="title">百度一下</div>
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/1YuDing.png\'/>预定管理')">
+                <img class="icon" src="./img/icon/1YuDing.png"/>
+                <div class="title">预定管理</div>
             </div>
 
-            <div class="shortcut" onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/1165334.png\'/>权限管理')">
-                <img class="icon" src="./img/icon/1165334.png"/>
-                <div class="title">权限管理</div>
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/2RuZhu.png\'/>入住管理')">
+                <img class="icon" src="./img/icon/2RuZhu.png"/>
+                <div class="title">入住管理</div>
             </div>
 
-            <div class="shortcut" onclick="window.open('https://github.com/inkss/hotelbook-JavaWeb')">
-                <img class="icon" src="./img/icon/github.png"/>
-                <div class="title">项目地址</div>
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/3FangTai.png\'/>房态管理')">
+                <img class="icon" src="./img/icon/3FangTai.png"/>
+                <div class="title">房态管理</div>
+            </div>
+
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/4ShuJu.png\'/>数据查询')">
+                <img class="icon" src="./img/icon/4ShuJu.png"/>
+                <div class="title">数据查询</div>
+            </div>
+
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/5ZhangDan.png\'/>账单管理')">
+                <img class="icon" src="./img/icon/5ZhangDan.png"/>
+                <div class="title">账单管理</div>
+            </div>
+
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/6XiTong.png\'/>系统设定')">
+                <img class="icon" src="./img/icon/6XiTong.png"/>
+                <div class="title">系统设定</div>
+            </div>
+
+            <div class="shortcut"
+                 onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'./img/icon/7YuanGong.png\'/>员工管理')">
+                <img class="icon" src="./img/icon/7YuanGong.png"/>
+                <div class="title">员工管理</div>
             </div>
 
             <div class="shortcut" onclick="Win10.exit()">
-                <img class="icon" src="./img/icon/exit.png"/>
+                <img class="icon" src="./img/icon/8AnQuan.png"/>
                 <div class="title">安全退出</div>
+            </div>
+
+            <div class="shortcut" onclick="window.open('https://github.com/inkss/hotelbook-JavaWeb')">
+                <img class="icon" src="./img/icon/9XiangMu.png"/>
+                <div class="title">项目地址</div>
+            </div>
+
+            <div class="shortcut"
+                 onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'./img/icon/10Liulan.png\'/>浏览地址')">
+                <img class="icon" src="./img/icon/10Liulan.png"/>
+                <div class="title">浏览地址</div>
             </div>
 
 
