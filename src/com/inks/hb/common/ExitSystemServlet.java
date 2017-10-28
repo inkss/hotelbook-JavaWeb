@@ -8,8 +8,8 @@ import java.io.IOException;
 /**
  * 作用 退出系统时 清除session
  * 之所以单独写这个，是为了在js中直接发ajax请求
- * 前端主页直接套用了框架，改装成jsp页面不知道会不会出问题
- * 索性直接提供可以直接被js直接使用的命令
+ * 前端主页直接套用了框架，改装成jsp页面会出现一些莫名其妙的问题
+ * 索性直接提供可以直接被js直接使用的命令，发请求调用 本质上依然是servlet
  *
  */
 @WebServlet(value = "/ExitSystemServlet",name = "/ExitSystemServlet")
