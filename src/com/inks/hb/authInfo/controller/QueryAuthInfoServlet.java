@@ -1,10 +1,10 @@
 package com.inks.hb.authInfo.controller;
 
 import com.google.gson.Gson;
-import com.inks.hb.authInfo.pojo.AuthINfotoJson;
 import com.inks.hb.authInfo.pojo.AuthInfo;
 import com.inks.hb.authInfo.service.AuthService;
 import com.inks.hb.authInfo.service.AuthServiceImpl;
+import com.inks.hb.common.PojotoJson;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +15,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
+/**
+ * 分页查询权限表
+ *
+ */
 @WebServlet(value = "/QueryAuthInfoServlet",name = "/QueryAuthInfoServlet")
 public class QueryAuthInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,12 +49,12 @@ public class QueryAuthInfoServlet extends HttpServlet {
 
             String count = String.valueOf(service.queryAuthInfoNum());
 
-            AuthINfotoJson authINfotoJson = new AuthINfotoJson("0","权限表",count,list);
+            PojotoJson pojotoJson = new PojotoJson("0","权限表",count,list);
 
             //转换为json字符串格式
             Gson gson = new Gson();
 
-            out.print(gson.toJson(authINfotoJson));
+            out.print(gson.toJson(pojotoJson));
 
         } catch (SQLException e) {
             e.printStackTrace();
