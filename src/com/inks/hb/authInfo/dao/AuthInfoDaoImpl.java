@@ -33,6 +33,48 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
     }
 
     @Override
+    public void deleteAuthInfo(int authId) throws SQLException {
+
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "DELETE FROM authInfo WHERE authId = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setInt(1, authId);
+
+        ps.executeUpdate();
+
+        ps.close();
+
+        DBUtil.close();
+
+    }
+
+    @Override
+    public void updateAuthInfo(AuthInfo authInfo) throws SQLException {
+
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "UPDATE authInfo SET authItem = ? ,isRead = ?,isWrite = ?,isChange = ?,isDelete = ? WHERE authId = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setString(1, authInfo.getAuthItem());
+        ps.setString(2,authInfo.getIsRead());
+        ps.setString(3,authInfo.getIsWrite());
+        ps.setString(4,authInfo.getIsChange());
+        ps.setString(5,authInfo.getIsDelete());
+        ps.setInt(6,authInfo.getAuthId());
+
+        ps.executeUpdate();
+
+        ps.close();
+
+        DBUtil.close();
+    }
+
+    @Override
     public int queryAuthInfoNum() throws SQLException {
 
         Connection conn = DBUtil.getConnection();
@@ -68,8 +110,8 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         PreparedStatement ps = conn.prepareStatement(sql);
 
-        ps.setInt(1,start-1);   //减一，详见声明部分
-        ps.setInt(2,length);
+        ps.setInt(1, start - 1);   //减一，详见声明部分
+        ps.setInt(2, length);
 
         ResultSet rs = ps.executeQuery();
 
@@ -78,8 +120,8 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         AuthInfo authInfo = null;
 
         while (rs.next()) {
-            authInfo = new AuthInfo(rs.getInt(1),rs.getString(2),rs.getString(3)
-                    ,rs.getString(4),rs.getString(5),rs.getString(6));
+            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5), rs.getString(6));
             list.add(authInfo);
         }
 

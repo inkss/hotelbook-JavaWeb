@@ -1,14 +1,9 @@
-package hb.authInfo.dao;
+package com.inks.hb.authInfo.dao;
 
-import com.inks.hb.authInfo.dao.AuthInfoDao;
-import com.inks.hb.authInfo.dao.AuthInfoDaoImpl;
 import com.inks.hb.authInfo.pojo.AuthInfo;
 import org.junit.Test;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-
-import static org.junit.Assert.*;
 
 public class AuthInfoDaoImplTest {
 
@@ -19,11 +14,6 @@ public class AuthInfoDaoImplTest {
     @Test
     public void insertAuthInfo() throws Exception {
 
-        /**
-         * 测试通过
-         *
-         * 插入一百条数据
-         */
         for (int i = 1; i < 100; i++) {
             authInfo = new AuthInfo(i, "测试数据" + i, "1", "1", "1", "1");
             dao.insertAuthInfo(authInfo);
@@ -31,16 +21,30 @@ public class AuthInfoDaoImplTest {
     }
 
     @Test
-    public void queryAuthInfoNum() throws SQLException {
+    public void deleteAuthInfo() throws Exception {
 
-        System.out.println("表长度：" + dao.queryAuthInfoNum());
+        dao.deleteAuthInfo(99);
+    }
+
+    @Test
+    public void updateAuthInfo() throws Exception {
+
+        AuthInfo authInfo = new AuthInfo(1,"测试数据AAA","0","1","1","0");
+
+        dao.updateAuthInfo(authInfo);
 
     }
 
     @Test
-    public void query() throws SQLException {
+    public void queryAuthInfoNum() throws Exception {
 
-        ArrayList<AuthInfo> list = dao.query(0,2);
+        System.out.println("表长度：" + dao.queryAuthInfoNum());
+    }
+
+    @Test
+    public void query() throws Exception {
+
+        ArrayList<AuthInfo> list = dao.query(1,6);
 
         for(AuthInfo authInfo : list)
             System.out.println(authInfo.toString());
