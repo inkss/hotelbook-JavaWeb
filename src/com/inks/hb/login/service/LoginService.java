@@ -14,7 +14,7 @@ public interface LoginService {
      * @return 判断结果
      * @throws SQLException 数据库错误
      */
-    public int queryByName(String name, String pwd) throws SQLException;
+    int queryByName(String name, String pwd) throws SQLException;
 
     /**
      * 根据name返回Login对象
@@ -23,6 +23,6 @@ public interface LoginService {
      * @return  Login对象
      * @throws SQLException 数据库错误
      */
-    public Login queryLogin(String name) throws SQLException;
+    Login queryLogin(String name) throws SQLException;
 
 }

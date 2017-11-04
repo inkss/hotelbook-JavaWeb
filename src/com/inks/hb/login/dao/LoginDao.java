@@ -14,6 +14,6 @@ public interface LoginDao {
      * @return Login对象
      * @throws SQLException 数据库错误
      */
-    public Login queryByName(String loginName) throws SQLException;
+    Login queryByName(String loginName) throws SQLException;
 
 }
