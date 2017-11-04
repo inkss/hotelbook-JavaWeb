@@ -18,13 +18,12 @@ import java.sql.SQLException;
 /**
  * 此servlet是根据登录名返回login对象，这个对象是包含密码数据的
  * 所以为了安全，将servlet也放入了过滤器的过滤范围
- *
  */
-@WebServlet(value = "/QueryLoginInfoServlet",name = "/QueryLoginInfoServlet")
+@WebServlet(value = "/QueryLoginInfoServlet", name = "/QueryLoginInfoServlet")
 public class QueryLoginInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        this.doGet(request,response);
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,15 +41,14 @@ public class QueryLoginInfoServlet extends HttpServlet {
         // 获得姓名
         //String loginName = request.getParameter("loginName");
 
-        //对于此功能，就直接从session中取值
+        // 对于此功能，就直接从session中取值
         HttpSession session = request.getSession();
         String loginName = (String) session.getAttribute("LoginName");
-
 
         try {
             Login login = service.queryLogin(loginName);
 
-            //转换为json字符串格式
+            // 转换为json字符串格式
             Gson gson = new Gson();
             out.print(gson.toJson(login));
 

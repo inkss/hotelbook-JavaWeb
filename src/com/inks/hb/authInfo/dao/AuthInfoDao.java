@@ -6,8 +6,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
- *
+ * AuthInfoDao函数表
+ * -------------
+ * 1. void insertAuthInfo(AuthInfo authInfo)
+ * 2. void deleteAuthInfo(int authId)
+ * 3. void updateAuthInfo(AuthInfo authInfo)
+ * 4. int queryAuthInfoNum()
+ * 5. ArrayList<AuthInfo> query(int start, int length)
  */
 public interface AuthInfoDao {
 
@@ -45,12 +50,13 @@ public interface AuthInfoDao {
 
     /**
      * 查 - 分页查询
-     *
+     * _
      * ____________________________________________________
      * _
      * _   注意：为了方便计算，传入的start在实际使用时已经减一
      * _   也就是数字1代表第一个数据。
      * ____________________________________________________
+     * _
      *
      * @param start  开始位置, 第一个数据的起始坐标为0.
      * @param length 返回多少数据

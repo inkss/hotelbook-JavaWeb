@@ -20,6 +20,9 @@ public class AuthServiceImpl implements AuthService {
 
         length = limit;
 
+        if (start < 1)  //小于1的话会触发一个错误
+            start = 1;  //但是理论上page和limit是由table表格生成的参数
+
         ArrayList<AuthInfo> list = dao.query(start, length);
 
         return list;

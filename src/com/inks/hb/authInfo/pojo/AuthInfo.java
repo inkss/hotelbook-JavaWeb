@@ -1,5 +1,18 @@
 package com.inks.hb.authInfo.pojo;
 
+
+/**
+ * AuthInfo对象对应数据库中的authInfo表,主键为authID。
+ * -------------
+ * 提供了3个构造器，分别为：
+ * 1. 无参构造器
+ * 2. 不含权限ID的构造器
+ * 3. 全构造器
+ * -------------
+ * 提供正常的get、set方法；
+ * -------------
+ * 提供重载后的toString()方法；
+ */
 public class AuthInfo {
 
     private int authId;         //权限ID

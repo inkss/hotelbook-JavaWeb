@@ -17,7 +17,7 @@ public class DBUtil {
 
     static {
         try {
-            //读取配置文件的mysql字段信息
+            // 读取配置文件的mysql字段信息
             dataSource = new ComboPooledDataSource("mysql");
         } catch (Exception e) {
             System.out.println("Exception：" + e.getMessage());

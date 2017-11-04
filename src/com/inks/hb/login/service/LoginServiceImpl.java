@@ -6,18 +6,14 @@ import com.inks.hb.login.pojo.Login;
 
 import java.sql.SQLException;
 
-public class LoginServiceImpl implements LoginService{
+public class LoginServiceImpl implements LoginService {
 
     private LoginDao loginDao = new LoginDaoImpl();
 
     @Override
-    public int queryByName(String name,String pwd) throws SQLException {
+    public int queryByName(String name, String pwd) throws SQLException {
 
         Login login = loginDao.queryByName(name);
-
-        //System.out.println(login.toString());
-
-        //判断用代码放在业务层
 
         int check = 0;  //密码错误
         if (login.getLoginAdmin() == -1)

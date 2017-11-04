@@ -1,42 +1,48 @@
 package com.inks.hb.login.pojo;
 
+/**
+ * Login对象对应数据库中的login表，主键为authId，设置为自动增加。
+ * -------------
+ * 提供了5个构造器，分别为：
+ * 1. 无参构造器
+ * 2. 用户登录名、用户密码
+ * 3. 用户登录名、用户密码、用户权限
+ * 4. 用户登录名、用户密码、用户昵称、用户权限
+ * 5. 全构造器
+ * 注意：对于无参构造器，其用户权限loginAdmin置为-1
+ * -------------
+ * 提供正常的get、set方法；
+ * -------------
+ * 提供重载后的toString()方法；
+ */
 public class Login {
 
-    private int loginId;        //登录编号 主键 自动增长
+    private int loginId;            //用户ID
 
-    private String loginName;   //登录用户名
+    private String loginName;       //用户登录名
 
-    private String loginPwd;    //登录用户密码
+    private String loginPwd;        //用户密码
 
-    private String loginNickName;   //昵称
+    private String loginNickName;   //用户昵称
 
-    private int loginAdmin;     //权限，默认最高权限是0
+    private int loginAdmin;         //用户权限
 
-    //无参构造器
     public Login() {
         super();
         loginAdmin = -1;
-        //关于权限标志
-        //默认生成的空对象统一置-1
-        //最高权限为0
-        //权限0 1 2 3 等等
-        //分级再说
     }
 
-    //用户名、用户密码
     public Login(String loginName, String loginPwd) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
     }
 
-    //用户名、用户密码、权限
     public Login(String loginName, String loginPwd, int loginAdmin) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.loginAdmin = loginAdmin;
     }
 
-    //用户名、用户密码、用户昵称、权限     -- 最常用的应该是这个
     public Login(String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
@@ -44,7 +50,6 @@ public class Login {
         this.loginAdmin = loginAdmin;
     }
 
-    //全构造器
     public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginId = loginId;
         this.loginName = loginName;

@@ -14,11 +14,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+/**
+ * 此servlet是登录界面使用的，根据用户登录名和用户密码进行登录判断。
+ * 如果登录结果判断成功就在session中写入当前的登录名值
+ * 通过ajax返回给判断的结果。
+ *
+ */
 @WebServlet(value = "/QueryLoginNameServlet", name = "/QueryLoginNameServlet")
 public class QueryLoginNameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        this.doGet(request,response);
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,14 +45,14 @@ public class QueryLoginNameServlet extends HttpServlet {
 
         try {
 
-            int check = service.queryByName(loginName,loginPwd);
+            int check = service.queryByName(loginName, loginPwd);
 
-            //设置session
+            // 设置session
             if (check == 1) {
                 HttpSession session = request.getSession();
-                session.setAttribute("LoginName",loginName);
+                session.setAttribute("LoginName", loginName);
             }
-            //转换为json字符串格式
+            // 转换为json字符串格式
             Gson gson = new Gson();
             out.print(gson.toJson(check));
 

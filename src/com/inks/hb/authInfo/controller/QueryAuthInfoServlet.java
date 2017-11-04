@@ -18,12 +18,11 @@ import java.util.ArrayList;
 
 /**
  * 分页查询权限表
- *
  */
-@WebServlet(value = "/QueryAuthInfoServlet",name = "/QueryAuthInfoServlet")
+@WebServlet(value = "/QueryAuthInfoServlet", name = "/QueryAuthInfoServlet")
 public class QueryAuthInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doGet(request,response);
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,29 +34,33 @@ public class QueryAuthInfoServlet extends HttpServlet {
         // 响应输出流
         PrintWriter out = response.getWriter();
 
-        // 调用service
-        AuthService service = new AuthServiceImpl();
-
         // 当前页码
         int page = Integer.parseInt(request.getParameter("page"));
 
         // 每页的数据量
         int limit = Integer.parseInt(request.getParameter("limit"));
 
+        // 调用service
+        AuthService service = new AuthServiceImpl();
+
+        String code = ""; //状态码
+        String msg = ""; //状态信息
+        String count = ""; //数据总数
+        ArrayList<AuthInfo> list = null; //数据内容
+
         try {
-            ArrayList<AuthInfo> list = service.query(page,limit);
-
-            String count = String.valueOf(service.queryAuthInfoNum());
-
-            PojotoJson pojotoJson = new PojotoJson("0","权限表",count,list);
-
-            //转换为json字符串格式
-            Gson gson = new Gson();
-
-            out.print(gson.toJson(pojotoJson));
-
+            code = "0";
+            msg = "数据查询正常";
+            list = service.query(page, limit);
+            count = String.valueOf(service.queryAuthInfoNum());
         } catch (SQLException e) {
+            code = "1";
+            msg = "数据查询出现异常";
             e.printStackTrace();
+        } finally {
+            PojotoJson pojotoJson = new PojotoJson(code, msg, count, list);
+            Gson gson = new Gson();
+            out.print(gson.toJson(pojotoJson));
         }
     }
 }

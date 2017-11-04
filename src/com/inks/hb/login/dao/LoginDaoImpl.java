@@ -15,19 +15,19 @@ public class LoginDaoImpl implements LoginDao {
 
         Connection conn = DBUtil.getConnection();
 
-        //language=GenericSQL
         String sql = "SELECT * FROM login WHERE loginName = ?";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1,loginName);
+
+        pstmt.setString(1, loginName);
 
         ResultSet rs = pstmt.executeQuery();
 
         Login loginer = new Login();
 
         if (rs.next()) {
-            loginer = new Login(rs.getInt(1),rs.getString(2),
-                    rs.getString(3),rs.getString(4),rs.getInt(5));
+            loginer = new Login(rs.getInt(1), rs.getString(2),
+                    rs.getString(3), rs.getString(4), rs.getInt(5));
         }
 
         rs.close();
