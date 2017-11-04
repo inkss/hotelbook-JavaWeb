@@ -68,7 +68,7 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         PreparedStatement ps = conn.prepareStatement(sql);
 
-        ps.setInt(1,start);
+        ps.setInt(1,start-1);   //减一，详见声明部分
         ps.setInt(2,length);
 
         ResultSet rs = ps.executeQuery();
