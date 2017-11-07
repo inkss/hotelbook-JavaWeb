@@ -49,6 +49,24 @@ public interface AuthInfoDao {
     int queryAuthInfoNum() throws SQLException;
 
     /**
+     * 查 - 权限ID
+     *
+     * @param authId 权限ID
+     * @return 权限对象,如果未查到就返回无参构造器构建的对象
+     * @throws SQLException 数据库
+     */
+    AuthInfo query(int authId) throws SQLException;
+
+    /**
+     * 查 - 权限项
+     *
+     * @param authItem 权限项
+     * @return 权限对象,如果未查到就返回无参构造器构建的对象
+     * @throws SQLException 数据库
+     */
+    AuthInfo query(String authItem) throws SQLException;
+
+    /**
      * 查 - 分页查询
      * _
      * ____________________________________________________

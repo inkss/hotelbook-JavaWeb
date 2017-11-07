@@ -12,6 +12,24 @@ public class AuthServiceImpl implements AuthService {
     AuthInfoDao dao = new AuthInfoDaoImpl();
 
     @Override
+    public int queryAuthInfoNum() throws SQLException {
+
+        return dao.queryAuthInfoNum();
+    }
+
+    @Override
+    public AuthInfo query(int authId) throws SQLException {
+
+        return dao.query(authId);
+    }
+
+    @Override
+    public AuthInfo query(String authItem) throws SQLException {
+
+        return dao.query(authItem);
+    }
+
+    @Override
     public ArrayList<AuthInfo> query(int page, int limit) throws SQLException {
 
         int start, length;
@@ -26,11 +44,5 @@ public class AuthServiceImpl implements AuthService {
         ArrayList<AuthInfo> list = dao.query(start, length);
 
         return list;
-    }
-
-    @Override
-    public int queryAuthInfoNum() throws SQLException {
-
-        return dao.queryAuthInfoNum();
     }
 }

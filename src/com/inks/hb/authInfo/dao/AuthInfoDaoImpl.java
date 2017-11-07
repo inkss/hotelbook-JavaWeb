@@ -2,6 +2,7 @@ package com.inks.hb.authInfo.dao;
 
 import com.inks.hb.authInfo.pojo.AuthInfo;
 import com.inks.hb.common.DBUtil;
+import com.sun.org.apache.regexp.internal.RE;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -61,11 +62,11 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         PreparedStatement ps = conn.prepareStatement(sql);
 
         ps.setString(1, authInfo.getAuthItem());
-        ps.setString(2,authInfo.getIsRead());
-        ps.setString(3,authInfo.getIsWrite());
-        ps.setString(4,authInfo.getIsChange());
-        ps.setString(5,authInfo.getIsDelete());
-        ps.setInt(6,authInfo.getAuthId());
+        ps.setString(2, authInfo.getIsRead());
+        ps.setString(3, authInfo.getIsWrite());
+        ps.setString(4, authInfo.getIsChange());
+        ps.setString(5, authInfo.getIsDelete());
+        ps.setInt(6, authInfo.getAuthId());
 
         ps.executeUpdate();
 
@@ -100,6 +101,70 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         return num;
     }
+
+    @Override
+    public AuthInfo query(int authId) throws SQLException {
+
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "SELECT * FROM authInfo WHERE authId = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setInt(1,authId);
+
+        ResultSet rs = ps.executeQuery();
+
+        AuthInfo authInfo = null;
+
+        while (rs.next()) {
+            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5), rs.getString(6));
+        }
+
+        if (authInfo == null)
+            authInfo = new AuthInfo();
+
+        rs.close();
+
+        ps.close();
+
+        DBUtil.close();
+
+        return authInfo;
+    }
+
+    @Override
+    public AuthInfo query(String authItem) throws SQLException {
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "SELECT * FROM authInfo WHERE authItem = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setString(1,authItem);
+
+        ResultSet rs = ps.executeQuery();
+
+        AuthInfo authInfo = null;
+
+        while (rs.next()) {
+            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5), rs.getString(6));
+        }
+
+        if (authInfo == null)
+            authInfo = new AuthInfo();
+
+        rs.close();
+
+        ps.close();
+
+        DBUtil.close();
+
+        return authInfo;
+    }
+
 
     @Override
     public ArrayList<AuthInfo> query(int start, int length) throws SQLException {

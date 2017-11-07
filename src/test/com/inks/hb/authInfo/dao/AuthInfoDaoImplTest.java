@@ -44,10 +44,26 @@ public class AuthInfoDaoImplTest {
     @Test
     public void query() throws Exception {
 
-        ArrayList<AuthInfo> list = dao.query(1,6);
+        ArrayList<AuthInfo> list = dao.query(95,110);
 
         for(AuthInfo authInfo : list)
             System.out.println(authInfo.toString());
+    }
+
+    @Test
+    public void query2() throws Exception {
+
+        authInfo = dao.query(0);
+
+        System.out.println(authInfo.toString());
+    }
+
+    @Test
+    public void query3() throws Exception {
+
+        authInfo = dao.query("测试数据5");
+
+        System.out.println(authInfo.toString());
     }
 
 }

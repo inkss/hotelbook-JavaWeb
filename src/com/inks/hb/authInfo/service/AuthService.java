@@ -8,10 +8,38 @@ import java.util.ArrayList;
 /**
  * AuthService函数表
  * -------------
- * 1. ArrayList<AuthInfo> query(int page, int limit)
- * 2. int queryAuthInfoNum()
+ * 1. int queryAuthInfoNum()
+ * 2. AuthInfo query(int authId)
+ * 3. AuthInfo query(String authItem)
+ * 4. ArrayList<AuthInfo> query(int page, int limit)
  */
 public interface AuthService {
+
+
+
+    /**
+     * 查询AuthInfo表的长度
+     *
+     * @return 权限表长度
+     * @throws SQLException 数据库
+     */
+    int queryAuthInfoNum() throws SQLException;
+
+    /**
+     *
+     * @param authId ID
+     * @return 权限表
+     * @throws SQLException 数据库
+     */
+    AuthInfo query(int authId) throws SQLException;
+
+    /**
+     *
+     * @param authId ID
+     * @return 权限表
+     * @throws SQLException 数据库
+     */
+    AuthInfo query(String authItem) throws SQLException;
 
     /**
      * 分页查询权限表中数据
@@ -24,13 +52,6 @@ public interface AuthService {
      */
     ArrayList<AuthInfo> query(int page, int limit) throws SQLException;
 
-    /**
-     * 查询AuthInfo表的长度
-     *
-     * @return 权限表长度
-     * @throws SQLException 数据库
-     */
-    int queryAuthInfoNum() throws SQLException;
 
 
 }
