@@ -209,7 +209,7 @@ window.Win10 = {
                 var sub = $('<li>' + item[0] + '</li>');
                 ul.append(sub);
                 sub.click(trigger, item[1]);
-                continue;
+
             }
         }
         //修正坐标
@@ -701,7 +701,7 @@ window.Win10 = {
     },
     openUrl: function (url, title, areaAndOffset) {
         if (this._countTask > 12) {
-            c
+            c;
             return false;
         } else {
             this._countTask++;
@@ -716,7 +716,7 @@ window.Win10 = {
             url = 'http://' + url;
         }
 
-        layer.msg(url);
+        //layer.msg(url);
 
         //if (!url) {
           //  url = '//yuri2.cn';

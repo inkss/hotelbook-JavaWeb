@@ -2,7 +2,6 @@ package com.inks.hb.authInfo.dao;
 
 import com.inks.hb.authInfo.pojo.AuthInfo;
 import com.inks.hb.common.DBUtil;
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

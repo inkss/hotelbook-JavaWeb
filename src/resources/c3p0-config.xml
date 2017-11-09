@@ -18,6 +18,8 @@
 
         <property name="maxPoolSize">20</property>
 
+        <property name="setMaxStatements">50</property>
+
     </named-config>
 
 </c3p0-config>

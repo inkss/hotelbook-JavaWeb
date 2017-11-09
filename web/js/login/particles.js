@@ -305,7 +305,7 @@ var pJS = function(tag_id, params){
     }
 
     /* animation - velocity for speed */
-    var velbase = {}
+    var velbase = {};
     switch(pJS.particles.move.direction){
       case 'top':
         velbase = { x:0, y:-1 };
@@ -374,7 +374,7 @@ var pJS = function(tag_id, params){
       this.img = {
         src: sh.image.src,
         ratio: sh.image.width / sh.image.height
-      }
+      };
       if(!this.img.ratio) this.img.ratio = 1;
       if(pJS.tmp.img_type == 'svg' && pJS.tmp.source_svg != undefined){
         pJS.fn.vendors.createSvgImg(this);
@@ -719,7 +719,7 @@ var pJS = function(tag_id, params){
     }
     
 
-  }
+  };
 
 
   pJS.fn.interact.bounceParticles = function(p1, p2){
@@ -737,7 +737,7 @@ var pJS = function(tag_id, params){
       p2.vy = -p2.vy;
     }
 
-  }
+  };
 
 
   /* ---------- pJS functions - modes events ------------ */
@@ -756,7 +756,7 @@ var pJS = function(tag_id, params){
             'y': pos ? pos.pos_y : Math.random() * pJS.canvas.h
           }
         )
-      )
+      );
       if(i == nb-1){
         if(!pJS.particles.move.enable){
           pJS.fn.particlesDraw();
@@ -929,7 +929,7 @@ var pJS = function(tag_id, params){
       var pos = {
         x: p.x + normVec.x * repulseFactor,
         y: p.y + normVec.y * repulseFactor
-      }
+      };
 
       if(pJS.particles.move.out_mode == 'bounce'){
         if(pos.x - p.radius > 0 && pos.x + p.radius < pJS.canvas.w) p.x = pos.x;
@@ -971,7 +971,7 @@ var pJS = function(tag_id, params){
             var pos = {
               x: p.x + p.vx,
               y: p.y + p.vy
-            }
+            };
             if (pos.x + p.radius > pJS.canvas.w) p.vx = -p.vx;
             else if (pos.x - p.radius < 0) p.vx = -p.vx;
             if (pos.y + p.radius > pJS.canvas.h) p.vy = -p.vy;
@@ -1008,7 +1008,7 @@ var pJS = function(tag_id, params){
 
     }
 
-  }
+  };
 
 
   pJS.fn.modes.grabParticle = function(p){
@@ -1139,7 +1139,7 @@ var pJS = function(tag_id, params){
               pJS.tmp.repulse_finish = false;
               setTimeout(function(){
                 pJS.tmp.repulse_clicking = false;
-              }, pJS.interactivity.modes.repulse.duration*1000)
+              }, pJS.interactivity.modes.repulse.duration*1000);
             break;
 
           }
@@ -1279,7 +1279,7 @@ var pJS = function(tag_id, params){
               pJS.tmp.img_error = true;
             }
           }
-        }
+        };
         xhr.send();
 
       }else{
@@ -1451,12 +1451,10 @@ function hexToRgb(hex){
       g: parseInt(result[2], 16),
       b: parseInt(result[3], 16)
   } : null;
-};
-
+}
 function clamp(number, min, max) {
   return Math.min(Math.max(number, min), max);
-};
-
+}
 function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }

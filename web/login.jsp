@@ -75,7 +75,7 @@
 
                 var loginName = $('#loginName').val();
                 var loginPwd = $('#loginPwd').val();
-                var baseUrl="http://localhost:8080";
+                var baseUrl="http://localhost:8080/";
                 var params = "loginName=" + loginName + "&loginPwd=" + loginPwd;
 
                 if(loginName == "")

@@ -35,7 +35,7 @@ public interface AuthService {
 
     /**
      *
-     * @param authId ID
+     * @param authItem 权限项目
      * @return 权限表
      * @throws SQLException 数据库
      */

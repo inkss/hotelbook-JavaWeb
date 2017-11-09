@@ -32,7 +32,6 @@ public class DBUtil {
      * @throws SQLException 数据库错误
      */
     public static Connection getConnection() throws SQLException {
-
         // 从threadLocal获得连接对象
         Connection conn = threadLocal.get();
 
