@@ -33,7 +33,7 @@
         <button class="layui-btn fa fa-pencil-square-o"> 新增</button>
     </div>
     <div class="layui-inline">
-        <button class="layui-btn fa fa-save"> 保存</button>
+        <button class="layui-btn fa fa-save"> 导出</button>
     </div>
 </div>
 <div class="layui-row">
