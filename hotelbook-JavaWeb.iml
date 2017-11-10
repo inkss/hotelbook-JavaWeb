@@ -11,6 +11,7 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/src/resources" />
         </sourceRoots>
       </configuration>
     </facet>

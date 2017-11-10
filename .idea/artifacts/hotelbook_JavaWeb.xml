@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="hotelbook-JavaWeb:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/hotelbook_JavaWeb_war_exploded</output-path>
+  <artifact type="exploded-war" name="hotelbook-JavaWeb">
+    <output-path>$PROJECT_DIR$/out/artifacts/hotelbook_JavaWeb</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
