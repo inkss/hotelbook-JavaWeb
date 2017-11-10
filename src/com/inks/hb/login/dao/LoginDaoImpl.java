@@ -34,7 +34,7 @@ public class LoginDaoImpl implements LoginDao {
 
         pstmt.close();
 
-        DBUtil.close();
+//      conn.close();
 
         return loginer;
     }

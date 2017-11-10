@@ -7,6 +7,10 @@
       <w>clearfix</w>
       <w>contextmenu</w>
       <w>cval</w>
+      <w>dbdriver</w>
+      <w>dbpassword</w>
+      <w>dburl</w>
+      <w>dbuser</w>
       <w>hotelbook</w>
       <w>inkss</w>
       <w>laydate</w>

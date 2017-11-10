@@ -22,6 +22,9 @@ public class CommonFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
+        //设置响应报头允许当前应用被跨域请求（CROS）
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
         HttpSession session = request.getSession();
 
         // 获得用户请求的URL
@@ -44,6 +47,7 @@ public class CommonFilter implements Filter {
             System.out.printf("===> 【过滤判定：");
         }
 
+
         if (!url.equals("/") && check) {
             // 判断session中此值是否存在
             if (session.getAttribute("LoginName") != null) {
@@ -57,6 +61,10 @@ public class CommonFilter implements Filter {
             // 非html和jsp请求一律不管
             chain.doFilter(request, response);
         }
+
+
+        // 请求响应结束之后调用统一关闭连接方法
+        DBUtil.close();
     }
 
     public void init(FilterConfig config) throws ServletException {

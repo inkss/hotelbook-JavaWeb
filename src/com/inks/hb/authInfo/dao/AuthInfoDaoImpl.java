@@ -29,7 +29,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         pstmt.close();
 
-        DBUtil.close();
     }
 
     @Override
@@ -47,7 +46,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ps.close();
 
-        DBUtil.close();
 
     }
 
@@ -71,7 +69,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ps.close();
 
-        DBUtil.close();
     }
 
     @Override
@@ -96,7 +93,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ps.close();
 
-        DBUtil.close();
 
         return num;
     }

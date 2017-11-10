@@ -1,5 +1,6 @@
 package com.inks.hb.common;
 
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import java.sql.Connection;
@@ -22,7 +23,6 @@ public class DBUtil {
         } catch (Exception e) {
             System.out.println("Exception：" + e.getMessage());
         }
-
     }
 
     /**
@@ -48,8 +48,10 @@ public class DBUtil {
         // 测试语句
         //System.out.println("当前数据库连接：" + conn + "\n剩余空闲连接数=" + dataSource.getNumIdleConnections() + "\n总连接数＝" + dataSource.getNumConnections());
 
+
         return conn;
     }
+
 
     public static void close() {
         // 从本地线程中获得连接
