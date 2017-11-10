@@ -11,7 +11,7 @@ import java.io.IOException;
  * 过滤器，拦截所有请求。
  * 仅当session中包含登录成功后的登录名后才放行请求
  */
-//@WebFilter("/*") //拦截所有请求
+@WebFilter("/*") //拦截所有请求
 public class CommonFilter implements Filter {
     public void destroy() {
     }
