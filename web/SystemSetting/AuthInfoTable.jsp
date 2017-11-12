@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="img/windows.ico">
-    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
-    <link rel="stylesheet" href="./MAIN/component/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet Icon" href="../img/windows.ico">
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../MAIN/component/font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
         body {
             margin: 10px;
@@ -14,7 +14,7 @@
 </head>
 <body>
 <div>
-    <div class="layui-inline  ">
+    <div class="layui-inline">
         <div class="layui-input-inline">
             <input class="layui-input" placeholder="权限ID">
         </div>
@@ -41,13 +41,13 @@
            lay-data="{height:500, url:'http://localhost:8080/QueryAuthInfoServlet', page:true, id:'idTest'}">
         <thead>
         <tr>
-            <th lay-data="{field:'authId', width:60, sort: true, fixed: true}">ID</th>
-            <th lay-data="{field:'authItem', width:160}">权限名称</th>
-            <th lay-data="{field:'isRead', width:65}">可读</th>
-            <th lay-data="{field:'isWrite', width:65}">可写</th>
-            <th lay-data="{field:'isChange', width:65}">可改</th>
-            <th lay-data="{field:'isDelete', width:65}">可删</th>
-            <th lay-data="{fixed: 'right', width:160, align:'center', toolbar: '#barDemo'}">管理</th>
+            <th lay-data="{field:'authId', width:80, sort: true, fixed: true}">ID</th>
+            <th lay-data="{field:'authItem', width:200}">权限名称</th>
+            <th lay-data="{field:'isRead', width:105}">可读</th>
+            <th lay-data="{field:'isWrite', width:105}">可写</th>
+            <th lay-data="{field:'isChange', width:105}">可改</th>
+            <th lay-data="{field:'isDelete', width:105}">可删</th>
+            <th lay-data="{fixed: 'right', width:200, align:'center', toolbar: '#barDemo'}">管理</th>
         </tr>
         </thead>
     </table>
@@ -59,10 +59,12 @@
     <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del">删除</a>
 </script>
 
-<script src="./layui/layui.js"></script>
+<script src="../js/layui/layui.js"></script>
 
 <script>
     layui.use('table', function () {
+
+        //自动初始化表格
         var table = layui.table;
 
     });

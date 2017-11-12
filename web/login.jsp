@@ -1,9 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8"  %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="img/windows.ico">
+    <link rel="stylesheet Icon" href="./img/windows.ico">
     <link rel="stylesheet" type="text/css" href="./css/login/register-login.css">
 </head>
 <body>
@@ -54,9 +54,9 @@
 
 <script type="text/javascript" src="./js/login/particles.js"></script>
 <script type="text/javascript" src="./js/login/background.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="layui/layui.js"></script>
-<script type="text/javascript" src="js/Cookie.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/layui/layui.js"></script>
+<script type="text/javascript" src="./js/Cookie.js"></script>
 
 //引入win10的api
 <script type="text/javascript" src="MAIN/js/win10.child.js"></script>
@@ -64,7 +64,7 @@
 <script>
 
     //模块化调用layui
-    layui.use(['layer'], function(){
+    layui.use(['layer'], function () {
         var layer = layui.layer;
         $(document).ready(function () {
             //alert("网页加载完毕");
@@ -75,12 +75,12 @@
 
                 var loginName = $('#loginName').val();
                 var loginPwd = $('#loginPwd').val();
-                var baseUrl="http://localhost:8080/";
+                var baseUrl = "http://localhost:8080/";
                 var params = "loginName=" + loginName + "&loginPwd=" + loginPwd;
 
-                if(loginName == "")
+                if (loginName == "")
                     layer.tips("请输入用户名", "#loginName");    //layer.tips(“string","#吸附容器")
-                else if(loginPwd == "")
+                else if (loginPwd == "")
                     layer.tips("请输入密码", "#loginPwd");
                 else {
                     //发出ajax请求，调用后端功能
@@ -109,9 +109,9 @@
                                 //alert(obj.loginAdmin);
 
                                 //设置cookie
-                                setCookie("loginName",loginName);
-                                setCookie("loginNickName",obj.loginNickName);
-                                setCookie("loginAdmin",obj.loginAdmin);
+                                setCookie("loginName", loginName);
+                                setCookie("loginNickName", obj.loginNickName);
+                                setCookie("loginAdmin", obj.loginAdmin);
                             });
 
                             setTimeout(function () {
