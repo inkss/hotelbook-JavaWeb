@@ -147,13 +147,14 @@ CREATE TABLE `hotelbook`.`billInfo` (
 
 -- 权限管理
 CREATE TABLE `hotelbook`.`authInfo` (
-  `authId` INT NOT NULL COMMENT '权限编号',
+  `authId` INT NOT NULL AUTO_INCREMENT COMMENT '权限编号',
   `authItem` VARCHAR(45) NULL COMMENT '权限项',
   `isRead` VARCHAR(45) NULL COMMENT '可读',
   `isWrite` VARCHAR(45) NULL COMMENT '可写',
   `isChange` VARCHAR(45) NULL COMMENT '可改',
   `isDelete` VARCHAR(45) NULL COMMENT '可删',
   PRIMARY KEY (`authId`));
+
 
 -- 预订单历史
 CREATE TABLE `hotelbook`.`orderHistory` (

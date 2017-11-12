@@ -15,15 +15,14 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "insert into authInfo values (?,?,?,?,?,?)";
+        String sql = "insert into authInfo (authItem, isRead, isWrite, isChange, isDelete) values (?,?,?,?,?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setInt(1, authInfo.getAuthId());
-        pstmt.setString(2, authInfo.getAuthItem());
-        pstmt.setString(3, authInfo.getIsRead());
-        pstmt.setString(4, authInfo.getIsWrite());
-        pstmt.setString(5, authInfo.getIsChange());
-        pstmt.setString(6, authInfo.getIsDelete());
+        pstmt.setString(1, authInfo.getAuthItem());
+        pstmt.setString(2, authInfo.getIsRead());
+        pstmt.setString(3, authInfo.getIsWrite());
+        pstmt.setString(4, authInfo.getIsChange());
+        pstmt.setString(5, authInfo.getIsDelete());
 
         pstmt.executeUpdate();
 
@@ -45,7 +44,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         ps.executeUpdate();
 
         ps.close();
-
 
     }
 
@@ -93,7 +91,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ps.close();
 
-
         return num;
     }
 
@@ -124,8 +121,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ps.close();
 
-        DBUtil.close();
-
         return authInfo;
     }
 
@@ -154,8 +149,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         rs.close();
 
         ps.close();
-
-        DBUtil.close();
 
         return authInfo;
     }
@@ -188,8 +181,6 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         rs.close();
 
         ps.close();
-
-        DBUtil.close();
 
         return list;
     }
