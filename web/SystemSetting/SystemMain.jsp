@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="../img/windows.ico">
 </head>
 
 <frameset cols="230,*" frameborder="0">

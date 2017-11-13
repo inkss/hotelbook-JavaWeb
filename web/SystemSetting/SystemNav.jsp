@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet Icon" href="../img/windows.ico">
     <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" />
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap/js/bootstrap.js"></script>
