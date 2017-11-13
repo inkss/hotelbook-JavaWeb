@@ -1,12 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
     <link rel="stylesheet Icon" href="../img/windows.ico">
-    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" />
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap/js/bootstrap.js"></script>
 
@@ -37,14 +36,14 @@
 <body>
 
 
-<div class="container-fluid">
-    <!--导航菜单-->
-    <div class="row">
-        <div class="list-group nav-left">
-            <a href="./AuthInfoTable.jsp" target="content" class="list-group-item">权限管理</a>
+    <div class="container-fluid">
+        <!--导航菜单-->
+        <div class="row">
+            <div class="list-group nav-left">
+                <a href="./AuthInfoTable.jsp" target="content" class="list-group-item">权限管理</a>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 
