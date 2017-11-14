@@ -61,7 +61,7 @@ public class AuthInfoDaoImplTest {
     @Test
     public void query3() throws Exception {
 
-        authInfo = dao.query("测试数据5");
+        authInfo = dao.query("5");
 
         System.out.println(authInfo.toString());
     }

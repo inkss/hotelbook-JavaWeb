@@ -6,6 +6,7 @@
     <title>酒店管理系统</title>
     <link rel="stylesheet Icon" href="./img/windows.ico">
     <link rel="stylesheet" type="text/css" href="./css/login/register-login.css">
+    <script src="./js/global.js"></script>
 </head>
 
 <body>
@@ -82,7 +83,6 @@
 
                     var loginName = $('#loginName').val();
                     var loginPwd = $('#loginPwd').val();
-                    var baseUrl = "http://localhost:8080/";
                     var params = "loginName=" + loginName + "&loginPwd=" + loginPwd;
 
                     if (loginName == "")

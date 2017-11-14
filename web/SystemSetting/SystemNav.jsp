@@ -39,7 +39,7 @@
         <!--导航菜单-->
         <div class="row">
             <div class="list-group nav-left">
-                <a href="./AuthInfoTable.jsp" target="content" class="list-group-item">权限管理</a>
+                <a href="./AuthTable.jsp" target="content" class="list-group-item">权限管理</a>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 <frameset cols="230,*" frameborder="0">
     <frame name="nav" src="SystemNav.jsp" />
-    <frame name="content" src="AuthInfoTable.jsp" />
+    <frame name="content" src="AuthTable.jsp" />
 </frameset>
 
 </html>
