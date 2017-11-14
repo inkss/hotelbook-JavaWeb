@@ -13,28 +13,38 @@
         body {
             margin: 10px;
         }
+        .layui-elem-field legend {
+            font-size: 14px;
+        }
+        .layui-field-title {
+            margin: 25px 0 15px;
+        }
     </style>
 </head>
 
 <body>
-
-<div>
-    <div class="layui-inline">
-        <div class="layui-input-inline">
-            <input class="layui-input" id="AuthITEM" placeholder="权限名称">
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>
+        <div>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="AuthITEM" placeholder="权限名称">
+                </div>
+                <button class="layui-btn fa fa-search" id="searchAuthITEM"> 搜索</button>
+            </div>
+            <div class="layui-inline">
+                <button class="layui-btn fa fa-refresh" id="refresh"> 刷新</button>
+            </div>
+            <div class="layui-inline">
+                <button class="layui-btn fa fa-pencil-square-o"> 新增</button>
+            </div>
+            <div class="layui-inline">
+                <button class="layui-btn fa fa-save"> 导出</button>
+            </div>
         </div>
-        <button class="layui-btn fa fa-search" id="searchAuthITEM"> 搜索</button>
-    </div>
-    <div class="layui-inline">
-        <button class="layui-btn fa fa-refresh" id="refresh"> 刷新</button>
-    </div>
-    <div class="layui-inline">
-        <button class="layui-btn fa fa-pencil-square-o"> 新增</button>
-    </div>
-    <div class="layui-inline">
-        <button class="layui-btn fa fa-save"> 导出</button>
-    </div>
-</div>
+    </legend>
+</fieldset>
+
 
 <%--方法级渲染表格--%>
 <table id="tableAuth"></table>
@@ -47,10 +57,12 @@
 </script>
 
 <script>
-    layui.use('table', function () {
+    layui.use(['util', 'layer','table'], function () {
         $(document).ready(function () {
             //自动初始化表格
-            var table = layui.table;
+            var table = layui.table
+                , layer = layui.layer
+                , util = layui.util;
 
             //方法级渲染
             var tableIns = table.render({
@@ -83,10 +95,7 @@
                 } else if (layEvent === 'del') {
                     layer.alert('本条目禁止删除！',
                         {
-                            title: '警告',
-                            icon: 4,
-                            anim: 6,
-                            offset: '250px'  //保持水平，自顶部向下偏移250像素
+                            title: '警告', icon: 4, anim: 6, offset: '250px'  //保持水平，自顶部向下偏移250像素
                         });
                 } else if (layEvent === 'edit') {
 
@@ -117,6 +126,14 @@
                     })
                 }
 
+            });
+
+            //固定块  -- 就是那个回到顶部
+            util.fixbar({
+                showHeight: 0
+                , click: function (type) {
+                    console.log(type);
+                }
             });
         });
     });

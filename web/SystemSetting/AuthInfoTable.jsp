@@ -68,9 +68,9 @@
 <script src="../js/jquery.js"></script>
 
 <script>
-    layui.use('table', function () {
+    layui.use(['util', 'layer'], function () {
         $(document).ready(function () {
-            //自动初始化表格
+
             var table = layui.table;
 
             //监听工具条
@@ -97,6 +97,8 @@
                 layer.msg('重载表格');
                 table.reload('tableAuth');
             });
+
+
         });
     });
 </script>

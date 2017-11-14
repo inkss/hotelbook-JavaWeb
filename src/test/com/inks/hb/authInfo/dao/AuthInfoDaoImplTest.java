@@ -22,14 +22,14 @@ public class AuthInfoDaoImplTest {
 
     @Test
     public void deleteAuthInfo() throws Exception {
-
-        dao.deleteAuthInfo(99);
+        for (int i = 20; i < 100; i++)
+            dao.deleteAuthInfo(i);
     }
 
     @Test
     public void updateAuthInfo() throws Exception {
 
-        AuthInfo authInfo = new AuthInfo(1,"测试数据AAA","0","1","1","0");
+        AuthInfo authInfo = new AuthInfo(1, "测试数据AAA", "0", "1", "1", "0");
 
         dao.updateAuthInfo(authInfo);
 
@@ -44,9 +44,9 @@ public class AuthInfoDaoImplTest {
     @Test
     public void query() throws Exception {
 
-        ArrayList<AuthInfo> list = dao.query(95,110);
+        ArrayList<AuthInfo> list = dao.query(95, 110);
 
-        for(AuthInfo authInfo : list)
+        for (AuthInfo authInfo : list)
             System.out.println(authInfo.toString());
     }
 
