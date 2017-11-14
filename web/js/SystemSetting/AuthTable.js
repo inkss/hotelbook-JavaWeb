@@ -85,7 +85,7 @@ layui.use(['util', 'layer', 'table'], function () {
                     }, function (IsWrite, index) {
                         layer.close(index);
                         layer.prompt({
-                            title: '请输入最低可读权限等级',
+                            title: '请输入最低可改权限等级',
                             formType: 0,
                             value: isChange,
                             offset: '220px',
@@ -129,8 +129,6 @@ layui.use(['util', 'layer', 'table'], function () {
         $('#refresh').click(function () {
             layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 1}});
-
-            layer.alert(countNum);
         });
 
         //新增
