@@ -19,8 +19,8 @@ import java.util.ArrayList;
 /**
  * 分页查询权限表
  */
-@WebServlet(value = "/QueryAuthInfoServlet", name = "/QueryAuthInfoServlet")
-public class QueryAuthInfoServlet extends HttpServlet {
+@WebServlet(value = "/AuthInfoServlet", name = "/AuthInfoServlet")
+public class AuthInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
@@ -40,7 +40,7 @@ public class QueryAuthInfoServlet extends HttpServlet {
         // 每页的数据量
         int limit = Integer.parseInt(request.getParameter("limit"));
 
-        // 状态标示 1：全部表格 2：搜索权限名称
+        // 状态标示 1：全部表格 2：搜索权限名称 3:修改
         int make = Integer.parseInt(request.getParameter("make"));
 
         // 调用service
@@ -65,6 +65,17 @@ public class QueryAuthInfoServlet extends HttpServlet {
                 list = new ArrayList<>();
                 list.add(authInfo);
                 count = "1";
+            } else if (make == 3) { //修改值
+                int authId = Integer.parseInt(request.getParameter("authId"));
+                String authItem = request.getParameter("authItem");
+                String isRead = request.getParameter("isRead");
+                String isWrite = request.getParameter("isWrite");
+                String isChange = request.getParameter("isChange");
+                String isDelete = request.getParameter("isDelete");
+                AuthInfo authInfo = new AuthInfo(authId,authItem,isRead,isWrite,isChange,isDelete);
+                service.updateAuthInfo(authInfo);
+                list = service.query(page, limit);
+                count = String.valueOf(service.queryAuthInfoNum());
             }
 
         } catch (SQLException e) {

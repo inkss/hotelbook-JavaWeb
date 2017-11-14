@@ -52,6 +52,8 @@ public interface AuthService {
      */
     ArrayList<AuthInfo> query(int page, int limit) throws SQLException;
 
+    void updateAuthInfo(AuthInfo authInfo) throws SQLException;
+
 
 
 }

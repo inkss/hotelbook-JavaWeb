@@ -45,4 +45,9 @@ public class AuthServiceImpl implements AuthService {
 
         return list;
     }
+
+    @Override
+    public void updateAuthInfo(AuthInfo authInfo) throws SQLException {
+        dao.updateAuthInfo(authInfo);
+    }
 }
