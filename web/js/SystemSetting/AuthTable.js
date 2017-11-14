@@ -1,13 +1,22 @@
+/**
+ * 权限表 全部完成
+ * 2017.11.15 1:33
+ */
 layui.use(['util', 'layer', 'table'], function () {
     $(document).ready(function () {
         //自动初始化表格
         var table = layui.table
             , layer = layui.layer
             , util = layui.util;
-
+        var countNum; //统计所有的数据量
         //方法级渲染
         var tableIns = table.render({
-            elem: '#tableAuth'  //绑定元素
+            done: function (res, curr, count) {
+                //回调函数
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                countNum = count;
+            }
+            , elem: '#tableAuth'  //绑定元素
             , id: 'tableAuth'  //表格容器索引
             , url: baseUrl + '/AuthInfoServlet' //数据接口
             , cols: [[  //表头
@@ -76,7 +85,7 @@ layui.use(['util', 'layer', 'table'], function () {
                     }, function (IsWrite, index) {
                         layer.close(index);
                         layer.prompt({
-                            title: '请输入最改可读权限等级',
+                            title: '请输入最低可读权限等级',
                             formType: 0,
                             value: isChange,
                             offset: '220px',
@@ -84,7 +93,7 @@ layui.use(['util', 'layer', 'table'], function () {
                         }, function (IsChange, index) {
                             layer.close(index);
                             layer.prompt({
-                                title: '请输入最改可删权限等级',
+                                title: '请输入最低可删权限等级',
                                 formType: 0,
                                 value: isDelete,
                                 offset: '220px',
@@ -120,6 +129,8 @@ layui.use(['util', 'layer', 'table'], function () {
         $('#refresh').click(function () {
             layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 1}});
+
+            layer.alert(countNum);
         });
 
         //新增
@@ -152,15 +163,26 @@ layui.use(['util', 'layer', 'table'], function () {
 
         //导出
         $('#toXls').click(function () {
+            //显示所有表格
+            tableIns.reload({where: {make: 1, limit: countNum}});
             layer.prompt({
                 title: '请输入文件名称',
                 formType: 0,
                 value: 'AuthInfo',
                 offset: '220px'
             }, function (fileName, index) {
+
                 layer.close(index);
-                layer.msg('ssss');
-                export_table_to_excel('tableAuth', fileName);
+                /**
+                 * 此处导出文件
+                 * 只能导出显示的文件
+                 */
+                export_table_to_excel('toxlsTable', fileName);
+                layer.alert('当前页面数据导出完成！', {
+                    title: '导出成功', icon: 6, anim: 1, offset: '250px'  //保持水平，自顶部向下偏移250像素
+                });
+                //刷新恢复
+                tableIns.reload({where: {make: 1}});
             });
         });
 

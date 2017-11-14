@@ -15,6 +15,9 @@
             margin: 10px;
         }
     </style>
+    <script src="../js/toExcel/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="../js/toExcel/FileSaver.js"></script>
+    <script type="text/javascript" src="../js/toExcel/Export2Excel.js"></script>
 </head>
 
 <body>
@@ -38,12 +41,12 @@
         <button class="layui-btn fa fa-pencil-square-o"> 新增</button>
     </div>
     <div class="layui-inline">
-        <button class="layui-btn fa fa-save"> 导出</button>
+        <button class="layui-btn fa fa-save" id="toXls"> 导出</button>
     </div>
 </div>
 <div class="layui-row">
-    <table class="layui-table"
-           lay-data="{height:500, url:'http://localhost:8080/QueryAuthInfoServlet', page:true, id:'tableAuth'}">
+    <table class="layui-table" id="table"
+           lay-data="{height:500,url:'http://localhost:8080/AuthInfoServlet', page:true, id:'tableAuth',where:{make:1}}">
         <thead>
         <tr>
             <th lay-data="{field:'authId', width:80, sort: true, fixed: true}">ID</th>
@@ -68,36 +71,24 @@
 <script src="../js/jquery.js"></script>
 
 <script>
-    layui.use(['util', 'layer'], function () {
+    layui.use(['util', 'layer', 'table'], function () {
         $(document).ready(function () {
 
             var table = layui.table;
 
-            //监听工具条
-            table.on('tool', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
-                var data = obj.data //获得当前行数据
-                    , layEvent = obj.event; //获得 lay-event 对应的值
-                if (layEvent === 'detail') {
-                    layer.msg('查看操作' + data.authItem);
-                } else if (layEvent === 'del') {
-                    layer.alert('本条目禁止删除！',
-                        {
-                            title: '警告',
-                            icon: 4,
-                            anim: 6
+            //导出
+            $('#toXls').click(function () {
+                layer.prompt({
+                    title: '请输入文件名称',
+                    formType: 0,
+                    value: 'AuthInfo',
+                    offset: '220px'
+                }, function (fileName, index) {
+                    layer.close(index);
+                    export_table_to_excel('tableAuth',fileName);
 
-                        });
-                } else if (layEvent === 'edit') {
-
-                }
+                });
             });
-
-            //刷新
-            $('#refresh').click(function () {
-                layer.msg('重载表格');
-                table.reload('tableAuth');
-            });
-
 
         });
     });

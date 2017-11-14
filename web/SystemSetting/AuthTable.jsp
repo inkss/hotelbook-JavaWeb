@@ -10,8 +10,8 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/toExcel/xlsx.full.min.js"></script>
-    <script src="../js/toExcel/FileSaver.js"></script>
-    <script src="../js/toExcel/Export2Excel.js"></script>
+    <script type="text/javascript" src="../js/toExcel/FileSaver.js"></script>
+    <script type="text/javascript" src="../js/toExcel/Export2Excel.js"></script>
     <style>
         body {
             margin: 10px;
@@ -50,9 +50,10 @@
     </legend>
 </fieldset>
 
-
-<%--方法级渲染表格--%>
-<table id="tableAuth"></table>
+<div id="toxlsTable">
+    <%--方法级渲染表格--%>
+    <table id="tableAuth"></table>
+</div>
 
 <script type="text/html" id="barAuth">
     <a class="layui-btn layui-btn-primary layui-btn-mini" lay-event="detail">查看</a>
