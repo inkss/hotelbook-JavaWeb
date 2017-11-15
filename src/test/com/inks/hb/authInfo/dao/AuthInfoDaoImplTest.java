@@ -14,7 +14,7 @@ public class AuthInfoDaoImplTest {
     @Test
     public void insertAuthInfo() throws Exception {
 
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 100; i++) {
             authInfo = new AuthInfo(i, "测试数据" + i, "1", "1", "1", "1");
             dao.insertAuthInfo(authInfo);
         }

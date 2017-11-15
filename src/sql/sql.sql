@@ -22,7 +22,7 @@ INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAd
 
 -- 楼层信息
 CREATE TABLE `hotelbook`.`floorInfo` (
-  `floorId` INT NOT NULL COMMENT '楼层编号',
+  `floorId` INT NOT NULL AUTO_INCREMENT COMMENT '楼层编号',
   `floorName` VARCHAR(45) NULL COMMENT '楼层名称',
   PRIMARY KEY (`floorId`));
 

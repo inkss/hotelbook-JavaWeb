@@ -170,7 +170,7 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
 
         ArrayList<AuthInfo> list = new ArrayList<>();
 
-        AuthInfo authInfo = null;
+        AuthInfo authInfo;
 
         while (rs.next()) {
             authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)

@@ -5,9 +5,7 @@ import com.inks.hb.login.pojo.Login;
 import java.sql.SQLException;
 
 /**
- * LoginDao函数表
- * -------------
- * 1. Login queryByName(String loginName)
+ * LoginDao
  */
 public interface LoginDao {
 

@@ -6,13 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * AuthInfoDao函数表
- * -------------
- * 1. void insertAuthInfo(AuthInfo authInfo)
- * 2. void deleteAuthInfo(int authId)
- * 3. void updateAuthInfo(AuthInfo authInfo)
- * 4. int queryAuthInfoNum()
- * 5. ArrayList<AuthInfo> query(int start, int length)
+ * AuthInfoDao
  */
 public interface AuthInfoDao {
 

@@ -5,10 +5,7 @@ import com.inks.hb.login.pojo.Login;
 import java.sql.SQLException;
 
 /**
- * LoginService函数表
- * -------------
- * 1. int queryByName(String name, String pwd)
- * 2. Login queryLogin(String name)
+ * LoginService
  */
 public interface LoginService {
 

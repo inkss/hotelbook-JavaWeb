@@ -12,6 +12,8 @@
       <w>dbpassword</w>
       <w>dburl</w>
       <w>dbuser</w>
+      <w>expeditedssl</w>
+      <w>gson</w>
       <w>hotelbook</w>
       <w>inkss</w>
       <w>laydate</w>
@@ -27,6 +29,7 @@
       <w>noninfringement</w>
       <w>onbeforeunload</w>
       <w>pojoto</w>
+      <w>pstms</w>
       <w>pstmt</w>
       <w>quan</w>
       <w>rometype</w>

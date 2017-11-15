@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.inks.hb.authInfo.pojo.AuthInfo;
 import com.inks.hb.authInfo.service.AuthService;
 import com.inks.hb.authInfo.service.AuthServiceImpl;
-import com.inks.hb.common.PojotoJson;
+import com.inks.hb.common.PojotoGson;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +18,12 @@ import java.util.ArrayList;
 
 /**
  * 分页查询权限表
+ * 通过前端传入的make标志，本servlet完成了三项功能：
+ * 1. make = 1 返回指定范围内的表信息
+ * 2. make = 2 根据权限名称返回查询结果 一条数据
+ * 3. make = 3 根据权限ID修改权限属性值 返回修改前数据
+ * 如查询过程中出现异常，统一返回'数据查询出现异常'
+ * 返回数据为pojotoGson类型
  */
 @WebServlet(value = "/AuthInfoServlet", name = "/AuthInfoServlet")
 public class AuthInfoServlet extends HttpServlet {
@@ -57,6 +63,7 @@ public class AuthInfoServlet extends HttpServlet {
             if (make == 1) {  //初始化表格
                 list = service.query(page, limit);
                 count = String.valueOf(service.queryAuthInfoNum());
+
             } else if (make == 2) {  //重载表格
                 // 权限名称
                 String authItem = request.getParameter("authItem");
@@ -72,20 +79,19 @@ public class AuthInfoServlet extends HttpServlet {
                 String isWrite = request.getParameter("isWrite");
                 String isChange = request.getParameter("isChange");
                 String isDelete = request.getParameter("isDelete");
-                AuthInfo authInfo = new AuthInfo(authId,authItem,isRead,isWrite,isChange,isDelete);
+                AuthInfo authInfo = new AuthInfo(authId, authItem, isRead, isWrite, isChange, isDelete);
                 service.updateAuthInfo(authInfo);
                 list = service.query(page, limit);
                 count = String.valueOf(service.queryAuthInfoNum());
             }
-
         } catch (SQLException e) {
             code = "1";
             msg = "数据查询出现异常";
             e.printStackTrace();
         } finally {
-            PojotoJson pojotoJson = new PojotoJson(code, msg, count, list);
+            PojotoGson pojotoGson = new PojotoGson(code, msg, count, list);
             Gson gson = new Gson();
-            out.print(gson.toJson(pojotoJson));
+            out.print(gson.toJson(pojotoGson));
         }
     }
 }

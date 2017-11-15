@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * 最主要用途是包装ArrayList的各个pojo对象
  *
  */
-public class PojotoJson {
+public class PojotoGson {
 
     private String code; //数据状态字段
 
@@ -17,7 +17,7 @@ public class PojotoJson {
 
     private ArrayList data; //数据
 
-    public PojotoJson(String code, String msg, String count, ArrayList data) {
+    public PojotoGson(String code, String msg, String count, ArrayList data) {
         this.code = code;
         this.msg = msg;
         this.count = count;
