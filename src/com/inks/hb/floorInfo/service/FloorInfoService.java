@@ -20,4 +20,8 @@ public interface FloorInfoService {
     FloorInfo query(String floorName) throws SQLException;
 
     int queryFloorInfoNum() throws SQLException;
+
+    void updateFloorInfo(FloorInfo floorInfo) throws SQLException;
+
+    void deleteFloorInfo(int floorId) throws SQLException;
 }

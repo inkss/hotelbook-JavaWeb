@@ -17,4 +17,8 @@ public interface FloorInfoDao {
     ArrayList<FloorInfo> query(int start, int length) throws SQLException;
 
     int queryFloorInfoNum() throws SQLException;
+
+    void updateFloorInfo(FloorInfo floorInfo) throws SQLException;
+
+    void deleteFloorInfo(int floorId) throws SQLException;
 }

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 /**
  * 与表格相关的全部操作
  */
-@WebServlet(name = "/FloorInfoServlet",value = "/FloorInfoServlet")
+@WebServlet(name = "/FloorInfoServlet", value = "/FloorInfoServlet")
 public class FloorInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
@@ -40,7 +40,7 @@ public class FloorInfoServlet extends HttpServlet {
         // 每页的数据量
         int limit = Integer.parseInt(request.getParameter("limit"));
 
-        // 状态标示 make 0重载 1新增 2修改 3搜索
+        // 状态标示 make 0重载 1新增 2修改 3搜索 4删除
         int make = Integer.parseInt(request.getParameter("make"));
 
         // 调用service
@@ -54,15 +54,41 @@ public class FloorInfoServlet extends HttpServlet {
         try {
             code = "0";
             msg = "数据查询正常";
-            if (make == 0) {  //初始化表格
-                list = service.query(page, limit);
-                count = String.valueOf(service.queryFloorInfoNum());
-            } else if (make == 1) {  //新增
-                // 权限名称
-                String floorName = request.getParameter("floorName");
-                service.insertFloorInfo(floorName);
-                list = service.query(page, limit);
-                count = String.valueOf(service.queryFloorInfoNum());
+            int floorId;
+            String floorName;
+            FloorInfo floorInfo;
+            switch (make) {
+                case 0:
+                    list = service.query(page, limit);
+                    count = String.valueOf(service.queryFloorInfoNum());
+                    break;
+                case 1:
+                    floorName = request.getParameter("floorName");
+                    service.insertFloorInfo(floorName);
+                    list = service.query(page, limit);
+                    count = String.valueOf(service.queryFloorInfoNum());
+                    break;
+                case 2:
+                    floorId = Integer.parseInt(request.getParameter("floorId"));
+                    floorName = request.getParameter("floorName");
+                    floorInfo = new FloorInfo(floorId, floorName);
+                    service.updateFloorInfo(floorInfo);
+                    list = service.query(page, limit);
+                    count = String.valueOf(service.queryFloorInfoNum());
+                    break;
+                case 3:
+                    floorName = request.getParameter("floorName");
+                    floorInfo = service.query(floorName);
+                    list = new ArrayList<>();
+                    list.add(floorInfo);
+                    count = "1";
+                    break;
+                case 4:
+                    floorId = Integer.parseInt(request.getParameter("floorId"));
+                    service.deleteFloorInfo(floorId);
+                    list = service.query(page, limit);
+                    count = String.valueOf(service.queryFloorInfoNum());
+                    break;
             }
         } catch (SQLException e) {
             code = "1";

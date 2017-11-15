@@ -1,6 +1,6 @@
 /**
  * 公共模板部分，自制模板修改
- * 规定：make 0重载 1新增 2修改 3搜索
+ * 规定：make 0重载 1新增 2修改 3搜索 4删除
  *
  * 这个模板来自权限表的jsp与js,因为大体类似，前端完全可以参照同一结构
  * 所以将一些变量名换成了与具体项无关的名称，需要修改的部分通过注释注明
@@ -37,10 +37,12 @@ layui.use(['util', 'layer', 'table'], function () {
         table.on('tool', function (obj) {
             var data = obj.data
                 , layEvent = obj.event;
+            var floorId = data.floorId;
+            var floorName = data.floorName;
 
             if (layEvent === 'detail') {                         // <--------------------------------模板修改：查看按钮
-                layer.alert('ID：' + data.floorId
-                    + '<br>楼层名称：' + data.floorName
+                layer.alert('ID：' + floorId
+                    + '<br>楼层名称：' + floorName
                     , {
                         skin: 'layui-layer-lan'
                         , closeBtn: 0
@@ -48,19 +50,41 @@ layui.use(['util', 'layer', 'table'], function () {
                         , anim: 4
                         , offset: '180px'
                     });
-
-
-
             } else if (layEvent === 'del') {                     // <--------------------------------模板修改：删除按钮
-                layer.alert('本条目禁止删除！', {
-                    title: '警告', icon: 4, anim: 6, offset: '250px'
+                layer.confirm('您确定要删除该条数据吗？', {
+                    offset: '180px',
+                    btn: ['是滴', '手滑'] //按钮
+                }, function () {
+                    table.reload('tableID', {
+                        where: {
+                            make: 4,
+                            floorId: floorId
+                        }
+                    });
+                    layer.msg('删除成功', {offset: '250px', icon: 1});
+
+                }, function () {
+                    layer.msg('删除操作已取消', {offset: '250px'});
                 });
 
-
-
             } else if (layEvent === 'edit') {                    // <--------------------------------模板修改：编辑按钮
-                var floorId = data.floorId;
-                var floorName = data.floorName;
+                layer.prompt({
+                    title: '请输入楼层名称',
+                    formType: 0,
+                    value: floorName,
+                    offset: '220px',
+                    maxlength: 10
+                }, function (value, index) {
+                    layer.close(index);
+                    table.reload('tableID', {
+                        where: {
+                            make: 2,
+                            floorId: floorId,
+                            floorName: value
+                        }
+                    });
+                    layer.msg('修改成功', {offset: '250px'});
+                });
 
             }
         });
@@ -77,7 +101,7 @@ layui.use(['util', 'layer', 'table'], function () {
                 table.reload('tableID', {
                     where: {                                     // <------------------------------模板修改：修改搜索的传参值
                         make: 3,
-                        authItem: inputTxt
+                        floorName: inputTxt
                     }
                 })
             }

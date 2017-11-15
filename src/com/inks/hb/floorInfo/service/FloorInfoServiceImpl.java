@@ -53,4 +53,14 @@ public class FloorInfoServiceImpl implements FloorInfoService {
 
         return dao.queryFloorInfoNum();
     }
+
+    @Override
+    public void updateFloorInfo(FloorInfo floorInfo) throws SQLException {
+        dao.updateFloorInfo(floorInfo);
+    }
+
+    @Override
+    public void deleteFloorInfo(int floorId) throws SQLException {
+        dao.deleteFloorInfo(floorId);
+    }
 }

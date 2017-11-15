@@ -102,4 +102,36 @@ public class FloorInfoDaoImpl implements FloorInfoDao {
 
         return num;
     }
+
+    @Override
+    public void updateFloorInfo(FloorInfo floorInfo) throws SQLException {
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "UPDATE floorInfo SET floorName = ?  WHERE floorId = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setString(1, floorInfo.getFloorName());
+        ps.setInt(2,floorInfo.getFloorId());
+
+        ps.executeUpdate();
+
+        ps.close();
+    }
+
+    @Override
+    public void deleteFloorInfo(int floorId) throws SQLException {
+
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "DELETE FROM floorInfo WHERE floorId = ?";
+
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setInt(1,floorId);
+
+        ps.executeUpdate();
+
+        ps.close();
+    }
 }
