@@ -51,10 +51,10 @@ public class CommonFilter implements Filter {
         if (!url.equals("/") && check) {
             // 判断session中此值是否存在
             if (session.getAttribute("LoginName") != null) {
-                System.out.println("---->通过】\n");
+                System.out.println("---->通过】");
                 chain.doFilter(request, response); //放行
             } else {
-                System.out.println("---->未通过!】\n");
+                System.out.println("---->未通过!】");
                 response.sendRedirect("/"); //跳转回根目录
             }
         } else {

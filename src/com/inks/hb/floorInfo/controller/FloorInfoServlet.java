@@ -61,20 +61,24 @@ public class FloorInfoServlet extends HttpServlet {
                 case 0:
                     list = service.query(page, limit);
                     count = String.valueOf(service.queryFloorInfoNum());
+                    System.out.println("===> 楼层信息：重载表格");
                     break;
                 case 1:
                     floorName = request.getParameter("floorName");
                     service.insertFloorInfo(floorName);
                     list = service.query(page, limit);
                     count = String.valueOf(service.queryFloorInfoNum());
+                    System.out.println("===> 楼层信息：新增表格数据");
                     break;
                 case 2:
                     floorId = Integer.parseInt(request.getParameter("floorId"));
                     floorName = request.getParameter("floorName");
                     floorInfo = new FloorInfo(floorId, floorName);
+                    System.out.println(floorInfo.toString());
                     service.updateFloorInfo(floorInfo);
                     list = service.query(page, limit);
                     count = String.valueOf(service.queryFloorInfoNum());
+                    System.out.println("===> 楼层信息：修改表格数据");
                     break;
                 case 3:
                     floorName = request.getParameter("floorName");
@@ -82,12 +86,14 @@ public class FloorInfoServlet extends HttpServlet {
                     list = new ArrayList<>();
                     list.add(floorInfo);
                     count = "1";
+                    System.out.println("===> 楼层信息：搜索表格数据");
                     break;
                 case 4:
                     floorId = Integer.parseInt(request.getParameter("floorId"));
                     service.deleteFloorInfo(floorId);
                     list = service.query(page, limit);
                     count = String.valueOf(service.queryFloorInfoNum());
+                    System.out.println("===> 楼层信息：删除表格数据");
                     break;
             }
         } catch (SQLException e) {

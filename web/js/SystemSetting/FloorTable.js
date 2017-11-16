@@ -68,6 +68,11 @@ layui.use(['util', 'layer', 'table'], function () {
                 });
 
             } else if (layEvent === 'edit') {                    // <--------------------------------模板修改：编辑按钮
+
+                //修改部分存在BUG
+                //1.为空值
+                //2.为已经存在的值
+
                 layer.prompt({
                     title: '请输入楼层名称',
                     formType: 0,
@@ -83,9 +88,7 @@ layui.use(['util', 'layer', 'table'], function () {
                             floorName: value
                         }
                     });
-                    layer.msg('修改成功', {offset: '250px'});
                 });
-
             }
         });
 
@@ -128,7 +131,7 @@ layui.use(['util', 'layer', 'table'], function () {
                                 make: 1,
                                 floorName: inputValue
                             }
-                        })
+                        });
                         layer.msg('新增楼层成功', {offset: '250px'});
                     } else {
                         layer.alert('该楼层名称已经存在！', {

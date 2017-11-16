@@ -33,9 +33,9 @@ public class FloorInfo {
 
     @Override
     public String toString() {
-        return "\n--->FloorInfo对象信息输出：" +
+        return "--->FloorInfo对象信息输出：" +
                 "\n floorId = " + floorId +
                 "\n floorName = " + floorName +
-                "\n--->FloorInfo信息输出结束\n";
+                "\n--->FloorInfo信息输出结束";
     }
 }
