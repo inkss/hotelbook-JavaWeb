@@ -41,6 +41,8 @@ layui.use(['util', 'layer', 'table'], function () {
             var floorName = data.floorName;
 
             if (layEvent === 'detail') {                         // <--------------------------------模板修改：查看按钮
+                //查看
+
                 layer.alert('ID：' + floorId
                     + '<br>楼层名称：' + floorName
                     , {
@@ -51,6 +53,8 @@ layui.use(['util', 'layer', 'table'], function () {
                         , offset: '180px'
                     });
             } else if (layEvent === 'del') {                     // <--------------------------------模板修改：删除按钮
+                //删除
+
                 layer.confirm('您确定要删除该条数据吗？', {
                     offset: '180px',
                     btn: ['是滴', '手滑'] //按钮
@@ -68,10 +72,13 @@ layui.use(['util', 'layer', 'table'], function () {
                 });
 
             } else if (layEvent === 'edit') {                    // <--------------------------------模板修改：编辑按钮
+                //编辑
+
 
                 //修改部分存在BUG
                 //1.为空值
                 //2.为已经存在的值
+
 
                 layer.prompt({
                     title: '请输入楼层名称',
@@ -81,17 +88,29 @@ layui.use(['util', 'layer', 'table'], function () {
                     maxlength: 10
                 }, function (value, index) {
                     layer.close(index);
-                    table.reload('tableID', {
-                        where: {
-                            make: 2,
-                            floorId: floorId,
-                            floorName: value
+
+                    var NewfloorName = "floorName=" + value;
+                    $.post(baseUrl + '/QueryFloorNameServlet', NewfloorName, function updateCheck(data) {
+                        if (data == 1) {
+                            table.reload('tableID', {
+                                where: {
+                                    make: 2,
+                                    floorId: floorId,
+                                    floorName: value
+                                }
+                            });
+                            layer.msg('修改楼层成功', {offset: '250px'});
+                        } else {
+                            layer.alert('该楼层名称已经存在！', {
+                                title: '警告', icon: 4, anim: 6, offset: '220px'
+                            });
                         }
                     });
                 });
             }
         });
 
+        //搜索
         $('#searchButton').click(function () {
             var inputTxt = $('#inputSearch').val();
             if (inputTxt == "")
@@ -110,11 +129,13 @@ layui.use(['util', 'layer', 'table'], function () {
             }
         });
 
+        //刷新
         $('#refreshButton').click(function () {
             layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 0}});
         });
 
+        //新增
         $('#insertButton').click(function () {
             layer.prompt({
                 title: '请输入楼层名称',
@@ -124,7 +145,7 @@ layui.use(['util', 'layer', 'table'], function () {
             }, function (inputValue, index) {
                 layer.close(index);
                 var params = "floorName=" + inputValue;
-                $.post(baseUrl + '/QueryFloorNameServlet', params, function (data) {
+                $.post(baseUrl + '/QueryFloorNameServlet', params, function insertCheck(data) {
                     if (data == 1) {
                         table.reload('tableID', {
                             where: {
@@ -142,6 +163,7 @@ layui.use(['util', 'layer', 'table'], function () {
             });
         });
 
+        //导出
         $('#toXlsButton').click(function () {
             tableIns.reload({where: {make: 0, limit: countNum}});
             layer.prompt({
@@ -159,6 +181,7 @@ layui.use(['util', 'layer', 'table'], function () {
             });
         });
 
+        //回到顶端
         util.fixbar({
             showHeight: 2
             , click: function (type) {

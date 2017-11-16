@@ -46,7 +46,7 @@ public class AuthInfoServlet extends HttpServlet {
         // 每页的数据量
         int limit = Integer.parseInt(request.getParameter("limit"));
 
-        // 状态标示 1：全部表格 2：搜索权限名称 3:修改
+        // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
         int make = Integer.parseInt(request.getParameter("make"));
 
         // 调用service
@@ -60,11 +60,11 @@ public class AuthInfoServlet extends HttpServlet {
         try {
             code = "0";
             msg = "数据查询正常";
-            if (make == 1) {  //初始化表格
+            if (make == 0) {  //初始化表格
                 list = service.query(page, limit);
                 count = String.valueOf(service.queryAuthInfoNum());
 
-            } else if (make == 2) {  //重载表格
+            } else if (make == 3) {  //搜索表格
                 // 权限名称
                 String authItem = request.getParameter("authItem");
                 AuthInfo authInfo = service.query(authItem);
@@ -72,7 +72,7 @@ public class AuthInfoServlet extends HttpServlet {
                 list = new ArrayList<>();
                 list.add(authInfo);
                 count = "1";
-            } else if (make == 3) { //修改值
+            } else if (make == 2) { //修改值
                 int authId = Integer.parseInt(request.getParameter("authId"));
                 String authItem = request.getParameter("authItem");
                 String isRead = request.getParameter("isRead");

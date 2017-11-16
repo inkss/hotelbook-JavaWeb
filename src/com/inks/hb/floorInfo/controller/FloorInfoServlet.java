@@ -40,7 +40,7 @@ public class FloorInfoServlet extends HttpServlet {
         // 每页的数据量
         int limit = Integer.parseInt(request.getParameter("limit"));
 
-        // 状态标示 make 0重载 1新增 2修改 3搜索 4删除
+        // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
         int make = Integer.parseInt(request.getParameter("make"));
 
         // 调用service
@@ -74,7 +74,6 @@ public class FloorInfoServlet extends HttpServlet {
                     floorId = Integer.parseInt(request.getParameter("floorId"));
                     floorName = request.getParameter("floorName");
                     floorInfo = new FloorInfo(floorId, floorName);
-                    System.out.println(floorInfo.toString());
                     service.updateFloorInfo(floorInfo);
                     list = service.query(page, limit);
                     count = String.valueOf(service.queryFloorInfoNum());

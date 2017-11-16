@@ -32,7 +32,7 @@ layui.use(['util', 'layer', 'table'], function () {
             ]]
             , page: true  //是否开启分页
             , where: {
-                make: 1 //make,此值将传入到servlet，根据值判断当前需要从后端获取的内容
+                make: 0 //make,此值将传入到servlet，根据值判断当前需要从后端获取的内容
             }
         });
 
@@ -107,7 +107,7 @@ layui.use(['util', 'layer', 'table'], function () {
                                     //传数据
                                     table.reload('tableAuth', {
                                         where: {
-                                            make: 3,
+                                            make: 2,
                                             authId: authId,
                                             authItem: authItem,
                                             isRead: IsRead,
@@ -128,7 +128,7 @@ layui.use(['util', 'layer', 'table'], function () {
         //刷新
         $('#refresh').click(function () {
             layer.msg('重载表格', {offset: '250px'});
-            tableIns.reload({where: {make: 1}});
+            tableIns.reload({where: {make: 0}});
         });
 
         //新增
@@ -151,7 +151,7 @@ layui.use(['util', 'layer', 'table'], function () {
                 //与tableIns.reload方法类似，这种方法是取表格容器索引值
                 table.reload('tableAuth', {
                     where: {
-                        make: 2,
+                        make: 3,
                         authItem: authItem
                     }
                 })
@@ -162,7 +162,7 @@ layui.use(['util', 'layer', 'table'], function () {
         //导出
         $('#toXls').click(function () {
             //显示所有表格
-            tableIns.reload({where: {make: 1, limit: countNum}});
+            tableIns.reload({where: {make: 0, limit: countNum}});
             layer.prompt({
                 title: '请输入文件名称',
                 formType: 0,
@@ -180,7 +180,7 @@ layui.use(['util', 'layer', 'table'], function () {
                     title: '导出成功', icon: 6, anim: 1, offset: '250px'  //保持水平，自顶部向下偏移250像素
                 });
                 //刷新恢复
-                tableIns.reload({where: {make: 1}});
+                tableIns.reload({where: {make: 0}});
             });
         });
 
