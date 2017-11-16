@@ -21,6 +21,8 @@ public interface FloorInfoService {
 
     int queryFloorInfoNum() throws SQLException;
 
+    int queryRepeat(String floorName) throws SQLException;
+
     void updateFloorInfo(FloorInfo floorInfo) throws SQLException;
 
     void deleteFloorInfo(int floorId) throws SQLException;

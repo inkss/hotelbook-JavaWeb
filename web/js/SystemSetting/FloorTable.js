@@ -79,6 +79,9 @@ layui.use(['util', 'layer', 'table'], function () {
                 //1.为空值
                 //2.为已经存在的值
 
+                //23:52 Bug修复
+
+                console.log('==================================');
 
                 layer.prompt({
                     title: '请输入楼层名称',
@@ -89,8 +92,16 @@ layui.use(['util', 'layer', 'table'], function () {
                 }, function (value, index) {
                     layer.close(index);
 
+                    console.log("floorName===>" + value + " floorId===>" + floorId);
+
                     var NewfloorName = "floorName=" + value;
+
+                    console.log("NewfloorName===>" + NewfloorName);
+
                     $.post(baseUrl + '/QueryFloorNameServlet', NewfloorName, function updateCheck(data) {
+
+                        console.log("data=" + data);
+
                         if (data == 1) {
                             table.reload('tableID', {
                                 where: {
@@ -105,6 +116,7 @@ layui.use(['util', 'layer', 'table'], function () {
                                 title: '警告', icon: 4, anim: 6, offset: '220px'
                             });
                         }
+                        console.log('==================================');
                     });
                 });
             }

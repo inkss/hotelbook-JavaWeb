@@ -55,6 +55,17 @@ public class FloorInfoServiceImpl implements FloorInfoService {
     }
 
     @Override
+    public int queryRepeat(String floorName) throws SQLException {
+
+        FloorInfo floorInfo = dao.query(floorName);
+
+        if (floorInfo.getFloorId() != 0) //表示存在同名项
+            return 0;
+        else
+            return 1;
+    }
+
+    @Override
     public void updateFloorInfo(FloorInfo floorInfo) throws SQLException {
         dao.updateFloorInfo(floorInfo);
     }

@@ -39,7 +39,7 @@ public class QueryFloorNameServlet extends HttpServlet {
         String floorName = request.getParameter("floorName");
 
         try {
-            int check = service.insertFloorInfo(floorName);
+            int check = service.queryRepeat(floorName);
             // 转换为json字符串格式
             Gson gson = new Gson();
             out.print(gson.toJson(check));
