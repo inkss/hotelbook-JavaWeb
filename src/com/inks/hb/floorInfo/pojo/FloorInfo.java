@@ -1,10 +1,13 @@
 package com.inks.hb.floorInfo.pojo;
 
+/**
+ * 楼层信息
+ */
 public class FloorInfo {
 
-    private int floorId;
+    private int floorId; //楼层编号
 
-    private String floorName;
+    private String floorName; //楼层名称
 
     public FloorInfo() {
         super();

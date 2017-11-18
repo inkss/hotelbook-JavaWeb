@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 /**
  * 与表格相关的全部操作
+ * 状态标志： make 0重载 1新增 2修改 3搜索 4删除
  */
 @WebServlet(name = "/FloorInfoServlet", value = "/FloorInfoServlet")
 public class FloorInfoServlet extends HttpServlet {

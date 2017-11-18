@@ -14,7 +14,6 @@ public class FloorInfoServiceImpl implements FloorInfoService {
     @Override
     public int insertFloorInfo(String floorName) throws SQLException {
 
-        //数据判断交由前端
         FloorInfo floorInfo = dao.query(floorName);
 
         if (floorInfo.getFloorId() != 0) //表示存在同名项
