@@ -40,15 +40,7 @@ public class DBUtil {
             conn = dataSource.getConnection();
             // 设置到threadLocal中
             threadLocal.set(conn);
-
-            // 测试语句
-            //System.out.println("连接池取出连接：" + conn);
         }
-
-        // 测试语句
-        //System.out.println("当前数据库连接：" + conn + "\n剩余空闲连接数=" + dataSource.getNumIdleConnections() + "\n总连接数＝" + dataSource.getNumConnections());
-
-
         return conn;
     }
 
