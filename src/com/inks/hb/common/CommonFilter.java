@@ -42,19 +42,19 @@ public class CommonFilter implements Filter {
             check = false;
 
         // 测试语句
-        if (check) {
-            System.out.println("当前请求：" + url);
-            System.out.printf("===> 【过滤判定：");
-        }
+//        if (check) {
+//            System.out.println("当前请求：" + url);
+//            System.out.printf("===> 【过滤判定：");
+//        }
 
 
         if (!url.equals("/") && check) {
             // 判断session中此值是否存在
             if (session.getAttribute("LoginName") != null) {
-                System.out.println("---->通过】");
+                //System.out.println("---->通过】");
                 chain.doFilter(request, response); //放行
             } else {
-                System.out.println("---->未通过!】");
+                //System.out.println("---->未通过!】");
                 response.sendRedirect("/"); //跳转回根目录
             }
         } else {

@@ -46,6 +46,10 @@ public class FloorInfoDaoImpl implements FloorInfoDao {
         if (floorInfo == null)
             floorInfo = new FloorInfo();
 
+        rs.close();
+
+        pstms.close();
+
         return floorInfo;
     }
 

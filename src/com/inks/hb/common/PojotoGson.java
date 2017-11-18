@@ -23,4 +23,14 @@ public class PojotoGson {
         this.count = count;
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "PojotoGson{" +
+                "code='" + code + '\'' +
+                ", msg='" + msg + '\'' +
+                ", count='" + count + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

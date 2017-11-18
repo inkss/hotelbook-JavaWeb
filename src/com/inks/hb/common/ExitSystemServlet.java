@@ -44,7 +44,7 @@ public class ExitSystemServlet extends HttpServlet {
         response.addCookie(cookie);
 
         if (session.getAttribute("LoginName") != null) {
-            System.out.println("已清除---> LoginName的session值\n");
+            //System.out.println("已清除---> LoginName的session值\n");
             session.removeAttribute("LoginName");
 
         }

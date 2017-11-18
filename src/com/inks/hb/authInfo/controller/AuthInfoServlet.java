@@ -68,7 +68,7 @@ public class AuthInfoServlet extends HttpServlet {
                 // 权限名称
                 String authItem = request.getParameter("authItem");
                 AuthInfo authInfo = service.query(authItem);
-                System.out.println(authInfo.toString());
+                //System.out.println(authInfo.toString());
                 list = new ArrayList<>();
                 list.add(authInfo);
                 count = "1";

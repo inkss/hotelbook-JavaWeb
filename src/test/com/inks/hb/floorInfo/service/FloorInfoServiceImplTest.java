@@ -12,19 +12,27 @@ public class FloorInfoServiceImplTest {
     FloorInfoService service = new FloorInfoServiceImpl();
 
     @Test
-    public void insertFloorInfo() throws Exception {
+    public void insertFloorInfo() {
 
         String a = "测试Ａ";
-        System.out.println(service.insertFloorInfo(a));
+        try {
+            System.out.println(service.insertFloorInfo(a));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
-    public void updateFloorInfo() throws SQLException {
+    public void updateFloorInfo()  {
         String a = "哔哩哔哩";
         int id = 21;
 
         FloorInfo floorInfo = new FloorInfo(id,a);
-        service.updateFloorInfo(floorInfo);
+        try {
+            service.updateFloorInfo(floorInfo);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }
