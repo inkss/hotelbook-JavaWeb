@@ -10,51 +10,23 @@
 
 * 编辑器：IntelliJ IDEA 2017.0.5
 
-## 二、数据库
+## 二、搭建
 
-### 2.1 数据库ER图
+## 三、介绍
 
-![](./markdown/hotelbook-ER.png)
+## 四、截图
 
-### 2.2 数据库建库脚本
+* 登录界面：
 
-建库sql语句：[SQL脚本](./src/sql/sql.sql)
+    ![登录界面](./markdown/登录界面.png)
+    
+* 主页：
 
-## 三、项目结构
+    ![主页](./markdown/主页.png)
+    
+* 系统设置：
 
-    hotelbook-JavaWeb
-     |-- .idea
-     |-- lib
-     |-- markdown
-     |-- out
-          |-- artifacts
-               |-- hotelbook_JavaWeb_Web
-          |-- production
-               |-- hotelbook-JavaWeb
-     |-- src
-          |-- com
-               |-- inks
-                    |-- hb
-                         |-- common
-                         |-- login
-                              |-- controller
-                              |-- dao
-                              |-- pojo
-                              |-- service
-          |-- resources
-          |-- sql
-          |-- test
-     |-- web
-          |-- img
-          |-- js
-          |-- layui
-          |-- login
-          |-- MAIN
-          |-- WEB-INF
-          |-- index.jsp
-     |-- hotelbook-JavaWeb.iml
-     |-- README.md
+    ![系统设置](./markdown/系统设置.png)
 
-## 四、项目介绍
 
 > 待更新..
