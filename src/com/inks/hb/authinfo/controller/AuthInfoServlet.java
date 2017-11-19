@@ -1,9 +1,9 @@
-package com.inks.hb.authInfo.controller;
+package com.inks.hb.authinfo.controller;
 
 import com.google.gson.Gson;
-import com.inks.hb.authInfo.pojo.AuthInfo;
-import com.inks.hb.authInfo.service.AuthService;
-import com.inks.hb.authInfo.service.AuthServiceImpl;
+import com.inks.hb.authinfo.pojo.AuthInfo;
+import com.inks.hb.authinfo.service.AuthService;
+import com.inks.hb.authinfo.service.AuthServiceImpl;
 import com.inks.hb.common.PojotoGson;
 
 import javax.servlet.ServletException;
@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 分页查询权限表
@@ -55,7 +56,7 @@ public class AuthInfoServlet extends HttpServlet {
         String code = ""; //状态码
         String msg = ""; //状态信息
         String count = ""; //数据总数
-        ArrayList<AuthInfo> list = null; //数据内容
+        List<AuthInfo> list = null; //数据内容
 
         try {
             code = "0";
@@ -68,7 +69,7 @@ public class AuthInfoServlet extends HttpServlet {
                 // 权限名称
                 String authItem = request.getParameter("authItem");
                 AuthInfo authInfo = service.query(authItem);
-                //System.out.println(authInfo.toString());
+                //System.out.println(authinfo.toString());
                 list = new ArrayList<>();
                 list.add(authInfo);
                 count = "1";

@@ -1,15 +1,14 @@
-package com.inks.hb.floorInfo.controller;
+package com.inks.hb.floorinfo.controller;
 
 import com.google.gson.Gson;
-import com.inks.hb.floorInfo.service.FloorInfoService;
-import com.inks.hb.floorInfo.service.FloorInfoServiceImpl;
+import com.inks.hb.floorinfo.service.FloorInfoService;
+import com.inks.hb.floorinfo.service.FloorInfoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

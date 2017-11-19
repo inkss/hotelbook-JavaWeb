@@ -1,4 +1,4 @@
-package com.inks.hb.billInfo.pojo;
+package com.inks.hb.billinfo.pojo;
 
 public class BillInfo {
 

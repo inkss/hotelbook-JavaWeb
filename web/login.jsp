@@ -81,22 +81,22 @@
                 $('#btnLogin').click(function () {
                     //alert("按钮被点击");
 
-                    var loginName = $('#loginName').val();
+                    loginName = $('#loginName').val();
                     var loginPwd = $('#loginPwd').val();
                     var params = "loginName=" + loginName + "&loginPwd=" + loginPwd;
 
-                    if (loginName == "")
+                    if (loginName === "")
                         layer.tips("请输入用户名", "#loginName"); //layer.tips(“string","#吸附容器")
-                    else if (loginPwd == "")
+                    else if (loginPwd === "")
                         layer.tips("请输入密码", "#loginPwd");
                     else {
                         //发出ajax请求，调用后端功能
                         $.post(baseUrl + '/QueryLoginNameServlet', params, function (data) {
-                            if (data == -1)
+                            if (data === '-1')
                                 layer.msg("用户名不存在", {
                                     anim: 6
                                 });
-                            else if (data == 0)
+                            else if (data === '0')
                                 layer.msg("密码不正确", {
                                     anim: 6
                                 });

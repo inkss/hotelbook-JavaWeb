@@ -1,9 +1,9 @@
-package com.inks.hb.floorInfo.service;
+package com.inks.hb.floorinfo.service;
 
-import com.inks.hb.floorInfo.pojo.FloorInfo;
+import com.inks.hb.floorinfo.pojo.FloorInfo;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 public interface FloorInfoService {
 
@@ -11,13 +11,12 @@ public interface FloorInfoService {
      * 插入一条信息
      *
      * @param floorName 楼层名称
-     * @return 0:代表已经存在 1：新增成功
      * @throws SQLException 数据库
      */
-    int insertFloorInfo(String floorName) throws SQLException;
+    void insertFloorInfo(String floorName) throws SQLException;
 
     //查询多条
-    ArrayList<FloorInfo> query(int page, int limit) throws SQLException;
+    List<FloorInfo> query(int page, int limit) throws SQLException;
 
     //查询单条
     FloorInfo query(String floorName) throws SQLException;
@@ -30,7 +29,7 @@ public interface FloorInfoService {
      *
      * @param floorName 楼层名称
      * @return 0:代表已经存在 1：新增成功
-     * @throws SQLException
+     * @throws SQLException 数据库
      */
     int queryRepeat(String floorName) throws SQLException;
 

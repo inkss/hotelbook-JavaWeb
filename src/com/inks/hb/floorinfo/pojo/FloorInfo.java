@@ -1,4 +1,4 @@
-package com.inks.hb.floorInfo.pojo;
+package com.inks.hb.floorinfo.pojo;
 
 /**
  * 楼层信息

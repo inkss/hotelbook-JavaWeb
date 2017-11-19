@@ -1,6 +1,6 @@
-package com.inks.hb.authInfo.dao;
+package com.inks.hb.authinfo.dao;
 
-import com.inks.hb.authInfo.pojo.AuthInfo;
+import com.inks.hb.authinfo.pojo.AuthInfo;
 import com.inks.hb.common.DBUtil;
 
 import java.sql.Connection;

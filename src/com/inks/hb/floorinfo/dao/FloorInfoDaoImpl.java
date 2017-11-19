@@ -1,7 +1,7 @@
-package com.inks.hb.floorInfo.dao;
+package com.inks.hb.floorinfo.dao;
 
 import com.inks.hb.common.DBUtil;
-import com.inks.hb.floorInfo.pojo.FloorInfo;
+import com.inks.hb.floorinfo.pojo.FloorInfo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

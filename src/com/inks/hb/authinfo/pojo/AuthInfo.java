@@ -1,4 +1,4 @@
-package com.inks.hb.authInfo.pojo;
+package com.inks.hb.authinfo.pojo;
 
 
 /**

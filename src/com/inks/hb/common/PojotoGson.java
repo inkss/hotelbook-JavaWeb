@@ -1,6 +1,6 @@
 package com.inks.hb.common;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 抽象出一个统一的toJson类
@@ -15,9 +15,9 @@ public class PojotoGson {
 
     private String count; //数据总数
 
-    private ArrayList data; //数据
+    private List data; //数据
 
-    public PojotoGson(String code, String msg, String count, ArrayList data) {
+    public PojotoGson(String code, String msg, String count, List data) {
         this.code = code;
         this.msg = msg;
         this.count = count;

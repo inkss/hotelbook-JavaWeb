@@ -1,10 +1,10 @@
-package com.inks.hb.floorInfo.controller;
+package com.inks.hb.floorinfo.controller;
 
 import com.google.gson.Gson;
 import com.inks.hb.common.PojotoGson;
-import com.inks.hb.floorInfo.pojo.FloorInfo;
-import com.inks.hb.floorInfo.service.FloorInfoService;
-import com.inks.hb.floorInfo.service.FloorInfoServiceImpl;
+import com.inks.hb.floorinfo.pojo.FloorInfo;
+import com.inks.hb.floorinfo.service.FloorInfoService;
+import com.inks.hb.floorinfo.service.FloorInfoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 与表格相关的全部操作
@@ -51,7 +52,7 @@ public class FloorInfoServlet extends HttpServlet {
         String code = "0"; //状态码
         String msg = "数据查询正常"; //状态信息
         String count = ""; //数据总数
-        ArrayList<FloorInfo> list = null; //数据内容
+        List<FloorInfo> list = null; //数据内容
 
         int floorId;
         String floorName;

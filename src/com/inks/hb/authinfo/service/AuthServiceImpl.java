@@ -1,15 +1,15 @@
-package com.inks.hb.authInfo.service;
+package com.inks.hb.authinfo.service;
 
-import com.inks.hb.authInfo.dao.AuthInfoDao;
-import com.inks.hb.authInfo.dao.AuthInfoDaoImpl;
-import com.inks.hb.authInfo.pojo.AuthInfo;
+import com.inks.hb.authinfo.dao.AuthInfoDao;
+import com.inks.hb.authinfo.dao.AuthInfoDaoImpl;
+import com.inks.hb.authinfo.pojo.AuthInfo;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class AuthServiceImpl implements AuthService {
 
-    AuthInfoDao dao = new AuthInfoDaoImpl();
+    private AuthInfoDao dao = new AuthInfoDaoImpl();
 
     @Override
     public int queryAuthInfoNum() throws SQLException {
@@ -30,20 +30,16 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public ArrayList<AuthInfo> query(int page, int limit) throws SQLException {
+    public List<AuthInfo> query(int page, int limit) throws SQLException {
 
-        int start, length;
+        int start;
 
         start = (page * limit) - limit + 1; //每一页的起始位置
 
-        length = limit;
+        if (start < 1)
+            start = 1;
 
-        if (start < 1)  //小于1的话会触发一个错误
-            start = 1;  //但是理论上page和limit是由table表格生成的参数
-
-        ArrayList<AuthInfo> list = dao.query(start, length);
-
-        return list;
+        return dao.query(start, limit);
     }
 
     @Override

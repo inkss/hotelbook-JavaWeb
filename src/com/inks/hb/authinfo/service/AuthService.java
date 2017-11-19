@@ -1,9 +1,9 @@
-package com.inks.hb.authInfo.service;
+package com.inks.hb.authinfo.service;
 
-import com.inks.hb.authInfo.pojo.AuthInfo;
+import com.inks.hb.authinfo.pojo.AuthInfo;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * AuthService
@@ -46,7 +46,7 @@ public interface AuthService {
      * @return 返回请求页数的数据
      * @throws SQLException 数据库
      */
-    ArrayList<AuthInfo> query(int page, int limit) throws SQLException;
+    List<AuthInfo> query(int page, int limit) throws SQLException;
 
     /**
      * 根据ID修改权限表属性

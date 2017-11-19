@@ -1,4 +1,4 @@
-package com.inks.hb.roomType.pojo;
+package com.inks.hb.roomtype.pojo;
 
 public class RoomType {
 
