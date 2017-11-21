@@ -1,28 +1,29 @@
 package com.inks.hb.floorinfo.service;
 
-import com.inks.hb.floorinfo.dao.FloorInfoDao;
+import com.inks.hb.common.CommonDao;
 import com.inks.hb.floorinfo.dao.FloorInfoDaoImpl;
 import com.inks.hb.floorinfo.pojo.FloorInfo;
 
 import java.sql.SQLException;
-import java.util.List;
+import java.util.ArrayList;
 
 public class FloorInfoServiceImpl implements FloorInfoService {
 
-    private FloorInfoDao dao = new FloorInfoDaoImpl();
+    private CommonDao dao = new FloorInfoDaoImpl();
 
     @Override
     public void insertFloorInfo(String floorName) throws SQLException {
+        FloorInfo floorInfoQuery = new FloorInfo();
+        floorInfoQuery.setFloorName(floorName);
 
-        FloorInfo floorInfo = dao.query(floorName);
+        FloorInfo floorInfo = (FloorInfo) dao.query(floorInfoQuery);
 
         if (floorInfo.getFloorId() == 0) //表示存在同名
-            dao.insertFloorInfo(floorName);
-
+            dao.insertData(floorInfoQuery);
     }
 
     @Override
-    public List<FloorInfo> query(int page, int limit) throws SQLException {
+    public ArrayList query(int page, int limit) throws SQLException {
 
         int start = (page * limit) - limit + 1; //每一页的起始位置
 
@@ -34,20 +35,24 @@ public class FloorInfoServiceImpl implements FloorInfoService {
 
     @Override
     public FloorInfo query(String floorName) throws SQLException {
+        FloorInfo floorInfoQuery = new FloorInfo();
+        floorInfoQuery.setFloorName(floorName);
 
-        return dao.query(floorName);
+        return (FloorInfo) dao.query(floorInfoQuery);
     }
 
     @Override
     public int queryFloorInfoNum() throws SQLException {
 
-        return dao.queryFloorInfoNum();
+        return dao.queryDataNum();
     }
 
     @Override
     public int queryRepeat(String floorName) throws SQLException {
+        FloorInfo floorInfoQuery = new FloorInfo();
+        floorInfoQuery.setFloorName(floorName);
 
-        FloorInfo floorInfo = dao.query(floorName);
+        FloorInfo floorInfo = (FloorInfo) dao.query(floorInfoQuery);
 
         if (floorInfo.getFloorId() != 0) //表示存在同名项
             return 0;
@@ -57,11 +62,15 @@ public class FloorInfoServiceImpl implements FloorInfoService {
 
     @Override
     public void updateFloorInfo(FloorInfo floorInfo) throws SQLException {
-        dao.updateFloorInfo(floorInfo);
+
+        dao.updateData(floorInfo);
     }
 
     @Override
     public void deleteFloorInfo(int floorId) throws SQLException {
-        dao.deleteFloorInfo(floorId);
+        FloorInfo floorInfoQuery = new FloorInfo();
+        floorInfoQuery.setFloorId(floorId);
+
+        dao.deleteData(floorInfoQuery);
     }
 }

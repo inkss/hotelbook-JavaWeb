@@ -3,7 +3,7 @@ package com.inks.hb.floorinfo.service;
 import com.inks.hb.floorinfo.pojo.FloorInfo;
 
 import java.sql.SQLException;
-import java.util.List;
+import java.util.ArrayList;
 
 public interface FloorInfoService {
 
@@ -16,7 +16,7 @@ public interface FloorInfoService {
     void insertFloorInfo(String floorName) throws SQLException;
 
     //查询多条
-    List<FloorInfo> query(int page, int limit) throws SQLException;
+    ArrayList query(int page, int limit) throws SQLException;
 
     //查询单条
     FloorInfo query(String floorName) throws SQLException;

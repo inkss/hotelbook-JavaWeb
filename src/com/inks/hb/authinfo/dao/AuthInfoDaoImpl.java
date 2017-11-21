@@ -1,6 +1,7 @@
 package com.inks.hb.authinfo.dao;
 
 import com.inks.hb.authinfo.pojo.AuthInfo;
+import com.inks.hb.common.CommonDao;
 import com.inks.hb.common.DBUtil;
 
 import java.sql.Connection;
@@ -9,14 +10,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class AuthInfoDaoImpl implements AuthInfoDao {
+public class AuthInfoDaoImpl implements CommonDao {
+
     @Override
-    public void insertAuthInfo(AuthInfo authInfo) throws SQLException {
+    public void insertData(Object o) throws SQLException {
+        AuthInfo authInfo = (AuthInfo) o;
 
         Connection conn = DBUtil.getConnection();
 
         String sql = "insert into authInfo (authItem, isRead, isWrite, isChange, isDelete) values (?,?,?,?,?)";
-
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, authInfo.getAuthItem());
         pstmt.setString(2, authInfo.getIsRead());
@@ -25,134 +27,60 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         pstmt.setString(5, authInfo.getIsDelete());
 
         pstmt.executeUpdate();
-
         pstmt.close();
-
     }
 
     @Override
-    public void deleteAuthInfo(int authId) throws SQLException {
+    public void deleteData(Object o) throws SQLException {
+        AuthInfo authInfo = (AuthInfo) o;
 
         Connection conn = DBUtil.getConnection();
 
         String sql = "DELETE FROM authInfo WHERE authId = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, authInfo.getAuthId());
 
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ps.setInt(1, authId);
-
-        ps.executeUpdate();
-
-        ps.close();
-
+        pstmt.executeUpdate();
+        pstmt.close();
     }
 
     @Override
-    public void updateAuthInfo(AuthInfo authInfo) throws SQLException {
+    public void updateData(Object o) throws SQLException {
+        AuthInfo authInfo = (AuthInfo) o;
 
         Connection conn = DBUtil.getConnection();
 
         String sql = "UPDATE authInfo SET authItem = ? ,isRead = ?,isWrite = ?,isChange = ?,isDelete = ? WHERE authId = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, authInfo.getAuthItem());
+        pstmt.setString(2, authInfo.getIsRead());
+        pstmt.setString(3, authInfo.getIsWrite());
+        pstmt.setString(4, authInfo.getIsChange());
+        pstmt.setString(5, authInfo.getIsDelete());
+        pstmt.setInt(6, authInfo.getAuthId());
 
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ps.setString(1, authInfo.getAuthItem());
-        ps.setString(2, authInfo.getIsRead());
-        ps.setString(3, authInfo.getIsWrite());
-        ps.setString(4, authInfo.getIsChange());
-        ps.setString(5, authInfo.getIsDelete());
-        ps.setInt(6, authInfo.getAuthId());
-
-        ps.executeUpdate();
-
-        ps.close();
-
+        pstmt.executeUpdate();
+        pstmt.close();
     }
 
     @Override
-    public int queryAuthInfoNum() throws SQLException {
+    public int queryDataNum() throws SQLException {
 
         Connection conn = DBUtil.getConnection();
 
         String sql = "select count(*) from authInfo;";
-
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ResultSet rs = ps.executeQuery();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        ResultSet rs = pstmt.executeQuery();
 
         int num;
-
-        if (rs.next())
-            num = rs.getInt("count(*)");
-        else
-            num = 0;
+        if (rs.next()) num = rs.getInt("count(*)");
+        else num = 0;
 
         rs.close();
-
-        ps.close();
+        pstmt.close();
 
         return num;
     }
-
-    @Override
-    public AuthInfo query(int authId) throws SQLException {
-
-        Connection conn = DBUtil.getConnection();
-
-        String sql = "SELECT * FROM authInfo WHERE authId = ?";
-
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ps.setInt(1,authId);
-
-        ResultSet rs = ps.executeQuery();
-
-        AuthInfo authInfo = null;
-
-        while (rs.next()) {
-            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
-                    , rs.getString(4), rs.getString(5), rs.getString(6));
-        }
-
-        if (authInfo == null)
-            authInfo = new AuthInfo();
-
-        rs.close();
-
-        ps.close();
-
-        return authInfo;
-    }
-
-    @Override
-    public AuthInfo query(String authItem) throws SQLException {
-        Connection conn = DBUtil.getConnection();
-
-        String sql = "SELECT * FROM authInfo WHERE authItem = ?";
-
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ps.setString(1,authItem);
-
-        ResultSet rs = ps.executeQuery();
-
-        AuthInfo authInfo = null;
-
-        while (rs.next()) {
-            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
-                    , rs.getString(4), rs.getString(5), rs.getString(6));
-        }
-
-        if (authInfo == null)
-            authInfo = new AuthInfo();
-
-        rs.close();
-
-        ps.close();
-
-        return authInfo;
-    }
-
 
     @Override
     public ArrayList<AuthInfo> query(int start, int length) throws SQLException {
@@ -160,16 +88,12 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         Connection conn = DBUtil.getConnection();
 
         String sql = "select * from authInfo limit ?, ?;";
-
-        PreparedStatement ps = conn.prepareStatement(sql);
-
-        ps.setInt(1, start - 1);   //减一，详见声明部分
-        ps.setInt(2, length);
-
-        ResultSet rs = ps.executeQuery();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, start - 1);   //减一，详见声明部分
+        pstmt.setInt(2, length);
+        ResultSet rs = pstmt.executeQuery();
 
         ArrayList<AuthInfo> list = new ArrayList<>();
-
         AuthInfo authInfo;
 
         while (rs.next()) {
@@ -179,9 +103,44 @@ public class AuthInfoDaoImpl implements AuthInfoDao {
         }
 
         rs.close();
-
-        ps.close();
+        pstmt.close();
 
         return list;
+    }
+
+    @Override
+    public Object query(Object o) throws SQLException {
+        AuthInfo authInfoQuery = (AuthInfo) o;
+
+        Connection conn = DBUtil.getConnection();
+
+        //存在两种查：查ID和查NAME
+        String sql = "";
+        boolean isQueryId = false;
+        if (authInfoQuery.getAuthId() == 0)
+            sql = "SELECT * FROM authInfo WHERE authItem = ?";
+        else if (authInfoQuery.getAuthItem() == null) {
+            sql = "SELECT * FROM authInfo WHERE authId = ?";
+            isQueryId = true;
+        }
+
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        if (isQueryId) pstmt.setInt(1, authInfoQuery.getAuthId());
+        else pstmt.setString(1, authInfoQuery.getAuthItem());
+        ResultSet rs = pstmt.executeQuery();
+
+        AuthInfo authInfo = null;
+        while (rs.next()) {
+            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5), rs.getString(6));
+        }
+
+        if (authInfo == null)
+            authInfo = new AuthInfo();
+
+        rs.close();
+        pstmt.close();
+
+        return authInfo;
     }
 }

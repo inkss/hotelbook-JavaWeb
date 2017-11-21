@@ -1,40 +1,42 @@
 package com.inks.hb.authinfo.service;
 
-import com.inks.hb.authinfo.dao.AuthInfoDao;
 import com.inks.hb.authinfo.dao.AuthInfoDaoImpl;
 import com.inks.hb.authinfo.pojo.AuthInfo;
+import com.inks.hb.common.CommonDao;
 
 import java.sql.SQLException;
-import java.util.List;
+import java.util.ArrayList;
 
 public class AuthServiceImpl implements AuthService {
 
-    private AuthInfoDao dao = new AuthInfoDaoImpl();
+    private CommonDao dao = new AuthInfoDaoImpl();
 
     @Override
     public int queryAuthInfoNum() throws SQLException {
 
-        return dao.queryAuthInfoNum();
+        return dao.queryDataNum();
     }
 
     @Override
     public AuthInfo query(int authId) throws SQLException {
+        AuthInfo authInfo = new AuthInfo();
+        authInfo.setAuthId(authId);
 
-        return dao.query(authId);
+        return (AuthInfo) dao.query(authInfo);
     }
 
     @Override
     public AuthInfo query(String authItem) throws SQLException {
+        AuthInfo authInfo = new AuthInfo();
+        authInfo.setAuthItem(authItem);
 
-        return dao.query(authItem);
+        return (AuthInfo) dao.query(authInfo);
     }
 
     @Override
-    public List<AuthInfo> query(int page, int limit) throws SQLException {
+    public ArrayList query(int page, int limit) throws SQLException {
 
-        int start;
-
-        start = (page * limit) - limit + 1; //每一页的起始位置
+        int start = (page * limit) - limit + 1; //每一页的起始位置
 
         if (start < 1)
             start = 1;
@@ -44,6 +46,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public void updateAuthInfo(AuthInfo authInfo) throws SQLException {
-        dao.updateAuthInfo(authInfo);
+
+        dao.updateData(authInfo);
     }
 }
