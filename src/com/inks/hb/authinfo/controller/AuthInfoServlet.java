@@ -34,56 +34,66 @@ public class AuthInfoServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // 设置编码
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-
-        // 响应输出流
         PrintWriter out = response.getWriter();
 
-        // 当前页码
-        int page = Integer.parseInt(request.getParameter("page"));
-
-        // 每页的数据量
-        int limit = Integer.parseInt(request.getParameter("limit"));
-
-        // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
+        int page = Integer.parseInt(request.getParameter("page")); // 当前页码
+        int limit = Integer.parseInt(request.getParameter("limit")); // 每页的数据量
         int make = Integer.parseInt(request.getParameter("make"));
 
         // 调用service
         AuthService service = new AuthServiceImpl();
 
-        String code = ""; //状态码
-        String msg = ""; //状态信息
+        // 默认输出信息
+        String code = "0"; //状态码
+        String msg = "数据查询正常"; //状态信息
         String count = ""; //数据总数
-        List<AuthInfo> list = null; //数据内容
+        ArrayList<AuthInfo> list = new ArrayList<>(); //数据内容
+
+        //单个全局属性
+        int authId;         //权限ID
+        String authItem = "";    //权限名称
+        String isRead;      //可读
+        String isWrite;     //可写
+        String isChange;    //可改
+        String isDelete;    //可删
+        AuthInfo authInfo = null;
 
         try {
-            code = "0";
-            msg = "数据查询正常";
-            if (make == 0) {  //初始化表格
-                list = service.query(page, limit);
-                count = String.valueOf(service.queryAuthInfoNum());
+            // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
 
-            } else if (make == 3) {  //搜索表格
-                // 权限名称
-                String authItem = request.getParameter("authItem");
-                AuthInfo authInfo = service.query(authItem);
-                //System.out.println(authinfo.toString());
-                list = new ArrayList<>();
-                list.add(authInfo);
-                count = "1";
-            } else if (make == 2) { //修改值
-                int authId = Integer.parseInt(request.getParameter("authId"));
-                String authItem = request.getParameter("authItem");
-                String isRead = request.getParameter("isRead");
-                String isWrite = request.getParameter("isWrite");
-                String isChange = request.getParameter("isChange");
-                String isDelete = request.getParameter("isDelete");
-                AuthInfo authInfo = new AuthInfo(authId, authItem, isRead, isWrite, isChange, isDelete);
-                service.updateAuthInfo(authInfo);
+            if (make == 2) {
+                authId = Integer.parseInt(request.getParameter("authId"));
+                authItem = request.getParameter("authItem");
+                isRead = request.getParameter("isRead");
+                isWrite = request.getParameter("isWrite");
+                isChange = request.getParameter("isChange");
+                isDelete = request.getParameter("isDelete");
+                authInfo = new AuthInfo(authId, authItem, isRead, isWrite, isChange, isDelete);
+            } else if (make == 3) {
+                authItem = request.getParameter("authItem");
+            }
+
+            switch (make) {
+                case 2:
+                    service.updateAuthInfo(authInfo);
+                    break;
+                case 3:
+                    authInfo = service.query(authItem);
+                    list.clear();
+                    list.add(authInfo);
+                    break;
+            }
+            if (make != 3) {
                 list = service.query(page, limit);
                 count = String.valueOf(service.queryAuthInfoNum());
+            } else {
+                if (authInfo.getAuthId() == 0) {
+                    count = "0";
+                } else {
+                    count = "1";
+                }
             }
         } catch (SQLException e) {
             code = "1";

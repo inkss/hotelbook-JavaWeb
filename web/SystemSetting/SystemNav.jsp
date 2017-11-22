@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 <html>
 
 <head>
@@ -40,7 +40,8 @@
         <div class="row">
             <div class="list-group nav-left">
                 <a href="./AuthTable.jsp" target="content" class="list-group-item">权限管理</a>
-                <a href="./FloorTable.jsp" target="content" class="list-group-item">楼层信息</a>
+                <a href="./FloorTable.jsp" target="content" class="list-group-item">楼层设置</a>
+                <a href="./RoomTypeTable.jsp" target="content" class="list-group-item">房间类型</a>
             </div>
         </div>
     </div>

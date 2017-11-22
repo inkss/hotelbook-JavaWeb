@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class FloorInfoDaoImpl implements CommonDao {
+public class FloorInfoDao implements CommonDao {
     @Override
     public void insertData(Object o) throws SQLException {
         FloorInfo floorInfo = (FloorInfo) o;

@@ -1,15 +1,14 @@
 package com.inks.hb.authinfo.service;
 
-import com.inks.hb.authinfo.dao.AuthInfoDaoImpl;
+import com.inks.hb.authinfo.dao.AuthInfoDao;
 import com.inks.hb.authinfo.pojo.AuthInfo;
-import com.inks.hb.common.CommonDao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class AuthServiceImpl implements AuthService {
 
-    private CommonDao dao = new AuthInfoDaoImpl();
+    private AuthInfoDao dao = new AuthInfoDao();
 
     @Override
     public int queryAuthInfoNum() throws SQLException {
@@ -30,7 +29,7 @@ public class AuthServiceImpl implements AuthService {
         AuthInfo authInfo = new AuthInfo();
         authInfo.setAuthItem(authItem);
 
-        return (AuthInfo) dao.query(authInfo);
+        return dao.queryName(authInfo);
     }
 
     @Override

@@ -37,6 +37,7 @@ layui.use(['util', 'layer', 'table'], function () {
         table.on('tool', function (obj) {
             var data = obj.data
                 , layEvent = obj.event;
+
             var floorId = data.floorId;
             var floorName = data.floorName;
 

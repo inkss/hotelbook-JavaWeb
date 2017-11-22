@@ -7,13 +7,14 @@ import java.util.ArrayList;
 
 public interface FloorInfoService {
 
-    /**
-     * 插入一条信息
-     *
-     * @param floorName 楼层名称
-     * @throws SQLException 数据库
-     */
+    //增添
     void insertFloorInfo(String floorName) throws SQLException;
+
+    //删除
+    void deleteFloorInfo(int floorId) throws SQLException;
+
+    //更新
+    void updateFloorInfo(FloorInfo floorInfo) throws SQLException;
 
     //查询多条
     ArrayList query(int page, int limit) throws SQLException;
@@ -28,14 +29,8 @@ public interface FloorInfoService {
      * 独立的查重函数
      *
      * @param floorName 楼层名称
-     * @return 0:代表已经存在 1：新增成功
+     * @return 0:已经存在 1：未存在
      * @throws SQLException 数据库
      */
     int queryRepeat(String floorName) throws SQLException;
-
-    //更新
-    void updateFloorInfo(FloorInfo floorInfo) throws SQLException;
-
-    //删除
-    void deleteFloorInfo(int floorId) throws SQLException;
 }

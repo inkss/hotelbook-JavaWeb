@@ -1,7 +1,6 @@
 package com.inks.hb.floorinfo.service;
 
-import com.inks.hb.common.CommonDao;
-import com.inks.hb.floorinfo.dao.FloorInfoDaoImpl;
+import com.inks.hb.floorinfo.dao.FloorInfoDao;
 import com.inks.hb.floorinfo.pojo.FloorInfo;
 
 import java.sql.SQLException;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 
 public class FloorInfoServiceImpl implements FloorInfoService {
 
-    private CommonDao dao = new FloorInfoDaoImpl();
+    private FloorInfoDao dao = new FloorInfoDao();
 
     @Override
     public void insertFloorInfo(String floorName) throws SQLException {

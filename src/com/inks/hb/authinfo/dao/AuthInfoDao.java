@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class AuthInfoDaoImpl implements CommonDao {
+public class AuthInfoDao implements CommonDao {
 
     @Override
     public void insertData(Object o) throws SQLException {
@@ -127,6 +127,36 @@ public class AuthInfoDaoImpl implements CommonDao {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         if (isQueryId) pstmt.setInt(1, authInfoQuery.getAuthId());
         else pstmt.setString(1, authInfoQuery.getAuthItem());
+        ResultSet rs = pstmt.executeQuery();
+
+        AuthInfo authInfo = null;
+        while (rs.next()) {
+            authInfo = new AuthInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5), rs.getString(6));
+        }
+
+        if (authInfo == null)
+            authInfo = new AuthInfo();
+
+        rs.close();
+        pstmt.close();
+
+        return authInfo;
+    }
+
+    /**
+     * 查询名称
+     *
+     * @param authInfoQuery 待查询对象
+     * @return 查询结果对象
+     * @throws SQLException 数据库
+     */
+    public AuthInfo queryName(AuthInfo authInfoQuery) throws SQLException {
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "SELECT * FROM authInfo WHERE authItem = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, authInfoQuery.getAuthItem());
         ResultSet rs = pstmt.executeQuery();
 
         AuthInfo authInfo = null;

@@ -16,7 +16,7 @@ import java.sql.SQLException;
 /**
  * 新增操作时判断数据库中已经拥有此角色
  */
-@WebServlet(name = "/QueryFloorNameServlet",value = "/QueryFloorNameServlet")
+@WebServlet(name = "/QueryFloorNameServlet", value = "/QueryFloorNameServlet")
 public class QueryFloorNameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
@@ -24,25 +24,19 @@ public class QueryFloorNameServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // 设置编码
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-
-        // 响应输出流
         PrintWriter out = response.getWriter();
 
         // 调用service
         FloorInfoService service = new FloorInfoServiceImpl();
 
-        // 获得姓名
-        String floorName = request.getParameter("floorName");
+        String floorName = request.getParameter("floorName"); //获得姓名
 
         try {
-            int check = service.queryRepeat(floorName);
             // 转换为json字符串格式
             Gson gson = new Gson();
-            out.print(gson.toJson(check));
-
+            out.print(gson.toJson(service.queryRepeat(floorName)));
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,19 +1,18 @@
 package com.inks.hb.login.service;
 
-import com.inks.hb.common.CommonDao;
-import com.inks.hb.login.dao.LoginDaoImpl;
+import com.inks.hb.login.dao.LoginDao;
 import com.inks.hb.login.pojo.Login;
 
 import java.sql.SQLException;
 
 public class LoginServiceImpl implements LoginService {
 
-    private CommonDao dao = new LoginDaoImpl();
+    private LoginDao dao = new LoginDao();
 
     @Override
     public int queryByName(String name, String pwd) throws SQLException {
 
-        Login loginQuery = new Login(name,pwd);
+        Login loginQuery = new Login(name, pwd);
         Login login = (Login) dao.query(loginQuery);
 
         int check = 0;  //密码错误

@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class LoginDaoImpl implements CommonDao {
+public class LoginDao implements CommonDao {
 
     @Override
     public void insertData(Object o) throws SQLException {
