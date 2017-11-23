@@ -79,17 +79,14 @@ public class FloorInfoServlet extends HttpServlet {
                 }
                 break;
             case 3:
-                floorInfo = service.query(floorName);
-                if (floorInfo.isNull()) {
-                    msg = "查无此项";
-                    code = "-1";
-                } else {
-                    searchList.clear();
-                    searchList.add(floorInfo);
-                    list = searchList;
-                    count = "1";  //<--------------留坑　改造计划　修改量很大
-                }
-                break;
+                list = service.query(1, service.queryFloorInfoNum());
+                searchList.clear();
+                for (Object temp : list) {
+                    floorInfo = (FloorInfo) temp;
+                    if(floorName.equals(floorInfo.getFloorName())) {
+                        searchList.add(floorInfo);
+                    }
+                } break;
             case 4:
                 if (service.deleteFloorInfo(floorId) == -1) {
                     msg = "删除失败";
@@ -101,6 +98,15 @@ public class FloorInfoServlet extends HttpServlet {
         if (make != 3) {
             list = service.query(page, limit);
             count = String.valueOf(service.queryFloorInfoNum());
+        } else { //这部分算是对3搜索的特殊处理，放这儿和放case里一样的。
+            int size = searchList.size();
+            if (size == 0) {
+                msg = "查无此项";
+                code = "-1";
+            } else {
+                list = searchList;
+                count =  Integer.toString(size);
+            }
         }
 
         PojotoGson pojotoGson = new PojotoGson(code, msg, count, list);
