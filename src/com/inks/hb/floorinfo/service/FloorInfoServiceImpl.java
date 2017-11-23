@@ -6,70 +6,115 @@ import com.inks.hb.floorinfo.pojo.FloorInfo;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 修订：2017.11.23
+ *
+ * 将异常放在了本层处理
+ * 如果出现数据库相关异常，则返回-1或者null
+ */
 public class FloorInfoServiceImpl implements FloorInfoService {
 
     private FloorInfoDao dao = new FloorInfoDao();
 
     @Override
-    public void insertFloorInfo(String floorName) throws SQLException {
+    public int insertFloorInfo(String floorName) {
         FloorInfo floorInfoQuery = new FloorInfo();
         floorInfoQuery.setFloorName(floorName);
 
-        FloorInfo floorInfo = (FloorInfo) dao.query(floorInfoQuery);
-
-        if (floorInfo.getFloorId() == 0) //表示存在同名
-            dao.insertData(floorInfoQuery);
+        FloorInfo floorInfo;
+        try {
+            floorInfo = (FloorInfo) dao.query(floorInfoQuery);
+            if (floorInfo.isNull())
+                dao.insertData(floorInfoQuery);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
     }
 
     @Override
-    public ArrayList query(int page, int limit) throws SQLException {
+    public int deleteFloorInfo(int floorId) {
+        FloorInfo floorInfoQuery = new FloorInfo();
+        floorInfoQuery.setFloorId(floorId);
+
+        try {
+            dao.deleteData(floorInfoQuery);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
+    }
+
+    @Override
+    public int updateFloorInfo(FloorInfo floorInfo) {
+
+        try {
+            dao.updateData(floorInfo);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
+    }
+
+    @Override
+    public ArrayList query(int page, int limit) {
 
         int start = (page * limit) - limit + 1; //每一页的起始位置
 
         if (start < 1)  //小于1的话会触发一个错误
             start = 1;  //但是理论上page和limit是由table表格生成的参数
 
-        return dao.query(start, limit);
+        try {
+            return dao.query(start, limit);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
-    public FloorInfo query(String floorName) throws SQLException {
+    public FloorInfo query(String floorName) {
         FloorInfo floorInfoQuery = new FloorInfo();
         floorInfoQuery.setFloorName(floorName);
 
-        return (FloorInfo) dao.query(floorInfoQuery);
+        try {
+            return (FloorInfo) dao.query(floorInfoQuery);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
-    public int queryFloorInfoNum() throws SQLException {
+    public int queryFloorInfoNum() {
 
-        return dao.queryDataNum();
+        try {
+            return dao.queryDataNum();
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
     }
 
     @Override
-    public int queryRepeat(String floorName) throws SQLException {
+    public int queryRepeat(String floorName) {
         FloorInfo floorInfoQuery = new FloorInfo();
         floorInfoQuery.setFloorName(floorName);
 
-        FloorInfo floorInfo = (FloorInfo) dao.query(floorInfoQuery);
-
-        if (floorInfo.getFloorId() != 0) //表示存在同名项
-            return 0;
-        else
-            return 1;
+        FloorInfo floorInfo;
+        try {
+            floorInfo = (FloorInfo) dao.query(floorInfoQuery);
+            if (!floorInfo.isNull()) //表示存在同名项
+                return 0;
+            else
+                return 1;
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
     }
 
-    @Override
-    public void updateFloorInfo(FloorInfo floorInfo) throws SQLException {
-
-        dao.updateData(floorInfo);
-    }
-
-    @Override
-    public void deleteFloorInfo(int floorId) throws SQLException {
-        FloorInfo floorInfoQuery = new FloorInfo();
-        floorInfoQuery.setFloorId(floorId);
-
-        dao.deleteData(floorInfoQuery);
-    }
 }

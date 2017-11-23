@@ -7,12 +7,12 @@
  * 原注释可以参考最初的版本
  */
 
-
 layui.use(['util', 'layer', 'table'], function () {
     $(document).ready(function () {
         var table = layui.table
             , layer = layui.layer
             , util = layui.util;
+
         var countNum;
         var tableIns = table.render({
             done: function (res, curr, count) {
@@ -20,7 +20,7 @@ layui.use(['util', 'layer', 'table'], function () {
             }
             , elem: '#tableID'
             , id: 'tableID'
-            , url: baseUrl + '/FloorInfoServlet'                  // <--------------------------------模板修改：修改表格接口
+            , url: baseUrl + '/FloorInfoServlet'    // <--------------------------------模板修改：修改表格接口
             , cols: [[
                 {field: 'floorId', title: 'ID', width: 80, sort: true, fixed: true}
                 , {field: 'floorName', title: '楼层名称', width: 190}
@@ -35,15 +35,11 @@ layui.use(['util', 'layer', 'table'], function () {
 
         //监听工具条
         table.on('tool', function (obj) {
-            var data = obj.data
-                , layEvent = obj.event;
-
+            var data = obj.data, layEvent = obj.event;
             var floorId = data.floorId;
             var floorName = data.floorName;
-
             if (layEvent === 'detail') {                         // <--------------------------------模板修改：查看按钮
                 //查看
-
                 layer.alert('ID：' + floorId
                     + '<br>楼层名称：' + floorName
                     , {
@@ -55,19 +51,15 @@ layui.use(['util', 'layer', 'table'], function () {
                     });
             } else if (layEvent === 'del') {                     // <--------------------------------模板修改：删除按钮
                 //删除
-
                 layer.confirm('您确定要删除该条数据吗？', {
                     offset: '180px',
                     btn: ['是滴', '手滑'] //按钮
                 }, function () {
                     table.reload('tableID', {
-                        where: {
-                            make: 4,
-                            floorId: floorId
-                        }
-                    });
-                    layer.msg('删除成功', {offset: '250px', icon: 1});
+                        where: {make: 4, floorId: floorId}
 
+                    });
+                    layer.msg('删除结果如下', {offset: '250px', icon: 1});
                 }, function () {
                     layer.msg('删除操作已取消', {offset: '250px'});
                 });
@@ -75,15 +67,12 @@ layui.use(['util', 'layer', 'table'], function () {
             } else if (layEvent === 'edit') {                    // <--------------------------------模板修改：编辑按钮
                 //编辑
 
-
                 //修改部分存在BUG
                 //1.为空值
                 //2.为已经存在的值
-
                 //23:52 Bug修复
 
                 console.log('==================================');
-
                 layer.prompt({
                     title: '请输入楼层名称',
                     formType: 0,
@@ -91,19 +80,14 @@ layui.use(['util', 'layer', 'table'], function () {
                     offset: '220px',
                     maxlength: 10
                 }, function (value, index) {
-                    layer.close(index);
-
                     console.log("floorName===>" + value + " floorId===>" + floorId);
-
                     var NewfloorName = "floorName=" + value;
-
-                    console.log("NewfloorName===>" + NewfloorName);
+                    console.log("NewfloorName===>->->->" + NewfloorName);
 
                     $.post(baseUrl + '/QueryFloorNameServlet', NewfloorName, function updateCheck(data) {
-
                         console.log("data=" + data);
-
-                        if (data == 1) {
+                        if (data === "1") {
+                            layer.close(index);
                             table.reload('tableID', {
                                 where: {
                                     make: 2,
@@ -111,7 +95,7 @@ layui.use(['util', 'layer', 'table'], function () {
                                     floorName: value
                                 }
                             });
-                            layer.msg('修改楼层成功', {offset: '250px'});
+                            layer.msg('修改结果如下', {offset: '250px'});
                         } else {
                             layer.alert('该楼层名称已经存在！', {
                                 title: '警告', icon: 4, anim: 6, offset: '220px'
@@ -143,7 +127,7 @@ layui.use(['util', 'layer', 'table'], function () {
         });
 
         //刷新
-        $('#refreshButton').click(function () {
+        $('#refreshButton').click(function refresh () {
             layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 0}});
         });
@@ -156,10 +140,10 @@ layui.use(['util', 'layer', 'table'], function () {
                 offset: '220px',
                 maxlength: 10
             }, function (inputValue, index) {
-                layer.close(index);
                 var params = "floorName=" + inputValue;
                 $.post(baseUrl + '/QueryFloorNameServlet', params, function insertCheck(data) {
-                    if (data == 1) {
+                    if (data === "1") {
+                        layer.close(index);
                         table.reload('tableID', {
                             where: {
                                 make: 1,
@@ -167,6 +151,7 @@ layui.use(['util', 'layer', 'table'], function () {
                             }
                         });
                         layer.msg('新增楼层成功', {offset: '250px'});
+                        tableIns.reload({where: {make: 0}});
                     } else {
                         layer.alert('该楼层名称已经存在！', {
                             title: '警告', icon: 4, anim: 6, offset: '220px'

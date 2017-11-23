@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 
 /**
  * 新增操作时判断数据库中已经拥有此角色
@@ -33,12 +32,8 @@ public class QueryFloorNameServlet extends HttpServlet {
 
         String floorName = request.getParameter("floorName"); //获得姓名
 
-        try {
-            // 转换为json字符串格式
-            Gson gson = new Gson();
-            out.print(gson.toJson(service.queryRepeat(floorName)));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        // 转换为json字符串格式
+        Gson gson = new Gson();
+        out.print(gson.toJson(service.queryRepeat(floorName)));
     }
 }

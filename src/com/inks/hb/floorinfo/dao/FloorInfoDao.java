@@ -10,6 +10,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 楼层 DAO
+ * 未提供独立函数
+ */
 public class FloorInfoDao implements CommonDao {
     @Override
     public void insertData(Object o) throws SQLException {
@@ -111,8 +115,11 @@ public class FloorInfoDao implements CommonDao {
         FloorInfo floorInfo = null;
         if (rs.next())
             floorInfo = new FloorInfo(rs.getInt(1), rs.getString(2));
-        if (floorInfo == null)
+
+        if (floorInfo == null) {
             floorInfo = new FloorInfo();
+            floorInfo.setNull(true);
+        }
 
         rs.close();
         pstms.close();
