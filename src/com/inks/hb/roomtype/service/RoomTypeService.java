@@ -5,32 +5,35 @@ import com.inks.hb.roomtype.pojo.RoomType;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 数据异常在本层解决
+ * 但凡出现SQL方面异常均返回-1
+ */
 public interface RoomTypeService {
 
     //增添
-    void insertRoomType(RoomType roomType) throws SQLException;
+    int insertRoomType(RoomType roomType);
 
     //删除
-    void deleteRoomType(String typeId) throws SQLException;
+    int deleteRoomType(String typeId);
 
     //更新
-    void updateRoomType(RoomType roomType) throws SQLException;
+    int updateRoomType(RoomType roomType);
 
     //查询单条
-    RoomType query(String typeId) throws SQLException;
+    RoomType query(String typeId);
 
     //查询多条
-    ArrayList query(int page, int limit) throws SQLException;
+    ArrayList query(int page, int limit);
 
     //查询长度
-    int queryRoomTypeNum() throws SQLException;
+    int queryRoomTypeNum();
 
     /**
      * 查重函数
      *
      * @param typeName 房间类型名称
      * @return 0:已经存在 1：未存在
-     * @throws SQLException 数据库
      */
-    int queryRepeat(String typeName) throws SQLException;
+    int queryRepeat(String typeName);
 }

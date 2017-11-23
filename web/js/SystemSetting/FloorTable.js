@@ -127,7 +127,7 @@ layui.use(['util', 'layer', 'table'], function () {
         });
 
         //刷新
-        $('#refreshButton').click(function refresh () {
+        $('#refreshButton').click(function () {
             layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 0}});
         });

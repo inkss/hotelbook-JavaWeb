@@ -10,6 +10,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 房间类型 DAO
+ * 提供独立函数：public RoomType queryName(String typeName) throws SQLException
+ * 根据类型名称进行查询
+ */
 public class RoomTypeDao implements CommonDao {
 
     @Override
@@ -129,9 +134,10 @@ public class RoomTypeDao implements CommonDao {
                     , rs.getString(4), rs.getInt(5), rs.getString(6));
         }
 
-        if (roomType == null)
+        if (roomType == null) {
             roomType = new RoomType();
-
+            roomType.setNull(true);
+        }
         rs.close();
         pstmt.close();
 
@@ -160,8 +166,10 @@ public class RoomTypeDao implements CommonDao {
                     , rs.getString(4), rs.getInt(5), rs.getString(6));
         }
 
-        if (roomTypeQuery == null)
+        if (roomTypeQuery == null) {
             roomTypeQuery = new RoomType();
+            roomTypeQuery.setNull(true);
+        }
 
         rs.close();
         pstmt.close();

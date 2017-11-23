@@ -1,5 +1,11 @@
 package com.inks.hb.roomtype.pojo;
 
+/**
+ * 2017.11.23 --------
+ * 添加isNull字段，现在可以通过setNull设置元素信息，通过isNull读取信息
+ * 原构造函数不变，不提供含该字段的构造函数，该字段应主要用于查询函数（查询函数不返回未实例化的对象）
+ * ------------
+ */
 public class RoomType {
 
     private String typeId; //类型编号
@@ -13,6 +19,8 @@ public class RoomType {
     private int exceedance; //可超预定数
 
     private String isSplice; //是否可拼房
+
+    private boolean isNull; //是否为空值对象
 
     public RoomType() {
         super();
@@ -75,15 +83,29 @@ public class RoomType {
         this.isSplice = isSplice;
     }
 
+    public boolean isNull() {
+        return isNull;
+    }
+
+    /**
+     * 如果为null，则设置为true，否则false
+     *
+     * @param aNull 对象是否为空
+     */
+    public void setNull(boolean aNull) {
+        isNull = aNull;
+    }
+
     @Override
     public String toString() {
-        return "\n--->RoomType对象信息输出：" +
-                "\n typeId = " + typeId +
-                "\n typeName = '" + typeName + '\'' +
-                "\n price = '" + price + '\'' +
-                "\n splicPrice = '" + splicPrice + '\'' +
-                "\n exceedance = " + exceedance +
-                "\n isSplice = " + isSplice +
-                "\n--->RoomType信息输出结束\n";
+        return "RoomType{" +
+                "typeId='" + typeId + '\'' +
+                ", typeName='" + typeName + '\'' +
+                ", price='" + price + '\'' +
+                ", splicPrice='" + splicPrice + '\'' +
+                ", exceedance=" + exceedance +
+                ", isSplice='" + isSplice + '\'' +
+                ", isNull=" + isNull +
+                '}';
     }
 }

@@ -13,10 +13,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet(name = "/QueryRoomTypeNameServlet",value = "/QueryRoomTypeNameServlet")
+@WebServlet(name = "/QueryRoomTypeNameServlet", value = "/QueryRoomTypeNameServlet")
 public class QueryRoomTypeNameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doGet(request,response);
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,11 +30,8 @@ public class QueryRoomTypeNameServlet extends HttpServlet {
 
         String typeName = request.getParameter("typeName"); //获得姓名
 
-        try {
-            Gson gson = new Gson();
-            out.print(gson.toJson(service.queryRepeat(typeName)));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        // 转换为json字符串格式
+        Gson gson = new Gson();
+        out.print(gson.toJson(service.queryRepeat(typeName)));
     }
 }

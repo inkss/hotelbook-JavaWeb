@@ -6,64 +6,107 @@ import com.inks.hb.roomtype.pojo.RoomType;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 修订：2017.11.23
+ *
+ * 将异常放在了本层处理
+ * 如果出现数据库相关异常，则返回-1或者null
+ */
 public class RoomTypeServiceImpl implements RoomTypeService {
 
     private RoomTypeDao dao = new RoomTypeDao();
 
     @Override
-    public void insertRoomType(RoomType roomType) throws SQLException {
+    public int insertRoomType(RoomType roomType) {
 
-        if (queryRepeat(roomType.getTypeName()) == 1)
-            dao.insertData(roomType);
+        try {
+            if (queryRepeat(roomType.getTypeName()) == 1)
+                dao.insertData(roomType);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
     }
 
     @Override
-    public void deleteRoomType(String typeId) throws SQLException {
+    public int deleteRoomType(String typeId) {
         RoomType roomType = new RoomType();
         roomType.setTypeId(typeId);
 
-        dao.deleteData(roomType);
+        try {
+            dao.deleteData(roomType);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
     }
 
     @Override
-    public void updateRoomType(RoomType roomType) throws SQLException {
-
-        dao.updateData(roomType);
+    public int updateRoomType(RoomType roomType) {
+        try {
+            dao.updateData(roomType);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
     }
 
     @Override
-    public RoomType query(String typeId) throws SQLException {
+    public RoomType query(String typeId) {
         RoomType roomType = new RoomType();
         roomType.setTypeId(typeId);
 
-        return (RoomType) dao.query(roomType);
+        try {
+            return (RoomType) dao.query(roomType);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
-    public ArrayList query(int page, int limit) throws SQLException {
-
+    public ArrayList query(int page, int limit) {
         int start = (page * limit) - limit + 1; //每一页的起始位置
 
         if (start < 1)  //小于1的话会触发一个错误
             start = 1;  //但是理论上page和limit是由table表格生成的参数
 
-        return dao.query(start, limit);
+        try {
+            return dao.query(start, limit);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
-    public int queryRoomTypeNum() throws SQLException {
+    public int queryRoomTypeNum() {
 
-        return dao.queryDataNum();
+        try {
+            return dao.queryDataNum();
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
     }
 
     @Override
-    public int queryRepeat(String typeName) throws SQLException {
+    public int queryRepeat(String typeName) {
+        RoomType roomType;
 
-        RoomType roomType = dao.queryName(typeName);
-
-        if (roomType.getTypeId() == null && roomType.getExceedance() == 0)
-            return 1;
-
-        return 0;
+        try {
+            roomType = dao.queryName(typeName);
+            if (!roomType.isNull()) //表示存在同名项
+                return 0;
+            else
+                return 1;
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
     }
+
 }
