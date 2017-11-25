@@ -17,13 +17,13 @@ layui.use(['util', 'layer', 'table'], function () {
             , id: 'tableID'
             , url: baseUrl + '/RoomTypeServlet'
             , cols: [[
-                {field: 'typeId', title: 'ID', sort: true, fixed: true, width:100}
+                {field: 'typeId', title: 'ID', sort: true, fixed: true}
                 , {field: 'typeName', title: '类型名称'}
                 , {field: 'price', title: '价格'}
                 , {field: 'splicPrice', title: '拼房价格'}
                 , {field: 'exceedance', title: '可超预定数'}
                 , {field: 'isSplice', title: '是否可拼房'}
-                , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width:200}
+                , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width: 200}
 
             ]]
             , page: true
@@ -102,19 +102,26 @@ layui.use(['util', 'layer', 'table'], function () {
 
         //刷新
         $('#refreshButton').click(function () {
-            layer.msg('重载表格', {offset: '250px'});
             tableIns.reload({where: {make: 0}});
         });
 
         //新增
         $('#insertButton').click(function () {
             layer.open({
-                title: "新增",
-                type: 2,
-                area: ['780px', '450px'],
-                fixed: false, //不固定
-                maxmin: true,
-                content: '/SystemSetting/insertRomeType.jsp'
+                title: "新增"
+                ,  btn: ['关闭']
+                ,  yes: function(index) {
+                    tableIns.reload({where: {make: 0}});
+                    layer.close(index); //关闭弹窗
+                }
+                , type: 2
+                , area: ['780px', '450px']
+                , fixed: false
+                , maxmin: true
+                , content: '/SystemSetting/insertRomeType.jsp'
+                , cancel: function () {
+                    tableIns.reload({where: {make: 0}});
+                }
             });
         });
 

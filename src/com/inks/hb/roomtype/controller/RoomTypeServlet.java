@@ -75,26 +75,30 @@ public class RoomTypeServlet extends HttpServlet {
                 if (service.insertRoomType(roomType) == -1) {
                     msg = "插入异常";
                     code = "-1";
-                } break;
+                }
+                break;
             case 2:
                 if (service.updateRoomType(roomType) == -1) {
                     msg = "修改异常";
                     code = "-1";
-                } break;
+                }
+                break;
             case 3:
                 list = service.query(1, service.queryRoomTypeNum());
                 searchList.clear();
                 for (Object temp : list) {
                     roomType = (RoomType) temp;
-                    if(typeName.equals(roomType.getTypeName())) {
+                    if (typeName.equals(roomType.getTypeName())) {
                         searchList.add(roomType);
                     }
-                } break;
+                }
+                break;
             case 4:
                 if (service.deleteRoomType(typeId) == -1) {
                     msg = "删除失败";
                     code = "-1";
-                } break;
+                }
+                break;
         }
 
         if (make != 3) {
@@ -107,7 +111,7 @@ public class RoomTypeServlet extends HttpServlet {
                 code = "-1";
             } else {
                 list = searchList;
-                count =  Integer.toString(size);
+                count = Integer.toString(size);
             }
         }
 

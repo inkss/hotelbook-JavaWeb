@@ -28,14 +28,14 @@
         <div class="layui-inline">
             <label class="layui-form-label">价格</label>
             <div class="layui-input-inline">
-                <input type="text" name="price" lay-verify="number" autocomplete="off" placeholder="￥"
+                <input type="text" name="price" lay-verify="required|number" autocomplete="off" placeholder="￥"
                        class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">拼房价格</label>
             <div class="layui-input-inline">
-                <input type="text" name="splicPrice" lay-verify="number" autocomplete="off" placeholder="￥"
+                <input type="text" name="splicPrice" lay-verify="required|number" autocomplete="off" placeholder="￥"
                        class="layui-input">
             </div>
         </div>
@@ -45,17 +45,11 @@
         <div class="layui-inline">
             <label class="layui-form-label">可超预定数</label>
             <div class="layui-input-inline">
-                <input type="text" name="exceedance" lay-verify="number" autocomplete="off" class="layui-input">
+                <input type="text" name="exceedance" lay-verify="required|number" autocomplete="off"
+                       class="layui-input">
             </div>
         </div>
     </div>
-
-    <%--<div class="layui-form-item">--%>
-        <%--<label class="layui-form-label">是否可拼房</label>--%>
-        <%--<div class="layui-input-block">--%>
-            <%--<input type="checkbox" name="isSplice" lay-skin="switch" value="Y" lay-text="是|否">--%>
-        <%--</div>--%>
-    <%--</div>--%>
 
     <div class="layui-form-item">
         <label class="layui-form-label">是否可拼房</label>
@@ -67,7 +61,7 @@
 
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button class="layui-btn" lay-submit lay-filter="demo1">立即提交</button>
+            <button class="layui-btn" lay-submit lay-filter="insertRome">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
@@ -77,7 +71,6 @@
 <script>
     layui.use(['form', 'layedit', 'laydate'], function () {
         var form = layui.form
-            ,layedit = layui.layedit
             , layer = layui.layer;
 
 
@@ -95,10 +88,17 @@
         });
 
         //监听提交
-        form.on('submit(demo1)', function (data) {
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
+        form.on('submit(insertRome)', function (data) {
+            $.post(baseUrl + '/InsertRomeTypeServlet', JSON.stringify(data.field), function (code) {
+                if (code === 1) {
+                    layer.alert('插入成功！', {title: '成功', icon: 6, anim: 5});
+                } else if (code === 0) {
+                    layer.alert('已存在同名项！', {title: '重复', icon: 4, anim: 6});
+                } else {
+                    layer.alert('插入失败！', {title: '异常', icon: 6, anim: 6});
+                }
             });
+
             return false;
         });
 
