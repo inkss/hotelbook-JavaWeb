@@ -24,7 +24,7 @@ if (isLogin == null)
 Win10.onReady(function () {
     //设置壁纸
     Win10.setBgUrl({
-        main: './img/wallpapers/timg.jpeg',
+        main: '../img/background.jpg',
         mobile: './img/wallpapers/mobile.jpg',
     });
 

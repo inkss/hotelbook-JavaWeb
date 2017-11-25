@@ -882,7 +882,7 @@ window.Win10 = {
             area: ['300px', '180px'], //宽高
             content: '<div style="padding: 10px;font-size: 12px">' +
             '<h2>酒店管理系统</h2>' +
-            '<p>inks©版权所有</p>' +
+            '<p>july©版权所有</p>' +
             '<a>© 2017 HotelBook System</a>' +
             '</div>'
         });
