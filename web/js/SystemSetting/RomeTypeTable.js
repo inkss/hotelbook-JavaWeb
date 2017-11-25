@@ -17,13 +17,13 @@ layui.use(['util', 'layer', 'table'], function () {
             , id: 'tableID'
             , url: baseUrl + '/RoomTypeServlet'
             , cols: [[
-                {field: 'typeId', title: 'ID', width: 80, sort: true, fixed: true}
-                , {field: 'typeName', title: '类型名称', width: 190}
-                , {field: 'price', title: '价格', width: 105}
-                , {field: 'splicPrice', title: '拼房价格', width: 105}
-                , {field: 'exceedance', title: '可超预定数', width: 105}
-                , {field: 'isSplice', title: '是否可拼房', width: 105}
-                , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width: 200}
+                {field: 'typeId', title: 'ID', sort: true, fixed: true, width:100}
+                , {field: 'typeName', title: '类型名称'}
+                , {field: 'price', title: '价格'}
+                , {field: 'splicPrice', title: '拼房价格'}
+                , {field: 'exceedance', title: '可超预定数'}
+                , {field: 'isSplice', title: '是否可拼房'}
+                , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width:200}
 
             ]]
             , page: true

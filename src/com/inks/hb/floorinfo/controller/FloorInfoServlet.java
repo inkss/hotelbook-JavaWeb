@@ -34,6 +34,12 @@ public class FloorInfoServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
+        Gson gson = new Gson();
+        out.print(gson.toJson(doMyServlet(request,response)));
+    }
+
+    private PojotoGson doMyServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         int page = Integer.parseInt(request.getParameter("page")); //当前页码
         int limit = Integer.parseInt(request.getParameter("limit")); //每页的数据量
         int make = Integer.parseInt(request.getParameter("make")); //状态标志
@@ -109,8 +115,6 @@ public class FloorInfoServlet extends HttpServlet {
             }
         }
 
-        PojotoGson pojotoGson = new PojotoGson(code, msg, count, list);
-        Gson gson = new Gson();
-        out.print(gson.toJson(pojotoGson));
+        return new PojotoGson(code, msg, count, list);
     }
 }

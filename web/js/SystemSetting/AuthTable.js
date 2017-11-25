@@ -21,12 +21,12 @@ layui.use(['util', 'layer', 'table'], function () {
             , url: baseUrl + '/AuthInfoServlet' //数据接口
             , cols: [[  //表头
                 //field字段名、title标题名、width列宽、sort排序、fixed固定列、toolbar绑定工具条
-                {field: 'authId', title: 'ID', width: 80, sort: true, fixed: true}
-                , {field: 'authItem', title: '权限名称', width: 190}
-                , {field: 'isRead', title: '可读', width: 105}
-                , {field: 'isWrite', title: '可写', width: 105}
-                , {field: 'isChange', title: '可改', width: 105}
-                , {field: 'isDelete', title: '可删', width: 105}
+                {field: 'authId', title: 'ID', width: 100, sort: true, fixed: true}
+                , {field: 'authItem', title: '权限名称'}
+                , {field: 'isRead', title: '可读'}
+                , {field: 'isWrite', title: '可写'}
+                , {field: 'isChange', title: '可改'}
+                , {field: 'isDelete', title: '可删'}
                 , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width: 200}
 
             ]]

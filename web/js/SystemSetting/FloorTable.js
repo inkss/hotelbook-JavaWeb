@@ -22,8 +22,8 @@ layui.use(['util', 'layer', 'table'], function () {
             , id: 'tableID'
             , url: baseUrl + '/FloorInfoServlet'    // <--------------------------------模板修改：修改表格接口
             , cols: [[
-                {field: 'floorId', title: 'ID', width: 80, sort: true, fixed: true}
-                , {field: 'floorName', title: '楼层名称', width: 190}
+                {field: 'floorId', title: 'ID', width: 100, sort: true, fixed: true}
+                , {field: 'floorName', title: '楼层名称'}
                 , {field: 'right', title: '管理', align: 'center', toolbar: '#barAuth', width: 200}
 
             ]]
