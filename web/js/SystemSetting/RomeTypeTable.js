@@ -85,7 +85,7 @@ layui.use(['util', 'layer', 'table'], function () {
                 , area: ['780px', '450px']
                 , fixed: false
                 , maxmin: true
-                , content: '/SystemSetting/insertRomeType.jsp'
+                , content: '/hb/SystemSetting/insertRomeType.jsp'
                 , cancel: function () {
                     tableIns.reload({where: {make: 0}});
                 }

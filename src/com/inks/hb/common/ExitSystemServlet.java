@@ -39,7 +39,7 @@ public class ExitSystemServlet extends HttpServlet {
         // 然后设置age为0，表示立即删除
         // 最后再通过response添加进去，因为同名的原因，所以会直接覆盖
         Cookie cookie = new Cookie("isLogin", "");
-        cookie.setPath("/MAIN");
+        cookie.setPath("/hb/MAIN");
         cookie.setMaxAge(0);
         response.addCookie(cookie);
 

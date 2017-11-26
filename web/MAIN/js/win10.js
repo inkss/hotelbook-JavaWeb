@@ -851,10 +851,10 @@ window.Win10 = {
             icon: 3,
             title: Win10.lang('提示', 'Prompt')
         }, function (index) {
-            $.post('http://localhost:8080/ExitSystemServlet');
+            $.post('http://localhost:8080/hb/ExitSystemServlet');
             document.body.onbeforeunload = function () {
             };
-            window.location.href = "/";
+            window.location.href = "/hb";
             window.close();
             layer.close(index);
 
