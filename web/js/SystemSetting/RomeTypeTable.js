@@ -48,7 +48,51 @@ layui.use(['util', 'layer', 'table'], function () {
                 });
             } else if (layEvent === 'edit') {
                 //编辑
-
+                layer.prompt({
+                    title: '请输入类型名称', formType: 0, value: typeName, offset: '220px', maxlength: 10
+                }, function (NewTypeName, index) {
+                    $.post(baseUrl + '/QueryRoomTypeNameServlet', NewTypeName, function (data) {
+                        if (data === "1") {
+                            if (NewTypeName.length < 3)
+                                layer.alert('长度不符合！', {title: '警告', icon: 4, anim: 6, offset: '220px'});
+                            else{ layer.close(index);
+                                layer.prompt({
+                                    title: '请输入价格', formType: 0, value: price, offset: '220px', maxlength: 10
+                                }, function (NewPrice, index) {
+                                    if (isNaN(NewPrice)) {layer.msg('您所输入的值类型不合法', {offset: '250px'});}
+                                    else { layer.close(index);
+                                        layer.prompt({
+                                            title: '请输入拼房价格', formType: 0, value: splicPrice, offset: '220px', maxlength: 10
+                                        }, function (NewSplicPrice, index) {
+                                            if (isNaN(NewSplicPrice)) {layer.msg('您所输入的值类型不合法', {offset: '250px'});}
+                                            else { layer.close(index);
+                                                layer.prompt({
+                                                    title: '请输入可超预定数', formType: 0, value: exceedance, offset: '220px', maxlength: 10
+                                                }, function (NewExceedance, index) {
+                                                    if (isNaN(NewExceedance)) {layer.msg('您所输入的值类型不合法', {offset: '250px'});}
+                                                    else { layer.close(index);
+                                                        layer.prompt({
+                                                            title: '是否可拼房（Y/N）', formType: 0, value: isSplice, offset: '220px', maxlength: 10
+                                                        }, function (NewIsSplice, index) {
+                                                            if (NewIsSplice.valueOf() === "Y" || NewIsSplice.valueOf() === "N") {
+                                                                tableIns.reload({
+                                                                    where: {make: 2, typeId: typeId, typeName: NewTypeName, price: NewPrice,
+                                                                        splicPrice: NewSplicPrice, exceedance: NewExceedance, isSplice: NewIsSplice}
+                                                                });layer.close(index);
+                                                            } else {
+                                                                if (isNaN(NewExceedance)) {layer.msg('您所输入的值类型不合法', {offset: '250px'});}
+                                                            }
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        } else { layer.alert('已存在同名项！', {title: '警告', icon: 4, anim: 6, offset: '220px'});}
+                    });
+                });
             }
         });
 

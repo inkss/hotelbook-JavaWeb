@@ -8,6 +8,7 @@
       <w>checkinfo</w>
       <w>clearfix</w>
       <w>contextmenu</w>
+      <w>currentdate</w>
       <w>cval</w>
       <w>dbdriver</w>
       <w>dbpassword</w>
@@ -35,6 +36,7 @@
       <w>mozilla</w>
       <w>msie</w>
       <w>newfloor</w>
+      <w>newtype</w>
       <w>nfoto</w>
       <w>noninfringement</w>
       <w>onbeforeunload</w>
@@ -44,6 +46,7 @@
       <w>quan</w>
       <w>rometype</w>
       <w>searchpage</w>
+      <w>seperator</w>
       <w>spellcheck</w>
       <w>splic</w>
       <w>toxls</w>

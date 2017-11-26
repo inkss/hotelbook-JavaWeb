@@ -39,7 +39,7 @@ public class InsertRomeTypeServlet extends HttpServlet {
         //主键ID没有想好暂时就用时间吧
         Date day = new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyMMddHHmmss");
-        roomType.setTypeId(df.format(day));
+        roomType.setTypeId("RT" + df.format(day));
 
         // 调用service
         RoomTypeService service = new RoomTypeServiceImpl();

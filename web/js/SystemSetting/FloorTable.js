@@ -35,14 +35,12 @@ layui.use(['util', 'layer', 'table'], function () {
             if (layEvent === 'detail') { //查看功能
                 layer.alert('ID：' + floorId + '<br>楼层名称：' + floorName
                     , {skin: 'layui-layer-lan', closeBtn: 0, title: '您当前选择的楼层值信息', anim: 4, offset: '180px'});
-
-            } else if (layEvent === 'del') {  //删除功能
+            } else if (layEvent === 'del') {
                 layer.confirm('您确定要删除该条数据吗？', {offset: '180px', btn: ['是滴', '手滑'] }, function () {
                     table.reload('tableID', {where: {make: 4, floorId: floorId}});
                     layer.msg('删除结果如下', {offset: '250px', icon: 1});
                 }, function () {layer.msg('删除操作已取消', {offset: '250px'});});
-
-            } else if (layEvent === 'edit') {  //编辑功能
+            } else if (layEvent === 'edit') {
                 layer.prompt({title: '请输入楼层名称', formType: 0, value: floorName, offset: '220px', maxlength: 10
                 }, function (value, index) {
                     var NewfloorName = "floorName=" + value;

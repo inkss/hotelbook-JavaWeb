@@ -68,8 +68,8 @@
             //自定义验证规则
             form.verify({
                 typeName: function (value) {
-                    if (value.length < 5) {
-                        return '房间类型至少5个字符';
+                    if (value.length < 3) {
+                        return '房间类型至少3个字符';
                     }
 
                     if (value.length > 10) {

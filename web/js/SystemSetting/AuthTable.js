@@ -30,8 +30,7 @@ layui.use(['util', 'layer', 'table'], function () {
 
         //监听工具条
         table.on('tool', function (obj) { //tool是工具条事件名
-            var data = obj.data //获得当前行数据
-                , layEvent = obj.event; //获得 lay-event 对应的值
+            var data = obj.data , layEvent = obj.event; //获得 lay-event 对应的值
             //从前当前行获取列数据
             var authId = data.authId;
             var authItem = data.authItem;
