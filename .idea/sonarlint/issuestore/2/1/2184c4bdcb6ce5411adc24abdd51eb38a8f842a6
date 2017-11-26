@@ -1,0 +1,16 @@
+
+N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(İŠÓ„
+dsquid:S1192"JDefine a constant instead of duplicating this literal "floorName" 3 times.(ˆêñ¼ûÿÿÿÿ
+9squid:S1989"$Add a "try/catch" block for "doGet".(Æ¯Ü
+9squid:S1989"$Add a "try/catch" block for "doGet".(Æ¯Ü
+Hsquid:S1989"3Add a "try/catch" block for "setCharacterEncoding".(ï‡‹ê
+Bsquid:S1989"(Add a "try/catch" block for "getWriter".(ïô†úÿÿÿÿ
+Asquid:S1989"'Add a "try/catch" block for "parseInt".(˜—ÑÄüÿÿÿÿ
+Asquid:S1989"'Add a "try/catch" block for "parseInt".(ˆ­Ğ¹üÿÿÿÿ
+Asquid:S1989"'Add a "try/catch" block for "parseInt".(ùŸ±‰ıÿÿÿÿ
+Asquid:S1989"'Add a "try/catch" block for "parseInt".(›äùšÿÿÿÿÿ
+Asquid:S1989"'Add a "try/catch" block for "parseInt".(›äùšÿÿÿÿÿ
+Rsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
