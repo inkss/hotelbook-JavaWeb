@@ -35,10 +35,10 @@ public class FloorInfoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         Gson gson = new Gson();
-        out.print(gson.toJson(doMyServlet(request,response)));
+        out.print(gson.toJson(doMyServlet(request)));
     }
 
-    private PojotoGson doMyServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private PojotoGson doMyServlet(HttpServletRequest request) throws ServletException, IOException {
 
         int page = Integer.parseInt(request.getParameter("page")); //当前页码
         int limit = Integer.parseInt(request.getParameter("limit")); //每页的数据量

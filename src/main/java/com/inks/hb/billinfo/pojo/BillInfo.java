@@ -1,5 +1,8 @@
 package com.inks.hb.billinfo.pojo;
 
+/**
+ * 账单表
+ */
 public class BillInfo {
 
     private int billId;

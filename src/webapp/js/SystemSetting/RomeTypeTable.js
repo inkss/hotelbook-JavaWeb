@@ -197,7 +197,7 @@ layui.use(['util', 'layer', 'table'], function() {
 		//搜索
 		$('#searchButton').click(function() {
 			var inputTxt = $('#inputSearch').val();
-			if(inputTxt == "")
+			if(inputTxt === "")
 				layer.msg('您必须输入值', {
 					offset: '250px'
 				});
@@ -244,7 +244,7 @@ layui.use(['util', 'layer', 'table'], function() {
 				area: ['780px', '450px'],
 				fixed: false,
 				maxmin: true,
-				content: '/hb/SystemSetting/insertRomeType.jsp',
+				content: '/hb/webpage/SystemSetting/insertRomeType.jsp',
 				cancel: function() {
 					tableIns.reload({
 						where: {
