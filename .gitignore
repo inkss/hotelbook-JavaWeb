@@ -1,2 +1,8 @@
+# IDEA配置文件
 .idea/workspace.xml
+
+# Hbuild项目
+src/webapp/*.project
+
+# IDEA输出
 out

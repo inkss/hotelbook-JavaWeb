@@ -1,156 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>酒店管理系统</title>
-    <link rel='Shortcut Icon' type='image/x-icon' href='../img/windows.ico'>
-    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
-    <link href="css/animate.css" rel="stylesheet">
-    <script type="text/javascript" src="./component/layer-v3.0.3/layer/layer.js"></script>
-    <link rel="stylesheet" href="component/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="css/default.css" rel="stylesheet">
-    <script type="text/javascript" src="./js/win10.js"></script>
-    <script type="text/javascript" src="../js/Cookie.js"></script>
-    <style>
-        * {
-            font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
-        }
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>酒店管理系统</title>
+		<link rel='Shortcut Icon' type='image/x-icon' href='../img/windows.ico'>
+		<script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+		<link href="css/animate.css" rel="stylesheet">
+		<script type="text/javascript" src="./component/layer-v3.0.3/layer/layer.js"></script>
+		<link rel="stylesheet" href="component/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link href="css/default.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/win10.js"></script>
+		<script type="text/javascript" src="../js/Cookie.js"></script>
+		<style>
+			* {
+				font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
+			}
+			/*去除窗体标题栏与主栏的差异，默认的属性是#eee*/
+			
+			.layui-layer-title {
+				border-bottom: 1px solid #444444;
+			}
+			/*磁贴自定义样式*/
+			
+			.win10-block-content-text {
+				line-height: 44px;
+				text-align: center;
+				font-size: 16px;
+			}
+		</style>
 
-        /*去除窗体标题栏与主栏的差异，默认的属性是#eee*/
-        .layui-layer-title {
-            border-bottom: 1px solid #444444;
-        }
-        /*磁贴自定义样式*/
+		<!--引入自定义js-->
+		<script type="text/javascript" src="./js/win10-hotelbook.js"></script>
+	</head>
 
-        .win10-block-content-text {
-            line-height: 44px;
-            text-align: center;
-            font-size: 16px;
-        }
-    </style>
+	<body>
+		<div id="win10">
 
-    <!--引入自定义js-->
-    <script type="text/javascript" src="./js/win10-hotelbook.js"></script>
-</head>
+			<!--桌面图标-->
+			<div class="desktop">
+				<div id="win10-shortcuts" class="shortcuts-hidden">
 
-<body>
-    <div id="win10">
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/orderInfo/order.jsp','<img class=\'icon\' src=\'img/icon/1YuDing.png\'/>预定管理')">
+						<img class="icon" src="img/icon/1YuDing.png" />
+						<div class="title">预定管理</div>
+					</div>
 
-        <!--桌面图标-->
-        <div class="desktop">
-            <div id="win10-shortcuts" class="shortcuts-hidden">
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/2RuZhu.png\'/>入住管理')">
+						<img class="icon" src="img/icon/2RuZhu.png" />
+						<div class="title">入住管理</div>
+					</div>
 
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/3FangTai.png\'/>房态管理')">
+						<img class="icon" src="img/icon/3FangTai.png" />
+						<div class="title">房态管理</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../orderInfo/order.jsp','<img class=\'icon\' src=\'img/icon/1YuDing.png\'/>预定管理')">
-                    <img class="icon" src="img/icon/1YuDing.png" />
-                    <div class="title">预定管理</div>
-                </div>
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/searchTable/searchpage.jsp','<img class=\'icon\' src=\'img/icon/4ShuJu.png\'/>数据查询')">
+						<img class="icon" src="img/icon/4ShuJu.png" />
+						<div class="title">数据查询</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'img/icon/2RuZhu.png\'/>入住管理')">
-                    <img class="icon" src="img/icon/2RuZhu.png" />
-                    <div class="title">入住管理</div>
-                </div>
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/5ZhangDan.png\'/>账单管理')">
+						<img class="icon" src="img/icon/5ZhangDan.png" />
+						<div class="title">账单管理</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'img/icon/3FangTai.png\'/>房态管理')">
-                    <img class="icon" src="img/icon/3FangTai.png" />
-                    <div class="title">房态管理</div>
-                </div>
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/SystemSetting/SystemMain.jsp','<img class=\'icon\' src=\'img/icon/6XiTong.png\'/>系统设定')">
+						<img class="icon" src="img/icon/6XiTong.png" />
+						<div class="title">系统设定</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../searchTable/searchpage.jsp','<img class=\'icon\' src=\'img/icon/4ShuJu.png\'/>数据查询')">
-                    <img class="icon" src="img/icon/4ShuJu.png" />
-                    <div class="title">数据查询</div>
-                </div>
+					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/7YuanGong.png\'/>员工管理')">
+						<img class="icon" src="img/icon/7YuanGong.png" />
+						<div class="title">员工管理</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'img/icon/5ZhangDan.png\'/>账单管理')">
-                    <img class="icon" src="img/icon/5ZhangDan.png" />
-                    <div class="title">账单管理</div>
-                </div>
+					<div class="shortcut" onclick="Win10.exit()">
+						<img class="icon" src="img/icon/8AnQuan.png" />
+						<div class="title">安全退出</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../SystemSetting/SystemMain.jsp','<img class=\'icon\' src=\'img/icon/6XiTong.png\'/>系统设定')">
-                    <img class="icon" src="img/icon/6XiTong.png" />
-                    <div class="title">系统设定</div>
-                </div>
+					<div class="shortcut" onclick="window.open('https://github.com/inkss/hotelbook-JavaWeb')">
+						<img class="icon" src="img/icon/9XiangMu.png" />
+						<div class="title">项目地址</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('../auth/auth.jsp','<img class=\'icon\' src=\'img/icon/7YuanGong.png\'/>员工管理')">
-                    <img class="icon" src="img/icon/7YuanGong.png" />
-                    <div class="title">员工管理</div>
-                </div>
+					<div class="shortcut" onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'img/icon/10Liulan.png\'/>浏览地址')">
+						<img class="icon" src="img/icon/10Liulan.png" />
+						<div class="title">浏览地址</div>
+					</div>
 
-                <div class="shortcut" onclick="Win10.exit()">
-                    <img class="icon" src="img/icon/8AnQuan.png" />
-                    <div class="title">安全退出</div>
-                </div>
+				</div>
+				<div id="win10-desktop-scene"></div>
+			</div>
 
-                <div class="shortcut" onclick="window.open('https://github.com/inkss/hotelbook-JavaWeb')">
-                    <img class="icon" src="img/icon/9XiangMu.png" />
-                    <div class="title">项目地址</div>
-                </div>
+			<!--磁贴菜单-->
+			<div id="win10-menu" class="hidden">
+				<div class="list win10-menu-hidden animated animated-slideOutLeft">
+					<div class="item" onclick="Win10.exit()">
+						<i class="black icon fa fa-power-off fa-fw"></i>
+						<span class="title">关闭</span>
+					</div>
+				</div>
+				<div class="blocks">
+					<div class="menu_group">
+						<div class="title">Welcome</div>
+						<div class="block" loc="1,1" size="6,4">
+							<div class="content">
+								<div style="font-size:100px;line-height: 132px;margin: 0 auto ;display: block" class="fa fa-fw fa-windows win10-block-content-text"></div>
+								<div class="win10-block-content-text" style="font-size: 22px">欢迎使用 酒店管理系统</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="win10-menu-switcher"></div>
+			</div>
 
-                <div class="shortcut" onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'img/icon/10Liulan.png\'/>浏览地址')">
-                    <img class="icon" src="img/icon/10Liulan.png" />
-                    <div class="title">浏览地址</div>
-                </div>
+			<!--通知中心-->
+			<div id="win10_command_center" class="hidden_right">
+				<div class="title">
+					<h4 style="float: left">消息中心 </h4>
+					<span id="win10_btn_command_center_clean_all">全部清除</span>
+				</div>
+				<div class="msgs"></div>
+			</div>
 
+			<!--状态栏-->
+			<div id="win10_task_bar">
+				<div id="win10_btn_group_left" class="btn_group">
+					<div id="win10_btn_win" class="btn">
+						<span class="fa fa-windows"></span>
+					</div>
+					<div class="btn" id="win10-btn-browser">
+						<span class="fa fa-internet-explorer"></span>
+					</div>
+				</div>
+				<div id="win10_btn_group_middle" class="btn_group"></div>
+				<div id="win10_btn_group_right" class="btn_group">
+					<div class="btn" id="win10_btn_time"></div>
+					<div class="btn" id="win10_btn_command">
+						<span id="win10-msg-nof" class="fa fa-comment-o"></span>
+					</div>
+					<div class="btn" id="win10_btn_show_desktop"></div>
+				</div>
+			</div>
 
-            </div>
-            <div id="win10-desktop-scene"></div>
-        </div>
-
-        <!--磁贴菜单-->
-        <div id="win10-menu" class="hidden">
-            <div class="list win10-menu-hidden animated animated-slideOutLeft">
-                <div class="item" onclick="Win10.exit()">
-                    <i class="black icon fa fa-power-off fa-fw"></i>
-                    <span class="title">关闭</span>
-                </div>
-            </div>
-            <div class="blocks">
-                <div class="menu_group">
-                    <div class="title">Welcome</div>
-                    <div class="block" loc="1,1" size="6,4">
-                        <div class="content">
-                            <div style="font-size:100px;line-height: 132px;margin: 0 auto ;display: block" class="fa fa-fw fa-windows win10-block-content-text"></div>
-                            <div class="win10-block-content-text" style="font-size: 22px">欢迎使用 酒店管理系统</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="win10-menu-switcher"></div>
-        </div>
-
-        <!--通知中心-->
-        <div id="win10_command_center" class="hidden_right">
-            <div class="title">
-                <h4 style="float: left">消息中心 </h4>
-                <span id="win10_btn_command_center_clean_all">全部清除</span>
-            </div>
-            <div class="msgs"></div>
-        </div>
-
-        <!--状态栏-->
-        <div id="win10_task_bar">
-            <div id="win10_btn_group_left" class="btn_group">
-                <div id="win10_btn_win" class="btn">
-                    <span class="fa fa-windows"></span>
-                </div>
-                <div class="btn" id="win10-btn-browser">
-                    <span class="fa fa-internet-explorer"></span>
-                </div>
-            </div>
-            <div id="win10_btn_group_middle" class="btn_group"></div>
-            <div id="win10_btn_group_right" class="btn_group">
-                <div class="btn" id="win10_btn_time"></div>
-                <div class="btn" id="win10_btn_command">
-                    <span id="win10-msg-nof" class="fa fa-comment-o"></span>
-                </div>
-                <div class="btn" id="win10_btn_show_desktop"></div>
-            </div>
-        </div>
-
-    </div>
-</body>
+		</div>
+	</body>
 
 </html>
