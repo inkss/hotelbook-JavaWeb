@@ -167,11 +167,9 @@ layui.use(['util', 'layer', 'table'], function() {
 																});
 																layer.close(index);
 															} else {
-																if(isNaN(NewExceedance)) {
-																	layer.msg('您所输入的值类型不合法', {
-																		offset: '250px'
-																	});
-																}
+																layer.msg('您所输入的值类型不合法', {
+																	offset: '260px'
+																});
 															}
 														});
 													}
