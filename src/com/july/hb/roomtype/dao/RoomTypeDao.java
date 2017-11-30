@@ -98,7 +98,7 @@ public class RoomTypeDao implements CommonDao {
 
         String sql = "select * from roomType limit ?, ?;";
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setInt(1, start - 1);   //减一，详见声明部分
+        pstmt.setInt(1, start - 1);
         pstmt.setInt(2, length);
         ResultSet rs = pstmt.executeQuery();
 

@@ -1,4 +1,4 @@
-package com.july.hb.floorinfo.pojo;
+package com.july.hb.floor.pojo;
 
 /**
  * 楼层信息

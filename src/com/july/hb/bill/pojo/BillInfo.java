@@ -1,4 +1,4 @@
-package com.july.hb.billinfo.pojo;
+package com.july.hb.bill.pojo;
 
 public class BillInfo {
 
@@ -11,6 +11,19 @@ public class BillInfo {
     private String costDate;
 
     private String remark;
+
+    private boolean isNull;
+
+    public BillInfo() {
+    }
+
+    public BillInfo(int billId, String checkedId, String costMoney, String costDate, String remark) {
+        this.billId = billId;
+        this.checkedId = checkedId;
+        this.costMoney = costMoney;
+        this.costDate = costDate;
+        this.remark = remark;
+    }
 
     public int getBillId() {
         return billId;
@@ -52,6 +65,14 @@ public class BillInfo {
         this.remark = remark;
     }
 
+    public boolean isNull() {
+        return isNull;
+    }
+
+    public void setNull(boolean aNull) {
+        isNull = aNull;
+    }
+
     @Override
     public String toString() {
         return "BillInfo{" +
@@ -60,6 +81,7 @@ public class BillInfo {
                 ", costMoney='" + costMoney + '\'' +
                 ", costDate='" + costDate + '\'' +
                 ", remark='" + remark + '\'' +
+                ", isNull=" + isNull +
                 '}';
     }
 }

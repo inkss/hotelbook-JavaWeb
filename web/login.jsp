@@ -89,8 +89,7 @@
                             });
                         else {
                             layer.msg('登录成功', {
-                                icon: 16,
-                                shade: 0.01
+
                             });
 
                             //根据写入的session值得到结果

@@ -1,8 +1,8 @@
-package com.july.hb.floorinfo.dao;
+package com.july.hb.floor.dao;
 
 import com.july.hb.common.CommonDao;
 import com.july.hb.common.DBUtil;
-import com.july.hb.floorinfo.pojo.FloorInfo;
+import com.july.hb.floor.pojo.FloorInfo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

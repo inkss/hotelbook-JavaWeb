@@ -141,7 +141,7 @@ CREATE TABLE `hotelbook`.`billInfo` (
   INDEX `fk_billInfo_1_idx` (`checkId` ASC),
   CONSTRAINT `fk_billInfo_1`
     FOREIGN KEY (`checkId`)
-    REFERENCES `hotelbook`.`checkInfo` (`checkId`)
+    REFERENCES `hotelbook`.checkinInfo (`checkId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 

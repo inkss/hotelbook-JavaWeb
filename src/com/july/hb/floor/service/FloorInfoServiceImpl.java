@@ -1,7 +1,7 @@
-package com.july.hb.floorinfo.service;
+package com.july.hb.floor.service;
 
-import com.july.hb.floorinfo.dao.FloorInfoDao;
-import com.july.hb.floorinfo.pojo.FloorInfo;
+import com.july.hb.floor.dao.FloorInfoDao;
+import com.july.hb.floor.pojo.FloorInfo;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

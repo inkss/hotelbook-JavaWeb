@@ -1,10 +1,10 @@
-package com.july.hb.floorinfo.controller;
+package com.july.hb.floor.controller;
 
 import com.google.gson.Gson;
 import com.july.hb.common.PojotoGson;
-import com.july.hb.floorinfo.pojo.FloorInfo;
-import com.july.hb.floorinfo.service.FloorInfoService;
-import com.july.hb.floorinfo.service.FloorInfoServiceImpl;
+import com.july.hb.floor.pojo.FloorInfo;
+import com.july.hb.floor.service.FloorInfoService;
+import com.july.hb.floor.service.FloorInfoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
