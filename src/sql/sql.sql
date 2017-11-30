@@ -85,13 +85,13 @@ CREATE TABLE `hotelbook`.`orderInfo` (
   PRIMARY KEY (`orderId`),
   INDEX `fk_orderInfo_1_idx` (`typeId` ASC),
   CONSTRAINT `fk_orderInfo_1`
-    FOREIGN KEY (`orderId`)
+    FOREIGN KEY (`typeId`)
     REFERENCES `hotelbook`.`roomType` (`typeId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
 -- 入住单
-CREATE TABLE `hotelbook`.`checkInfo` (
+CREATE TABLE `hotelbook`.`checkInInfo` (
   `checkId` VARCHAR(45) NOT NULL COMMENT '入住单号',
   `orderId` VARCHAR(45) NULL COMMENT '预定单号',
   `checkName` VARCHAR(45) NULL COMMENT '入住人',
@@ -111,7 +111,7 @@ CREATE TABLE `hotelbook`.`checkInfo` (
   `addBedPrice` VARCHAR(20) NULL COMMENT '加床价格',
   `orderMoney` VARCHAR(20) NULL COMMENT '预收款',
   `money` VARCHAR(20) NULL COMMENT '应收账款',
-  `idCheck` VARCHAR(10) NULL COMMENT '是否结账',
+  `isCheck` VARCHAR(10) NULL COMMENT '是否结账',
   `checkMoney` VARCHAR(20) NULL COMMENT '结账金额',
   `checkDate` VARCHAR(45) NULL COMMENT '结账日期',
   `remark` VARCHAR(500) NULL COMMENT '备注',
@@ -141,7 +141,7 @@ CREATE TABLE `hotelbook`.`billInfo` (
   INDEX `fk_billInfo_1_idx` (`checkId` ASC),
   CONSTRAINT `fk_billInfo_1`
     FOREIGN KEY (`checkId`)
-    REFERENCES `hotelbook`.`checkInfo` (`checkId`)
+    REFERENCES `hotelbook`.`checkInInfo` (`checkId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -180,7 +180,7 @@ CREATE TABLE `hotelbook`.`orderHistory` (
   PRIMARY KEY (`orderId`));
 
 -- 入住单历史
-CREATE TABLE `hotelbook`.`checkHistory` (
+CREATE TABLE `hotelbook`.`checkInHistory` (
   `checkId` VARCHAR(45) NOT NULL COMMENT '入住单号',
   `orderId` VARCHAR(45) NULL COMMENT '预定单号',
   `checkName` VARCHAR(45) NULL COMMENT '入住人',
@@ -200,7 +200,7 @@ CREATE TABLE `hotelbook`.`checkHistory` (
   `addBedPrice` VARCHAR(20) NULL COMMENT '加床价格',
   `orderMoney` VARCHAR(20) NULL COMMENT '预收款',
   `money` VARCHAR(20) NULL COMMENT '应收账款',
-  `idCheck` VARCHAR(10) NULL COMMENT '是否结账',
+  `isCheck` VARCHAR(10) NULL COMMENT '是否结账',
   `checkMoney` VARCHAR(20) NULL COMMENT '结账金额',
   `checkDate` VARCHAR(45) NULL COMMENT '结账日期',
   `remark` VARCHAR(500) NULL COMMENT '备注',

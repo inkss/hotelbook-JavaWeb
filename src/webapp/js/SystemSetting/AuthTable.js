@@ -152,7 +152,8 @@ layui.use(['util', 'layer', 'table'], function () {
         $('#refresh').click(function () {
             tableIns.reload({
                 where: {
-                    make: 0
+                    make: 0 ,
+                    page: 1
                 }
             });
         });

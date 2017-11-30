@@ -10,6 +10,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class OrderInfoDao implements CommonDao {
+
+    /**
+     * 插入函数关联内容如下：
+     * 1.外键关联： roomtype表
+     * 2.属性关联  login字段
+     * 3.pojo对象只定义了无参构造函数，所以
+     * 3.1 String类型无赋值则其值为NULL
+     * 3.2 Int类型为0
+     * 3.3 typeId与operatorId需要负值对象
+     *
+     * @param o OrderInfo字段信息
+     * @throws SQLException 数据库
+     */
     @Override
     public void insertData(Object o) throws SQLException {
 

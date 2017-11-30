@@ -6,7 +6,7 @@
 		<title>酒店管理系统</title>
 	</head>
 
-	<frameset cols="230,*" frameborder="0">
+	<frameset cols="200,*" frameborder="0">
 		<frame name="nav" src="SystemNav.jsp" />
 		<frame name="content" src="RoomTypeTable.jsp" />
 	</frameset>

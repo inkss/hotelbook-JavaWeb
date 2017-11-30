@@ -220,7 +220,8 @@ layui.use(['util', 'layer', 'table'], function() {
 		$('#refreshButton').click(function() {
 			tableIns.reload({
 				where: {
-					make: 0
+					make: 0 ,
+                    page: 1
 				}
 			});
 		});
