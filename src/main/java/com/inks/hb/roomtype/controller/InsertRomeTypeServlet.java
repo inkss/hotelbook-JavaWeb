@@ -45,10 +45,7 @@ public class InsertRomeTypeServlet extends HttpServlet {
         RoomTypeService service = new RoomTypeServiceImpl();
         PrintWriter out = response.getWriter();
 
-        int code = service.queryRepeat(roomType.getTypeName());
-
-        if (code != 0)
-            code = service.insertRoomType(roomType);
+        int code = service.insertRoomType(roomType);
 
         //code 1:插入成功 0：存在同名项 -1:插入失败
         out.print(gson.toJson(code));

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * 修订：2017.11.23
- *
+ * <p>
  * 将异常放在了本层处理
  * 如果出现数据库相关异常，则返回-1或者null
  */
@@ -18,10 +18,11 @@ public class RoomTypeServiceImpl implements RoomTypeService {
 
     @Override
     public int insertRoomType(RoomType roomType) {
-
         try {
-            if (queryRepeat(roomType.getTypeName()) == 1)
-                dao.insertData(roomType);
+            String name = roomType.getTypeName();
+            if (queryRepeat(name,name) != 1)
+                return 0;
+            dao.insertData(roomType);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return -1;
@@ -94,14 +95,16 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int queryRepeat(String typeName) {
+    public int queryRepeat(String newName,String oldName) {
         RoomType roomType;
 
         try {
-            roomType = dao.queryName(typeName);
-            if (!roomType.isNull()) //表示存在同名项
+            roomType = dao.queryName(newName);
+            if (!roomType.isNull()) {//表示存在同名项
+                if (roomType.getTypeName().equals(oldName))
+                    return 2;           //表示存在同名项，但是是与传递来的相同
                 return 0;
-            else
+            } else
                 return 1;
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());

@@ -96,8 +96,9 @@ layui.use(['util', 'layer', 'table'], function() {
 					offset: '220px',
 					maxlength: 10
 				}, function(NewTypeName, index) {
-					$.post(baseUrl + '/QueryRoomTypeNameServlet', NewTypeName, function(data) {
-						if(data === "1") {
+                    var params = "new=" + NewTypeName + "&old=" + typeName;
+					$.post(baseUrl + '/QueryRoomTypeNameServlet', params, function(data) {
+						if(data === "1" || data === "2") {
 							if(NewTypeName.length < 3)
 								layer.alert('长度不符合！', {
 									title: '警告',

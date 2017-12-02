@@ -32,8 +32,8 @@ public interface FloorInfoService {
     /**
      * 独立的查重函数
      *
-     * @param floorName 楼层名称
-     * @return 0:已经存在 1：未存在
+     * @param newName oldName 楼层名称
+     * @return 0:已经存在 1：未存在 2：与自身相同
      */
-    int queryRepeat(String floorName);
+    int queryRepeat(String newName,String oldName);
 }

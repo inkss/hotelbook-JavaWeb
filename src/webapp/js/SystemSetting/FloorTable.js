@@ -86,9 +86,9 @@ layui.use(['util', 'layer', 'table'], function() {
 					offset: '220px',
 					maxlength: 10
 				}, function(value, index) {
-					var NewfloorName = "floorName=" + value;
-					$.post(baseUrl + '/QueryFloorNameServlet', NewfloorName, function updateCheck(data) {
-						if(data === "1") {
+					var params = "new=" + value + "&old=" + floorName;
+					$.post(baseUrl + '/QueryFloorNameServlet', params, function updateCheck(data) {
+						if(data === "1" || data === "2") {
 							layer.close(index);
 							table.reload('tableID', {
 								where: {
@@ -155,8 +155,8 @@ layui.use(['util', 'layer', 'table'], function() {
 				offset: '220px',
 				maxlength: 10
 			}, function(inputValue, index) {
-				var params = "floorName=" + inputValue;
-				$.post(baseUrl + '/QueryFloorNameServlet', params, function insertCheck(data) {
+                var params = "new=" + inputValue + "&old=" + inputValue;
+				$.post(baseUrl + '/QueryFloorNameServlet', params, function (data) {
 					if(data === "1") {
 						layer.close(index);
 						table.reload('tableID', {

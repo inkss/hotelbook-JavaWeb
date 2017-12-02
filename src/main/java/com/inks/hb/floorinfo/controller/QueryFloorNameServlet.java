@@ -30,10 +30,10 @@ public class QueryFloorNameServlet extends HttpServlet {
         // 调用service
         FloorInfoService service = new FloorInfoServiceImpl();
 
-        String floorName = request.getParameter("floorName"); //获得姓名
-
+        String newName = request.getParameter("new"); //获得姓名
+        String oldName = request.getParameter("old");
         // 转换为json字符串格式
         Gson gson = new Gson();
-        out.print(gson.toJson(service.queryRepeat(floorName)));
+        out.print(gson.toJson(service.queryRepeat(newName,oldName)));
     }
 }

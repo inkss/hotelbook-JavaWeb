@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * 修订：2017.11.23
- *
+ * <p>
  * 将异常放在了本层处理
  * 如果出现数据库相关异常，则返回-1或者null
  */
@@ -100,16 +100,17 @@ public class FloorInfoServiceImpl implements FloorInfoService {
     }
 
     @Override
-    public int queryRepeat(String floorName) {
+    public int queryRepeat(String newName,String oldName) {
         FloorInfo floorInfoQuery = new FloorInfo();
-        floorInfoQuery.setFloorName(floorName);
-
+        floorInfoQuery.setFloorName(newName);
         FloorInfo floorInfo;
         try {
             floorInfo = (FloorInfo) dao.query(floorInfoQuery);
-            if (!floorInfo.isNull()) //表示存在同名项
+            if (!floorInfo.isNull()) { //表示存在同名项
+                if (floorInfo.getFloorName().equals(oldName))
+                    return 2; //表示存在同名项，但是是与传递来的相同
                 return 0;
-            else
+            } else
                 return 1;
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());

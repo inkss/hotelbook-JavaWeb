@@ -28,10 +28,11 @@ public class QueryRoomTypeNameServlet extends HttpServlet {
         // 调用service
         RoomTypeService service = new RoomTypeServiceImpl();
 
-        String typeName = request.getParameter("typeName"); //获得姓名
+        String newName = request.getParameter("new"); //获得姓名
+        String oldName = request.getParameter("old");
 
         // 转换为json字符串格式
         Gson gson = new Gson();
-        out.print(gson.toJson(service.queryRepeat(typeName)));
+        out.print(gson.toJson(service.queryRepeat(newName,oldName)));
     }
 }
