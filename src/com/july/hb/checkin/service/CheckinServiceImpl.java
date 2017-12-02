@@ -1,22 +1,20 @@
-package com.july.hb.roomtype.service;
+package com.july.hb.checkin.service;
 
-import com.july.hb.roomtype.dao.RoomTypeDao;
-import com.july.hb.roomtype.pojo.RoomType;
+import com.july.hb.checkin.dao.CheckinDao;
+import com.july.hb.checkin.pojo.CheckinInfo;
+import com.july.hb.common.CommonDao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-
-public class RoomTypeServiceImpl implements RoomTypeService {
-
-    private RoomTypeDao dao = new RoomTypeDao();
+//把数据层得到的数据处理一下给控制层
+public class CheckinServiceImpl implements CheckinService {
+    private CheckinDao dao = new CheckinDao();
 
     @Override
-    public int insertRoomType(RoomType roomType) {
-
+    public int insertCheckinInfo(CheckinInfo checkinInfo) {
         try {
-            if (queryRepeat(roomType.getTypeName()) == 1)
-                dao.insertData(roomType);
+            if (queryRepeat(checkinInfo.getCheckName())==1)
+                dao.insertData(checkinInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return -1;
@@ -25,12 +23,12 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int deleteRoomType(String typeId) {
-        RoomType roomType = new RoomType();
-        roomType.setTypeId(typeId);
+    public int deleteCheckinInfo(String checkId) {
+        CheckinInfo checkinInfo = new CheckinInfo();
+        checkinInfo.setCheckId(checkId);
 
         try {
-            dao.deleteData(roomType);
+            dao.deleteData(checkinInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return -1;
@@ -39,9 +37,9 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int updateRoomType(RoomType roomType) {
+    public int updateCheckinInfo(CheckinInfo checkinInfo) {
         try {
-            dao.updateData(roomType);
+            dao.updateData(checkinInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return -1;
@@ -50,12 +48,12 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public RoomType query(String typeId) {
-        RoomType roomType = new RoomType();
-        roomType.setTypeId(typeId);
+    public CheckinInfo query(String checkId) {
+        CheckinInfo checkinInfo = new CheckinInfo();
+        checkinInfo.setCheckId(checkId);
 
         try {
-            return (RoomType) dao.query(roomType);
+            return (CheckinInfo) dao.query(checkinInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return null;
@@ -78,8 +76,7 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int queryRoomTypeNum() {
-
+    public int queryCheckinNum() {
         try {
             return dao.queryDataNum();
         } catch (SQLException e) {
@@ -89,12 +86,12 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int queryRepeat(String typeName) {
-        RoomType roomType;
+    public int queryRepeat(String checkName) {
+        CheckinInfo checkinInfo;
 
         try {
-            roomType = dao.queryName(typeName);
-            if (!roomType.isNull()) //表示存在同名项
+            checkinInfo = dao.queryName(checkName);
+            if (!checkinInfo.isNull()) //表示存在同名项
                 return 0;
             else
                 return 1;
@@ -103,5 +100,6 @@ public class RoomTypeServiceImpl implements RoomTypeService {
             return -1;
         }
     }
+
 
 }

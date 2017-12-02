@@ -36,7 +36,7 @@
             <div class="layui-inline">
                 <div class="layui-input-inline">
                     <%--------------------修改此处输入框提醒值--------------------%>
-                    <input class="layui-input" id="inputSearch" placeholder="房间类型">
+                    <input class="layui-input" id="inputSearch" placeholder="入住单号">
                 </div>
                 <button class="layui-btn fa fa-search" id="searchButton"> 搜索</button>
             </div>
@@ -44,7 +44,7 @@
                 <button class="layui-btn fa fa-refresh" id="refreshButton"> 刷新</button>
             </div>
             <div class="layui-inline">
-                <button class="layui-btn fa fa-pencil-square-o " id="insertButton"> 新增</button>
+                <button class="layui-btn fa fa-pencil-square-o " id="insertButton"> 生成</button>
             </div>
             <div class="layui-inline">
                 <button class="layui-btn fa fa-save" id="toXlsButton"> 导出</button>
@@ -65,7 +65,7 @@
 </script>
 
 <%---------------------修改此处引入的js--------------------%>
-<script src="../js/SystemSetting/RomeTypeTable.js"></script>
+<script src="../js/account/BillInfo.js"></script>
 
 
 </body>

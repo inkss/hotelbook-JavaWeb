@@ -21,7 +21,7 @@ public class BillDao implements CommonDao
         String sql = "INSERT INTO floorInfo (floorName) VALUES (?,?,?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, billInfo.getBillId());
-        pstmt.setString(2,billInfo.getCheckedId());
+        pstmt.setString(2,billInfo.getCheckId());
         pstmt.setString(3,billInfo.getCostMoney());
         pstmt.setString(4,billInfo.getCostDate());
         pstmt.setString(5,billInfo.getRemark());
@@ -38,11 +38,11 @@ public class BillDao implements CommonDao
         Connection conn = DBUtil.getConnection();
 
         String sql = "DELETE FROM billInfo WHERE billInfo = ?";
-        PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setInt(1, billInfo.getBillId());
-        ps.executeUpdate();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, billInfo.getBillId());
+        pstmt.executeUpdate();
 
-        ps.close();
+        pstmt.close();
     }
 
     @Override
@@ -51,11 +51,13 @@ public class BillDao implements CommonDao
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "UPDATE billInfo SET costMoney = ? ,costDate = ? ,remark = ?  WHERE billId = ?";
+        String sql = "UPDATE billInfo SET checkId = ? ,costMoney = ? ,costDate = ? ,remark = ?  WHERE billId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, billInfo.getCostDate());
-        pstmt.setString(2, billInfo.getCostDate());
-        pstmt.setString(3, billInfo.getRemark());
+        pstmt.setInt(1, billInfo.getBillId());
+        pstmt.setString(2, billInfo.getCheckId());
+        pstmt.setString(3, billInfo.getCostDate());
+        pstmt.setString(4, billInfo.getCostDate());
+        pstmt.setString(5, billInfo.getRemark());
         pstmt.executeUpdate();
         pstmt.close();
     }
@@ -83,7 +85,7 @@ public class BillDao implements CommonDao
     public ArrayList query(int start, int length) throws SQLException {
         Connection conn = DBUtil.getConnection();
 
-        String sql = "select * from roomType limit ?, ?;";
+        String sql = "select * from billInfo limit ?, ?;";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, start - 1);
         pstmt.setInt(2, length);
@@ -129,5 +131,31 @@ public class BillDao implements CommonDao
         pstmt.close();
 
         return billInfo;
+    }
+
+    public BillInfo queryName(int billId) throws SQLException {
+
+        Connection conn = DBUtil.getConnection();
+
+        String sql = "SELECT * FROM billInfo WHERE billId = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, billId);
+        ResultSet rs = pstmt.executeQuery();
+
+        BillInfo billInfoQuery = null;
+        while (rs.next()) {
+            billInfoQuery = new BillInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), rs.getString(5) );
+         }
+
+        if (billInfoQuery == null) {
+            billInfoQuery = new BillInfo();
+            billInfoQuery.setNull(true);
+        }
+
+        rs.close();
+        pstmt.close();
+
+        return billInfoQuery;
     }
 }

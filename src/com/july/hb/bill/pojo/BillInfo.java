@@ -3,13 +3,9 @@ package com.july.hb.bill.pojo;
 public class BillInfo {
 
     private int billId;
-
-    private String checkedId;
-
+    private String checkId;
     private String costMoney;
-
     private String costDate;
-
     private String remark;
 
     private boolean isNull;
@@ -19,7 +15,7 @@ public class BillInfo {
 
     public BillInfo(int billId, String checkedId, String costMoney, String costDate, String remark) {
         this.billId = billId;
-        this.checkedId = checkedId;
+        this.checkId = checkId;
         this.costMoney = costMoney;
         this.costDate = costDate;
         this.remark = remark;
@@ -33,12 +29,12 @@ public class BillInfo {
         this.billId = billId;
     }
 
-    public String getCheckedId() {
-        return checkedId;
+    public String getCheckId() {
+        return checkId;
     }
 
-    public void setCheckedId(String checkedId) {
-        this.checkedId = checkedId;
+    public void setCheckId(String checkId) {
+        this.checkId = checkId;
     }
 
     public String getCostMoney() {
@@ -77,7 +73,7 @@ public class BillInfo {
     public String toString() {
         return "BillInfo{" +
                 "billId=" + billId +
-                ", checkedId='" + checkedId + '\'' +
+                ", checkId='" + checkId + '\'' +
                 ", costMoney='" + costMoney + '\'' +
                 ", costDate='" + costDate + '\'' +
                 ", remark='" + remark + '\'' +
