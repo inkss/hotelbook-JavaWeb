@@ -3,6 +3,7 @@
 
 	<head>
 		<title>酒店管理系统</title>
+		<link rel="stylesheet Icon" type=" image/x-icon" href="img/windows.ico">
 	</head>
 
 	<body>

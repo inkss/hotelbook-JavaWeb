@@ -9,6 +9,7 @@
 		<script src="../../js/jquery.js"></script>
 		<script src="../../js/global.js"></script>
 		<script src="../../js/getTime.js"></script>
+        <script src="../../js/Cookie.js"></script>
 	</head>
 
 	<body>
@@ -16,7 +17,7 @@
 			<legend>酒店管理 - 预订单</legend>
 		</fieldset>
 
-		<form class="layui-form" action="">
+		<form class="layui-form" >
 
 			<div class="layui-form-item">
 				<div class="layui-inline">
@@ -34,7 +35,7 @@
 				<div class="layui-inline">
 					<label class="layui-form-label">预定电话</label>
 					<div class="layui-input-inline">
-						<input type="tel" id="orderPhone" lay-verify="required|phone" autocomplete="off" placeholder="预定人电话" class="layui-input">
+						<input type="tel" id="orderPhone" lay-verify="phone" autocomplete="off" placeholder="预定人电话" class="layui-input">
 					</div>
 				</div>
 			</div>
@@ -42,66 +43,54 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">身份证</label>
 				<div class="layui-input-block">
-					<input type="text" id="orderIDcard" lay-verify="identity" placeholder="公民身份证号" autocomplete="off" class="layui-input">
+					<input type="text" id="orderIDcard" lay-verify="required|identity" placeholder="公民身份证号" autocomplete="off" class="layui-input">
 				</div>
 			</div>
 
 			<div class="layui-form-item">
+
 				<div class="layui-inline">
-					<label class="layui-form-label">抵店时间</label>
+					<label class="layui-form-label">入住时长</label>
 					<div class="layui-input-inline">
-						<input type="text" id="arrireDate" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+						<input type="text" class="layui-input" lay-verify="required" id="orderAllTime" placeholder="抵店时间 - 离店时间" readonly>
 					</div>
 				</div>
 
-				<div class="layui-inline">
-					<label class="layui-form-label">离店时间</label>
-					<div class="layui-input-inline">
-						<input type="text" id="leaveDate" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
-					</div>
-				</div>
-
-			</div>
-
-			<div class="layui-form-item">
-				<div class="layui-inline">
-					<label class="layui-form-label">房间类型</label>
-					<div class="layui-input-inline">
-						<input type="text" id="typeId" lay-verify="required" autocomplete="off" placeholder="房间类型" class="layui-input">
-					</div>
-				</div>
 				<div class="layui-inline">
 					<label class="layui-form-label">入住人数</label>
 					<div class="layui-input-inline">
-						<input type="text" id="checkNum" lay-verify="required|number" autocomplete="off" placeholder="实际入住人数" class="layui-input">
+						<input type="text" id="checkNum" lay-verify="number" autocomplete="off" placeholder="实际入住人数" class="layui-input">
 					</div>
+				</div>
+
+				<div class="layui-inline">
+					<label class="layui-form-label">房间类型</label>
+					<div class="layui-input-inline">
+						<input type="text" id="typeId" lay-verify="required" autocomplete="off" placeholder="房间类型" class="layui-input" readonly>
+					</div>
+					<button type="button" class="layui-btn layui-btn-primary" id="buttonTypeId"><i class="layui-icon">&#xe654;</i> 选择</button>
 				</div>
 
 			</div>
 
 			<div class="layui-form-item">
-				<div class="layui-inline">
-					<label class="layui-form-label">客房编号</label>
-					<div class="layui-input-inline">
-						<input type="text" id="roomId" lay-verify="number" autocomplete="off" placeholder="No." class="layui-input">
-					</div>
-				</div>
+
 				<div class="layui-inline">
 					<label class="layui-form-label">客房价格</label>
 					<div class="layui-input-inline">
 						<input type="text" id="price" lay-verify="number" autocomplete="off" placeholder="￥" class="layui-input">
 					</div>
 				</div>
-
-			</div>
-
-			<div class="layui-form-item">
 				<div class="layui-inline">
 					<label class="layui-form-label">入住价格</label>
 					<div class="layui-input-inline">
 						<input type="text" id="checkPrice" lay-verify="number" autocomplete="off" placeholder="￥" class="layui-input">
 					</div>
 				</div>
+
+			</div>
+
+			<div class="layui-form-item">
 				<div class="layui-inline">
 					<label class="layui-form-label">折扣</label>
 					<div class="layui-input-inline">
@@ -142,6 +131,18 @@
 						<input type="text" id="orderMoney" lay-verify="required|number" autocomplete="off" placeholder="￥" class="layui-input">
 					</div>
 				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">单据状态</label>
+					<div class="layui-input-inline">
+						<select name="city" class="layui-input-inline" id="orderState">
+							<option value="0">预定</option>
+							<option value="1">入住</option>
+							<option value="2">结算</option>
+							<option value="3">延期</option>
+						</select>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="layui-form-item layui-form-text">
@@ -167,7 +168,26 @@
 
 			layui.use(['form', 'layedit', 'laydate'], function() {
 				var form = layui.form,
-					layer = layui.layer;
+					layer = layui.layer,
+					layedit = layui.layedit,
+					laydate = layui.laydate;
+				var isAddBed = false;
+
+				//日期
+				laydate.render({
+					elem: '#arrireDate'
+				});
+				laydate.render({
+					elem: '#leaveDate'
+				});
+				laydate.render({
+					elem: '#orderAllTime',
+					type: 'datetime',
+					min: 0,
+					range: '|',
+					format: 'yyyy-MM-dd',
+					calendar: true
+				});
 
 				//设置ID（读取的时间）
 				var time = new Date().getTime();
@@ -179,12 +199,106 @@
 				form.on('radio(addBedYes)', function() {
 					$('#addBed').removeClass("layui-hide");
 					$('#addBed').addClass("layui-show");
+					isAddBed = true;
 				});
 				form.on('radio(addBedNo)', function() {
 					$('#addBed').removeClass("layui-show");
 					$('#addBed').addClass("layui-hide");
+					isAddBed = false;
 				});
 
+				//房间类型的选择
+				$('#buttonTypeId').on('click', function() {
+					layer.open({
+						type: 2,
+						title: '请选择房间类型',
+						btn: ['确定', '取消'],
+						area: ['880px', '440px'],
+						fixed: form,
+						content: './selectRoomType.jsp',
+						yes: function(index, layero) {
+							typeId.value = $(layero).find('iframe')[0].contentWindow.tId.value; //将子窗口中的 tId 抓过来
+							price.value = $(layero).find('iframe')[0].contentWindow.tPrice.value;
+							layer.close(index); //关闭弹窗
+						},
+						btn2: function(index) {
+							layer.close(index);
+						},
+						success: function(layero, index) {
+							var obj = $(layero).find('iframe')[0].contentWindow;
+						}
+					});
+				});
+
+				//监听提交
+				form.on('submit(insertRome)', function(data) {
+
+					//先获取值
+					var orderId = $('#orderId').val();
+					var orderName = $('#orderName').val();
+					var orderPhone = $('#orderPhone').val();
+					var orderIDcard = $('#orderIDcard').val();
+					var typeId = $('#typeId').val();
+
+					//返回数据类型： yyyy-mm-dd hh:mm:ss
+					var orderAllTime = ($('#orderAllTime').val()).split(" | ");
+					var arrireDate = orderAllTime[0];
+					var leaveDate = orderAllTime[1];
+
+					var orderState = $('#orderState').val();
+					var checkNum = $('#checkNum').val();
+
+					// var roomId = $('#roomId').val(); 后台处理 -->直接放一个空类就行了
+
+					var price = $('#price').val();
+					var checkPrice = $('#checkPrice').val();
+					var discount = $('#discount').val();
+					var discountReason = $('#discountReason').val();
+
+					//加床：true 不加：false
+					var addBed = isAddBed;
+
+					var addBedPrice = $('#addBedPrice').val();
+					var orderMoney = $('#orderMoney').val();
+                    var operatorId = getCookie("loginName");
+					var remark = $('#remark').val();
+
+					var params = "orderId=" + orderId + "&orderName=" + orderName + "&orderPhone=" + orderPhone +
+						"&orderIDcard=" + orderIDcard + "&typeId=" + typeId + "&arrireDate=" + arrireDate +
+						"&leaveDate=" + leaveDate + "&orderState=" + orderState + "&checkNum=" + checkNum +
+						"&price=" + price + "&checkPrice=" + checkPrice + "&discount=" + discount +
+						"&discountReason=" + discountReason + "&addBed=" + addBed + "&addBedPrice=" + addBedPrice +
+						"&orderMoney=" + orderMoney + "&operatorId=" + operatorId + "&remark=" + remark;
+
+                    $.post(baseUrl + '/InsertOrderInfoServlet', params, function(data) {
+                        if (data === '1') {
+                            layer.alert('预订单登记成功！', {
+                                title: '新增成功',
+                                icon: 6,
+                                shade: 0.6 ,
+                                anim: 3,
+                                offset: '220px'
+                            });
+                        }else if (data === '0') {
+                            layer.alert('存在相同字段！', {
+                                title: '新增失败',
+                                icon: 5,
+                                shade: 0.6 ,
+                                anim: 6,
+                                offset: '220px'
+                            });
+                        } else {
+                            layer.alert('预订单登记失败！', {
+                                title: '新增失败',
+                                icon: 2,
+                                shade: 0.6 ,
+                                anim: 6,
+                                offset: '220px'
+                            });
+                        }
+                    });
+                    return false;
+				});
 			});
 		</script>
 	</body>

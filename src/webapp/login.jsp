@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>酒店管理系统</title>
-		<link rel="stylesheet Icon" href="img/windows.ico">
+		<link rel="stylesheet Icon" type=" image/x-icon" href="img/windows.ico">
 		<link rel="stylesheet" type="text/css" href="css/login/register-login.css">
 		<script src="./js/global.js"></script>
 	</head>

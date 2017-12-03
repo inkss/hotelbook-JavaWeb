@@ -9,48 +9,70 @@ import com.inks.hb.roomtype.pojo.RoomType;
  */
 public class OrderInfo {
 
-    private String orderId; //预订单号->直接获取时间戳?存进去
+    private String orderId; //预订单号->直接获取时间戳?存进去 1
 
-    private String orderName; //预定人
+    private String orderName; //预定人 2
 
-    private String orderPhone; //联系电话
+    private String orderPhone; //联系电话 3
 
-    private String orderIDcard;
+    private String orderIDcard; // 4
 
-    private RoomType typeId; //房间类型->对应roomtype表
+    private RoomType typeId; //房间类型->对应roomtype表 5<-------------------
 
-    private String arrireDate; //抵店时间
+    private String arrireDate; //抵店时间 6
 
-    private String leaveDate; //离店时间
+    private String leaveDate; //离店时间 7
 
-    private String orderState; //单据状态->该字段前端做下拉框写死
+    private String orderState; //单据状态->该字段前端做下拉框写死 8
 
-    private String checkNum; //入住人数
+    private String checkNum; //入住人数 9
 
-    private String roomId; //客房编号->预订单不一定实际分配，预定转入住时才可以
+    private String roomId; //客房编号->预订单不一定实际分配，预定转入住时才可以 10
 
-    private String price; //客房价格
+    private String price; //客房价格 11
 
-    private String checkPrice; //入住价格
+    private String checkPrice; //入住价格 12
 
-    private int discount; //折扣
+    private int discount; //折扣 13<-------------------
 
-    private String discountReason; //折扣原因
+    private String discountReason; //折扣原因 14
 
-    private String addBed; //是否加床
+    private String addBed; //是否加床 15
 
-    private String addBedPrice; //加床价格
+    private String addBedPrice; //加床价格 16
 
-    private String orderMoney; //预收款
+    private String orderMoney; //预收款 17
 
-    private String remark; //备注
+    private String remark; //备注 18
 
-    private Login operatorId; //操作员->登录
+    private Login operatorId; //操作员->登录 19<-------------------
 
-    private boolean isNull; //是否为空值对象
+    private boolean isNull; //是否为空值对象 20
 
     public OrderInfo() {
         super();
+    }
+
+    public OrderInfo(String orderId, String orderName, String orderPhone, String orderIDcard, RoomType typeId, String arrireDate, String leaveDate, String orderState, String checkNum, String roomId, String price, String checkPrice, int discount, String discountReason, String addBed, String addBedPrice, String orderMoney, String remark, Login operatorId) {
+        this.orderId = orderId;
+        this.orderName = orderName;
+        this.orderPhone = orderPhone;
+        this.orderIDcard = orderIDcard;
+        this.typeId = typeId;
+        this.arrireDate = arrireDate;
+        this.leaveDate = leaveDate;
+        this.orderState = orderState;
+        this.checkNum = checkNum;
+        this.roomId = roomId;
+        this.price = price;
+        this.checkPrice = checkPrice;
+        this.discount = discount;
+        this.discountReason = discountReason;
+        this.addBed = addBed;
+        this.addBedPrice = addBedPrice;
+        this.orderMoney = orderMoney;
+        this.remark = remark;
+        this.operatorId = operatorId;
     }
 
     public String getOrderId() {

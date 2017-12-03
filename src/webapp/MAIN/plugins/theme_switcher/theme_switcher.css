@@ -1,0 +1,96 @@
+/*themesetting*/
+#theme_body {
+
+}
+
+.theme_area {
+    z-index: 999;
+    padding: 10px 0 0 10px;
+}
+
+.theme_area a {
+    color: #333;
+    text-decoration: none;
+}
+
+div.wallpaper_settingButton, a.theme_setting, div.theme_upload {
+    display: inline;
+    float: left;
+    margin: 5px 8px 5px 8px;
+    width: 180px;
+    height: 140px;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+
+a.theme_setting {
+    background: #cbe7fc;
+    transition: all 0.5s;
+}
+
+a.theme_setting:hover {
+    background: #75c1f9
+}
+
+div.themeSetting_hover {
+    background: #75c1f9
+}
+
+div.theme_select, a.theme_select {
+    background: #75c1f9
+}
+
+.theme_icon {
+    margin: 5px auto;
+    padding-top: 3px;
+    width: 140px;
+    height: 100px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.theme_icon img{
+    width: 140px;
+    height: 100px;
+}
+
+.theme_text {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.theme_text a {
+    text-decoration: none;
+}
+
+.theme_text a:link {
+    text-decoration: none;
+}
+
+div.theme_upload {
+    background: #e9e9e9;
+    transition: all 0.5s;
+}
+
+div.theme_upload:hover{
+    background: #75c1f9
+}
+
+.clear {
+    clear: both;
+}
+
+.h10 {
+    clear: both;
+    height: 10px;
+}
+
+/*end*/

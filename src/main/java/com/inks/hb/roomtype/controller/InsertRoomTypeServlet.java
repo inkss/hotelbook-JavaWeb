@@ -17,13 +17,13 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "/InsertRomeTypeServlet", value = "/InsertRomeTypeServlet")
-public class InsertRomeTypeServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet(name = "/InsertRoomTypeServlet", value = "/InsertRoomTypeServlet")
+public class InsertRoomTypeServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("application/json; charset=utf-8");

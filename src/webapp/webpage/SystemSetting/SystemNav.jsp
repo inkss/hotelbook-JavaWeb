@@ -41,10 +41,7 @@
 		<script src="../../js/layui/layui.js"></script>
 		<script src="../../js/jquery.js"></script>
 		<script>
-			layui.use('element', function() {
-				var element = layui.element;
-
-			});
+			layui.use('element', function() {});
 		</script>
 	</body>
 

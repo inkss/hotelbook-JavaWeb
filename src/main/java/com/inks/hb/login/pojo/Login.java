@@ -32,22 +32,13 @@ public class Login {
         loginAdmin = -1;
     }
 
+    public Login(String loginName) {
+        this.loginName = loginName;
+    }
+
     public Login(String loginName, String loginPwd) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
-    }
-
-    public Login(String loginName, String loginPwd, int loginAdmin) {
-        this.loginName = loginName;
-        this.loginPwd = loginPwd;
-        this.loginAdmin = loginAdmin;
-    }
-
-    public Login(String loginName, String loginPwd, String loginNickName, int loginAdmin) {
-        this.loginName = loginName;
-        this.loginPwd = loginPwd;
-        this.loginNickName = loginNickName;
-        this.loginAdmin = loginAdmin;
     }
 
     public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
@@ -100,12 +91,12 @@ public class Login {
 
     @Override
     public String toString() {
-        return "\n--->Login对象信息输出：" +
-                "\n loginId = " + loginId +
-                "\n loginName = '" + loginName + '\'' +
-                "\n loginPwd = '" + loginPwd + '\'' +
-                "\n loginNickName = '" + loginNickName + '\'' +
-                "\n loginAdmin = " + loginAdmin +
-                "\n--->Login信息输出结束\n";
+        return "Login{" +
+                "loginId=" + loginId +
+                ", loginName='" + loginName + '\'' +
+                ", loginPwd='" + loginPwd + '\'' +
+                ", loginNickName='" + loginNickName + '\'' +
+                ", loginAdmin=" + loginAdmin +
+                '}';
     }
 }

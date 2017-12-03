@@ -78,7 +78,7 @@
 
 				//监听提交
 				form.on('submit(insertRome)', function(data) {
-					$.post(baseUrl + '/InsertRomeTypeServlet', JSON.stringify(data.field), function(code) {
+					$.post(baseUrl + '/InsertRoomTypeServlet', JSON.stringify(data.field), function(code) {
 						if(code === 1) {
 							layer.alert('插入成功！', {
 								title: '成功',

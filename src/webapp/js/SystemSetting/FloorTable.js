@@ -6,6 +6,7 @@
  * 一些变量名换成了与具体项无关的名称，需要修改的部分通过注释注明
  * 原注释可以参考最初的版本 : AuthTable.jsp
  */
+
 layui.use(['util', 'layer', 'table'], function() {
 	$(document).ready(function() {
 		var table = layui.table,
@@ -125,15 +126,15 @@ layui.use(['util', 'layer', 'table'], function() {
 					offset: '250px'
 				});
 			else {
-				layer.msg('搜索结果', {
-					offset: '250px'
-				});
-				table.reload('tableID', {
-					where: {
-						make: 3,
-						floorName: inputTxt
-					}
-				})
+                tableIns.reload({
+                    where: {
+                        make: 3,
+                        floorName: inputTxt
+                    }
+                });
+                layer.msg('搜索结果', {
+                    offset: '250px'
+                });
 			}
 		});
 

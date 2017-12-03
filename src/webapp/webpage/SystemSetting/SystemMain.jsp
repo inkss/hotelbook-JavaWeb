@@ -4,11 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>酒店管理系统</title>
+
 	</head>
+
 
 	<frameset cols="200,*" frameborder="0">
 		<frame name="nav" src="SystemNav.jsp" />
-		<frame name="content" src="RoomTypeTable.jsp" />
+		<frame name="content" src="../../nav.html" />
 	</frameset>
 
 </html>

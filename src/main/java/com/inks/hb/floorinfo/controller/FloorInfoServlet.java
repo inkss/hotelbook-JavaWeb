@@ -23,12 +23,12 @@ import java.util.ArrayList;
 public class FloorInfoServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
@@ -38,7 +38,7 @@ public class FloorInfoServlet extends HttpServlet {
         out.print(gson.toJson(doMyServlet(request)));
     }
 
-    private PojotoGson doMyServlet(HttpServletRequest request) throws ServletException, IOException {
+    private PojotoGson doMyServlet(HttpServletRequest request) {
 
         int page = Integer.parseInt(request.getParameter("page")); //当前页码
         int limit = Integer.parseInt(request.getParameter("limit")); //每页的数据量
@@ -114,7 +114,6 @@ public class FloorInfoServlet extends HttpServlet {
                 count =  Integer.toString(size);
             }
         }
-
         return new PojotoGson(code, msg, count, list);
     }
 }

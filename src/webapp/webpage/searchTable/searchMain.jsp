@@ -6,9 +6,9 @@
     <title>酒店管理系统</title>
 </head>
 
-<frameset rows="65,*" frameborder="0">
+<frameset rows="60,*" frameborder="0">
     <frame name="Header" src="searchHeader.jsp" />
-    <frame name="content" src="../SystemSetting/RoomTypeTable.jsp" />
+    <frame name="content" src="../../nav.html" />
 </frameset>
 
 </html>

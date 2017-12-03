@@ -20,7 +20,7 @@
 			}
 			
 			.layui-layer-title {
-				border-bottom: 1px solid #444444;
+				border-bottom: 1px solid #2b2b33;
 			}
 			/*去除窗体标题栏与主栏的差异，默认的属性是#eee*/
 			
@@ -41,39 +41,38 @@
 
 			<!--桌面图标-->
 			<div class="desktop">
-				<div id="win10-shortcuts" class="shortcuts-hidden">
-
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/orderInfo/order.jsp','<img class=\'icon\' src=\'img/icon/1YuDing.png\'/>预定管理')">
+				<div id="win10-shortcuts" class="shortcuts-hidden" >
+					<div class="shortcut win10-open-window"  data-area-offset="max" data-url="../webpage/orderInfo/order.jsp">
 						<img class="icon" src="img/icon/1YuDing.png" />
-						<div class="title">预定管理</div>
+						<div class="title">客房预定</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/2RuZhu.png\'/>入住管理')">
+					<div class="shortcut win10-open-window" data-url="../webpage/auth/auth.jsp">
 						<img class="icon" src="img/icon/2RuZhu.png" />
-						<div class="title">入住管理</div>
+						<div class="title">客房入住</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/3FangTai.png\'/>房态管理')">
+					<div class="shortcut win10-open-window" data-url="../webpage/auth/auth.jsp">
 						<img class="icon" src="img/icon/3FangTai.png" />
 						<div class="title">房态管理</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/searchTable/searchMain.jsp','<img class=\'icon\' src=\'img/icon/4ShuJu.png\'/>数据查询')">
+					<div class="shortcut win10-open-window" data-url="../webpage/searchTable/searchMain.jsp">
 						<img class="icon" src="img/icon/4ShuJu.png" />
 						<div class="title">数据查询</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/5ZhangDan.png\'/>账单管理')">
+					<div class="shortcut win10-open-window" data-url="../webpage/billinfo/billInfoMain.jsp">
 						<img class="icon" src="img/icon/5ZhangDan.png" />
 						<div class="title">账单管理</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/SystemSetting/SystemMain.jsp','<img class=\'icon\' src=\'img/icon/6XiTong.png\'/>系统设定')">
+					<div class="shortcut win10-open-window" data-url="../webpage/SystemSetting/SystemMain.jsp">
 						<img class="icon" src="img/icon/6XiTong.png" />
 						<div class="title">系统设定</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('../webpage/auth/auth.jsp','<img class=\'icon\' src=\'img/icon/7YuanGong.png\'/>员工管理')">
+					<div class="shortcut win10-open-window" data-url="../webpage/auth/auth.jsp">
 						<img class="icon" src="img/icon/7YuanGong.png" />
 						<div class="title">员工管理</div>
 					</div>
@@ -88,9 +87,14 @@
 						<div class="title">项目地址</div>
 					</div>
 
-					<div class="shortcut" onclick="Win10.openUrl('https://www.baidu.com','<img class=\'icon\' src=\'img/icon/10Liulan.png\'/>浏览地址')">
+					<div class="shortcut win10-open-window" data-url="./plugins/theme_switcher/theme_switcher.html">
+						<img class="icon" src="img/icon/11pic.png" />
+						<div class="title">更换壁纸</div>
+					</div>
+
+					<div class="shortcut win10-open-window" data-url="https://www.baidu.com">
 						<img class="icon" src="img/icon/10Liulan.png" />
-						<div class="title">浏览地址</div>
+						<div class="title">浏览器</div>
 					</div>
 
 				</div>

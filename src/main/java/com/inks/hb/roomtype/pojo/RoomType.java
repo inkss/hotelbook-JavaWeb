@@ -26,6 +26,10 @@ public class RoomType {
         super();
     }
 
+    public RoomType(String typeId) {
+        this.typeId = typeId;
+    }
+
     public RoomType(String typeId, String typeName, boolean isNull) {
         this.typeId = typeId;
         this.typeName = typeName;
