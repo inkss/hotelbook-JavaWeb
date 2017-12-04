@@ -14,8 +14,11 @@ public class BillServiceImpl implements BillService {
         try {
             if (queryRepeat(billInfo.getBillId()) == 1)
                 dao.insertData(billInfo);
+            else
+                return 0; //存在id
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
         return 1;
@@ -30,6 +33,7 @@ public class BillServiceImpl implements BillService {
             dao.deleteData(billInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
         return 1;
@@ -41,6 +45,7 @@ public class BillServiceImpl implements BillService {
             dao.updateData(billInfo);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
         return 1;
@@ -48,6 +53,7 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public ArrayList query(int page, int limit) {
+
         int start = (page * limit) - limit + 1; //每一页的起始位置
 
         if (start < 1)  //小于1的话会触发一个错误

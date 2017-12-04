@@ -32,6 +32,10 @@ public class CheckinInfo {
     public CheckinInfo() {
     }
 
+    public CheckinInfo(String checkId) {
+        this.checkId = checkId;
+    }
+
     public CheckinInfo(String checkId, String orderId, String checkName, String checkPhone, String checkIDcard, String typeId, String arriveTime, String leaveTime, String checkState, Integer checkNum, String roomId, String price, String checkPrice, Integer discount, String discountReason, String addBed, String addBedPrice, String orderMoney, String money, String ifCheckout, String checkMoney, String checkoutDate, String remark, String operatorId ) {
         this.checkId = checkId;
         this.orderId = orderId;

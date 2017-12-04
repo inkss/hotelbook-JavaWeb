@@ -13,7 +13,7 @@ public class BillInfo {
     public BillInfo() {
     }
 
-    public BillInfo(int billId, String checkedId, String costMoney, String costDate, String remark) {
+    public BillInfo(int billId, String checkId, String costMoney, String costDate, String remark) {
         this.billId = billId;
         this.checkId = checkId;
         this.costMoney = costMoney;

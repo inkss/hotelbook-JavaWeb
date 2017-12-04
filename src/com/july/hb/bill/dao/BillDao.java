@@ -1,6 +1,7 @@
 package com.july.hb.bill.dao;
 
 import com.july.hb.bill.pojo.BillInfo;
+import com.july.hb.checkin.pojo.CheckinInfo;
 import com.july.hb.common.CommonDao;
 import com.july.hb.common.DBUtil;
 
@@ -18,7 +19,7 @@ public class BillDao implements CommonDao
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "INSERT INTO floorInfo (floorName) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO billInfo (billId, checkId, costMoney, costDate, remark) VALUES (?,?,?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, billInfo.getBillId());
         pstmt.setString(2,billInfo.getCheckId());
@@ -37,7 +38,7 @@ public class BillDao implements CommonDao
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "DELETE FROM billInfo WHERE billInfo = ?";
+        String sql = "DELETE FROM billInfo WHERE billId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, billInfo.getBillId());
         pstmt.executeUpdate();
@@ -53,11 +54,12 @@ public class BillDao implements CommonDao
 
         String sql = "UPDATE billInfo SET checkId = ? ,costMoney = ? ,costDate = ? ,remark = ?  WHERE billId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setInt(1, billInfo.getBillId());
-        pstmt.setString(2, billInfo.getCheckId());
+
+        pstmt.setString(1, billInfo.getCheckId());
+        pstmt.setString(2, billInfo.getCostDate());
         pstmt.setString(3, billInfo.getCostDate());
-        pstmt.setString(4, billInfo.getCostDate());
-        pstmt.setString(5, billInfo.getRemark());
+        pstmt.setString(4, billInfo.getRemark());
+        pstmt.setInt(5, billInfo.getBillId());
         pstmt.executeUpdate();
         pstmt.close();
     }
@@ -119,7 +121,7 @@ public class BillDao implements CommonDao
 
         BillInfo billInfo = null;
         while (rs.next()) {
-            billInfo = new BillInfo(rs.getInt(1), rs.getString(2), rs.getString(3)
+            billInfo = new BillInfo(rs.getInt(1),rs.getString(2), rs.getString(3)
                     , rs.getString(4), rs.getString(5) );
         }
 
