@@ -7,10 +7,9 @@
 
 	</head>
 
-
 	<frameset cols="200,*" frameborder="0">
 		<frame name="nav" src="SystemNav.jsp" />
-		<frame name="content" src="../../nav.html" />
+		<frame name="system" src="../../nav.html" />
 	</frameset>
 
 </html>

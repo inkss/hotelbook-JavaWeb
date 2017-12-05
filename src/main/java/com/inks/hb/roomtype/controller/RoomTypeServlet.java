@@ -6,7 +6,6 @@ import com.inks.hb.roomtype.pojo.RoomType;
 import com.inks.hb.roomtype.service.RoomTypeService;
 import com.inks.hb.roomtype.service.RoomTypeServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,13 +18,13 @@ import java.util.ArrayList;
  * 与表格相关的全部操作
  * 状态标志： make 0重载 1新增 2修改 3搜索 4删除
  */
-@WebServlet(name = "/RoomTypeServlet", value = "/RoomTypeServlet")
+@WebServlet(name = "RoomTypeServlet", value = "/RoomTypeServlet")
 public class RoomTypeServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");

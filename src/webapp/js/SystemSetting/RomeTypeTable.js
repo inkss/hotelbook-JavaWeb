@@ -82,7 +82,7 @@ layui.use(['util', 'layer', 'table'], function() {
 						offset: '250px',
 						icon: 1
 					});
-				}, function() {
+                }, function() {
 					layer.msg('删除操作已取消', {
 						offset: '250px'
 					});
@@ -96,7 +96,7 @@ layui.use(['util', 'layer', 'table'], function() {
 					offset: '220px',
 					maxlength: 10
 				}, function(NewTypeName, index) {
-                    var params = "new=" + NewTypeName + "&old=" + typeName;
+					var params = "new=" + NewTypeName + "&old=" + typeName;
 					$.post(baseUrl + '/QueryRoomTypeNameServlet', params, function(data) {
 						if(data === "1" || data === "2") {
 							if(NewTypeName.length < 3)
@@ -219,12 +219,17 @@ layui.use(['util', 'layer', 'table'], function() {
 
 		//刷新
 		$('#refreshButton').click(function() {
-			tableIns.reload({
-				where: {
-					make: 0 ,
-                    page: 1
-				}
-			});
+		    // 简述此处存在的BUG 删除操作触发外键依赖后，出500异常
+            // 通过msg回传参数，尔后执行刷新操作时，框架本身死掉
+            // 即往后端传入的分页参数固定为1，表格的重载刷新失效
+            // 暂时只发现删除引起的异常，先通过强制刷新解决此处异常
+			// tableIns.reload({
+			// 	where: {
+			// 		make: 0,
+			// 		page: 1
+			// 	}
+			// });
+            location.reload();
 		});
 
 		//新增

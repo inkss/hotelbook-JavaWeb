@@ -6,7 +6,6 @@ import com.inks.hb.floorinfo.pojo.FloorInfo;
 import com.inks.hb.floorinfo.service.FloorInfoService;
 import com.inks.hb.floorinfo.service.FloorInfoServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
  * 与表格相关的全部操作
  * 状态标志： make 0重载 1新增 2修改 3搜索 4删除
  */
-@WebServlet(name = "/FloorInfoServlet", value = "/FloorInfoServlet")
+@WebServlet(name = "FloorInfoServlet", value = "/FloorInfoServlet")
 public class FloorInfoServlet extends HttpServlet {
 
     @Override

@@ -19,18 +19,22 @@
 				<!-- 头部区域（可配合layui已有的水平导航） -->
 				<ul class="layui-nav layui-layout-left">
 					<li class="layui-nav-item" lay-unselect>
-						<a href="orderTable.jsp" target="content">预订单</a>
+						<a href="../orderInfo/orderTable.jsp" target="search">预订单</a>
 					</li>
 					<li class="layui-nav-item" lay-unselect>
-						<a href="此处填充地址" target="content">入住单</a>
+						<a href="此处填充地址" target="search">入住单</a>
 					</li>
 					<li class="layui-nav-item" lay-unselect>
-						<a href="../SystemSetting/RoomTypeTable.jsp" target="content">账单明细</a>
+						<a href="../SystemSetting/RoomTypeTable.jsp" target="search">账单明细</a>
 					</li>
 				</ul>
 				<ul class="layui-nav layui-layout-right">
-					<li class="layui-nav-item" lay-unselect><a href="此处填充地址" target="content">预订单历史</a></li>
-					<li class="layui-nav-item" lay-unselect><a href="此处填充地址" target="content">入住单历史</a></li>
+					<li class="layui-nav-item" lay-unselect>
+						<a href="此处填充地址" target="search">预订单历史</a>
+					</li>
+					<li class="layui-nav-item" lay-unselect>
+						<a href="此处填充地址" target="search">入住单历史</a>
+					</li>
 				</ul>
 			</div>
 		</div>

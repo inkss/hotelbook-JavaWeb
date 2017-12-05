@@ -126,15 +126,15 @@ layui.use(['util', 'layer', 'table'], function() {
 					offset: '250px'
 				});
 			else {
-                tableIns.reload({
-                    where: {
-                        make: 3,
-                        floorName: inputTxt
-                    }
-                });
-                layer.msg('搜索结果', {
-                    offset: '250px'
-                });
+				tableIns.reload({
+					where: {
+						make: 3,
+						floorName: inputTxt
+					}
+				});
+				layer.msg('搜索结果', {
+					offset: '250px'
+				});
 			}
 		});
 
@@ -142,7 +142,7 @@ layui.use(['util', 'layer', 'table'], function() {
 		$('#refreshButton').click(function() {
 			tableIns.reload({
 				where: {
-					make: 0 ,
+					make: 0,
 					page: 1
 				}
 			});
@@ -156,8 +156,8 @@ layui.use(['util', 'layer', 'table'], function() {
 				offset: '220px',
 				maxlength: 10
 			}, function(inputValue, index) {
-                var params = "new=" + inputValue + "&old=" + inputValue;
-				$.post(baseUrl + '/QueryFloorNameServlet', params, function (data) {
+				var params = "new=" + inputValue + "&old=" + inputValue;
+				$.post(baseUrl + '/QueryFloorNameServlet', params, function(data) {
 					if(data === "1") {
 						layer.close(index);
 						table.reload('tableID', {

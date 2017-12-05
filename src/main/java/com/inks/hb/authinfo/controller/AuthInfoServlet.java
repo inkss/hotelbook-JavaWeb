@@ -6,7 +6,6 @@ import com.inks.hb.authinfo.service.AuthService;
 import com.inks.hb.authinfo.service.AuthServiceImpl;
 import com.inks.hb.common.PojotoGson;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,13 +24,13 @@ import java.util.ArrayList;
  * 如查询过程中出现异常，统一返回'数据查询出现异常'
  * 返回数据为pojotoGson类型
  */
-@WebServlet(value = "/AuthInfoServlet", name = "/AuthInfoServlet")
+@WebServlet(value = "/AuthInfoServlet", name = "AuthInfoServlet")
 public class AuthInfoServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");

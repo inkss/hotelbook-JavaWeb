@@ -27,7 +27,16 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Override
     public int deleteOrderInfo(String orderId) {
-        return 0;
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setOrderId(orderId);
+
+        try {
+            dao.deleteData(orderInfo);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+        return 1;
     }
 
     @Override
@@ -42,7 +51,17 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Override
     public ArrayList query(int page, int limit) {
-        return null;
+        int start = (page * limit) - limit + 1; //每一页的起始位置
+
+        if (start < 1)  //小于1的话会触发一个错误
+            start = 1;  //但是理论上page和limit是由table表格生成的参数
+
+        try {
+            return dao.query(start, limit);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override

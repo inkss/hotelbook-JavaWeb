@@ -1,10 +1,7 @@
 package com.inks.hb.common;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import java.io.IOException;
-
 /**
  * 作用 退出系统时 清除session、cookie
  * 之所以单独写这个，是为了在js中直接发ajax请求
@@ -15,13 +12,13 @@ import java.io.IOException;
  * 1. "/login.jsp" ： loginName、loginNickName、loginAdmin
  * 2. “/MAIN/main.html : isLogin
  */
-@WebServlet(value = "/ExitSystemServlet", name = "/ExitSystemServlet")
+@WebServlet(value = "/ExitSystemServlet", name = "ExitSystemServlet")
 public class ExitSystemServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  {
 
         HttpSession session = request.getSession();
 

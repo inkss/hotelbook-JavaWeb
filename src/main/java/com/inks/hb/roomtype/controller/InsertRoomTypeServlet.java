@@ -1,12 +1,10 @@
 package com.inks.hb.roomtype.controller;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.inks.hb.roomtype.pojo.RoomType;
 import com.inks.hb.roomtype.service.RoomTypeService;
 import com.inks.hb.roomtype.service.RoomTypeServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +15,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "/InsertRoomTypeServlet", value = "/InsertRoomTypeServlet")
+@WebServlet(name = "InsertRoomTypeServlet", value = "/InsertRoomTypeServlet")
 public class InsertRoomTypeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);

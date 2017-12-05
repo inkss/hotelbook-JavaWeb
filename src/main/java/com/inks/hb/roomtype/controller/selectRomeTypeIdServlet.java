@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name = "/selectRomeTypeIdServlet", value = "/selectRomeTypeIdServlet")
+@WebServlet(name = "selectRomeTypeIdServlet", value = "/selectRomeTypeIdServlet")
 public class selectRomeTypeIdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 

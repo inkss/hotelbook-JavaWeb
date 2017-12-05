@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.inks.hb.floorinfo.service.FloorInfoService;
 import com.inks.hb.floorinfo.service.FloorInfoServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,13 +14,13 @@ import java.io.PrintWriter;
 /**
  * 新增操作时判断数据库中已经拥有此角色
  */
-@WebServlet(name = "/QueryFloorNameServlet", value = "/QueryFloorNameServlet")
+@WebServlet(name = "QueryFloorNameServlet", value = "/QueryFloorNameServlet")
 public class QueryFloorNameServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");

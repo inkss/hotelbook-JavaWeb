@@ -20,10 +20,10 @@
 						<a>基础功能设置</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="RoomTypeTable.jsp" target="content">房间类型</a>
+								<a href="RoomTypeTable.jsp" target="system">房间类型</a>
 							</dd>
 							<dd>
-								<a href="FloorTable.jsp" target="content">楼层信息</a>
+								<a href="FloorTable.jsp" target="system">楼层信息</a>
 							</dd>
 						</dl>
 					</li>
@@ -31,7 +31,7 @@
 						<a>附属功能设置</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="AuthTable.jsp" target="content">权限管理</a>
+								<a href="AuthTable.jsp" target="system">权限管理</a>
 							</dd>
 						</dl>
 					</li>

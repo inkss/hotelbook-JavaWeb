@@ -9,7 +9,7 @@
 		<script src="../../js/jquery.js"></script>
 		<script src="../../js/global.js"></script>
 		<script src="../../js/getTime.js"></script>
-        <script src="../../js/Cookie.js"></script>
+		<script src="../../js/Cookie.js"></script>
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 			<legend>酒店管理 - 预订单</legend>
 		</fieldset>
 
-		<form class="layui-form" >
+		<form class="layui-form">
 
 			<div class="layui-form-item">
 				<div class="layui-inline">
@@ -135,10 +135,10 @@
 					<label class="layui-form-label">单据状态</label>
 					<div class="layui-input-inline">
 						<select name="city" class="layui-input-inline" id="orderState">
-							<option value="0">预定</option>
-							<option value="1">入住</option>
-							<option value="2">结算</option>
-							<option value="3">延期</option>
+							<option value="预定">预定</option>
+							<option value="入住">入住</option>
+							<option value="结算">结算</option>
+							<option value="延期">延期</option>
 						</select>
 					</div>
 				</div>
@@ -260,7 +260,7 @@
 
 					var addBedPrice = $('#addBedPrice').val();
 					var orderMoney = $('#orderMoney').val();
-                    var operatorId = getCookie("loginName");
+					var operatorId = getCookie("loginName");
 					var remark = $('#remark').val();
 
 					var params = "orderId=" + orderId + "&orderName=" + orderName + "&orderPhone=" + orderPhone +
@@ -270,34 +270,34 @@
 						"&discountReason=" + discountReason + "&addBed=" + addBed + "&addBedPrice=" + addBedPrice +
 						"&orderMoney=" + orderMoney + "&operatorId=" + operatorId + "&remark=" + remark;
 
-                    $.post(baseUrl + '/InsertOrderInfoServlet', params, function(data) {
-                        if (data === '1') {
-                            layer.alert('预订单登记成功！', {
-                                title: '新增成功',
-                                icon: 6,
-                                shade: 0.6 ,
-                                anim: 3,
-                                offset: '220px'
-                            });
-                        }else if (data === '0') {
-                            layer.alert('存在相同字段！', {
-                                title: '新增失败',
-                                icon: 5,
-                                shade: 0.6 ,
-                                anim: 6,
-                                offset: '220px'
-                            });
-                        } else {
-                            layer.alert('预订单登记失败！', {
-                                title: '新增失败',
-                                icon: 2,
-                                shade: 0.6 ,
-                                anim: 6,
-                                offset: '220px'
-                            });
-                        }
-                    });
-                    return false;
+					$.post(baseUrl + '/InsertOrderInfoServlet', params, function(data) {
+						if(data === '1') {
+							layer.alert('预订单登记成功！', {
+								title: '新增成功',
+								icon: 6,
+								shade: 0.6,
+								anim: 3,
+								offset: '220px'
+							});
+						} else if(data === '0') {
+							layer.alert('存在相同字段！', {
+								title: '新增失败',
+								icon: 5,
+								shade: 0.6,
+								anim: 6,
+								offset: '220px'
+							});
+						} else {
+							layer.alert('预订单登记失败！', {
+								title: '新增失败',
+								icon: 2,
+								shade: 0.6,
+								anim: 6,
+								offset: '220px'
+							});
+						}
+					});
+					return false;
 				});
 			});
 		</script>
