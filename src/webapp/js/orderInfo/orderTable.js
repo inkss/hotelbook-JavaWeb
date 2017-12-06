@@ -108,8 +108,7 @@ layui.use(['util', 'layer', 'table'], function() {
 
 		//监听工具条
 		table.on('tool', function(obj) {
-			var data = obj.data,
-				layEvent = obj.event;
+			var data = obj.data, layEvent = obj.event;
 			var orderId = data.orderId;
 
 			if(layEvent === 'detail') {
@@ -117,7 +116,7 @@ layui.use(['util', 'layer', 'table'], function() {
 					'别闹，左边就是', {
 						skin: 'layui-layer-lan',
 						closeBtn: 0,
-						title: '您当前选择的房间类型信息',
+						title: '滑稽一下',
 						anim: 4,
 						offset: '180px'
 					});
@@ -142,19 +141,61 @@ layui.use(['util', 'layer', 'table'], function() {
 					});
 				});
 			} else if(layEvent === 'edit') {
-				//编辑
 
+			    // emmm 父子传参只会写儿子传递给父亲的
+                // 其实 用jsp那套session啥的传参或许更好
+			    setCookie("orderId",orderId);
+
+				//编辑
+                layer.open({
+                    title: "提交",
+                    btn: ['关闭'],
+                    yes: function(index) {
+                        tableIns.reload({
+                            where: {
+                                make: 0
+                            }
+                        });
+                        layer.close(index); //关闭弹窗
+                    },
+                    type: 2,
+                    area: ['1080px', '520px'],
+                    fixed: false,
+                    maxmin: true,
+                    content: '/hb/webpage/orderInfo/updateOrder.jsp',
+                    cancel: function() {
+                        tableIns.reload({
+                            where: {
+                                make: 0
+                            }
+                        });
+                    }
+                });
 
 			}
 		});
 
 		//搜索
 		$('#searchButton1').click(function() {
-
+            var select = $('#inputSearch1').val();
+            tableIns.reload({
+                where: {
+                    make: 1,
+                    page: 1,
+                    select: select
+                }
+            });
 		});
 
         $('#searchButton2').click(function() {
-
+            var select = $('#inputSearch2').val();
+            tableIns.reload({
+                where: {
+                    make: 2,
+                    page: 1,
+                    select: select
+                }
+            });
         });
 
 		//刷新

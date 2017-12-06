@@ -2,6 +2,9 @@ package com.inks.hb.orderinfo.service;
 
 import com.inks.hb.orderinfo.dao.OrderInfoDao;
 import com.inks.hb.orderinfo.pojo.OrderInfo;
+import com.inks.hb.roomtype.dao.RoomTypeDao;
+import com.inks.hb.roomtype.pojo.RoomType;
+import com.inks.hb.roomtype.service.RoomTypeServiceImpl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,7 +18,7 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
         try {
             String orderId = orderInfo.getOrderId();
-            if (queryRepeat(orderId,orderId) != 1)
+            if (queryRepeat(orderId, orderId) != 1)
                 return 0;
             dao.insertData(orderInfo);
         } catch (SQLException e) {
@@ -41,12 +44,27 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Override
     public int updateOrderInfo(OrderInfo orderInfo) {
-        return 0;
+        try {
+            dao.updateData(orderInfo);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
+            return -1;
+        }
+        return 1;
     }
 
     @Override
     public OrderInfo query(String orderId) {
-        return null;
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setOrderId(orderId);
+
+        try {
+            return (OrderInfo) dao.query(orderInfo);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
@@ -66,7 +84,33 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Override
     public int queryOrderInfoNum() {
-        return 0;
+        try {
+            return dao.queryDataNum();
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return -1;
+        }
+    }
+
+    @Override
+    public ArrayList queryOrder(int make, String select) {
+
+        if (make == 2) { //2：查类型
+            try {
+                // 然而这样写失去了对类型的模糊查询
+                RoomType roomType = new RoomTypeDao().queryName(select);
+                select = roomType.getTypeId();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            return dao.queryOrder(make, select);
+        } catch (SQLException e) {
+            System.out.println(e.getErrorCode() + e.getMessage());
+            return null;
+        }
     }
 
     @Override
@@ -87,4 +131,5 @@ public class OrderInfoServiceImpl implements OrderInfoService {
             return -1; //异常
         }
     }
+
 }

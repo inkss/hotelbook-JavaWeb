@@ -25,7 +25,7 @@
 						<a href="此处填充地址" target="search">入住单</a>
 					</li>
 					<li class="layui-nav-item" lay-unselect>
-						<a href="../SystemSetting/RoomTypeTable.jsp" target="search">账单明细</a>
+						<a href="此处填充地址" target="search">账单明细</a>
 					</li>
 				</ul>
 				<ul class="layui-nav layui-layout-right">

@@ -9,6 +9,7 @@
 		<script src="../../js/layui/layui.js"></script>
 		<script src="../../js/jquery.js"></script>
 		<script src="../../js/global.js"></script>
+        <script src="../../js/Cookie.js"></script>
 		<style>
 			body {
 				margin: 10px;

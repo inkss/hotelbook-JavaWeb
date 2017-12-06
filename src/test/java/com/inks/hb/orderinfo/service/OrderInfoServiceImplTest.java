@@ -36,6 +36,8 @@ public class OrderInfoServiceImplTest {
 
     @Test
     public void query1() {
+
+        System.out.println(service.query("OD151254780333"));
     }
 
     @Test

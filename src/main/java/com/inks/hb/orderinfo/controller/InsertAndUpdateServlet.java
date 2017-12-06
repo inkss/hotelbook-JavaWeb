@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "InsertOrderInfoServlet" , value = "/InsertOrderInfoServlet")
-public class InsertOrderInfoServlet extends HttpServlet {
+@WebServlet(name = "InsertAndUpdateServlet", value = "/InsertAndUpdateServlet")
+public class InsertAndUpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
@@ -46,6 +46,7 @@ public class InsertOrderInfoServlet extends HttpServlet {
         String orderMoney = request.getParameter("orderMoney"); //17
         String remark = request.getParameter("remark"); //18
         Login operatorId = new Login(request.getParameter("operatorId")); //19
+        int make = Integer.parseInt(request.getParameter("make")); // 20 标志啊
 
         int discount;
 
@@ -55,11 +56,19 @@ public class InsertOrderInfoServlet extends HttpServlet {
             discount = 0;
         }
 
-        OrderInfo orderInfo = new OrderInfo(orderId,orderName,orderPhone,orderIDcard,typeId,arrireDate,leaveDate,orderState,checkNum,roomId,price,checkPrice,discount,discountReason,addBed,addBedPrice,orderMoney,remark,operatorId);
+        OrderInfo orderInfo = new OrderInfo(orderId, orderName, orderPhone, orderIDcard, typeId, arrireDate, leaveDate, orderState, checkNum, roomId, price, checkPrice, discount, discountReason, addBed, addBedPrice, orderMoney, remark, operatorId);
 
-        int code = service.insertOrderInfo(orderInfo);
+        int code = -1; //返回的状态
 
-        //code 1:插入成功 0：存在同名项 -1:插入失败
+        if (make == 1) { //1.新增
+            code = service.insertOrderInfo(orderInfo);
+        } else if (make == 2) { //修改
+            code = service.updateOrderInfo(orderInfo);
+        }
+
+
+        //make=1 -> 1:插入成功 0：存在同名项 -1:插入失败
+        //make=2 -> 1:修改成功 -1;修改失败
         Gson gson = new Gson();
         out.print(gson.toJson(code));
     }

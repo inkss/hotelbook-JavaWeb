@@ -13,6 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * 另提供queryOrder-> 对预定人名称和房间类型的查询
+ */
 public class OrderInfoDao implements CommonDao {
 
     /**
@@ -20,9 +23,9 @@ public class OrderInfoDao implements CommonDao {
      * 1.外键关联： roomtype表
      * 2.属性关联  login字段
      * 3.pojo对象的无参构造函数
-     *   String类型无赋值则其值为NULL
-     *   Int类型为0
-     *   typeId与operatorId需要负值对象
+     * String类型无赋值则其值为NULL
+     * Int类型为0
+     * typeId与operatorId需要负值对象
      *
      * @param o OrderInfo字段信息
      * @throws SQLException 数据库
@@ -84,7 +87,7 @@ public class OrderInfoDao implements CommonDao {
         String sql = "UPDATE orderinfo SET orderName = ? ,orderPhone = ? ,orderIDcard = ? ,typeId = ? " +
                 ",arrireDate = ? ,leaveDate = ? ,orderState = ? ,checkNum = ? ,roomId = ? ,price = ? ,checkPrice = ? " +
                 ",discount = ? ,discountReason = ? ,addBed = ? ,addBedPrice = ? ,orderMoney = ? ,remark = ? " +
-                ",operatorId = ? WHERE orderId = ?)";
+                ",operatorId = ? WHERE orderId = ?";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, orderInfo.getOrderName());
@@ -145,13 +148,13 @@ public class OrderInfoDao implements CommonDao {
         OrderInfo orderInfo;
 
         while (rs.next()) {
-            orderInfo = new OrderInfo(rs.getString(1),rs.getString(2),rs.getString(3)
-                    ,rs.getString(4),new RoomType(rs.getString(5)),rs.getString(6)
-                    ,rs.getString(7),rs.getString(8),rs.getString(9)
-                    ,rs.getString(10),rs.getString(11),rs.getString(12)
-                    ,rs.getInt(13),rs.getString(14),rs.getString(15)
-                    ,rs.getString(16),rs.getString(17),rs.getString(18)
-                    ,new Login(rs.getString(19)));
+            orderInfo = new OrderInfo(rs.getString(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), new RoomType(rs.getString(5)), rs.getString(6)
+                    , rs.getString(7), rs.getString(8), rs.getString(9)
+                    , rs.getString(10), rs.getString(11), rs.getString(12)
+                    , rs.getInt(13), rs.getString(14), rs.getString(15)
+                    , rs.getString(16), rs.getString(17), rs.getString(18)
+                    , new Login(rs.getString(19)));
             list.add(orderInfo);
         }
 
@@ -175,13 +178,13 @@ public class OrderInfoDao implements CommonDao {
 
         OrderInfo orderInfo = null;
         while (rs.next()) {
-            orderInfo = new OrderInfo(rs.getString(1),rs.getString(2),rs.getString(3)
-                    ,rs.getString(4),new RoomType(rs.getString(5)),rs.getString(6)
-                    ,rs.getString(7),rs.getString(8),rs.getString(9)
-                    ,rs.getString(10),rs.getString(11),rs.getString(12)
-                    ,rs.getInt(13),rs.getString(14),rs.getString(15)
-                    ,rs.getString(16),rs.getString(17),rs.getString(18)
-                    ,new Login(rs.getString(19)));
+            orderInfo = new OrderInfo(rs.getString(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), new RoomType(rs.getString(5)), rs.getString(6)
+                    , rs.getString(7), rs.getString(8), rs.getString(9)
+                    , rs.getString(10), rs.getString(11), rs.getString(12)
+                    , rs.getInt(13), rs.getString(14), rs.getString(15)
+                    , rs.getString(16), rs.getString(17), rs.getString(18)
+                    , new Login(rs.getString(19)));
         }
 
         if (orderInfo == null) {
@@ -193,4 +196,45 @@ public class OrderInfoDao implements CommonDao {
 
         return orderInfo;
     }
+
+    /**
+     * 查询啊,模糊查询呀
+     *
+     * @param make   1：查名称 2：查类型
+     * @param select 待查的值
+     * @return 查询对象
+     * @throws SQLException 抛给业务层
+     */
+    public ArrayList queryOrder(int make, String select) throws SQLException {
+        Connection conn = DBUtil.getConnection();
+
+        String sql;
+        if (make == 1)
+            sql = "select * from orderinfo WHERE orderName LIKE ?;";
+        else
+            sql = "select * from orderinfo WHERE typeId LIKE ?;";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, "%" + select + "%");
+
+        ResultSet rs = pstmt.executeQuery();
+        ArrayList<OrderInfo> list = new ArrayList<>();
+        OrderInfo orderInfo;
+
+        while (rs.next()) {
+            orderInfo = new OrderInfo(rs.getString(1), rs.getString(2), rs.getString(3)
+                    , rs.getString(4), new RoomType(rs.getString(5)), rs.getString(6)
+                    , rs.getString(7), rs.getString(8), rs.getString(9)
+                    , rs.getString(10), rs.getString(11), rs.getString(12)
+                    , rs.getInt(13), rs.getString(14), rs.getString(15)
+                    , rs.getString(16), rs.getString(17), rs.getString(18)
+                    , new Login(rs.getString(19)));
+            list.add(orderInfo);
+        }
+
+        rs.close();
+        pstmt.close();
+
+        return list;
+    }
+
 }

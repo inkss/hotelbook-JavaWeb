@@ -28,6 +28,9 @@ public interface OrderInfoService {
     //查询长度
     int queryOrderInfoNum();
 
+    //俩查询 1：查名称 2：查类型
+    ArrayList queryOrder(int make, String select);
+
     /**
      * 查重函数
      *

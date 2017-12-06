@@ -852,6 +852,10 @@ window.Win10 = {
 		}, function(index) {
 			$.post('http://localhost:8080/hb/ExitSystemServlet');
 			document.body.onbeforeunload = function() {};
+			deleteCookie("loginName");
+            deleteCookie("loginNickName");
+            deleteCookie("loginAdmin");
+            deleteCookie("isLogin");
 			window.location.href = "/hb";
 			window.close();
 			layer.close(index);

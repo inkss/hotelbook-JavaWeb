@@ -7,6 +7,9 @@ import com.inks.hb.roomtype.dao.RoomTypeDao;
 import com.inks.hb.roomtype.pojo.RoomType;
 import org.junit.Test;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class OrderInfoDaoTest {
@@ -26,6 +29,19 @@ public class OrderInfoDaoTest {
         orderInfo.setOperatorId(login);
         orderInfo.setOrderId("预定第3单");
         dao.insertData(orderInfo);
+
+    }
+
+    @Test
+    public void queryOrder(){
+        ArrayList<OrderInfo> list = null;
+        try {
+            list = dao.queryOrder(1,"测试");
+            for (OrderInfo info : list)
+                System.out.println(info);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 

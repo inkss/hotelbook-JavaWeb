@@ -15,6 +15,8 @@ layui.use(['util', 'layer', 'table'], function() {
 			id: 'tableAuth' //表格容器索引
 				,
 			url: baseUrl + '/AuthInfoServlet' //数据接口
+                ,
+            limit: 30
 				,
 			cols: [
 				[ //表头

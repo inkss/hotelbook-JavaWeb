@@ -268,9 +268,9 @@
 						"&leaveDate=" + leaveDate + "&orderState=" + orderState + "&checkNum=" + checkNum +
 						"&price=" + price + "&checkPrice=" + checkPrice + "&discount=" + discount +
 						"&discountReason=" + discountReason + "&addBed=" + addBed + "&addBedPrice=" + addBedPrice +
-						"&orderMoney=" + orderMoney + "&operatorId=" + operatorId + "&remark=" + remark;
+						"&orderMoney=" + orderMoney + "&operatorId=" + operatorId + "&remark=" + remark + "&make=1";
 
-					$.post(baseUrl + '/InsertOrderInfoServlet', params, function(data) {
+					$.post(baseUrl + '/InsertAndUpdateServlet', params, function(data) {
 						if(data === '1') {
 							layer.alert('预订单登记成功！', {
 								title: '新增成功',
