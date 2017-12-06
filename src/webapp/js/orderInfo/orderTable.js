@@ -210,7 +210,7 @@ layui.use(['util', 'layer', 'table'], function() {
 
 		//导出
 		$('#toXlsButton').click(function() {
-
+            location.href = baseUrl + '/OrderInfoExcelServlet';
 		});
 
 		//回到顶端

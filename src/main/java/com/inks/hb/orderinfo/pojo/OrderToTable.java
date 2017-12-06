@@ -65,6 +65,78 @@ public class OrderToTable {
         this.operatorId = operatorId;
     }
 
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public String getOrderName() {
+        return orderName;
+    }
+
+    public String getOrderPhone() {
+        return orderPhone;
+    }
+
+    public String getOrderIDcard() {
+        return orderIDcard;
+    }
+
+    public String getArrireDate() {
+        return arrireDate;
+    }
+
+    public String getLeaveDate() {
+        return leaveDate;
+    }
+
+    public String getTypeId() {
+        return typeId;
+    }
+
+    public String getCheckNum() {
+        return checkNum;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getCheckPrice() {
+        return checkPrice;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public String getDiscountReason() {
+        return discountReason;
+    }
+
+    public String getAddBed() {
+        return addBed;
+    }
+
+    public String getAddBedPrice() {
+        return addBedPrice;
+    }
+
+    public String getOrderMoney() {
+        return orderMoney;
+    }
+
+    public String getOrderState() {
+        return orderState;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public String getOperatorId() {
+        return operatorId;
+    }
+
     @Override
     public String toString() {
         return "OrderToTable{" +
