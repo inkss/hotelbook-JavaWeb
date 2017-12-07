@@ -24,7 +24,7 @@ public class QueryLoginInfoServlet extends HttpServlet {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");

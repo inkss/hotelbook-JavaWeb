@@ -11,7 +11,7 @@ import java.io.IOException;
  * 过滤器，拦截所有请求。
  * 仅当session中包含登录成功后的登录名后才放行请求
  */
-@WebFilter(value = "/*",filterName = "CommonFilter") //拦截所有请求
+@WebFilter(value = "/*", filterName = "CommonFilter") //拦截所有请求
 public class CommonFilter implements Filter {
     public void destroy() {
     }
@@ -60,7 +60,7 @@ public class CommonFilter implements Filter {
         DBUtil.close();
     }
 
-    public void init(FilterConfig config)  {
+    public void init(FilterConfig config) {
 
     }
 

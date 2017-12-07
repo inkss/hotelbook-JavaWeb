@@ -20,11 +20,11 @@ import java.util.ArrayList;
  */
 @WebServlet(name = "RoomTypeServlet", value = "/RoomTypeServlet")
 public class RoomTypeServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
@@ -86,8 +86,8 @@ public class RoomTypeServlet extends HttpServlet {
                 list = service.query(1, service.queryRoomTypeNum());
                 searchList.clear();
                 for (Object temp : list) {
-                    roomType = (RoomType) temp;
-                    if (typeName.equals(roomType.getTypeName())) {
+                    roomType = (RoomType) temp; //用contains模糊查询 机智啊，这样连mysql的like语句都不用写   --2017.12.7 改
+                    if (roomType.getTypeName().contains(typeName)) {
                         searchList.add(roomType);
                     }
                 }

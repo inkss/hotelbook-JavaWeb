@@ -5,7 +5,6 @@ import com.inks.hb.common.DBUtil;
 import com.inks.hb.login.pojo.Login;
 import com.inks.hb.orderinfo.pojo.OrderInfo;
 import com.inks.hb.roomtype.pojo.RoomType;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

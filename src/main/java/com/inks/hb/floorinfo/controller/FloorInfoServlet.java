@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class FloorInfoServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
@@ -87,11 +87,12 @@ public class FloorInfoServlet extends HttpServlet {
                 list = service.query(1, service.queryFloorInfoNum());
                 searchList.clear();
                 for (Object temp : list) {
-                    floorInfo = (FloorInfo) temp;
-                    if(floorName.equals(floorInfo.getFloorName())) {
+                    floorInfo = (FloorInfo) temp;  //用contains模糊查询 机智啊，这样连mysql的like语句都不用写   --2017.12.7 改
+                    if (floorInfo.getFloorName().contains(floorName)) {
                         searchList.add(floorInfo);
                     }
-                } break;
+                }
+                break;
             case 4:
                 if (service.deleteFloorInfo(floorId) == -1) {
                     msg = "删除失败";
@@ -110,7 +111,7 @@ public class FloorInfoServlet extends HttpServlet {
                 code = "-1";
             } else {
                 list = searchList;
-                count =  Integer.toString(size);
+                count = Integer.toString(size);
             }
         }
         return new PojotoGson(code, msg, count, list);

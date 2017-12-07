@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 /**
  * 修订：2017.11.23
- * <p>
  * 将异常放在了本层处理
  * 如果出现数据库相关异常，则返回-1或者null
  */
@@ -100,7 +99,7 @@ public class FloorInfoServiceImpl implements FloorInfoService {
     }
 
     @Override
-    public int queryRepeat(String newName,String oldName) {
+    public int queryRepeat(String newName, String oldName) {
         FloorInfo floorInfoQuery = new FloorInfo();
         floorInfoQuery.setFloorName(newName);
         FloorInfo floorInfo;

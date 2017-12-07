@@ -84,7 +84,7 @@ public class FloorInfoDao implements CommonDao {
 
         String sql = "select * from floorInfo limit ?, ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setInt(1, start - 1);   //减一，详见声明部分
+        ps.setInt(1, start - 1);
         ps.setInt(2, length);
         ResultSet rs = ps.executeQuery();
 

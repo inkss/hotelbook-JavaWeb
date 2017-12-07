@@ -31,6 +31,6 @@ public class QueryRoomTypeNameServlet extends HttpServlet {
 
         // 转换为json字符串格式
         Gson gson = new Gson();
-        out.print(gson.toJson(service.queryRepeat(newName,oldName)));
+        out.print(gson.toJson(service.queryRepeat(newName, oldName)));
     }
 }

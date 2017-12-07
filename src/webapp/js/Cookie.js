@@ -20,14 +20,13 @@ function getCookie(name) {
 //也就是不设置时间的cookie不会存储到硬盘，也就是保存到内存中，随浏览器生存
 function deleteCookie(name) {
 
-    var date=new Date();
+	var date = new Date();
 
-    //将date设置为过去的时间
-    date.setTime(date.getTime()-10000);
+	//将date设置为过去的时间
+	date.setTime(date.getTime() - 10000);
 
-    //将userId这个cookie删除
-    document.cookie= name + "=删除; path=/; expires="+date.toGMTString();
+	//将userId这个cookie删除
+	document.cookie = name + "=删除; path=/; expires=" + date.toGMTString();
 }
-
 
 //为了方便 cookies的域都在"/"

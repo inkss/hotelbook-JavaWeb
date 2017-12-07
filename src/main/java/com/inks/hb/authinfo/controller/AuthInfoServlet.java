@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 @WebServlet(value = "/AuthInfoServlet", name = "AuthInfoServlet")
 public class AuthInfoServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
@@ -50,12 +50,12 @@ public class AuthInfoServlet extends HttpServlet {
         ArrayList<AuthInfo> list = new ArrayList<>(); //数据内容
 
         //单个全局属性
-        int authId;         //权限ID
-        String authItem = "";    //权限名称
-        String isRead;      //可读
-        String isWrite;     //可写
-        String isChange;    //可改
-        String isDelete;    //可删
+        int authId;                  //权限ID
+        String authItem = "";        //权限名称
+        String isRead;               //可读
+        String isWrite;              //可写
+        String isChange;             //可改
+        String isDelete;             //可删
         AuthInfo authInfo = null;
 
         try {

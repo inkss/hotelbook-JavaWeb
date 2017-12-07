@@ -4,7 +4,6 @@ import com.inks.hb.orderinfo.dao.OrderInfoDao;
 import com.inks.hb.orderinfo.pojo.OrderInfo;
 import com.inks.hb.roomtype.dao.RoomTypeDao;
 import com.inks.hb.roomtype.pojo.RoomType;
-import com.inks.hb.roomtype.service.RoomTypeServiceImpl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

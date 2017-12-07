@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "QueryOrderInfoServlet",value = "/QueryOrderInfoServlet")
+@WebServlet(name = "QueryOrderInfoServlet", value = "/QueryOrderInfoServlet")
 public class QueryOrderInfoServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");

@@ -65,3 +65,17 @@
     });
 
 ## 3.模块名称:layer
+
+## 4.模块名称：form
+
+* js设置radio
+
+
+    $("input[name='addBed'][value='Y']").prop("checked", true); //把 是 给主动选上
+    form.render('radio'); //重新渲染
+    
+* js设置下拉
+
+    
+    $("#orderState").val(obj.orderState); //<--需要处理
+    form.render("select"); //重新渲染select

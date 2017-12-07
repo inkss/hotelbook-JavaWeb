@@ -2,7 +2,6 @@ package com.inks.hb.floorinfo.service;
 
 import com.inks.hb.floorinfo.pojo.FloorInfo;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -35,5 +34,5 @@ public interface FloorInfoService {
      * @param newName oldName 楼层名称
      * @return 0:已经存在 1：未存在 2：与自身相同
      */
-    int queryRepeat(String newName,String oldName);
+    int queryRepeat(String newName, String oldName);
 }

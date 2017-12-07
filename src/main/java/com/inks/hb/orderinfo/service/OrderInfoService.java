@@ -8,6 +8,7 @@ public interface OrderInfoService {
 
     /**
      * 插入一条数据
+     *
      * @param orderInfo 预订单
      * @return -1失败 0重名 1成功
      */
@@ -37,6 +38,6 @@ public interface OrderInfoService {
      * @param newName oldName 房间类型名称
      * @return 0:已经存在 1：未存在 2：与自身相同
      */
-    int queryRepeat(String newName,String oldName);
+    int queryRepeat(String newName, String oldName);
 }
 

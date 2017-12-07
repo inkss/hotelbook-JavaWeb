@@ -17,11 +17,11 @@ import java.util.Date;
 
 @WebServlet(name = "InsertRoomTypeServlet", value = "/InsertRoomTypeServlet")
 public class InsertRoomTypeServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("application/json; charset=utf-8");

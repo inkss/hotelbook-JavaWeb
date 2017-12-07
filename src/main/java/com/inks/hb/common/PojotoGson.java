@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * 抽象出一个统一的toJson类
  * 最主要用途是包装ArrayList的各个pojo对象
- *
  */
 public class PojotoGson {
 

@@ -32,8 +32,54 @@
 			/*磁贴自定义样式*/
 		</style>
 
-		<!--引入自定义js-->
-		<script type="text/javascript" src="./js/win10-hotelbook.js"></script>
+		<script>
+			if(window.top == window.self) {
+				//alert('页面不是在框架中打开的');
+			} else {
+				//alert('页面是在框架中打开的');
+				//所以最简单的方法就是判断主页面是否在框架里，如果在就直接刷新父类界面
+				parent.location.reload();
+			}
+
+			//从cookie读取登录用户
+			var loginName = getCookie("loginName");
+			var isLogin = getCookie("isLogin");
+			var loginNickName = getCookie("loginNickName");
+			var loginAdmin = getCookie("loginAdmin");
+
+			if(isLogin == null)
+				setCookie("isLogin", "0"); //表示第一次登录
+
+			Win10.onReady(function() {
+				//设置壁纸
+				Win10.setBgUrl({
+					main: './img/wallpapers/miaowu.jpg',
+					mobile: './img/wallpapers/mobile.jpg',
+				});
+
+				//Animated动画 地址：https://daneden.github.io/animate.css
+				Win10.setAnimated([
+					'animated flip',
+					'animated bounceIn',
+				], 0.01);
+
+				//发送一条消息
+				setTimeout(function() {
+					isLogin = getCookie("isLogin");
+					loginAdmin = getCookie("loginAdmin");
+					if(isLogin == 0) {
+						Win10.newMsg('欢迎登录',
+							'欢迎用户"' + loginNickName + '"的登录。');
+						setCookie("isLogin", "1")
+					} else {
+						Win10.newMsg('欢迎回来',
+							'你好' + loginNickName + '，欢迎回来。');
+					}
+
+				}, 2500);
+
+			});
+		</script>
 	</head>
 
 	<body>

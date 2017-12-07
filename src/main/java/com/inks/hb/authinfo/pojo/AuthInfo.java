@@ -3,15 +3,6 @@ package com.inks.hb.authinfo.pojo;
 
 /**
  * AuthInfo对象对应数据库中的authInfo表,主键为authID。
- * -------------
- * 提供了3个构造器，分别为：
- * 1. 无参构造器
- * 2. 不含权限ID的构造器
- * 3. 全构造器
- * -------------
- * 提供正常的get、set方法；
- * -------------
- * 提供重载后的toString()方法；
  */
 public class AuthInfo {
 
@@ -27,40 +18,10 @@ public class AuthInfo {
 
     private String isDelete;    //可删
 
-    /**
-     * 无参构造器
-     *
-     */
     public AuthInfo() {
         super();
     }
 
-    /**
-     * 不含ID的构造器
-     *
-     * @param authItem 权限名称
-     * @param isRead 可读
-     * @param isWrite 可写
-     * @param isChange 可改
-     * @param isDelete 可删
-     */
-    public AuthInfo(String authItem, String isRead, String isWrite, String isChange, String isDelete) {
-        this.authItem = authItem;
-        this.isRead = isRead;
-        this.isWrite = isWrite;
-        this.isChange = isChange;
-        this.isDelete = isDelete;
-    }
-
-    /**
-     * 全构造器
-     * @param authId 权限ID
-     * @param authItem 权限名称
-     * @param isRead 可读
-     * @param isWrite 可写
-     * @param isChange 可改
-     * @param isDelete 可删
-     */
     public AuthInfo(int authId, String authItem, String isRead, String isWrite, String isChange, String isDelete) {
         this.authId = authId;
         this.authItem = authItem;

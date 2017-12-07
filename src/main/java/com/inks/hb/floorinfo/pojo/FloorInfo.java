@@ -46,6 +46,7 @@ public class FloorInfo {
 
     /**
      * 如果为null，则设置为true，否则false
+     *
      * @param aNull 对象是否为空
      */
     public void setNull(boolean aNull) {

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 /**
  * 修订：2017.11.23
- * <p>
  * 将异常放在了本层处理
  * 如果出现数据库相关异常，则返回-1或者null
  */
@@ -20,7 +19,7 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     public int insertRoomType(RoomType roomType) {
         try {
             String name = roomType.getTypeName();
-            if (queryRepeat(name,name) != 1)
+            if (queryRepeat(name, name) != 1)
                 return 0;
             dao.insertData(roomType);
         } catch (SQLException e) {
@@ -95,7 +94,7 @@ public class RoomTypeServiceImpl implements RoomTypeService {
     }
 
     @Override
-    public int queryRepeat(String newName,String oldName) {
+    public int queryRepeat(String newName, String oldName) {
         RoomType roomType;
 
         try {
