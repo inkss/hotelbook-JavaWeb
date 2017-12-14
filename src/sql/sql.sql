@@ -12,7 +12,7 @@ CREATE TABLE `hotelbook`.`login` (
    UNIQUE INDEX `loginName_UNIQUE` (`loginName` ASC));
 
 -- 为login表插入默认的管理员用户
-INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAdmin`) VALUE ("root","toor","管理员",0);
+INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAdmin`) VALUE ("root","eySvyLyA5UjWbE5/9yFxxQ==","管理员",0);
 
 
 -- 创建主体数据表

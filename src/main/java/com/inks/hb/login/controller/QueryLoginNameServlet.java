@@ -1,6 +1,7 @@
 package com.inks.hb.login.controller;
 
 import com.google.gson.Gson;
+import com.inks.hb.common.MD5;
 import com.inks.hb.login.service.LoginService;
 import com.inks.hb.login.service.LoginServiceImpl;
 
@@ -32,10 +33,11 @@ public class QueryLoginNameServlet extends HttpServlet {
 
         // 调用service
         LoginService service = new LoginServiceImpl();
+        MD5 md5 = new MD5();
 
         // 获得姓名
         String loginName = request.getParameter("loginName");
-        String loginPwd = request.getParameter("loginPwd");
+        String loginPwd = md5.getMD5(request.getParameter("loginPwd"));  //转成MD5存储
 
         try {
             int check = service.queryByName(loginName, loginPwd);

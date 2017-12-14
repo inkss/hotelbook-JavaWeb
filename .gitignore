@@ -6,3 +6,6 @@ src/webapp/*.project
 
 # IDEA输出
 out
+
+# checkstyidea-libs
+.idea/checkstyleidea-libs/

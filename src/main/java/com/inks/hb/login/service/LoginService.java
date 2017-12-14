@@ -3,6 +3,7 @@ package com.inks.hb.login.service;
 import com.inks.hb.login.pojo.Login;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * LoginService
@@ -27,5 +28,23 @@ public interface LoginService {
      * @throws SQLException 数据库错误
      */
     Login queryLogin(String name) throws SQLException;
+
+    //增添
+    int insertLogin(Login login);
+
+    //删除
+    int deleteLogin(String loginId);
+
+    //更新
+    int updateLogin(Login login);
+
+    //查询多条
+    ArrayList query(int page, int limit);
+
+    //查询长度
+    int queryLoginNum();
+
+    //查重函数
+    int queryRepeat(String newName, String oldName);
 
 }

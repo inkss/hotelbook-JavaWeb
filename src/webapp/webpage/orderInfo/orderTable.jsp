@@ -199,6 +199,12 @@
 									offset: '250px',
 									icon: 1
 								});
+                                tableIns.reload({
+                                    where: {
+                                        make: 0,
+                                        page: 1
+                                    }
+                                });
 							}, function() {
 								layer.msg('删除操作已取消', {
 									offset: '250px'

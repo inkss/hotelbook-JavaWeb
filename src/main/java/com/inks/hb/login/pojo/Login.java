@@ -29,6 +29,8 @@ public class Login {
         this.loginPwd = loginPwd;
     }
 
+
+
     public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginId = loginId;
         this.loginName = loginName;
