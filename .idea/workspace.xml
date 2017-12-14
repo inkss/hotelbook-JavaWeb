@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8513cb23-c783-4f18-a695-2a28ff6e2900" name="Default" comment="Merge branch 'development' of https://github.com/July7183/hotelbook-JavaWeb into July7183-development&#10;&#10;# Conflicts:&#10;#&#9;LICENSE&#10;#&#9;src/com/july/hb/bill/pojo/BillInfo.java&#10;#&#9;src/com/july/hb/common/CommonDao.java&#10;#&#9;src/com/july/hb/common/CommonFilter.java&#10;#&#9;src/com/july/hb/common/DBUtil.java&#10;#&#9;src/com/july/hb/common/ExitSystemServlet.java&#10;#&#9;src/com/july/hb/common/PojotoGson.java&#10;#&#9;src/com/july/hb/floor/controller/FloorInfoServlet.java&#10;#&#9;src/com/july/hb/floor/controller/QueryFloorNameServlet.java&#10;#&#9;src/com/july/hb/floor/dao/FloorInfoDao.java&#10;#&#9;src/com/july/hb/floor/pojo/FloorInfo.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoService.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoServiceImpl.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginInfoServlet.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginNameServlet.java&#10;#&#9;src/com/july/hb/login/dao/LoginDao.java&#10;#&#9;src/com/july/hb/login/pojo/Login.java&#10;#&#9;src/com/july/hb/login/service/LoginService.java&#10;#&#9;src/com/july/hb/login/service/LoginServiceImpl.java&#10;#&#9;src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java&#10;#&#9;src/com/july/hb/roomtype/controller/RoomTypeServlet.java&#10;#&#9;src/com/july/hb/roomtype/dao/RoomTypeDao.java&#10;#&#9;src/com/july/hb/roomtype/pojo/RoomType.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeService.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java&#10;#&#9;src/sql/sql.sql&#10;#&#9;web/MAIN/img/wallpapers/mobile.jpg&#10;#&#9;web/MAIN/js/win10-hotelbook.js&#10;#&#9;web/MAIN/js/win10.js&#10;#&#9;web/MAIN/main.html&#10;#&#9;web/account/BillInfoTable.jsp&#10;#&#9;web/account/insertRomeType.jsp&#10;#&#9;web/js/jquery.js&#10;#&#9;web/login.jsp">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/julys.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/control/BillInfoServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/control/InsertBillInfoServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/dao/BillDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/pojo/BillInfo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/control/CheckinServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/control/InsertCheckinServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/control/QueryCheckinNameServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/dao/CheckinDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/pojo/CheckinInfo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/common/CommonDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/common/CommonFilter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/common/DBUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/common/ExitSystemServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/common/PojotoGson.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/controller/FloorInfoServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/controller/QueryFloorNameServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/dao/FloorInfoDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/pojo/FloorInfo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginInfoServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginNameServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/dao/LoginDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/pojo/Login.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/RoomTypeServlet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/dao/RoomTypeDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/pojo/RoomType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/sql/sql.sql" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/com/july/hb/bill/service/BillServiceImplTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/account.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/timg.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/mobile.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/js/win10-hotelbook.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/js/win10.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/main.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/account/BillInfoTable.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/account/insertRomeType.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/checkin/CheckInAdd.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/demo.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/login.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/normalize.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/background.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/default.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/error.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/login_ico.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/qiang.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/ruo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/zhong.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/EasePack.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/TweenLite.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/account/BillInfo.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/demo-1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/html5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/rAF.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" afterPath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1474">
+              <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="488" />
+    <option name="y" value="88" />
+    <option name="width" value="1467" />
+    <option name="height" value="1002" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8513cb23-c783-4f18-a695-2a28ff6e2900" name="Default" comment="" />
+      <created>1513253078917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1513253078917</updated>
+      <workItem from="1513253080365" duration="220000" />
+      <workItem from="1513253303364" duration="1404000" />
+      <workItem from="1513254955403" duration="321000" />
+      <workItem from="1513255464864" duration="112000" />
+    </task>
+    <task id="LOCAL-00001" summary="清空库">
+      <created>1513253472834</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513253472834</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2057000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="69" y="-9" width="1860" height="1098" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6572973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.827027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26091826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="清空库" />
+    <MESSAGE value="Merge branch 'development' of https://github.com/July7183/hotelbook-JavaWeb into July7183-development&#10;&#10;# Conflicts:&#10;#&#9;LICENSE&#10;#&#9;src/com/july/hb/bill/pojo/BillInfo.java&#10;#&#9;src/com/july/hb/common/CommonDao.java&#10;#&#9;src/com/july/hb/common/CommonFilter.java&#10;#&#9;src/com/july/hb/common/DBUtil.java&#10;#&#9;src/com/july/hb/common/ExitSystemServlet.java&#10;#&#9;src/com/july/hb/common/PojotoGson.java&#10;#&#9;src/com/july/hb/floor/controller/FloorInfoServlet.java&#10;#&#9;src/com/july/hb/floor/controller/QueryFloorNameServlet.java&#10;#&#9;src/com/july/hb/floor/dao/FloorInfoDao.java&#10;#&#9;src/com/july/hb/floor/pojo/FloorInfo.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoService.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoServiceImpl.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginInfoServlet.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginNameServlet.java&#10;#&#9;src/com/july/hb/login/dao/LoginDao.java&#10;#&#9;src/com/july/hb/login/pojo/Login.java&#10;#&#9;src/com/july/hb/login/service/LoginService.java&#10;#&#9;src/com/july/hb/login/service/LoginServiceImpl.java&#10;#&#9;src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java&#10;#&#9;src/com/july/hb/roomtype/controller/RoomTypeServlet.java&#10;#&#9;src/com/july/hb/roomtype/dao/RoomTypeDao.java&#10;#&#9;src/com/july/hb/roomtype/pojo/RoomType.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeService.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java&#10;#&#9;src/sql/sql.sql&#10;#&#9;web/MAIN/img/wallpapers/mobile.jpg&#10;#&#9;web/MAIN/js/win10-hotelbook.js&#10;#&#9;web/MAIN/js/win10.js&#10;#&#9;web/MAIN/main.html&#10;#&#9;web/account/BillInfoTable.jsp&#10;#&#9;web/account/insertRomeType.jsp&#10;#&#9;web/js/jquery.js&#10;#&#9;web/login.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'development' of https://github.com/July7183/hotelbook-JavaWeb into July7183-development&#10;&#10;# Conflicts:&#10;#&#9;LICENSE&#10;#&#9;src/com/july/hb/bill/pojo/BillInfo.java&#10;#&#9;src/com/july/hb/common/CommonDao.java&#10;#&#9;src/com/july/hb/common/CommonFilter.java&#10;#&#9;src/com/july/hb/common/DBUtil.java&#10;#&#9;src/com/july/hb/common/ExitSystemServlet.java&#10;#&#9;src/com/july/hb/common/PojotoGson.java&#10;#&#9;src/com/july/hb/floor/controller/FloorInfoServlet.java&#10;#&#9;src/com/july/hb/floor/controller/QueryFloorNameServlet.java&#10;#&#9;src/com/july/hb/floor/dao/FloorInfoDao.java&#10;#&#9;src/com/july/hb/floor/pojo/FloorInfo.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoService.java&#10;#&#9;src/com/july/hb/floor/service/FloorInfoServiceImpl.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginInfoServlet.java&#10;#&#9;src/com/july/hb/login/controller/QueryLoginNameServlet.java&#10;#&#9;src/com/july/hb/login/dao/LoginDao.java&#10;#&#9;src/com/july/hb/login/pojo/Login.java&#10;#&#9;src/com/july/hb/login/service/LoginService.java&#10;#&#9;src/com/july/hb/login/service/LoginServiceImpl.java&#10;#&#9;src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java&#10;#&#9;src/com/july/hb/roomtype/controller/RoomTypeServlet.java&#10;#&#9;src/com/july/hb/roomtype/dao/RoomTypeDao.java&#10;#&#9;src/com/july/hb/roomtype/pojo/RoomType.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeService.java&#10;#&#9;src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java&#10;#&#9;src/sql/sql.sql&#10;#&#9;web/MAIN/img/wallpapers/mobile.jpg&#10;#&#9;web/MAIN/js/win10-hotelbook.js&#10;#&#9;web/MAIN/js/win10.js&#10;#&#9;web/MAIN/main.html&#10;#&#9;web/account/BillInfoTable.jsp&#10;#&#9;web/account/insertRomeType.jsp&#10;#&#9;web/js/jquery.js&#10;#&#9;web/login.jsp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="46" lean-forward="true" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/hotelbook-JavaWeb.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.rebel.xml.bak" />
+    <entry file="file://$PROJECT_DIR$/.idea/.rebel-remote.xml.bak" />
+    <entry file="file://$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/webContexts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/hotelbook-JavaWeb.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/layui使用笔记.md" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="97" column="39" lean-forward="false" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

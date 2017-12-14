@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>酒店管理系统</title>
+    <link rel='Shortcut Icon' type='image/x-icon' href='../img/windows.ico'>
+    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+    <link href="./css/animate.css" rel="stylesheet">
+    <script type="text/javascript" src="./component/layer-v3.0.3/layer/layer.js"></script>
+    <link rel="stylesheet" href="./component/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="./css/default.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/win10.js"></script>
+    <script type="text/javascript" src="../js/Cookie.js"></script>
+    <style>
+        * {
+            font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
+        }
+        /*去除窗体标题栏与主栏的差异，默认的属性是#eee*/
+
+        .layui-layer-title {
+            border-bottom: 1px solid #444444;
+        }
+        /*磁贴自定义样式*/
+
+        .win10-block-content-text {
+            line-height: 44px;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+
+    <!--引入自定义js-->
+    <script type="text/javascript" src="./js/win10-hotelbook.js"></script>
+</head>
+
+<body>
+    <div id="win10">
+
+        <!--桌面图标-->
+        <div class="desktop">
+            <div   id="win10-shortcuts"  class="shortcuts-hidden">
+                <div class="shortcut" onclick="Win10.openUrl('../account/BillInfoTable.jsp','<img class=\'icon\' src=\'img/icon/account.jpeg\'/>收银记账')">
+                    <img class="icon" src="img/icon/account.jpeg" />
+                    <div class="title">收银记账</div>
+                </div>
+                <div class="shortcut" onclick="Win10.openUrl('../checkin/CheckInAdd.jsp','<img class=\'icon\' src=\'img/icon/timg.jpeg\'/>入住情况')">
+                    <img class="icon" src="img/icon/timg.jpeg" />
+                    <div class="title">入住情况</div>
+                </div>
+
+            </div>
+
+
+            <div id="win10-desktop-scene"></div>
+        </div>
+
+        <!--磁贴菜单-->
+        <div id="win10-menu" class="hidden">
+            <div class="list win10-menu-hidden animated animated-slideOutLeft">
+                <div class="item" onclick="Win10.exit()">
+                    <i class="black icon fa fa-power-off fa-fw"></i>
+                    <span class="title">关闭</span>
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="menu_group">
+                    <div class="title">Welcome</div>
+                    <div class="block" loc="1,1" size="6,4">
+                        <div class="content">
+                            <div style="font-size:100px;line-height: 132px;margin: 0 auto ;display: block" class="fa fa-fw fa-windows win10-block-content-text"></div>
+                            <div class="win10-block-content-text" style="font-size: 22px">欢迎使用 酒店管理系统</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="win10-menu-switcher"></div>
+        </div>
+
+        <!--通知中心-->
+        <div id="win10_command_center" class="hidden_right">
+            <div class="title">
+                <h4 style="float: left">消息中心 </h4>
+                <span id="win10_btn_command_center_clean_all">全部清除</span>
+            </div>
+            <div class="msgs"></div>
+        </div>
+
+        <!--状态栏-->
+        <div id="win10_task_bar">
+            <div id="win10_btn_group_left" class="btn_group">
+                <div id="win10_btn_win" class="btn">
+                    <span class="fa fa-windows"></span>
+                </div>
+                <div class="btn" id="win10-btn-browser">
+                    <span class="fa fa-internet-explorer"></span>
+                </div>
+            </div>
+            <div id="win10_btn_group_middle" class="btn_group"></div>
+            <div id="win10_btn_group_right" class="btn_group">
+                <div class="btn" id="win10_btn_time"></div>
+                <div class="btn" id="win10_btn_command">
+                    <span id="win10-msg-nof" class="fa fa-comment-o"></span>
+                </div>
+                <div class="btn" id="win10_btn_show_desktop"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
