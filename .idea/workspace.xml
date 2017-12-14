@@ -2,282 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="hotelbook-JavaWeb" />
+      <artifact name="hotelbook-JavaWeb:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list id="89114420-a9e4-4c4f-8306-000a5b08f8e4" name="Revert &quot;修改登录界面&quot; This reverts commit 205433c" comment="Revert &quot;修改登录界面&quot;&#10;&#10;This reverts commit 205433c" />
     <list default="true" id="c9ee5fe9-3ad2-43c6-bf7c-778a8db5ff19" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/hotelbook_JavaWeb_Web_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/base64-1.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/c3p0-0.9.5.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/commons-collections4-4.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/commons-fileupload-1.2.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/commons-io-1.4.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.2.4.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/mchange-commons-java-0.2.11.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.44-bin.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-examples-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-excelant-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poi-scratchpad-3.17.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/xmlbeans-2.6.0.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/billinfo/pojo/BillInfo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/controller/FloorInfoServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/controller/QueryFloorNameServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/dao/FloorInfoDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/pojo/FloorInfo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/service/FloorInfoService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/july/hb/floorinfo/service/FloorInfoServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/resources/c3p0-config.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/com/july/hb/floorinfo/service/FloorInfoServiceTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/com/july/hb/roomtype/dao/RoomTypeDaoTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/404.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.full.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/mobile/need/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/component/layer-v3.0.3/layer/skin/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/css/animate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/css/default.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/10Liulan.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/1YuDing.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/2RuZhu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/3FangTai.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/4ShuJu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/5ZhangDan.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/6XiTong.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/7YuanGong.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/8AnQuan.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/icon/9XiangMu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/main.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/miaowu.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/img/wallpapers/timg.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/js/jquery-2.2.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/MAIN/js/win10.child.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/SystemSetting/FloorTable.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/SystemSetting/RoomTypeTable.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/SystemSetting/SystemMain.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/SystemSetting/SystemNav.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/SystemSetting/insertRomeType.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/account/accountMain.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/account/accountNav.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/checkin/CheckinTable.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/checkin/checkMain.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/checkin/checkNav.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/login/register-login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/img/windows.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/Cookie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/SystemSetting/AuthTable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/SystemSetting/FloorTable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/SystemSetting/RomeTypeTable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap/js/npm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/global.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/layui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/layui.mobile.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/code.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/laydate/default/laydate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/css/modules/layer/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/font/iconfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/font/iconfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/font/iconfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/font/iconfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/10.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/11.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/12.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/13.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/14.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/15.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/16.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/17.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/18.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/19.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/20.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/21.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/22.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/23.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/24.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/25.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/26.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/27.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/28.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/29.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/3.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/30.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/31.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/32.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/33.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/34.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/35.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/36.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/37.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/38.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/39.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/4.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/40.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/41.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/42.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/43.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/44.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/45.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/46.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/47.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/48.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/49.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/5.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/50.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/51.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/52.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/53.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/54.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/55.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/56.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/57.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/58.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/59.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/6.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/60.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/61.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/62.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/63.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/64.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/65.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/66.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/67.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/68.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/69.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/7.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/70.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/71.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/8.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/images/face/9.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/code.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/element.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/flow.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/laydate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/layedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/laypage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/laytpl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/mobile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/upload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/lay/modules/util.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/layui.all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/layui/layui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/login/background.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/login/particles.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/toExcel/Export2Excel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/toExcel/FileSaver.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/toExcel/xlsx.core.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/toExcel/xlsx.full.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainHeader.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPage.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/welcome.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/julys.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/julys.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/hotelbook-JavaWeb.iml" afterPath="$PROJECT_DIR$/.idea/hotelbook-JavaWeb.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hotelbook_JavaWeb_Web_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/hotelbook_JavaWeb_Web_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" afterPath="$PROJECT_DIR$/hotelbook-JavaWeb.iml" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/bill/dao/BillDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/dao/BillDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/bill/pojo/BillInfo.java" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/pojo/BillInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillService.java" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillService.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/july/hb/bill/service/BillServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/checkin/control/InsertCheckinServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/control/InsertCheckinServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/checkin/dao/CheckinDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/dao/CheckinDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/checkin/pojo/CheckinInfo.java" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/pojo/CheckinInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinService.java" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinService.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/july/hb/checkin/service/CheckinServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/common/CommonDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/common/CommonDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/common/CommonFilter.java" afterPath="$PROJECT_DIR$/src/com/july/hb/common/CommonFilter.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/common/DBUtil.java" afterPath="$PROJECT_DIR$/src/com/july/hb/common/DBUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/common/ExitSystemServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/common/ExitSystemServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/common/PojotoGson.java" afterPath="$PROJECT_DIR$/src/com/july/hb/common/PojotoGson.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/controller/FloorInfoServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/controller/FloorInfoServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/controller/QueryFloorNameServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/controller/QueryFloorNameServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/dao/FloorInfoDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/dao/FloorInfoDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/pojo/FloorInfo.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/pojo/FloorInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoService.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoService.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/july/hb/floor/service/FloorInfoServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginInfoServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginInfoServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginNameServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/controller/QueryLoginNameServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/dao/LoginDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/dao/LoginDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/pojo/Login.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/pojo/Login.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginService.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginService.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/july/hb/login/service/LoginServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/QueryRoomTypeNameServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/RoomTypeServlet.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/controller/RoomTypeServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/dao/RoomTypeDao.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/dao/RoomTypeDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/pojo/RoomType.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/pojo/RoomType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeService.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/july/hb/roomtype/service/RoomTypeServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/sql/sql.sql" afterPath="$PROJECT_DIR$/src/sql/sql.sql" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/july/hb/bill/service/BillServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/com/july/hb/bill/service/BillServiceImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/web/MAIN/js/win10-hotelbook.js" afterPath="$PROJECT_DIR$/web/MAIN/js/win10-hotelbook.js" />
-      <change beforePath="$PROJECT_DIR$/web/MAIN/js/win10.js" afterPath="$PROJECT_DIR$/web/MAIN/js/win10.js" />
-      <change beforePath="$PROJECT_DIR$/web/MAIN/main.html" afterPath="$PROJECT_DIR$/web/MAIN/main.html" />
-      <change beforePath="$PROJECT_DIR$/web/account/BillInfoTable.jsp" afterPath="$PROJECT_DIR$/web/account/BillInfoTable.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/account/insertRomeType.jsp" afterPath="$PROJECT_DIR$/web/account/insertRomeType.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/checkin/CheckInAdd.jsp" afterPath="$PROJECT_DIR$/web/checkin/CheckInAdd.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/css/demo.css" afterPath="$PROJECT_DIR$/web/css/demo.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/login.css" afterPath="$PROJECT_DIR$/web/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/web/js/EasePack.min.js" afterPath="$PROJECT_DIR$/web/js/EasePack.min.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/TweenLite.min.js" afterPath="$PROJECT_DIR$/web/js/TweenLite.min.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/account/BillInfo.js" afterPath="$PROJECT_DIR$/web/js/account/BillInfo.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/demo-1.js" afterPath="$PROJECT_DIR$/web/js/demo-1.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/html5.js" afterPath="$PROJECT_DIR$/web/js/html5.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery.js" afterPath="$PROJECT_DIR$/web/js/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/web/js/rAF.js" afterPath="$PROJECT_DIR$/web/js/rAF.js" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/com/july/hb/billinfo/pojo/BillInfo.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -305,7 +38,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -412,85 +145,55 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="july" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="july" type="462c0819:PsiDirectoryNode" />
               <item name="hb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="hotelbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelbook" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="july" type="462c0819:PsiDirectoryNode" />
               <item name="hb" type="462c0819:PsiDirectoryNode" />
               <item name="bill" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="july" type="462c0819:PsiDirectoryNode" />
-              <item name="hb" type="462c0819:PsiDirectoryNode" />
-              <item name="checkin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="july" type="462c0819:PsiDirectoryNode" />
-              <item name="hb" type="462c0819:PsiDirectoryNode" />
-              <item name="checkin" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelbook-JavaWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelbook-JavaWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="checkin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -735,11 +438,11 @@
       <listeners />
     </configuration>
     <configuration name="hb" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M26" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.jsp" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="hotelbook-JavaWeb">
+        <artifact name="hotelbook-JavaWeb:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -838,6 +541,7 @@
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="hotelbook-JavaWeb" />
+          <artifact name="hotelbook-JavaWeb:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -898,6 +602,7 @@
       <workItem from="1512466369771" duration="10235000" />
       <workItem from="1513248966809" duration="500000" />
       <workItem from="1513263309558" duration="573000" />
+      <workItem from="1513267057337" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="项目部署，初步修改">
       <created>1511582949401</created>
@@ -991,7 +696,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81242000" />
+    <option name="totallyTimeSpent" value="81629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-9" width="1860" height="1098" extended-state="6" />
@@ -999,36 +704,36 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32930514" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35231787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22402598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6980519" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6972973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3409091" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21276596" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2155655" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1331,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2926">
           <caret line="133" column="26" lean-forward="false" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,7 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,39 +1064,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/july/hb/bill/controller/InsertBillInfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/july/hb/bill/controller/InsertBillInfoServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/com/july/hb/checkin/control/InsertCheckinServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/july/hb/bill/controller/BillInfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/july/hb/bill/controller/BillInfoServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/com/july/hb/bill/control/BillInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,11 +1089,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>hotelbook-JavaWeb</last-edited>
+          <last-edited>hotelbook-JavaWeb:Web exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.28492647" />
                 <option value="0.5" />
               </list>
             </option>
