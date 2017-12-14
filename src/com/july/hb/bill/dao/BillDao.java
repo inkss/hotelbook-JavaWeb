@@ -1,7 +1,6 @@
 package com.july.hb.bill.dao;
 
 import com.july.hb.bill.pojo.BillInfo;
-import com.july.hb.checkin.pojo.CheckinInfo;
 import com.july.hb.common.CommonDao;
 import com.july.hb.common.DBUtil;
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <named-config name="mysql">
+
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/hotelbook?characterEncoding=utf8&amp;useSSL=true</property>
+
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+
+        <property name="user">root</property>
+
+        <property name="password">123456</property>
+
+        <property name="acquireIncrement">3</property>
+
+        <property name="initialPoolSize">10</property>
+
+        <property name="minPoolSize">2</property>
+
+        <property name="maxPoolSize">10</property>
+
+    </named-config>
+
+</c3p0-config>
