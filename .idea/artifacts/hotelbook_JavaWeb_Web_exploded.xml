@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hotelbook-JavaWeb:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/hotelbook_JavaWeb_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hotelbook-JavaWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="hotelbook-JavaWeb/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>酒店管理系统</title>
+<link rel='Shortcut Icon' type='image/x-icon' href='./img/windows.ico'>
 <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 <link rel="stylesheet" type="text/css" href="css/demo.css"/>
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
@@ -89,8 +90,7 @@
                             });
                         else {
                             layer.msg('登录成功', {
-                                icon: 16,
-                                shade: 0.01
+
                             });
 
                             //根据写入的session值得到结果
@@ -113,7 +113,7 @@
                             });
 
                             setTimeout(function () {
-                                location.href = 'MAIN/main.html';
+                                location.href = 'mainPage.jsp';
                             }, 1000); //等待一段时间后跳入
                         }
                     });

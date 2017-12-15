@@ -91,7 +91,7 @@ CREATE TABLE `hotelbook`.`orderInfo` (
     ON UPDATE NO ACTION);
 
 -- 入住单
-CREATE TABLE `hotelbook`.`checkInfo` (
+CREATE TABLE `hotelbook`.`checkinInfo` (
   `checkId` VARCHAR(45) NOT NULL COMMENT '入住单号',
   `orderId` VARCHAR(45) NULL COMMENT '预定单号',
   `checkName` VARCHAR(45) NULL COMMENT '入住人',
@@ -119,12 +119,12 @@ CREATE TABLE `hotelbook`.`checkInfo` (
   PRIMARY KEY (`checkId`),
   INDEX `fk_checkInfo_1_idx` (`typeId` ASC),
   INDEX `fk_checkInfo_2_idx` (`roomId` ASC),
-  CONSTRAINT `fk_checkInfo_1`
+  CONSTRAINT `fk_checkinInfo_1`
     FOREIGN KEY (`typeId`)
     REFERENCES `hotelbook`.`roomType` (`typeId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_checkInfo_2`
+  CONSTRAINT `fk_checkinInfo_2`
     FOREIGN KEY (`roomId`)
     REFERENCES `hotelbook`.`roomInfo` (`roomId`)
     ON DELETE NO ACTION
@@ -141,7 +141,7 @@ CREATE TABLE `hotelbook`.`billInfo` (
   INDEX `fk_billInfo_1_idx` (`checkId` ASC),
   CONSTRAINT `fk_billInfo_1`
     FOREIGN KEY (`checkId`)
-    REFERENCES `hotelbook`.`checkInfo` (`checkId`)
+    REFERENCES `hotelbook`.checkinInfo (`checkId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -180,7 +180,7 @@ CREATE TABLE `hotelbook`.`orderHistory` (
   PRIMARY KEY (`orderId`));
 
 -- 入住单历史
-CREATE TABLE `hotelbook`.`checkHistory` (
+CREATE TABLE `hotelbook`.`checkinHistory` (
   `checkId` VARCHAR(45) NOT NULL COMMENT '入住单号',
   `orderId` VARCHAR(45) NULL COMMENT '预定单号',
   `checkName` VARCHAR(45) NULL COMMENT '入住人',
