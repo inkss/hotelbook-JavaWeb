@@ -28,6 +28,6 @@ public interface CheckinService {
     //查询长度
     int queryCheckinNum();
 
-
+    //查重
     int queryRepeat(String checkName);
 }

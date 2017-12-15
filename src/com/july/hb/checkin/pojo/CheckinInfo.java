@@ -2,66 +2,52 @@ package com.july.hb.checkin.pojo;
 
 public class CheckinInfo {
 
-    private String checkId;
-    private String orderId;
-    private String checkName;
-    private String checkPhone;
-    private String checkIDcard;
-    private String typeId;
-    private String arriveTime;
-    private String leaveTime;
-    private String checkState;
-    private Integer checkNum;
-    private String roomId;
-    private String price;
-    private String checkPrice;
-    private Integer discount;
-    private String discountReason;
-    private String addBed;
-    private String addBedPrice;
-    private String orderMoney;
-    private String money;
-    private String ifCheckout;
-    private String checkMoney;
-    private String checkoutDate;
-    private String remark;
-    private String operatorId;
+    private String checkId; //入住单号
+    private String checkName; //入住人
+    private String checkPhone; //入住人电话
+    private String checkIDcard; //身份证
+    private String arriveTime; //抵店时间
+    private String leaveTime; //离店时间
+    private String checkNum; //入住人数
+    private String floorId; //楼层类型
+    private String typeId; //房间类型
+    private String roomId; //房号
+    private String price; //客房价格
+    private String checkPrice; //入住价格
+    private String discount; //折扣
+    private String orderMoney; //预收款
+    private String money; //应收款
+    private String checkState; //单据状态
+    private String isCheck; //是否结账
+    private String checkMoney; //结张金额
+    private String checkoutDate; //结账日期
+    private String remark; //备注
 
     private boolean isNull;
-    //快捷键 ait+insert 空方法，全参构造器，get，set，tostring等
-    public CheckinInfo() {
-    }
 
-    public CheckinInfo(String checkId) {
-        this.checkId = checkId;
-    }
+    public CheckinInfo() { }
 
-    public CheckinInfo(String checkId, String orderId, String checkName, String checkPhone, String checkIDcard, String typeId, String arriveTime, String leaveTime, String checkState, Integer checkNum, String roomId, String price, String checkPrice, Integer discount, String discountReason, String addBed, String addBedPrice, String orderMoney, String money, String ifCheckout, String checkMoney, String checkoutDate, String remark, String operatorId ) {
+    public CheckinInfo(String checkId, String checkName, String checkPhone, String checkIDcard, String arriveTime, String leaveTime, String checkNum, String floorId, String typeId, String roomId, String price, String checkPrice, String discount, String orderMoney, String money, String checkState, String isCheck, String checkMoney, String checkoutDate, String remark) {
         this.checkId = checkId;
-        this.orderId = orderId;
         this.checkName = checkName;
         this.checkPhone = checkPhone;
         this.checkIDcard = checkIDcard;
-        this.typeId = typeId;
         this.arriveTime = arriveTime;
         this.leaveTime = leaveTime;
-        this.checkState = checkState;
         this.checkNum = checkNum;
+        this.floorId = floorId;
+        this.typeId = typeId;
         this.roomId = roomId;
         this.price = price;
         this.checkPrice = checkPrice;
         this.discount = discount;
-        this.discountReason = discountReason;
-        this.addBed = addBed;
-        this.addBedPrice = addBedPrice;
         this.orderMoney = orderMoney;
         this.money = money;
-        this.ifCheckout = ifCheckout;
+        this.checkState = checkState;
+        this.isCheck = isCheck;
         this.checkMoney = checkMoney;
         this.checkoutDate = checkoutDate;
         this.remark = remark;
-        this.operatorId = operatorId;
-
     }
 
     public String getCheckId() {
@@ -70,14 +56,6 @@ public class CheckinInfo {
 
     public void setCheckId(String checkId) {
         this.checkId = checkId;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
     }
 
     public String getCheckName() {
@@ -104,14 +82,6 @@ public class CheckinInfo {
         this.checkIDcard = checkIDcard;
     }
 
-    public String getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(String typeId) {
-        this.typeId = typeId;
-    }
-
     public String getArriveTime() {
         return arriveTime;
     }
@@ -128,20 +98,28 @@ public class CheckinInfo {
         this.leaveTime = leaveTime;
     }
 
-    public String getCheckState() {
-        return checkState;
-    }
-
-    public void setCheckState(String checkState) {
-        this.checkState = checkState;
-    }
-
-    public Integer getCheckNum() {
+    public String getCheckNum() {
         return checkNum;
     }
 
-    public void setCheckNum(Integer checkNum) {
+    public void setCheckNum(String checkNum) {
         this.checkNum = checkNum;
+    }
+
+    public String getFloorId() {
+        return floorId;
+    }
+
+    public void setFloorId(String floorId) {
+        this.floorId = floorId;
+    }
+
+    public String getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(String typeId) {
+        this.typeId = typeId;
     }
 
     public String getRoomId() {
@@ -168,36 +146,12 @@ public class CheckinInfo {
         this.checkPrice = checkPrice;
     }
 
-    public Integer getDiscount() {
+    public String getDiscount() {
         return discount;
     }
 
-    public void setDiscount(Integer discount) {
+    public void setDiscount(String discount) {
         this.discount = discount;
-    }
-
-    public String getDiscountReason() {
-        return discountReason;
-    }
-
-    public void setDiscountReason(String discountReason) {
-        this.discountReason = discountReason;
-    }
-
-    public String getAddBed() {
-        return addBed;
-    }
-
-    public void setAddBed(String addBed) {
-        this.addBed = addBed;
-    }
-
-    public String getAddBedPrice() {
-        return addBedPrice;
-    }
-
-    public void setAddBedPrice(String addBedPrice) {
-        this.addBedPrice = addBedPrice;
     }
 
     public String getOrderMoney() {
@@ -216,12 +170,20 @@ public class CheckinInfo {
         this.money = money;
     }
 
-    public String getIfCheckout() {
-        return ifCheckout;
+    public String getCheckState() {
+        return checkState;
     }
 
-    public void setIfCheckout(String ifCheckout) {
-        this.ifCheckout = ifCheckout;
+    public void setCheckState(String checkState) {
+        this.checkState = checkState;
+    }
+
+    public String getIsCheck() {
+        return isCheck;
+    }
+
+    public void setIsCheck(String isCheck) {
+        this.isCheck = isCheck;
     }
 
     public String getCheckMoney() {
@@ -248,14 +210,6 @@ public class CheckinInfo {
         this.remark = remark;
     }
 
-    public String getOperatorId() {
-        return operatorId;
-    }
-
-    public void setOperatorId(String operatorId) {
-        this.operatorId = operatorId;
-    }
-
     public boolean isNull() {
         return isNull;
     }
@@ -268,31 +222,26 @@ public class CheckinInfo {
     public String toString() {
         return "CheckinInfo{" +
                 "checkId='" + checkId + '\'' +
-                ", orderId='" + orderId + '\'' +
                 ", checkName='" + checkName + '\'' +
                 ", checkPhone='" + checkPhone + '\'' +
                 ", checkIDcard='" + checkIDcard + '\'' +
-                ", typeId='" + typeId + '\'' +
                 ", arriveTime='" + arriveTime + '\'' +
                 ", leaveTime='" + leaveTime + '\'' +
-                ", checkState='" + checkState + '\'' +
-                ", checkNum='" + checkNum +
+                ", checkNum='" + checkNum + '\'' +
+                ", floorId='" + floorId + '\'' +
+                ", typeId='" + typeId + '\'' +
                 ", roomId='" + roomId + '\'' +
                 ", price='" + price + '\'' +
                 ", checkPrice='" + checkPrice + '\'' +
-                ", discount=" + discount +
-                ", discountReason='" + discountReason + '\'' +
-                ", addBed='" + addBed + '\'' +
-                ", addBedPrice='" + addBedPrice + '\'' +
+                ", discount='" + discount + '\'' +
                 ", orderMoney='" + orderMoney + '\'' +
                 ", money='" + money + '\'' +
-                ", ifCheckout='" + ifCheckout + '\'' +
+                ", checkState='" + checkState + '\'' +
+                ", isCheck='" + isCheck + '\'' +
                 ", checkMoney='" + checkMoney + '\'' +
                 ", checkoutDate='" + checkoutDate + '\'' +
                 ", remark='" + remark + '\'' +
-                ", operatorId='" + operatorId + '\'' +
                 ", isNull=" + isNull +
                 '}';
     }
-
 }

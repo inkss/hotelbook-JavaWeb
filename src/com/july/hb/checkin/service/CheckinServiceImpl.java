@@ -2,21 +2,24 @@ package com.july.hb.checkin.service;
 
 import com.july.hb.checkin.dao.CheckinDao;
 import com.july.hb.checkin.pojo.CheckinInfo;
-import com.july.hb.common.CommonDao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-//把数据层得到的数据处理一下给控制层
+
 public class CheckinServiceImpl implements CheckinService {
+
     private CheckinDao dao = new CheckinDao();
 
     @Override
     public int insertCheckinInfo(CheckinInfo checkinInfo) {
         try {
-            if (queryRepeat(checkinInfo.getCheckName())==1)
+            if (queryRepeat(checkinInfo.getCheckId()) == 1)
                 dao.insertData(checkinInfo);
+            else
+                return 0; //存在id
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
         return 1;
@@ -29,22 +32,24 @@ public class CheckinServiceImpl implements CheckinService {
 
         try {
             dao.deleteData(checkinInfo);
+            return 1;
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
-        return 1;
     }
 
     @Override
     public int updateCheckinInfo(CheckinInfo checkinInfo) {
         try {
             dao.updateData(checkinInfo);
+            return 1;
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
+            e.printStackTrace();
             return -1;
         }
-        return 1;
     }
 
     @Override
@@ -53,7 +58,7 @@ public class CheckinServiceImpl implements CheckinService {
         checkinInfo.setCheckId(checkId);
 
         try {
-            return (CheckinInfo) dao.query(checkinInfo);
+            return (CheckinInfo) dao.query(checkId);
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             return null;
@@ -62,6 +67,7 @@ public class CheckinServiceImpl implements CheckinService {
 
     @Override
     public ArrayList query(int page, int limit) {
+
         int start = (page * limit) - limit + 1; //每一页的起始位置
 
         if (start < 1)  //小于1的话会触发一个错误
@@ -96,10 +102,7 @@ public class CheckinServiceImpl implements CheckinService {
             else
                 return 1;
         } catch (SQLException e) {
-            System.out.println(e.getErrorCode() + e.getMessage());
             return -1;
         }
     }
-
-
 }

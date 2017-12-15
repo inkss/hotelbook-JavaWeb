@@ -92,7 +92,7 @@
         </div>
 
         <div class="layui-inline">
-            <label class="layui-form-label">房间类型</label>
+            <label class="layui-form-label">楼层类型</label>
             <div class="layui-input-inline">
                 <select class="layui-input-inline" id="floorId" name="floorId" lay-verify="required"
                         autocomplete="off" placeholder="楼层" class="layui-input">
