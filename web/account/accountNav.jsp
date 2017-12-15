@@ -13,7 +13,7 @@
     <div class="layui-side-scroll">
         <ul class="layui-nav layui-nav-tree">
             <li class="layui-nav-item">
-                <a href="填充地址" target="account">账单结算</a>
+                <a href="BillJieSuan.jsp" target="account">账单结算</a>
             </li>
             <li class="layui-nav-item">
                 <a href="BillInfoTable.jsp" target="account">账单管理</a>
