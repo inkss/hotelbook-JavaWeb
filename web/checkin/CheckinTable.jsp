@@ -89,10 +89,6 @@
                         title: '客房价格',
                         width: 100
                     }, {
-                        field: 'checkPrice',
-                        title: '入住价格',
-                        width: 100
-                    }, {
                         field: 'discount',
                         title: '折扣',
                         width: 100
@@ -120,10 +116,10 @@
                         sort: true,
                         width: 100
                     }, {
-                        field: 'checkDate',
+                        field: 'checkoutDate',
                         title: '结账日期',
                         sort: true,
-                        width: 100
+                        width: 180
                     }, {
                         field: 'remark',
                         title: '备注',

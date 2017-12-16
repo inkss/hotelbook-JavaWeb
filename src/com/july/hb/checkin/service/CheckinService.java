@@ -25,6 +25,9 @@ public interface CheckinService {
     //查询多条
     ArrayList query(int page, int limit);
 
+    //结算转用
+    ArrayList billInfo(int page, int limit);
+
     //查询长度
     int queryCheckinNum();
 

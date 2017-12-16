@@ -68,13 +68,12 @@ public class CheckinDao implements CommonDao {
     @Override
     public void updateData(Object o) throws SQLException {
         CheckinInfo checkinInfo = (CheckinInfo) o;
-
         Connection conn = DBUtil.getConnection();
 
-        String sql = "UPDATE checkinInfo SET orderId = ? ,checkinName = ? ,checkPhone = ? ,checkIDcard = ?," +
+        String sql = "UPDATE checkinInfo SET orderId = ? ,checkName = ? ,checkPhone = ? ,checkIDcard = ?," +
                 "typeId = ?,arrireTime = ?,leaveTime = ? ,checkState = ? ,checkNum = ? , roomId = ?,price = ? ," +
                 "checkPrice = ?,discount = ? ,discountReason = ?,addBed = ? ,addBedPrice = ?,orderMoney = ? ," +
-                "money = ?,ifCheckout = ?,checkMoney = ? ,checkoutDate = ? ,remark = ?,operatorId = ? " +
+                "money = ?,isCheck = ?,checkMoney = ? ,checkDate = ? ,remark = ?,operatorId = ? " +
                 " WHERE checkId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -96,7 +95,7 @@ public class CheckinDao implements CommonDao {
         pstmt.setString(16, "");
         pstmt.setString(17, checkinInfo.getOrderMoney());
         pstmt.setString(18, checkinInfo.getMoney());
-        pstmt.setString(19, "");
+        pstmt.setString(19, checkinInfo.getIsCheck());
         pstmt.setString(20, checkinInfo.getCheckMoney());
         pstmt.setString(21, checkinInfo.getCheckoutDate());
         pstmt.setString(22, checkinInfo.getRemark());
@@ -145,6 +144,8 @@ public class CheckinDao implements CommonDao {
                     , rs.getString(12), rs.getString(13), Integer.toString(rs.getInt(14))
                     , rs.getString(18), rs.getString(19), rs.getString(9), rs.getString(20)
                     , rs.getString(21), rs.getString(22), rs.getString(23));
+            if (checkinInfo.getDiscount().equals("0"))
+                checkinInfo.setDiscount("10");
             list.add(checkinInfo);
         }
 
@@ -174,10 +175,12 @@ public class CheckinDao implements CommonDao {
                     , rs.getString(18), rs.getString(19), rs.getString(9), rs.getString(20)
                     , rs.getString(21), rs.getString(22), rs.getString(23));
         }
-
         if (checkinInfo == null) {
             checkinInfo = new CheckinInfo();
             checkinInfo.setNull(true);
+        } else if (checkinInfo != null){
+            if (checkinInfo.getDiscount().equals("0"))
+                checkinInfoQuery.setDiscount("10");
         }
         rs.close();
         pstmt.close();
@@ -207,6 +210,9 @@ public class CheckinDao implements CommonDao {
         if (checkinInfoQuery == null) {
             checkinInfoQuery = new CheckinInfo();
             checkinInfoQuery.setNull(true);
+        } else {
+            if (checkinInfoQuery.getDiscount().equals("0"))
+                checkinInfoQuery.setDiscount("10");
         }
 
         rs.close();

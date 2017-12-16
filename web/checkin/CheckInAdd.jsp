@@ -22,7 +22,7 @@
         <div class="layui-inline">
             <label class="layui-form-label">入住单号</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input" id="checkId" name="checkId" placeholder="入住单号" readonly>
+                <input type="text" class="layui-input" id="checkId" lay-verify="required" name="checkId" placeholder="入住单号" readonly>
             </div>
         </div>
         <div class="layui-inline">
@@ -122,21 +122,21 @@
         <div class="layui-inline">
             <label class="layui-form-label">客房价格</label>
             <div class="layui-input-inline">
-                <input type="text" id="price" name="price" lay-verify="number" autocomplete="off"
+                <input type="text" id="price" name="price" lay-verify="required|number" autocomplete="off"
                        placeholder="￥" class="layui-input">
             </div>
         </div>
-        <div class="layui-inline">
+        <div class="layui-inline layui-hide">
             <label class="layui-form-label">入住价格</label>
             <div class="layui-input-inline">
                 <input type="text" id="checkPrice" name="checkPrice" lay-verify="number" autocomplete="off"
-                       placeholder="￥" class="layui-input">
+                       placeholder="￥" class="layui-input" readonly>
             </div>
         </div>
         <div class="layui-inline">
             <label class="layui-form-label">折扣</label>
             <div class="layui-input-inline">
-                <input type="text" id="discount" name="discount" lay-verify="number" autocomplete="off"
+                <input type="text" id="discount" name="discount" lay-verify="required|number" autocomplete="off"
                        placeholder="折扣请输入，无折扣置空" class="layui-input" value="0">
             </div>
         </div>
@@ -150,7 +150,7 @@
                        placeholder="￥" class="layui-input">
             </div>
         </div>
-        <div class="layui-inline">
+        <div class="layui-inline layui-hide">
             <label class="layui-form-label">应收款</label>
             <div class="layui-input-inline">
                 <input type="text" id="money" name="money" lay-verify="number" autocomplete="off"
@@ -161,7 +161,6 @@
             <label class="layui-form-label">单据状态</label>
             <div class="layui-input-inline">
                 <select name="checkState" class="layui-input-inline" id="checkState" lay-verify="required">
-                    <option value="预定">预定</option>
                     <option value="入住">入住</option>
                     <option value="结算">结算</option>
                     <option value="延期">延期</option>
@@ -170,7 +169,7 @@
         </div>
     </div>
 
-    <div class="layui-form-item">
+    <div class="layui-form-item layui-hide">
         <div class="layui-inline">
             <label class="layui-form-label">是否结账</label>
             <div class="layui-input-inline">

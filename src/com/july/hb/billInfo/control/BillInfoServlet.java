@@ -43,10 +43,10 @@ public class BillInfoServlet extends HttpServlet {
         String count; //数据总数
         ArrayList list; //数据内容
 
-//        if (make == 1) { //删除
-//            String checkId = request.getParameter("checkId");
-//            code = String.valueOf(service.deleteCheckinInfo(checkId));
-//        }
+        if (make == 1) { //删除
+            int billId = Integer.parseInt(request.getParameter("billId"));
+            code = String.valueOf(service.deleteBillInfo(billId));
+        }
 
         count = String.valueOf(service.queryBillNum());
         list = service.query(page,limit);
