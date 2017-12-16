@@ -1,7 +1,6 @@
 package com.july.hb.checkin.control;
 
 import com.google.gson.Gson;
-import com.july.hb.checkin.pojo.CheckinInfo;
 import com.july.hb.checkin.service.CheckinService;
 import com.july.hb.checkin.service.CheckinServiceImpl;
 
@@ -10,32 +9,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-@WebServlet(name = "InsertCheckinServlet", value = "/InsertCheckinServlet")
-public class InsertCheckinServlet extends HttpServlet {
+@WebServlet(name = "selectCheckinServlet",value = "/selectCheckinServlet")
+public class selectCheckinServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        // 设置编码
         request.setCharacterEncoding("utf-8");
-        response.setContentType("application/json; charset=utf-8");
+        response.setContentType("text/html;charset=utf-8");
 
-        // 获取前端传递的json数据
-        BufferedReader reader = request.getReader();
-        String json = reader.readLine();
-
-        // 解析json
-        Gson gson = new Gson();
-        CheckinInfo checkinInfo = gson.fromJson(json, CheckinInfo.class);
+        // 响应输出流
+        PrintWriter out = response.getWriter();
 
         CheckinService service = new CheckinServiceImpl();
-        PrintWriter out = response.getWriter();
-        int code = service.insertCheckinInfo(checkinInfo);
-        out.print(gson.toJson(code));
+
+
+        ArrayList list = service.billInfo(1, service.queryCheckinNum());
+        //转换为json字符串格式
+        Gson gson = new Gson();
+        out.print(gson.toJson(list));
     }
 }

@@ -2,6 +2,8 @@ package com.july.hb.billInfo.service;
 
 import com.july.hb.billInfo.dao.BillDao;
 import com.july.hb.billInfo.pojo.BillInfo;
+import com.july.hb.checkin.pojo.CheckinInfo;
+import com.july.hb.checkin.service.CheckinServiceImpl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -28,9 +30,10 @@ public class BillServiceImpl implements BillService {
     public int deleteBillInfo(int billId) {
         BillInfo billInfo = new BillInfo();
         billInfo.setBillId(billId);
-
         try {
+            BillInfo billInfo1 = dao.queryName(billId);
             dao.deleteData(billInfo);
+            new CheckinServiceImpl().deleteCheckinInfo(billInfo1.getCheckId()); //也删
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
             e.printStackTrace();

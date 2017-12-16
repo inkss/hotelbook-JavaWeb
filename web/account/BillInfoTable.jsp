@@ -34,19 +34,6 @@
     <legend>
         <div>
             <div class="layui-inline">
-                <div class="layui-input-inline">
-                    <%--------------------修改此处输入框提醒值--------------------%>
-                    <input class="layui-input" id="inputSearch" placeholder="入住单号">
-                </div>
-                <button class="layui-btn fa fa-search" id="searchButton"> 搜索</button>
-            </div>
-            <div class="layui-inline">
-                <button class="layui-btn fa fa-refresh" id="refreshButton"> 刷新</button>
-            </div>
-            <div class="layui-inline">
-                <button class="layui-btn fa fa-pencil-square-o " id="insertButton"> 生成</button>
-            </div>
-            <div class="layui-inline">
                 <button class="layui-btn fa fa-save" id="toXlsButton"> 导出</button>
             </div>
         </div>
@@ -59,13 +46,98 @@
 </div>
 
 <script type="text/html" id="barAuth">
-    <a class="layui-btn layui-btn-primary layui-btn-mini" lay-event="detail">查看</a>
-    <a class="layui-btn layui-btn-mini" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<%---------------------修改此处引入的js--------------------%>
-<script src="../js/account/BillInfo.js"></script>
+<script>
+    layui.use(['util', 'layer', 'table'], function () {
+        $(document).ready(function () {
+            var table = layui.table
+                , layer = layui.layer
+                , util = layui.util;
+
+            var countNum;
+            var tableIns = table.render({
+                done: function (res, curr, count) {
+                    countNum = count;
+                }
+                , elem: '#tableID'
+                , id: 'tableID'
+                , url: baseUrl + '/BillInfoServlet'  // <--------------------------------待修改：数据接口
+                , cols: [[
+                    {field: 'billId', title: '账单编号', width: 200, sort: true, fixed: true}
+                    , {field: 'checkId', title: '入住单号', width: 200}
+                    , {field: 'costMoney', title: '消费金额', width: 150}
+                    , {field: 'costDate', title: '消费时间', width: 150}
+                    , {field: 'remark', title: '备注'}
+                    , {field: 'right', title: '工具', align: 'center', toolbar: '#barAuth', width: 200, fixed: 'right'}
+
+                ]]
+                , page: true
+                , where: {
+                    make: 0
+                }
+            });
+
+            //监听工具条
+            table.on('tool', function (obj) {
+                var data = obj.data
+                    , layEvent = obj.event;
+                var billId = data.billId;
+
+                if (layEvent === 'del') {
+                    //删除
+                    layer.confirm('您确定要删除该条数据吗？', {
+                        offset: '180px',
+                        btn: ['是滴', '手滑']
+                    }, function () {
+                        table.reload('tableID', {
+                            where: {
+                                make: 1,
+                                billId: billId
+                            }
+                        });
+                        layer.msg('删除结果如下', {
+                            offset: '250px',
+                            icon: 1
+                        });
+                        tableIns.reload({
+                            where: {
+                                make: 0,
+                                page: 1
+                            }
+                        });
+                    }, function () {
+                        layer.msg('删除操作已取消', {
+                            offset: '250px'
+                        });
+                    });
+
+                }
+            });
+
+
+            //导出
+            $('#toXlsButton').click(function () {
+                location.href = baseUrl + '/ToExcelServlet';
+                layer.alert('Excel文件生成完成！', {
+                    title: '成功',
+                    icon: 6,
+                    anim: 1,
+                    offset: '250px'
+                });
+            });
+
+            //回到顶端
+            util.fixbar({
+                showHeight: 2
+                , click: function (type) {
+                    console.log(type);
+                }
+            });
+        });
+    });
+</script>
 
 
 </body>
