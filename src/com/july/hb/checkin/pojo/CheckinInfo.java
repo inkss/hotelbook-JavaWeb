@@ -25,7 +25,8 @@ public class CheckinInfo {
 
     private boolean isNull;
 
-    public CheckinInfo() { }
+    public CheckinInfo() {
+    }
 
     public CheckinInfo(String checkId, String checkName, String checkPhone, String checkIDcard, String arriveTime, String leaveTime, String checkNum, String floorId, String typeId, String roomId, String price, String checkPrice, String discount, String orderMoney, String money, String checkState, String isCheck, String checkMoney, String checkoutDate, String remark) {
         this.checkId = checkId;
@@ -44,8 +45,12 @@ public class CheckinInfo {
         this.orderMoney = orderMoney;
         this.money = money;
         this.checkState = checkState;
+        if (isCheck == null)
+            isCheck = "否";
         this.isCheck = isCheck;
         this.checkMoney = checkMoney;
+        if (checkoutDate == null)
+            checkoutDate = leaveTime;
         this.checkoutDate = checkoutDate;
         this.remark = remark;
     }
@@ -183,6 +188,8 @@ public class CheckinInfo {
     }
 
     public void setIsCheck(String isCheck) {
+        if (isCheck == null)
+            isCheck = "否";
         this.isCheck = isCheck;
     }
 
@@ -199,6 +206,8 @@ public class CheckinInfo {
     }
 
     public void setCheckoutDate(String checkoutDate) {
+        if (checkoutDate == null)
+            checkoutDate = leaveTime;
         this.checkoutDate = checkoutDate;
     }
 

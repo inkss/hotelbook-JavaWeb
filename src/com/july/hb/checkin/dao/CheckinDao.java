@@ -18,7 +18,7 @@ public class CheckinDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "INSERT INTO checkinInfo () VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO checkinInfo () VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, checkinInfo.getCheckId());
         pstmt.setString(2, ""); //在不改变数据库结构的情况下直接赋空值，以下同理
@@ -56,7 +56,7 @@ public class CheckinDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "DELETE FROM checkinInfo WHERE checkinInfo = ?";
+        String sql = "DELETE FROM checkinInfo WHERE checkId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, checkinInfo.getCheckId());
 
@@ -73,7 +73,7 @@ public class CheckinDao implements CommonDao {
 
         String sql = "UPDATE checkinInfo SET orderId = ? ,checkinName = ? ,checkPhone = ? ,checkIDcard = ?," +
                 "typeId = ?,arrireTime = ?,leaveTime = ? ,checkState = ? ,checkNum = ? , roomId = ?,price = ? ," +
-                "checkPrice = ?,discount = ? ,discountReason = ?,,addBed = ? ,addBedPrice = ?,orderMoney = ? ," +
+                "checkPrice = ?,discount = ? ,discountReason = ?,addBed = ? ,addBedPrice = ?,orderMoney = ? ," +
                 "money = ?,ifCheckout = ?,checkMoney = ? ,checkoutDate = ? ,remark = ?,operatorId = ? " +
                 " WHERE checkId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -189,7 +189,7 @@ public class CheckinDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "SELECT * FROM checkinInfo WHERE checkinName = ?";
+        String sql = "SELECT * FROM checkinInfo WHERE checkId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, checkName);
         ResultSet rs = pstmt.executeQuery();

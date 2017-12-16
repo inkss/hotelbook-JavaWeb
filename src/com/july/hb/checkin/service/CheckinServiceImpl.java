@@ -2,6 +2,7 @@ package com.july.hb.checkin.service;
 
 import com.july.hb.checkin.dao.CheckinDao;
 import com.july.hb.checkin.pojo.CheckinInfo;
+import com.july.hb.roomInfo.pojo.RoomInfo;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,9 +14,14 @@ public class CheckinServiceImpl implements CheckinService {
     @Override
     public int insertCheckinInfo(CheckinInfo checkinInfo) {
         try {
-            if (queryRepeat(checkinInfo.getCheckId()) == 1)
+            if (queryRepeat(checkinInfo.getCheckId()) == 1) {
+                RoomInfo roomInfo = new RoomInfo(checkinInfo.getRoomId()
+                        ,checkinInfo.getTypeId(),checkinInfo.getFloorId());
+                roomInfo.insertRoomInfo();
+                checkinInfo.setIsCheck(checkinInfo.getIsCheck());
+                checkinInfo.setCheckoutDate(checkinInfo.getCheckoutDate());
                 dao.insertData(checkinInfo);
-            else
+            }else
                 return 0; //存在id
         } catch (SQLException e) {
             System.out.println(e.getErrorCode() + e.getMessage());
