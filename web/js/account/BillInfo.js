@@ -15,9 +15,9 @@ layui.use(['util', 'layer', 'table'], function () {
             }
             , elem: '#tableID'
             , id: 'tableID'
-            , url: baseUrl + ''  // <--------------------------------待修改：数据接口
+            , url: baseUrl + '/BillInfoServlet'  // <--------------------------------待修改：数据接口
             , cols: [[
-                {field: 'billId', title: '账单编号', width: 105, sort: true, fixed: true}
+                {field: 'billId', title: '账单编号', width: 190, sort: true, fixed: true}
                 , {field: 'checkedId', title: '入住单号', width: 190}
                 , {field: 'costMoney', title: '消费金额', width: 105}
                 , {field: 'costDate', title: '消费时间', width: 105}
