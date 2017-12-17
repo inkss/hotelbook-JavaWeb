@@ -31,8 +31,11 @@
 						<a>附属功能设置</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="AuthTable.jsp" target="system">权限管理</a>
+                                <a href="LogTable.jsp" target="system">日志管理</a>
 							</dd>
+                            <dd>
+                                <a href="AuthTable.jsp" target="system">权限管理</a>
+                            </dd>
 						</dl>
 					</li>
 				</ul>

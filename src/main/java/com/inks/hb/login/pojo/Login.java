@@ -29,7 +29,11 @@ public class Login {
         this.loginPwd = loginPwd;
     }
 
-
+    public Login(String loginName, String loginPwd, String loginNickName) {
+        this.loginName = loginName;
+        this.loginPwd = loginPwd;
+        this.loginNickName = loginNickName;
+    }
 
     public Login(int loginId, String loginName, String loginPwd, String loginNickName, int loginAdmin) {
         this.loginId = loginId;

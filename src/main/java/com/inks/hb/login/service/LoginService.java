@@ -33,7 +33,7 @@ public interface LoginService {
     int insertLogin(Login login);
 
     //删除
-    int deleteLogin(String loginId);
+    int deleteLogin(int loginId);
 
     //更新
     int updateLogin(Login login);
@@ -43,8 +43,5 @@ public interface LoginService {
 
     //查询长度
     int queryLoginNum();
-
-    //查重函数
-    int queryRepeat(String newName, String oldName);
 
 }

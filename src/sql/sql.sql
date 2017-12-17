@@ -14,6 +14,19 @@ CREATE TABLE `hotelbook`.`login` (
 -- 为login表插入默认的管理员用户
 INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAdmin`) VALUE ("root","eySvyLyA5UjWbE5/9yFxxQ==","管理员",0);
 
+-- 建立日志表
+CREATE TABLE `hotelbook`.`logInfo` (
+   `logId` INT NOT NULL AUTO_INCREMENT COMMENT '日志，主键、自动增长。',
+   `logName` VARCHAR(45) NOT NULL COMMENT '日志项目',
+   `loginId` INT NOT NULL COMMENT '用户 外键 login表字段值',
+   `loginName` VARCHAR(45)  NULL COMMENT '用户名称',
+   `logDate` VARCHAR(45) NULL COMMENT '日志时间' ,
+   PRIMARY KEY (`logId`),
+   CONSTRAINT `fk_logInfo_1`
+    FOREIGN KEY (`loginId`)
+    REFERENCES `hotelbook`.`login` (`loginId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
 
 -- 创建主体数据表
 -- 核心数据库内容

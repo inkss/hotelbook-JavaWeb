@@ -1,5 +1,6 @@
 package com.inks.hb.login.service;
 
+import com.inks.hb.common.MD5;
 import com.inks.hb.login.dao.LoginDao;
 import com.inks.hb.login.pojo.Login;
 
@@ -10,15 +11,14 @@ public class LoginServiceImpl implements LoginService {
 
     private LoginDao dao = new LoginDao();
 
+    private MD5 md5 = new MD5();
+
     @Override
     public int queryByName(String name, String pwd) throws SQLException {
         Login loginQuery = new Login(name, pwd);
         Login login = (Login) dao.query(loginQuery);
-        System.out.println(loginQuery);
-        System.out.println(login);
-
         int check = 0;  //密码错误
-        if (login.getLoginAdmin() == -1)
+        if (login.getLoginId() == 0)
             check = -1; //账户不存在
         else if (login.getLoginPwd().equals(pwd))
             check = 1;  //登录成功
@@ -37,17 +37,46 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public int insertLogin(Login login) {
-        return 0;
+
+        //密码转MD5加密存储
+        String pwd = login.getLoginPwd();
+        login.setLoginPwd(md5.getMD5(pwd));
+
+        try {
+            dao.insertData(login);
+        } catch (SQLException e) {
+            return -1;
+        }
+        return 1;
     }
 
     @Override
-    public int deleteLogin(String loginId) {
-        return 0;
+    public int deleteLogin(int loginId) {
+        Login login = new Login();
+        login.setLoginId(loginId);
+
+        try {
+            dao.deleteData(login);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return -1;
+        }
+        return 1;
     }
 
     @Override
     public int updateLogin(Login login) {
-        return 0;
+
+        String pwd = login.getLoginPwd();
+        login.setLoginPwd(md5.getMD5(pwd));
+
+        try {
+            dao.updateData(login);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return -1;
+        }
+        return 1;
     }
 
     @Override
@@ -75,8 +104,4 @@ public class LoginServiceImpl implements LoginService {
         return 0;
     }
 
-    @Override
-    public int queryRepeat(String newName, String oldName) {
-        return 0;
-    }
 }
