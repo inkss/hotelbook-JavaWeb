@@ -56,7 +56,6 @@
 			<table id="tableID"></table>
 		</div>
 		<script type="text/html" id="barAuth">
-			<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
 			<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
 			<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 		</script>
@@ -156,7 +155,7 @@
 								title: '管理',
 								align: 'center',
 								toolbar: '#barAuth',
-								width: 200,
+								width: 150,
 								fixed: 'right'
 							}]
 						],
@@ -175,16 +174,7 @@
 							layEvent = obj.event;
 						var orderId = data.orderId;
 
-						if(layEvent === 'detail') {
-							layer.alert(
-								'别闹，左边就是', {
-									skin: 'layui-layer-lan',
-									closeBtn: 0,
-									title: '滑稽一下',
-									anim: 4,
-									offset: '180px'
-								});
-						} else if(layEvent === 'del') {
+						if(layEvent === 'del') {
 							layer.confirm('您确定要删除该条数据吗？', {
 								offset: '180px',
 								btn: ['是滴', '手滑']

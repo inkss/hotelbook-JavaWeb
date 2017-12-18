@@ -1,8 +1,10 @@
 package com.inks.hb.common;
 
 import java.io.BufferedOutputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -84,6 +86,27 @@ public class ExportExcel<T> {
                 fos.close();
             }
         }
+    }
+
+    public static ArrayList readXlsx(String path) throws IOException
+    {
+        XSSFWorkbook xwb = new XSSFWorkbook(path);
+        XSSFSheet sheet = xwb.getSheetAt(0);
+        XSSFRow row;
+        String[] cell = new String[sheet.getPhysicalNumberOfRows()+1];
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (int i = sheet.getFirstRowNum()+1; i < sheet.getPhysicalNumberOfRows(); i++)
+        {
+            cell[i] = "";
+            row = sheet.getRow(i);
+            for (int j = row.getFirstCellNum(); j < row.getPhysicalNumberOfCells(); j++)
+            {
+                cell[i]+=row.getCell(j).toString();
+                cell[i]+=" | ";
+            }
+            arrayList.add(cell[i]);
+        }
+        return arrayList;
     }
 
 }

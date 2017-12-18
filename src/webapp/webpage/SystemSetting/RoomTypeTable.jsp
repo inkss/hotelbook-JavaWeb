@@ -73,7 +73,8 @@
 								field: 'typeId',
 								title: 'ID',
 								sort: true,
-								fixed: true
+								fixed: true,
+                                width: 150
 							}, {
 								field: 'typeName',
 								title: '类型名称'

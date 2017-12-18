@@ -30,10 +30,13 @@
     <legend>
         <div>
             <div class="layui-inline">
-                <button class="layui-btn fa fa-pencil-square-o " id="insertButton"> 新增</button>
+                <button class="layui-btn layui-btn-primary fa fa-pencil-square-o " id="insertButton"> 新增</button>
             </div>
             <div class="layui-inline">
-                <button class="layui-btn fa fa-save" id="toXlsButton"> 导出</button>
+                <button class="layui-btn layui-btn-primary fa  fa-cloud-download" id="toXlsButton"> 导出</button>
+            </div>
+            <div class="layui-inline">
+                <button type="button" class="layui-btn layui-btn-primary fa fa-cloud-upload" id="upload"> 导入</button>
             </div>
         </div>
     </legend>
@@ -45,11 +48,26 @@
 </script>
 <script>
 
-    layui.use(['util', 'layer', 'table'], function () {
+    layui.use(['util', 'layer', 'table','upload'], function () {
         $(document).ready(function () {
             var table = layui.table,
                 layer = layui.layer,
+                upload = layui.upload,
                 util = layui.util;
+
+            upload.render({ //允许上传的文件后缀
+                elem: '#upload'
+                ,url: baseUrl + '/UploadFileServlet'
+                ,accept: 'file' //普通文件
+                ,exts: 'xlsx' //只允许上传excel文件
+                ,before: function(){
+                    layer.msg('文件上传中');
+                }
+                ,success: function(res){
+                    alert(res.msg);
+                }
+            });
+
             var countNum;
             var tableIns = table.render({
                 elem: '#tableID',
