@@ -6,7 +6,6 @@ import com.inks.hb.logInfo.pojo.LogInfo;
 import com.inks.hb.logInfo.service.LogInfoService;
 import com.inks.hb.logInfo.service.LogInfoServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,13 +14,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name = "LogInfoServlet",value = "/LogInfoServlet")
+@WebServlet(name = "LogInfoServlet", value = "/LogInfoServlet")
 public class LogInfoServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
@@ -44,9 +43,9 @@ public class LogInfoServlet extends HttpServlet {
         }
 
         count = String.valueOf(service.queryLogInfoNum());
-        list = service.query(page,limit);
+        list = service.query(page, limit);
 
         PrintWriter out = response.getWriter();
-        out.print(new Gson().toJson(new PojotoGson(code,msg,count,list)));
+        out.print(new Gson().toJson(new PojotoGson(code, msg, count, list)));
     }
 }

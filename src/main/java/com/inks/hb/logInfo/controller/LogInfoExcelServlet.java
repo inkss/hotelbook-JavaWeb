@@ -5,13 +5,10 @@ import com.inks.hb.logInfo.pojo.LogInfo;
 import com.inks.hb.logInfo.service.LogInfoService;
 import com.inks.hb.logInfo.service.LogInfoServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet(name = "LogInfoExcelServlet", value = "/LogInfoExcelServlet")

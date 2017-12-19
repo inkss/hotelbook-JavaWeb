@@ -50,7 +50,7 @@ public class QueryLoginNameServlet extends HttpServlet {
                 session.setAttribute("LoginName", loginName);
                 Login login = service.queryLogin(loginName);
                 //写入登录记录
-                LogInfo logInfo = new LogInfo("登录",login.getLoginId(),login.getLoginName());
+                LogInfo logInfo = new LogInfo("登录", login.getLoginId(), login.getLoginName());
                 LogInfoService logInfoService = new LogInfoServiceImpl();
                 logInfoService.insertLogInfo(logInfo);
             }

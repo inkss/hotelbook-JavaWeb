@@ -5,7 +5,6 @@ import com.inks.hb.login.pojo.Login;
 import com.inks.hb.login.service.LoginService;
 import com.inks.hb.login.service.LoginServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,10 +13,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "InsertLoginServlet",value = "/InsertLoginServlet")
+@WebServlet(name = "InsertLoginServlet", value = "/InsertLoginServlet")
 public class InsertLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        this.doGet(request,response);
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

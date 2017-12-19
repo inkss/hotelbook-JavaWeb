@@ -20,10 +20,10 @@ public class LoginDao implements CommonDao {
         Connection conn = DBUtil.getConnection();
         String sql = "INSERT INTO login (loginName, loginPwd, loginNickName, loginAdmin) VALUE (?,?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1,login.getLoginName());
-        pstmt.setString(2,login.getLoginPwd());
-        pstmt.setString(3,login.getLoginNickName());
-        pstmt.setInt(4,login.getLoginAdmin());
+        pstmt.setString(1, login.getLoginName());
+        pstmt.setString(2, login.getLoginPwd());
+        pstmt.setString(3, login.getLoginNickName());
+        pstmt.setInt(4, login.getLoginAdmin());
 
         pstmt.executeUpdate();
         pstmt.close();
@@ -54,8 +54,8 @@ public class LoginDao implements CommonDao {
         pstmt.setString(1, login.getLoginName());
         pstmt.setString(2, login.getLoginPwd());
         pstmt.setString(3, login.getLoginNickName());
-        pstmt.setInt(4,login.getLoginAdmin());
-        pstmt.setInt(5,login.getLoginId());
+        pstmt.setInt(4, login.getLoginAdmin());
+        pstmt.setInt(5, login.getLoginId());
 
         pstmt.executeUpdate();
         pstmt.close();
@@ -95,8 +95,8 @@ public class LoginDao implements CommonDao {
         Login login;
 
         while (rs.next()) {
-            login = new Login(rs.getInt(1),rs.getString(2),
-                    rs.getString(3),rs.getString(4),rs.getInt(5));
+            login = new Login(rs.getInt(1), rs.getString(2),
+                    rs.getString(3), rs.getString(4), rs.getInt(5));
             list.add(login);
         }
 

@@ -27,7 +27,7 @@ public class MD5 {
         return strMD5;
     }
 
-    public boolean checkMD5(String newStr,String oldStr) {
+    public boolean checkMD5(String newStr, String oldStr) {
         return getMD5(newStr).equals(oldStr);
     }
 }

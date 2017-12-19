@@ -26,7 +26,7 @@ public class LogInfo {
     /**
      * 此构造器呀
      */
-    public LogInfo(String logName, int loginId,String loginName) {
+    public LogInfo(String logName, int loginId, String loginName) {
         this.logName = logName;
         this.loginId = loginId;
         this.loginName = loginName;

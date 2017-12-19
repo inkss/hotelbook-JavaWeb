@@ -17,10 +17,6 @@ import java.util.ArrayList;
 
 /**
  * 分页查询权限表
- * 通过前端传入的make标志，本servlet完成了三项功能：
- * 1. make = 1 返回指定范围内的表信息
- * 2. make = 2 根据权限名称返回查询结果 一条数据
- * 3. make = 3 根据权限ID修改权限属性值 返回修改前数据
  * 如查询过程中出现异常，统一返回'数据查询出现异常'
  * 返回数据为pojotoGson类型
  */
@@ -59,8 +55,8 @@ public class AuthInfoServlet extends HttpServlet {
         AuthInfo authInfo = null;
 
         try {
-            // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
 
+            // 状态标志 make 0重载 1新增 2修改 3搜索 4删除
             if (make == 2) {
                 authId = Integer.parseInt(request.getParameter("authId"));
                 authItem = request.getParameter("authItem");

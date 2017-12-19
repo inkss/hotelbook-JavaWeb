@@ -88,21 +88,18 @@ public class ExportExcel<T> {
         }
     }
 
-    public static ArrayList readXlsx(String path) throws IOException
-    {
+    public static ArrayList readXlsx(String path) throws IOException {
         XSSFWorkbook xwb = new XSSFWorkbook(path);
         XSSFSheet sheet = xwb.getSheetAt(0);
         XSSFRow row;
-        String[] cell = new String[sheet.getPhysicalNumberOfRows()+1];
+        String[] cell = new String[sheet.getPhysicalNumberOfRows() + 1];
         ArrayList<String> arrayList = new ArrayList<>();
-        for (int i = sheet.getFirstRowNum()+1; i < sheet.getPhysicalNumberOfRows(); i++)
-        {
+        for (int i = sheet.getFirstRowNum() + 1; i < sheet.getPhysicalNumberOfRows(); i++) {
             cell[i] = "";
             row = sheet.getRow(i);
-            for (int j = row.getFirstCellNum(); j < row.getPhysicalNumberOfCells(); j++)
-            {
-                cell[i]+=row.getCell(j).toString();
-                cell[i]+=" | ";
+            for (int j = row.getFirstCellNum(); j < row.getPhysicalNumberOfCells(); j++) {
+                cell[i] += row.getCell(j).toString();
+                cell[i] += " | ";
             }
             arrayList.add(cell[i]);
         }

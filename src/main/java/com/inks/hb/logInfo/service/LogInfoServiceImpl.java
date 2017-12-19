@@ -12,6 +12,7 @@ public class LogInfoServiceImpl implements LogInfoService {
 
     /**
      * 这里接收包装好的对象
+     *
      * @param logInfo 日志
      * @return 状态码 0失败 1成功
      */
@@ -30,6 +31,7 @@ public class LogInfoServiceImpl implements LogInfoService {
 
     /**
      * 删除
+     *
      * @param logId 主键
      * @return 状态码 1成功 0失败
      */

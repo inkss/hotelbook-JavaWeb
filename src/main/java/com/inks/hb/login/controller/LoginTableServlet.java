@@ -7,7 +7,6 @@ import com.inks.hb.login.pojo.Login;
 import com.inks.hb.login.service.LoginService;
 import com.inks.hb.login.service.LoginServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,13 +15,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name = "LoginTableServlet",value = "/LoginTableServlet")
+@WebServlet(name = "LoginTableServlet", value = "/LoginTableServlet")
 public class LoginTableServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
@@ -36,9 +35,8 @@ public class LoginTableServlet extends HttpServlet {
 
         String code = "0"; //状态码
         String msg = "数据查询正常"; //状态信息
-        String count = ""; //数据总数
-        ArrayList list = new ArrayList<>(); //数据内容
-        ArrayList<Login> searchList = new ArrayList<>(); //数据内容
+        String count; //数据总数
+        ArrayList list; //数据内容
 
         if (make == 4) { //删除
             int loginId = Integer.parseInt(request.getParameter("loginId"));
@@ -46,9 +44,8 @@ public class LoginTableServlet extends HttpServlet {
             service.deleteLogin(loginId);
         }
 
-        list = service.query(page,limit);
+        list = service.query(page, limit);
         count = String.valueOf(service.queryLoginNum());
-
 
 
         PojotoGson pojotoGson = new PojotoGson(code, msg, count, list);

@@ -15,6 +15,18 @@ public class BillInfo {
 
     private String remark;
 
+    public BillInfo() {
+        super();
+    }
+
+    public BillInfo(int billId, String checkedId, String costMoney, String costDate, String remark) {
+        this.billId = billId;
+        this.checkedId = checkedId;
+        this.costMoney = costMoney;
+        this.costDate = costDate;
+        this.remark = remark;
+    }
+
     public int getBillId() {
         return billId;
     }

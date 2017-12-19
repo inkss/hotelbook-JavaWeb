@@ -2,26 +2,21 @@ package com.inks.hb.login.controller;
 
 import com.google.gson.Gson;
 import com.inks.hb.common.MD5;
-import com.inks.hb.logInfo.pojo.LogInfo;
-import com.inks.hb.logInfo.service.LogInfoService;
-import com.inks.hb.logInfo.service.LogInfoServiceImpl;
 import com.inks.hb.login.pojo.Login;
 import com.inks.hb.login.service.LoginService;
 import com.inks.hb.login.service.LoginServiceImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet(name = "UpdatePwdServlet",value = "/UpdatePwdServlet")
+@WebServlet(name = "UpdatePwdServlet", value = "/UpdatePwdServlet")
 public class UpdatePwdServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doGet(request, response);
     }
 
