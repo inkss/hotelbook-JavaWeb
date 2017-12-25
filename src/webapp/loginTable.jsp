@@ -222,7 +222,7 @@
                         layer.close(index); //关闭弹窗
                     },
                     type: 2,
-                    area: ['450px', '400px'],
+                    area: ['450px', '500px'],
                     fixed: false,
                     maxmin: true,
                     content: '/hb/insertLogin.jsp',

@@ -28,8 +28,17 @@
         <div class="layui-inline">
             <label class="layui-form-label">密码</label>
             <div class="layui-input-inline">
-                <input type="password" name="loginPwd" lay-verify="required|inputPwd" autocomplete="off"
+                <input type="password" name="loginPwd" id="pwd1" lay-verify="required|inputPwd" autocomplete="off"
                        placeholder="您登录所需的密码" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">确认密码</label>
+            <div class="layui-input-inline">
+                <input type="password"  id="pwd2" lay-verify="required|inputPwd" autocomplete="off"
+                       placeholder="重复你所输入的密码" class="layui-input">
             </div>
         </div>
     </div>
@@ -79,21 +88,31 @@
 
         //监听提交
         form.on('submit(insertRome)', function (data) {
-            $.post(baseUrl + '/InsertLoginServlet', JSON.stringify(data.field), function (code) {
-                if (code === 1) {
-                    layer.alert('注册成功！', {
-                        title: '成功',
-                        icon: 6,
-                        anim: 5
-                    });
-                } else {
-                    layer.alert('注册失败！', {
-                        title: '异常',
-                        icon: 5,
-                        anim: 6
-                    });
-                }
-            });
+
+            var pwd1 = $("#pwd1").val();
+            var pwd2 = $("#pwd2").val();
+
+            if (pwd1 != pwd2) {
+                layer.msg("二次密码验证不一致");
+            } else {
+
+                $.post(baseUrl + '/InsertLoginServlet', JSON.stringify(data.field), function (code) {
+                    if (code === 1) {
+                        layer.alert('注册成功！', {
+                            title: '成功',
+                            icon: 6,
+                            anim: 5
+                        });
+                    } else {
+                        layer.alert('注册失败！', {
+                            title: '异常',
+                            icon: 5,
+                            anim: 6
+                        });
+                    }
+                });
+            }
+
             return false;
         });
     });
