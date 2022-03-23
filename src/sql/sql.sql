@@ -12,7 +12,7 @@ CREATE TABLE `hotelbook`.`login` (
    UNIQUE INDEX `loginName_UNIQUE` (`loginName` ASC));
 
 -- 为login表插入默认的管理员用户
-INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAdmin`) VALUE ("root","eySvyLyA5UjWbE5/9yFxxQ==","管理员",0);
+INSERT INTO `hotelbook`.`login` (`loginName`,`loginPwd`,`loginNickName`,`loginAdmin`) VALUE ("root","bUg4eWhCTC1uKmotMmdtQ3Rvb3I=","管理员",0);
 
 -- 建立日志表
 CREATE TABLE `hotelbook`.`logInfo` (

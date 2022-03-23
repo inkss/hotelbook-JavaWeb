@@ -8,7 +8,7 @@
 
         <property name="user">root</property>
 
-        <property name="password">123456</property>
+        <property name="password">1q2w3e4r</property>
 
         <property name="acquireIncrement">3</property>
 
